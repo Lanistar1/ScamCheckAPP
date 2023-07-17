@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.More.MoreMenu"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <StackLayout Margin="50,50,50,20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0" Margin="30,0">
+                <Frame Padding="10" CornerRadius="10" Background="#DFBD0A" HeightRequest="50" WidthRequest="40">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="To_Profile"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <Image Source="newscamavatar.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                <Label Text="My Profile" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Margin="30,0">
+                <Frame Padding="10" CornerRadius="10" Background="#17F212" HeightRequest="50" WidthRequest="40">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="To_HelpCenter"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <Image Source="newscamhelp.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                <Label Text="Help Center" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+
+            </StackLayout>
+        </Grid>
+
+        <Grid Margin="0,40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0" Margin="30,0">
+                <Frame Padding="10" CornerRadius="10" Background="#DF0A17" HeightRequest="50" WidthRequest="40">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="To_Terms"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <Image Source="newscamterm.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                <Label Text="Terms" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Margin="30,0">
+                <Frame Padding="10" CornerRadius="10" Background="#0CC0EC" HeightRequest="50" WidthRequest="40">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="To_ChangePassword"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <Image Source="newscampassword.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                <Label Text="Change Password" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+
+            </StackLayout>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0" Margin="30,0">
+                <Frame Padding="10" CornerRadius="10" Background="#9747FF" HeightRequest="50" WidthRequest="40">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer />
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <Image Source="newscamlegal.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                <Label Text="Legal" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Margin="30,0">
+                <Frame Padding="10" CornerRadius="10" Background="#F012CD" HeightRequest="50" WidthRequest="40">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Logout"/>
+                    </Frame.GestureRecognizers>
+                    <StackLayout>
+                        <Image Source="newscamlogout.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                <Label Text="Logout" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+            </StackLayout>
+        </Grid>
+
+    </StackLayout>
+</ContentPage>

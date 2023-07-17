@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:Controls="clr-namespace:ScamMobileApp.Controls" 
+             xmlns:local="clr-namespace:ScamMobileApp.Utils"
+             x:Class="ScamMobileApp.Views.Identity.Register"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <Grid Margin="10,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout  Grid.Row="0" Margin="0">
+            <Frame BackgroundColor="White">
+                <Label Text="Logo will be here" TextColor="Black" FontSize="20" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" Margin="0,20,0,30"/>
+            </Frame>
+        </StackLayout>
+
+        <ScrollView Grid.Row="1" Margin="10,0">
+            <StackLayout >
+                <Label Text="Register" TextColor="White" FontSize="20" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" Margin="0,20,0,0"/>
+
+                <StackLayout Margin="0,10,0,0">
+                    <Label  Text="First Name"
+                            FontFamily="Inter-Medium"
+                            FontSize="14"
+                            Margin="0,0"
+                            TextColor="White"/>
+
+                    <Frame Padding="10,0,10,0" BorderColor="#ffffff" BackgroundColor="{StaticResource PrimaryColor}" CornerRadius="10" HeightRequest="50" Margin="0,0,0,10" HasShadow="False">
+                        <Controls:CustomEntry 
+                                    VerticalTextAlignment="Center"
+                                    FontSize="14"
+                                    PlaceholderColor="#cccccc"
+                                    Text="{Binding FirstName}"
+                                    Placeholder="John"
+                                    TextColor="White"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Margin="0,5,0,0">
+                    <Label  Text="Last Name"
+                            FontFamily="Inter-Medium"
+                            FontSize="14"
+                            Margin="0,0"
+                            TextColor="White"/>
+
+                    <Frame Padding="10,0,10,0" BorderColor="#ffffff" BackgroundColor="{StaticResource PrimaryColor}" CornerRadius="10" HeightRequest="50" Margin="0,0,0,10" HasShadow="False">
+                        <Controls:CustomEntry 
+                                    VerticalTextAlignment="Center"
+                                    FontSize="14"
+                                    PlaceholderColor="#cccccc"
+                                    Text="{Binding LastName}"
+                                    Placeholder="Doe"
+                                    TextColor="White"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Margin="0,5,0,0">
+                    <Label  Text="User Name"
+                            FontFamily="Inter-Medium"
+                            FontSize="14"
+                            Margin="0,0"
+                            TextColor="White"/>
+
+                    <Frame Padding="10,0,10,0" BorderColor="#ffffff" BackgroundColor="{StaticResource PrimaryColor}" CornerRadius="10" HeightRequest="50" Margin="0,0,0,10" HasShadow="False">
+                        <Controls:CustomEntry 
+                                    VerticalTextAlignment="Center"
+                                    FontSize="14"
+                                    PlaceholderColor="#cccccc"
+                                    Text="{Binding UserName}"
+                                    Placeholder="Johnny"
+                                    TextColor="White"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Margin="0,5,0,0">
+                    <Label  Text="Email"
+                            FontFamily="Inter-Medium"
+                            FontSize="14"
+                            Margin="0,0"
+                            TextColor="White"/>
+
+                    <Frame Padding="10,0,10,0" BorderColor="#ffffff" CornerRadius="10" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" Margin="0,0,0,10" HasShadow="False">
+                        <Controls:CustomEntry 
+                                    VerticalTextAlignment="Center"
+                                    FontSize="14"
+                                    PlaceholderColor="#cccccc"
+                                    Text="{Binding Email}"
+                                    Placeholder="yourname@example.com"
+                                    TextColor="White"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout>
+                    <StackLayout>
+
+                        <StackLayout >
+                            <Label Text="Password"
+                                    FontFamily="Inter-Medium"
+                                    FontSize="15"
+                                    Margin="0,0,10,5"
+                                    TextColor="White"/>
+
+                            <Frame Padding="10,5,10,0" CornerRadius="10" BorderColor="#ffffff" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="45" Margin="0,0,0,10" HasShadow="False">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="7*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Controls:CustomEntry 
+                                            VerticalOptions="CenterAndExpand"
+                                            FontFamily="Inter-Regular"
+                                            Placeholder="********"
+                                            PlaceholderColor="#cccccc"
+                                            FontSize="14"
+                                            Text="{Binding Password}"
+                                            Grid.Column="0"
+                                            TextColor="White"
+                                            IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}"
+                                            />
+
+                                    <ImageButton  Grid.Column="1"
+                                              BackgroundColor="Transparent"
+                                              Margin="0,0,10,5"
+                                              HeightRequest="20"
+                                              HorizontalOptions="End"
+                                              Source="scameyeclose">
+                                        <ImageButton.Triggers>
+                                            <EventTrigger Event="Clicked">
+                                                <local:ShowPasswordTriggerAction ShowIcon="scamopeneye"
+                                                                             HideIcon="scameyeclose"
+                                                                             x:Name="ShowPasswordActualTrigger"/>
+                                            </EventTrigger>
+                                        </ImageButton.Triggers>
+                                    </ImageButton>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout >
+                            <Label Text="Confirm Password"
+                                    FontFamily="Euclid-Medium"
+                                    FontSize="15"
+                                    Margin="0,0,10,5"
+                                    TextColor="White"/>
+
+                            <Frame Padding="10,5,10,0" BorderColor="#ffffff" BackgroundColor="{StaticResource PrimaryColor}" CornerRadius="10" HeightRequest="45" Margin="0,0,0,10" HasShadow="False">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="7*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Controls:CustomEntry 
+                                            VerticalOptions="CenterAndExpand"
+                                            FontFamily="Poppins-Light"
+                                            Placeholder="**************"
+                                            PlaceholderColor="#cccccc"
+                                            FontSize="14"
+                                            Text="{Binding ConfirmPassword}"
+                                            Grid.Column="0"
+                                            TextColor="White"
+                                            IsPassword="{Binding Source={x:Reference ShowConfirmPasswordActualTrigger}, Path=HidePassword}"
+                                            />
+
+                                    <ImageButton  Grid.Column="1"
+                                              BackgroundColor="Transparent"
+                                              Margin="0,0,10,5"
+                                              HeightRequest="20"
+                                              HorizontalOptions="End"
+                                              Source="scameyeclose">
+                                        <ImageButton.Triggers>
+                                            <EventTrigger Event="Clicked">
+                                                <local:ShowPasswordTriggerAction ShowIcon="scamopeneye"
+                                                                             HideIcon="scameyeclose"
+                                                                             x:Name="ShowConfirmPasswordActualTrigger"/>
+                                            </EventTrigger>
+                                        </ImageButton.Triggers>
+                                    </ImageButton>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                        <Frame CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Padding="10,12" Margin="0,10,0,0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SignupCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Label Text="Register" TextColor="White" FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="CenterAndExpand" Margin="0,5">
+                            <Label Text="Already have an account?" TextColor="#ffffff"/>
+                            <Label HorizontalOptions="CenterAndExpand" TextColor="#01FF1A" Margin="10,0,0,0" FontSize="Subtitle">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Login" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Login"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

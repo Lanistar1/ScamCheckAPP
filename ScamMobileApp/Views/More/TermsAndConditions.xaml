@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.More.TermsAndConditions"
+              Title="Terms and Conditions"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+
+    <ScrollView Margin="20">
+        <StackLayout>
+            <StackLayout>
+                <Label Text="The following disclaimer is provided for the purpose of clarifying the guidelines and limitations regarding the sharing of scam/fraud stories on this platform:" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Users are welcome to share their scam or fraud experiences in text format on this page. However, it is important to note that this platform strictly prohibits the inclusion of any website URLs, links, email addresses, or contact numbers within the user-generated content." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="This restriction is in place to ensure the safety and security of our users. By disallowing the sharing of such information, we aim to prevent scammers or malicious entities from exploiting this platform to promote or engage in fraudulent activities." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="While we strive to maintain a safe environment, please be aware that the information shared by users is their own personal experience and does not necessarily reflect the views or opinions of this platform or its administrators. We cannot guarantee the accuracy or validity of the shared stories." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Users are solely responsible for the content they contribute, and any reliance on such information is at the discretion and risk of the reader. We strongly encourage users to exercise caution and conduct their own research or seek professional advice when dealing with scams or fraud." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="The platform reserves the right to moderate and remove any content that violates these guidelines or is deemed inappropriate, offensive, or potentially harmful." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="By using this platform and engaging in the sharing of scam or fraud stories, users agree to comply with these guidelines and understand the platform's limitations in preventing the posting of malicious content." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Please proceed with the understanding that the shared stories are based on individual experiences and may not serve as conclusive evidence or a substitute for legal or professional advice." TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Thank you for your understanding and cooperation in maintaining a secure and informative environment for all users." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

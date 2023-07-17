@@ -1,0 +1,57 @@
+﻿using ScamMobileApp.Utils;
+using ScamMobileApp.ViewModels.Home;
+using ScamMobileApp.Views.Questions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace ScamMobileApp.Views.Home
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Dashboard : ContentPage
+    {
+        public Dashboard()
+        {
+            InitializeComponent();
+            BindingContext = new DashboardViewModel(Navigation);
+        }
+
+        private void To_firstQuestion(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new TypeOfScam());
+        }
+
+        private void To_ShareExperience(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ShareScamExperience());
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                //var result = await this.DisplayAlert("Alert!", "Do you really want to exit?", "Yes", "No");
+                string msg = "Do you really want to exit this app?";
+                await ConfirmPopup.Instance.Show(
+                             title: "Message",
+                             message: msg,
+                             closeButtonText: "No",
+                             acceptButtonText: "Yes",
+                             acceptCommand: new Command(() =>
+                             {
+                                 System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow(); // Or anything else
+                             }));
+                //if (result)
+                //{
+                //    System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow(); // Or anything else
+                //}
+            });
+            return true;
+        }
+    }
+}

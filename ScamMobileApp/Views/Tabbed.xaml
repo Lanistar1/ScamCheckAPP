@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:Pages1="clr-namespace:ScamMobileApp.Views.Home" 
+            xmlns:Pages2="clr-namespace:ScamMobileApp.Views.More"
+            x:Class="ScamMobileApp.Views.Tabbed"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            NavigationPage.HasNavigationBar="False"
+            BarBackgroundColor="{StaticResource PrimaryColor}"
+            android:TabbedPage.BarItemColor="#B2B2B2"
+            android:TabbedPage.BarSelectedItemColor="{StaticResource TertiaryColor}">
+
+
+    <!--Pages can be added as references or inline-->
+    <Pages1:Dashboard Title="Home" IconImageSource="scamhome.png"></Pages1:Dashboard>
+    <Pages2:MoreMenu Title="Menu" IconImageSource="scammenu.png"></Pages2:MoreMenu>
+    
+</TabbedPage>
