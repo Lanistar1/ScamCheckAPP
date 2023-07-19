@@ -13,6 +13,10 @@ namespace ScamMobileApp.Service
 {
     public class ScamAppService
     {
+        HttpClient client;
+        ProfileData userData = Global.UserData == null ? null : Global.UserData;
+        string token = Global.Token;
+
         public async Task<(LoginResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> LoginUserAsync(string email, string password)
         {
             try
@@ -181,7 +185,8 @@ namespace ScamMobileApp.Service
                 ErrorResponseModel errorData;
 
                 HttpClient client = new HttpClient();
-                var response = await client.PostAsync(url, content);
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                var response = await client.PutAsync(url, content);
                 int statusCode = (int)response.StatusCode;
                 int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
                 string result = await response.Content.ReadAsStringAsync();
