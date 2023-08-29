@@ -12,9 +12,9 @@ using Xamarin.Forms.Xaml;
 namespace ScamMobileApp.Views.Questions
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ScamResult : ContentPage
+    public partial class ScamResultTwo : ContentPage
     {
-        public ScamResult()
+        public ScamResultTwo()
         {
             InitializeComponent();
         }

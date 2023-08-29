@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ScamMobileApp.ViewModels.Home;
+using ScamMobileApp.ViewModels.ScamCalculator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,8 @@ namespace ScamMobileApp.Views.Questions
         public ThirdQuestion()
         {
             InitializeComponent();
+            BindingContext = new ScamCalculatorViewModel(Navigation);
+
         }
 
         private void To_forthQuestion(object sender, EventArgs e)

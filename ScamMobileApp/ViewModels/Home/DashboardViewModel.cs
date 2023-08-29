@@ -1,4 +1,5 @@
-﻿using ScamMobileApp.Models.Home;
+﻿using ScamMobileApp.Helpers;
+using ScamMobileApp.Models.Home;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,6 +23,16 @@ namespace ScamMobileApp.ViewModels.Home
             }
         }
 
+        private string username;
+        public string Username
+        {
+            get => username;
+            set
+            {
+                username = value;
+                OnPropertyChanged(nameof(Username));
+            }
+        }
 
         public DashboardViewModel(INavigation navigation)
         {
@@ -33,9 +44,10 @@ namespace ScamMobileApp.ViewModels.Home
                 new DashboardModel { ScamType = "Vishing scam check", Date = "04/08/2023"},
                 new DashboardModel { ScamType = "Smishing scam check", Date = "04/08/2023"},
                 new DashboardModel { ScamType = "Investment scam check", Date = "04/08/2023"},
-                new DashboardModel { ScamType = "Ransomeware scam check", Date = "04/08/2023"},
 
              };
+
+            Username = Global.UserData.username;
         }
     }
 }

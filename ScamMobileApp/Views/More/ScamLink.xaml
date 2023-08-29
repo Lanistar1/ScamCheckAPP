@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.More.ScamLink"
+             Title="Scam links"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <StackLayout Margin="30">
+        <Label Text="You can check the sites below to know more about scam in your region." TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+
+        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="StartAndExpand" Margin="0,5">
+            <Label Text="1. Check recent scam report in USA." TextColor="#ffffff"/>
+            <Label HorizontalOptions="CenterAndExpand" TextColor="#01FF1A" Margin="10,0,0,0" FontSize="Subtitle">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Click here" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_usa"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="StartAndExpand" Margin="0,5">
+            <Label Text="2. Check recent scam report in UK." TextColor="#ffffff"/>
+            <Label HorizontalOptions="CenterAndExpand" TextColor="#01FF1A" Margin="10,0,0,0" FontSize="Subtitle">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Click here" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_uk"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="StartAndExpand" Margin="0,5">
+            <Label Text="3. Check recent scam report in Canada." TextColor="#ffffff"/>
+            <Label HorizontalOptions="CenterAndExpand" TextColor="#01FF1A" Margin="10,0,0,0" FontSize="Subtitle">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Click here" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_canada"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

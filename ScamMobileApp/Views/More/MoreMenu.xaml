@@ -12,7 +12,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackLayout Grid.Column="0" Margin="30,0">
+                <!--<StackLayout Grid.Column="0" Margin="30,0">
                     <Frame Padding="10" CornerRadius="10" Background="#DFBD0A" HeightRequest="50" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="To_Profile"/>
@@ -23,9 +23,22 @@
                     </Frame>
                     <Label Text="My Profile" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
+                </StackLayout>-->
+
+                <StackLayout Grid.Column="0" Margin="10,0">
+                    <Frame Padding="10" CornerRadius="10" Background="#DFBD0A" HeightRequest="50" WidthRequest="40">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_Scamlink"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <Image Source="scamlink.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                    <Label Text="Scam Link" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+
                 </StackLayout>
 
-                <StackLayout Grid.Column="1" Margin="30,0">
+                <StackLayout Grid.Column="1" Margin="10,0">
                     <Frame Padding="10" CornerRadius="10" Background="#17F212" HeightRequest="50" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="To_HelpCenter"/>
@@ -45,7 +58,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackLayout Grid.Column="0" Margin="30,0">
+                <StackLayout Grid.Column="0" Margin="10,0">
                     <Frame Padding="10" CornerRadius="10" Background="#F012CD" HeightRequest="50" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="To_Terms"/>
@@ -58,7 +71,7 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Column="1" Margin="30,0">
+                <StackLayout Grid.Column="1" Margin="10,0">
                     <Frame Padding="10" CornerRadius="10" Background="#0CC0EC" HeightRequest="50" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="To_ChangePassword"/>
@@ -78,7 +91,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackLayout Grid.Column="0" Margin="30,0">
+                <StackLayout Grid.Column="0" Margin="10,0">
                     <Frame Padding="10" CornerRadius="10" Background="#8F6526" HeightRequest="50" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="To_typeOFScam"/>
@@ -91,7 +104,7 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Column="1" Margin="30,0">
+                <StackLayout Grid.Column="1" Margin="10,0">
                     <Frame Padding="10" CornerRadius="10" Background="#6F7A6A" HeightRequest="50" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="To_ScamQA"/>
@@ -110,7 +123,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackLayout Grid.Column="0" Margin="30,0">
+                <StackLayout Grid.Column="0" Margin="10,0">
                     <Frame Padding="10" CornerRadius="10" Background="#94B958" HeightRequest="50" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="To_ShareExperience"/>
@@ -123,7 +136,7 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Column="1" Margin="30,0">
+                <StackLayout Grid.Column="1" Margin="10,0">
                     <Frame Padding="10" CornerRadius="10" Background="#1D4D0C" HeightRequest="50" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="To_PreventiveTips"/>
@@ -142,7 +155,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackLayout Grid.Column="0" Margin="30,0">
+                <StackLayout Grid.Column="0" Margin="10,0">
                     <Frame Padding="10" CornerRadius="10" Background="#FF8947" HeightRequest="50" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TowarningSign"/>
@@ -155,7 +168,7 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Column="1" Margin="30,0">
+                <StackLayout Grid.Column="1" Margin="10,0">
                     <Frame Padding="10" CornerRadius="10" Background="#DF0A17" HeightRequest="50" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Logout"/>

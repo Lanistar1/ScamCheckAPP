@@ -19,6 +19,10 @@ namespace ScamMobileApp.Helpers
         public static ProfileData UserData;
         public static string Token;
 
+        public static int firstTest;
+        public static int seconTest;
+        public static int thirdTest;
+
         public static bool Contains(this string target, string value, StringComparison comparison)
         {
             return target.IndexOf(value, comparison) >= 0;

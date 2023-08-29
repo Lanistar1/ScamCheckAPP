@@ -17,7 +17,7 @@
                 <Image Source="scamavatar.png"/>
                 <StackLayout>
                     <Label Text="Welcome" TextColor="White" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <Label Text="John Williams" TextColor="White" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <Label Text="{Binding Username}" TextColor="White" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                 </StackLayout>
             </StackLayout>
             <Label Text="Do you have a scam experience? Tell us your story to help others stay ahead of scammers. Join The Anti-Scam Movement." TextColor="White" FontSize="14" 
@@ -61,7 +61,7 @@
                 </CollectionView.EmptyView>
             </CollectionView>
 
-            <StackLayout VerticalOptions="EndAndExpand">
+            <StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,20">
                 <ImageButton BackgroundColor="Transparent" Clicked="To_firstQuestion" Source="scammeter.png" WidthRequest="100" HeightRequest="100" />
             </StackLayout>
         </StackLayout>

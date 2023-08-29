@@ -113,7 +113,7 @@ namespace ScamMobileApp.ViewModels.Identity
                 {
                     Global.UserData = ResponseData.data.profile;
                     Global.Token = ResponseData.data.token;
-                    await MessagePopup.Instance.Show("Login successful");
+                    //await MessagePopup.Instance.Show("Login successful");
 
                     Application.Current.MainPage = new NavigationPage(new Tabbed());
                 }
