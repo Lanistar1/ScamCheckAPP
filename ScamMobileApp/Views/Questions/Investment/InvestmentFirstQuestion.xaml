@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Investment.InvestmentFirstQuestion"
+             Title="Question and answer"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <StackLayout Margin="20">
+        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+
+        <StackLayout>
+            <Image Source="scamquestion1.png"/>
+        </StackLayout>
+        <Label Text="Is the investment promising extraordinarily high returns with little or no risk?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+        <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+            <RadioButton Content="YES" IsChecked="{Binding QuestionOneCheckYes}" BorderColor="#fff"  BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="NO" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionOneCheckNo}" GroupName="Activity"  Padding="0,0,5,0"/>
+        </StackLayout>
+        <FlexLayout JustifyContent="SpaceBetween">
+            <StackLayout>
+                <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                <Label Text="Previous" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout>
+                <ImageButton Command="{Binding FirstQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png" />
+                <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </FlexLayout>
+        <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}">
+            <StackLayout>
+                <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <Label Text=" This question is helping you be cautious about investment opportunities. It's asking whether the investment is making big promises of very high profits without much risk involved. Be aware that if an investment sounds too good to be true, it might be. Legitimate investments generally come with some level of risk, and extremely high returns with no risk are often signs of potential scams. It's important to do thorough research and consult with financial experts before considering any investment that makes such bold claims. Don't fall for promises that seem unrealistically amazing." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>

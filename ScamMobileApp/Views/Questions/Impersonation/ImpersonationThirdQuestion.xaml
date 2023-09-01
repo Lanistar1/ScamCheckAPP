@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Impersonation.ImpersonationThirdQuestion"
+             Title="Question and answer"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <StackLayout Margin="20">
+        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+
+        <StackLayout>
+            <Image Source="scamquestion3.png"/>
+        </StackLayout>
+        <Label Text="Is the person or entity requesting personal information, money, or any action that seems out of character or unusual for them?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+        <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+            <RadioButton Content="YES" IsChecked="{Binding QuestionThreeCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="NO" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionThreeCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+        </StackLayout>
+        <FlexLayout JustifyContent="SpaceBetween">
+            <StackLayout>
+                <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout>
+                <ImageButton Command="{Binding ThirdQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
+                <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </FlexLayout>
+        <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+            <StackLayout>
+                <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <Label Text="This question asks whether the person or organization is asking for things that seem unusual or out of character for them. For example, if a friend suddenly asks you for money when they never have before, or if a company is requesting sensitive information (personal) that they wouldn't usually need, it could be a sign of something wrong. Scammers often use these tactics to catch you off guard. To protect yourself, be careful when faced with requests that don't match what you expect from that person or entity. Take a moment to verify the request before taking any action, especially if it involves giving money or personal information. Your safety is important, so trust your instincts and verify unusual requests." 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>

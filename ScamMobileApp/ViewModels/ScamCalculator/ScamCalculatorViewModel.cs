@@ -175,10 +175,14 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             if (QuestionOneCheckYes == true && QuestionOneCheckNo == false)
             {
                 Test1 = "25";
+                await Navigation.PushAsync(new SecondQuestion());
+
             }
             else if (QuestionOneCheckYes == false && QuestionOneCheckNo == true)
             {
                 Test1 = "0";
+                await Navigation.PushAsync(new SecondQuestion());
+
             }
             else
             {
@@ -199,10 +203,14 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             if (QuestionTwoCheckYes == true && QuestionTwoCheckNo == false)
             {
                 Test2 = "25";
+                await Navigation.PushAsync(new ThirdQuestion());
+
             }
             else if (QuestionTwoCheckYes == false && QuestionTwoCheckNo == true)
             {
                 Test2 = "0";
+                await Navigation.PushAsync(new ThirdQuestion());
+
             }
             else
             {
@@ -223,10 +231,14 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             if (QuestionThreeCheckYes == true && QuestionThreeCheckNo == false)
             {
                 Test3 = "25";
+                await Navigation.PushAsync(new ForthQuestion());
+
             }
             else if (QuestionThreeCheckYes == false && QuestionThreeCheckNo == true)
             {
                 Test3 = "0";
+                await Navigation.PushAsync(new ForthQuestion());
+
             }
             else
             {

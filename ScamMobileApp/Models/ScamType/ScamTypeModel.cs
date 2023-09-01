@@ -8,6 +8,8 @@ namespace ScamMobileApp.Models.ScamType
     public class ScamTypeData : BaseViewModel
     {
         public string ScamType { get; set; }
+        public bool isSelected { get; set; }
+
 
         private string dishImage;
         public string DishImage

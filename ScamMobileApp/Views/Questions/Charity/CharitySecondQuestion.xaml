@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Charity.CharitySecondQuestion"
+             Title="Question and answer"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <StackLayout Margin="20">
+        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+
+        <StackLayout>
+            <Image Source="scamquestion2.png"/>
+        </StackLayout>
+        <Label Text="Is the request for a donation coming from an official, recognized communication channel of the charity?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+        <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+            <RadioButton Content="YES" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="NO" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+        </StackLayout>
+        <FlexLayout JustifyContent="SpaceBetween">
+            <StackLayout>
+                <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout>
+                <ImageButton Command="{Binding SecondQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
+                <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </FlexLayout>
+        <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+            <StackLayout>
+                <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <Label Text="This question asks whether the request for a donation is coming from an official and recognized communication channel of the charity. Scammers often impersonate legitimate charities to trick people into donating to fake causes. Be wary if you receive donation requests through unsolicited emails, social media messages, or phone calls that can't be verified. Legitimate charities typically use official websites, established email addresses, and official social media accounts to communicate with potential donors. Before donating, visit the charity's official website or contact them through their verified channels to confirm the authenticity of the request. " 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>

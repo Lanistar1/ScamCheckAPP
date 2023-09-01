@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Lottery.LotteryLikelyResult"
+             Title="Is This A Scam?"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="scambackground.png">
+
+    <ScrollView>
+        <StackLayout>
+            <Frame Padding="10" BackgroundColor="{StaticResource TertiaryColor}">
+                <Label Text="Is This A Scam?" TextColor="#ffffff" FontSize="18" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+            </Frame>
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="#ffffff" Margin="10,50,10,0" VerticalOptions="StartAndExpand">
+                <StackLayout>
+                    <StackLayout>
+                        <Image Source="scamredlogo.png" WidthRequest="100" HeightRequest="100"/>
+                    </StackLayout>
+                    <Label Text="Likely a scam" TextColor="#D03434" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <StackLayout>
+                        <Label Text="The Q and A analysis strongly suggests a likely scam. Be cautious of unrealistic prizes without entering contests. Avoid sharing information or money for unearned gifts.  Independently research and contact the organizer through official channels if uncertain. Legitimate prizes won't need payment or data. If uncertain, stay cautious and report before acting." 
+                               TextColor="#000000" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Recommendations:" TextColor="#000000" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+                        <Label Text="1. Report this scam (report here)" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0"/>
+                        <Label Text="2. Share your experience in the Anti-Scam Movement page (Anti-Scam Movement)" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,-3"/>
+                        <Label Text="3. Scammed? Take Action." TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    </StackLayout>
+                    <Frame HorizontalOptions="CenterAndExpand" BackgroundColor="{StaticResource PrimaryColor}" CornerRadius="5" Padding="40,5" Margin="0,10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_Dashboard"/>
+                        </Frame.GestureRecognizers>
+                        <Label Text="OK" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

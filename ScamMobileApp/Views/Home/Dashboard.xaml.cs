@@ -1,5 +1,6 @@
 ﻿using ScamMobileApp.Utils;
 using ScamMobileApp.ViewModels.Home;
+using ScamMobileApp.Views.More;
 using ScamMobileApp.Views.Questions;
 using System;
 using System.Collections.Generic;
@@ -52,6 +53,11 @@ namespace ScamMobileApp.Views.Home
                 //}
             });
             return true;
+        }
+
+        private async void To_Profile(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfilePage());
         }
     }
 }

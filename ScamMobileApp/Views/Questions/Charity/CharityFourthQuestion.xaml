@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Charity.CharityFourthQuestion"
+             Title="Question and answer"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <StackLayout Margin="20">
+        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+
+        <StackLayout>
+            <Image Source="newforthscam.png"/>
+        </StackLayout>
+        <Label Text="Are they pressuring you to donate immediately or claiming that your donation is urgently needed?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+        <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+            <RadioButton Content="YES" IsChecked="{Binding QuestionFourCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="NO" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionFourCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+
+
+        </StackLayout>
+
+        <FlexLayout JustifyContent="SpaceBetween">
+            <StackLayout>
+                <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout>
+                <ImageButton BackgroundColor="Transparent" Command="{Binding ScamCalculatorCommand}" Source="scamresult.png"/>
+                <Label Text="Recommendation" TextColor="#0CC0EC" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </FlexLayout>
+        <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+            <StackLayout>
+                <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <Label Text="This question asks  whether the charity is pressuring you to donate immediately or claiming your donation is urgently needed. Scammers often use urgency to make you act without thinking, exploiting your desire to help others. Legitimate charities value your support but would not rush or manipulate you into giving quickly. Take your time to research and verify the charity before making any donations. Reach out to the charity through their official communication channels to confirm the urgency of the situation." 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>

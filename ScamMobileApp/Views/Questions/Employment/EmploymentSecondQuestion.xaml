@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Employment.EmploymentSecondQuestion"
+             Title="Question and answer"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <StackLayout Margin="20">
+        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+
+        <StackLayout>
+            <Image Source="scamquestion2.png"/>
+        </StackLayout>
+        <Label Text="Are you being asked to pay upfront fees, provide personal financial information, or purchase expensive training materials as part of the job application process?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+        <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+            <RadioButton Content="YES" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="NO" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+        </StackLayout>
+        <FlexLayout JustifyContent="SpaceBetween">
+            <StackLayout>
+                <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout>
+                <ImageButton Command="{Binding SecondQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
+                <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </FlexLayout>
+        <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+            <StackLayout>
+                <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <Label Text="This question asks whether you're being asked to pay upfront fees, provide personal financial information, or purchase expensive training materials as part of the job application process. Scammers may use these tactics to exploit job seekers for financial gain. Legitimate job opportunities typically don't require candidates to make payments or provide personal financial details as part of the application process. Research the company, check for red flags, and carefully review the terms of the job offer. If something seems off, consider reaching out to the company directly using verified contact information to confirm the legitimacy of the requirements." 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
