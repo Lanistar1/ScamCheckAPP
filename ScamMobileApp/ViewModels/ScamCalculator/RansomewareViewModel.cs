@@ -1,6 +1,7 @@
 ﻿using ScamMobileApp.Helpers;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views.Questions;
+using ScamMobileApp.Views.Questions.Ransomware;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -280,13 +281,13 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 if (newResult > 25)
                 {
                     //await Navigation.PushAsync(new ScamResult());
-                    Application.Current.MainPage = new NavigationPage(new ScamResult());
+                    Application.Current.MainPage = new NavigationPage(new RansomwareLikelyResult());
 
                 }
                 else
                 {
                     //await Navigation.PushAsync(new ScamResultTwo());
-                    Application.Current.MainPage = new NavigationPage(new ScamResultTwo());
+                    Application.Current.MainPage = new NavigationPage(new RansomwareUnlikeResult());
 
                 }
             }

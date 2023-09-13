@@ -90,7 +90,6 @@ namespace ScamMobileApp.ViewModels.ScamType
 
         private string searchEntry = string.Empty;
         private CancellationTokenSource searchDelayTokenSource;
-
         public string SearchEntry
         {
             get => searchEntry;
@@ -134,27 +133,27 @@ namespace ScamMobileApp.ViewModels.ScamType
 
 
             ScamType = new ObservableCollection<ScamTypeData>{
-                new ScamTypeData { ScamType = "PHISHING SCAM (email)", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "VISHING SCAM (Phone calls or voice messages) ", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "SMIShING SCAM (text messages SMS)   ", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "INVESTMENT SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "ROMANCE SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "QR CODE SCAMS", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "IMPERSONATION SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "RANSOMWARE  SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "ATM SKIMMING SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "TECH SUPPORT SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "BUSINESS EMAIL COMPROMISE(BEC) SCAMS", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "LOTTERY, PRIZE OR FREE GIFTS SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "SOCIAL MEDIA SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "TAX SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "IDENTITY THEFT SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "GRANDPARENT OR PARENT SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "CHARITY SCAM", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "ONLINE SHOPPING SCAMS", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "EMPLOYMENT OPPORTUNITY SCAMS", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "FAKE INVOICE SCAMS", DishImage = "scamarrowdown.png"},
-                new ScamTypeData { ScamType = "GIFT CARD SCAMS", DishImage = "scamarrowdown.png"},
+                new ScamTypeData { ScamType = "PHISHING SCAM (email)", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "VISHING SCAM (Phone calls or voice messages) ", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "SMIShING SCAM (text messages SMS)   ", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "INVESTMENT SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "ROMANCE SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "QR CODE SCAMS", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "IMPERSONATION SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "RANSOMWARE  SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "ATM SKIMMING SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "TECH SUPPORT SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "BUSINESS EMAIL COMPROMISE(BEC) SCAMS", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "LOTTERY, PRIZE OR FREE GIFTS SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "SOCIAL MEDIA SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "TAX SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "IDENTITY THEFT SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "GRANDPARENT OR PARENT SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "CHARITY SCAM", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "ONLINE SHOPPING SCAMS", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "EMPLOYMENT OPPORTUNITY SCAMS", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "FAKE INVOICE SCAMS", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "GIFT CARD SCAMS", DishImage = "scamarrow.png"},
 
              };
 

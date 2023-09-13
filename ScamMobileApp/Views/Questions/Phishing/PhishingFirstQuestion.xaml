@@ -7,7 +7,7 @@
              BackgroundColor="{StaticResource PrimaryColor}">
 
     <StackLayout Margin="20">
-        <Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
 
         <StackLayout>
             <Image Source="scamquestion1.png"/>
@@ -31,8 +31,7 @@
         <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
             <StackLayout>
                 <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                <Label Text="Go through the email sent to you to check if the sender is asking for some of your personal information. Personal information include: Your BVN, address, family members' name, car information, passwords, work history, credit status, social security numbers, car license numbers, insurance policy numbers credit/debit card numbers etc.
-                             All the above listed information are personal information that must not be checked." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <Label Text=" This question aims to help you determine whether an email is trustworthy; is the sender someone you know well or a group you frequently communicate with? Phishing emails often impersonate well-known companies or individuals to gain trust. If the sender is unfamiliar or the organization is not one you typically interact with, it raises suspicion and could be an indication of a phishing attempt. Examine the sender's email address, domain, and display name, and look for misspelled words, or go to their official website to help you verify the sender." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
                 <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
             </StackLayout>

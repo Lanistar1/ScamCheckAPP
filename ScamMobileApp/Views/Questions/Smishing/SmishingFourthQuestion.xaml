@@ -7,12 +7,12 @@
              BackgroundColor="{StaticResource PrimaryColor}">
 
     <StackLayout Margin="20">
-        <Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
 
         <StackLayout>
             <Image Source="newforthscam.png"/>
         </StackLayout>
-        <Label Text="Are there any suspicious links or attachments in the email, especially if they redirect to unfamiliar websites?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+        <Label Text="Does the message contain suspicious links or prompts to click on unknown URLs?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
         <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
             <RadioButton Content="YES" IsChecked="{Binding QuestionFourCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
@@ -34,7 +34,7 @@
         <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
             <StackLayout>
                 <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                <Label Text="Go through the email sent to you to check if the email contains some suspicious links or attachments which can expose you to a possible scam." 
+                <Label Text="This question asks whether the message includes any strange or unfamiliar web links or tells you to click on URLs that you don't recognize. Scammers often use these links to lead you to harmful websites or trick you into downloading malicious files. If a message has links that you are not familiar with or take you to places you're not sure about, it's a sign to be careful. Avoid clicking on such links to keep your devices and personal information safe. NEVER click on any links you receive through SMS, Instead, go directly to the official website of the company or service mentioned in the message." 
                        TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
                 <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>

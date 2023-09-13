@@ -188,7 +188,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
 
             Global.firstTest = new1;
 
-            await Navigation.PushAsync(new SecondQuestion());
+            await Navigation.PushAsync(new BusinessSecondQuestion());
 
         }
 
@@ -212,7 +212,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             int new2 = int.Parse(Test2);
 
             Global.seconTest = new2;
-            await Navigation.PushAsync(new ThirdQuestion());
+            await Navigation.PushAsync(new BusinessThirdQuestion());
 
         }
 
@@ -236,11 +236,9 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
 
             Global.thirdTest = new3;
 
-            await Navigation.PushAsync(new ForthQuestion());
+            await Navigation.PushAsync(new BusinesForthQuestion());
 
         }
-
-
 
 
         private async Task ScamCalculatorCommandExecute()

@@ -2,6 +2,8 @@
 using ScamMobileApp.Converters;
 using ScamMobileApp.Helpers;
 using ScamMobileApp.Models.Common;
+using ScamMobileApp.Models.Experience;
+using ScamMobileApp.Models.Feedback;
 using ScamMobileApp.Models.Identity;
 using System;
 using System.Collections.Generic;
@@ -269,6 +271,181 @@ namespace ScamMobileApp.Service
             }
 
         }
+
+        public async Task<(GetProfileModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> GetUserProfileAsync()
+        {
+            try
+            {
+                string url = Global.GetProfileUrl;
+                HttpClient client = new HttpClient();
+
+                //client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Helpers.Global.Token}");
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                HttpResponseMessage response = null;
+                ErrorResponseModel errorData;
+                response = await client.GetAsync(url);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        var data = JsonConvert.DeserializeObject<GetProfileModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, 0);
+                    default:
+                        return (null, null, 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+        }
+
+        public async Task<(GetExperienceModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> GetUserExperienceAsync()
+        {
+            try
+            {
+                string url = Global.GetExperienceUrl;
+                HttpClient client = new HttpClient();
+
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                HttpResponseMessage response = null;
+                ErrorResponseModel errorData;
+                response = await client.GetAsync(url);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        var data = JsonConvert.DeserializeObject<GetExperienceModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, 0);
+                    default:
+                        return (null, null, 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+        }
+
+        public async Task<(GetFeedbackModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> GetUserFeedBackAsync()
+        {
+            try
+            {
+                string url = Global.GetFeedbackUrl;
+                HttpClient client = new HttpClient();
+
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                HttpResponseMessage response = null;
+                ErrorResponseModel errorData;
+                response = await client.GetAsync(url);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        var data = JsonConvert.DeserializeObject<GetFeedbackModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, 0);
+                    default:
+                        return (null, null, 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+        }
+
+        public async Task<(PostExperienceResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> PostExperienceAsync(string title, string message)
+        {
+            try
+            {
+                string url = Global.PostExperienceUrl;
+
+                var ExperienceData = new PostExperienceRequestModel
+                {
+                    message = message, 
+                    title = title
+                };
+                var json = JsonConvert.SerializeObject(ExperienceData);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                ErrorResponseModel errorData;
+
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                var response = await client.PostAsync(url, content);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        PostExperienceResponseModel data = JsonConvert.DeserializeObject<PostExperienceResponseModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, statusCode);
+                    default:
+                        return (null, null, statusCode);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+
+        }
+
 
     }
 }

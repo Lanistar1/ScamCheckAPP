@@ -17,7 +17,7 @@ namespace ScamMobileApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new FirstQuestion());
+            MainPage = new NavigationPage(new Welcome2());
 
         }
 

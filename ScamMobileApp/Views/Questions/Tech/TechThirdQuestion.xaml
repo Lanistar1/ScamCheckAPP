@@ -7,12 +7,12 @@
              BackgroundColor="{StaticResource PrimaryColor}">
 
     <StackLayout Margin="20">
-        <Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
 
         <StackLayout>
             <Image Source="scamquestion3.png"/>
         </StackLayout>
-        <Label Text="Does the email contain urgent or threatening language, asking you to take immediate action?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+        <Label Text="Are they asking for remote access to your computer?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
         <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
             <RadioButton Content="YES" IsChecked="{Binding QuestionThreeCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
@@ -31,7 +31,7 @@
         <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
             <StackLayout>
                 <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                <Label Text="Go through the email sent to you to check if the sender is urging you to take immediate actions. Immediate actions may expose you to immediate loss of your properties." 
+                <Label Text="Scammers often use this tactic to gain control of your computer and potentially access your personal information or install harmful software. To protect yourself, be careful when someone you didn't initiate contact with asks for remote access to your computer. Legitimate tech support would typically only ask for remote access if you've contacted them first about a specific issue. If you're uncertain, don't grant remote access and seek assistance from reputable tech professionals through official channels/websites. Your computer's security matters, so be cautious and only allow remote access from trusted sources." 
                        TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
                 <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>

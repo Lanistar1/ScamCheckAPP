@@ -7,7 +7,7 @@
              BackgroundColor="{StaticResource PrimaryColor}">
 
     <StackLayout Margin="20">
-        <Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
 
         <StackLayout>
             <Image Source="scamquestion2.png"/>

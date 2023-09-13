@@ -7,12 +7,12 @@
              BackgroundColor="{StaticResource PrimaryColor}">
 
     <StackLayout Margin="20">
-        <Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
 
         <StackLayout>
             <Image Source="newforthscam.png"/>
         </StackLayout>
-        <Label Text="Are there any suspicious links or attachments in the email, especially if they redirect to unfamiliar websites?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+        <Label Text="Is the email or message asking for payment or providing instructions on how to make a payment to regain access to your files or computer?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
         <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
             <RadioButton Content="YES" IsChecked="{Binding QuestionFourCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
@@ -34,7 +34,7 @@
         <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
             <StackLayout>
                 <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                <Label Text="Go through the email sent to you to check if the email contains some suspicious links or attachments which can expose you to a possible scam." 
+                <Label Text="This question asks asking whether the email or message you received is requesting payment or giving you instructions on how to pay in order to regain access to your files or computer. Ransomware scammers lock your data and demand payment to unlock it. They often use urgent language and threats to pressure you into paying quickly. Don't follow any payment instructions mentioned in suspicious emails. Instead, immediately disconnect your device from the internet, scan it for malware, and consult a cybersecurity professional. Avoid engaging with these messages and seek professional help to handle the situation properly." 
                        TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
                 <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>

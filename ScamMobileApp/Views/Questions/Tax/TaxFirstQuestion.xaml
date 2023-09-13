@@ -7,12 +7,12 @@
              BackgroundColor="{StaticResource PrimaryColor}">
 
     <StackLayout Margin="20">
-        <Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
 
         <StackLayout>
             <Image Source="scamquestion1.png"/>
         </StackLayout>
-        <Label Text="Is the email or message from a familiar sender or organisation that you regularly interact with?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+        <Label Text="Is the communication from a known and legitimate tax authority, such as the IRS (Internal Revenue Service) or your country's official tax agency?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
         <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
             <RadioButton Content="YES" IsChecked="{Binding QuestionOneCheckYes}" BorderColor="#fff"  BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
@@ -31,8 +31,7 @@
         <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
             <StackLayout>
                 <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                <Label Text="Go through the email sent to you to check if the sender is asking for some of your personal information. Personal information include: Your BVN, address, family members' name, car information, passwords, work history, credit status, social security numbers, car license numbers, insurance policy numbers credit/debit card numbers etc.
-                             All the above listed information are personal information that must not be checked." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <Label Text="This question asks whether the communication you've received, like emails or messages related to taxes, is from a known and legitimate tax authority, such as the IRS (Internal Revenue Service) or your country's official tax agency. Scammers often impersonate tax authorities to trick individuals into sharing personal and financial information. Official tax-related communications are typically sent directly from the authorized tax agency and often have official letterheads or verified contact information. Before taking any action, verify the authenticity of the communication by independently contacting the official tax agency through their official channels. Avoid sharing any personal information until you're sure the communication is legitimate. " TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
                 <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
             </StackLayout>
