@@ -11,13 +11,13 @@ using Xamarin.Forms;
 
 namespace ScamMobileApp.ViewModels.FeedBack
 {
-    public class GetExperienceViewModel : BaseViewModel
+    public class GetFeedbackViewModel : BaseViewModel
     {
-        public GetExperienceViewModel(INavigation navigation)
+        public GetFeedbackViewModel(INavigation navigation)
         {
             Navigation = navigation;
 
-            Task _tsk = FetchFeedback();
+            Task _task = FetchFeedback(limit, offset);
 
         }
 
@@ -35,6 +35,39 @@ namespace ScamMobileApp.ViewModels.FeedBack
             }
         }
 
+
+        private string emptyPlaceholder;
+        public string EmptyPlaceholder
+        {
+            get => emptyPlaceholder;
+            set
+            {
+                emptyPlaceholder = value;
+                OnPropertyChanged(nameof(EmptyPlaceholder));
+            }
+        }
+
+        private string offset;
+        public string Offset
+        {
+            get => offset;
+            set
+            {
+                offset = value;
+                OnPropertyChanged(nameof(Offset));
+            }
+        }
+
+        private string limit;
+        public string Limit
+        {
+            get => limit;
+            set
+            {
+                limit = value;
+                OnPropertyChanged(nameof(Limit));
+            }
+        }
         #endregion
 
         #region Commands
@@ -42,13 +75,13 @@ namespace ScamMobileApp.ViewModels.FeedBack
 
 
         #region functions, methods, events and Navigations
-        private async Task FetchFeedback()
+        private async Task FetchFeedback(string limit, string offset)
         {
             try
             {
-                await LoadingPopup.Instance.Show("Loading Profile detail...");
+                await LoadingPopup.Instance.Show("Fetching Feedbacks...");
 
-                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.GetUserFeedBackAsync();
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.GetUserFeedBackAsync(limit, offset);
                 if (ResponseData != null)
                 {
                     if (ResponseData.data != null)
@@ -58,6 +91,8 @@ namespace ScamMobileApp.ViewModels.FeedBack
                     else
                     {
                         await MessagePopup.Instance.Show(ErrorData.message);
+                        EmptyPlaceholder = "No Feedback found.";
+
                     }
                 }
                 else if (ErrorData != null && StatusCode == 401)

@@ -29,6 +29,11 @@ namespace ScamMobileApp.Helpers
         public static int firstTest;
         public static int seconTest;
         public static int thirdTest;
+        public static string newResult1;
+        public static string newResult2;
+        public static string newResult3;
+        public static string newResult4;
+        public static string NewScamResult;
 
         public static bool Contains(this string target, string value, StringComparison comparison)
         {

@@ -1,6 +1,7 @@
 ﻿using ScamMobileApp.Helpers;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views.Questions;
+using ScamMobileApp.Views.Questions.Identity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -187,7 +188,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
 
             Global.firstTest = new1;
 
-            await Navigation.PushAsync(new SecondQuestion());
+            await Navigation.PushAsync(new IdentitySecondQuestion());
 
         }
 
@@ -211,7 +212,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             int new2 = int.Parse(Test2);
 
             Global.seconTest = new2;
-            await Navigation.PushAsync(new ThirdQuestion());
+            await Navigation.PushAsync(new IdentityThirdQuestion());
 
         }
 
@@ -235,7 +236,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
 
             Global.thirdTest = new3;
 
-            await Navigation.PushAsync(new ForthQuestion());
+            await Navigation.PushAsync(new IdentityFourthQuestion());
 
         }
 
@@ -280,13 +281,13 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 if (newResult > 25)
                 {
                     //await Navigation.PushAsync(new ScamResult());
-                    Application.Current.MainPage = new NavigationPage(new ScamResult());
+                    Application.Current.MainPage = new NavigationPage(new IdentityLikeResult());
 
                 }
                 else
                 {
                     //await Navigation.PushAsync(new ScamResultTwo());
-                    Application.Current.MainPage = new NavigationPage(new ScamResultTwo());
+                    Application.Current.MainPage = new NavigationPage(new IdentityUnlikeLyResult());
 
                 }
             }

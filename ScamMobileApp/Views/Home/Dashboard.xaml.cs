@@ -1,5 +1,6 @@
 ﻿using ScamMobileApp.Utils;
 using ScamMobileApp.ViewModels.Home;
+using ScamMobileApp.Views.Feedback;
 using ScamMobileApp.Views.More;
 using ScamMobileApp.Views.Questions;
 using System;
@@ -58,6 +59,11 @@ namespace ScamMobileApp.Views.Home
         private async void To_Profile(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ProfilePage());
+        }
+
+        private async void To_AllFeedback(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AllFeedbackPage());
         }
     }
 }

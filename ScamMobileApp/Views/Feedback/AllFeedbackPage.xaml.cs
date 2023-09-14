@@ -1,5 +1,4 @@
-﻿using ScamMobileApp.ViewModels.Home;
-using ScamMobileApp.ViewModels.ScamType;
+﻿using ScamMobileApp.ViewModels.FeedBack;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,17 +8,16 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ScamMobileApp.Views.Questions
+namespace ScamMobileApp.Views.Feedback
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TypeOfScam : ContentPage
+    public partial class AllFeedbackPage : ContentPage
     {
-        public TypeOfScam()
+        public AllFeedbackPage()
         {
             InitializeComponent();
-            BindingContext = new scamtypeViewModel(Navigation);
+            BindingContext = new GetFeedbackViewModel(Navigation);
 
         }
-
     }
 }

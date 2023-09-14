@@ -1,4 +1,5 @@
 ﻿using ScamMobileApp.Utils;
+using ScamMobileApp.ViewModels.ScamCalculator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace ScamMobileApp.Views.Questions.ATM
         public AtmUnlikelyResult()
         {
             InitializeComponent();
+            BindingContext = new ATMViewModel(Navigation);
+
         }
 
         private void To_Dashboard(object sender, EventArgs e)

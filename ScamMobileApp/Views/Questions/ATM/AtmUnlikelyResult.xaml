@@ -11,14 +11,12 @@
             <Frame Padding="10" BackgroundColor="{StaticResource TertiaryColor}">
                 <Label Text="Is This A Scam?" TextColor="#ffffff" FontSize="18" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
             </Frame>
-
             <Frame Padding="10" CornerRadius="10" BackgroundColor="#ffffff" Margin="10,50,10,0" VerticalOptions="StartAndExpand">
                 <StackLayout>
                     <StackLayout>
                         <Image Source="scamgreenlogo.png" WidthRequest="100" HeightRequest="100"/>
                     </StackLayout>
                     <Label Text="Unlikely a scam" TextColor="#3DBF4A" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
                     <StackLayout>
                         <Label Text="Based on the Q and A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection. " 
                            TextColor="#000000" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
@@ -32,11 +30,9 @@
                         <Label Text="4. Trust your instincts." TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                         <Label Text="5. Stay vigilant." TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                     </StackLayout>
-
-
                     <Frame HorizontalOptions="CenterAndExpand" BackgroundColor="{StaticResource PrimaryColor}" CornerRadius="5" Padding="40,5" Margin="0,10">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="To_Dashboard"/>
+                            <TapGestureRecognizer Command="{Binding PostFeedbackCommand}"/>
                         </Frame.GestureRecognizers>
                         <Label Text="OK" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
                     </Frame>
@@ -44,5 +40,4 @@
             </Frame>
         </StackLayout>
     </ScrollView>
-
 </ContentPage>

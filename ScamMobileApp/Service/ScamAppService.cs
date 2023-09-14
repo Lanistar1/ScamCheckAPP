@@ -355,11 +355,11 @@ namespace ScamMobileApp.Service
             }
         }
 
-        public async Task<(GetFeedbackModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> GetUserFeedBackAsync()
+        public async Task<(GetFeedbackModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> GetUserFeedBackAsync(string limit, string offset)
         {
             try
             {
-                string url = Global.GetFeedbackUrl;
+                string url = $"{Global.GetFeedbackUrl}?limit={limit}&offset={offset}"; 
                 HttpClient client = new HttpClient();
 
                 client.DefaultRequestHeaders.Add("Authorization", $"{token}");

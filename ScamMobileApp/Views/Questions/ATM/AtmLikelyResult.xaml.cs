@@ -17,7 +17,7 @@ namespace ScamMobileApp.Views.Questions.ATM
         public AtmLikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ScamCalculatorViewModel(Navigation);
+            BindingContext = new ATMViewModel(Navigation);
 
         }
 

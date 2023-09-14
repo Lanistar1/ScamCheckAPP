@@ -6,8 +6,8 @@
              NavigationPage.HasNavigationBar="False">
 
 
-    <StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,120">
-        <Label Text="The only scam we are falling for is the one we get rich by being ourselves!!!" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+    <StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,60">
+        <Label Text="The only scam we are falling for is the one we get rich by being ourselves!!!" Margin="20,0" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
 
         <Frame Padding="10" CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Margin="50,10">
             <Frame.GestureRecognizers>

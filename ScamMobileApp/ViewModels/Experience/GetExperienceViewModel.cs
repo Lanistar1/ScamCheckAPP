@@ -4,6 +4,7 @@ using ScamMobileApp.Models.Identity;
 using ScamMobileApp.Models.ScamType;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
+using ScamMobileApp.Views.Experience;
 using ScamMobileApp.Views.Identity;
 using System;
 using System.Collections.Generic;
@@ -25,11 +26,16 @@ namespace ScamMobileApp.ViewModels.Experience
 
             Task _tsk = FetchExperience();
 
+            TappedCommand = new Command<ExperienceData>(async (model) => await GetTappedExecute(model));
+
 
         }
 
 
         #region Bindings
+
+        private ObservableCollection<ExperienceData> SelectedItems = new ObservableCollection<ExperienceData>();
+
 
         private string searchEntry = string.Empty;
         private CancellationTokenSource searchDelayTokenSource;
@@ -61,7 +67,7 @@ namespace ScamMobileApp.ViewModels.Experience
         }
 
 
-        private string emptyPlaceholder = "Fetching Customers...";
+        private string emptyPlaceholder = "Fetching Experiences...";
         public string EmptyPlaceholder
         {
             get => emptyPlaceholder;
@@ -98,15 +104,40 @@ namespace ScamMobileApp.ViewModels.Experience
         #region Commands
         public Command SearchEntryTextChangedCommand => new Command<string>((searchEntry) => SearchBar_TextChanged(searchEntry));
         public Command SearchCommand { get; }
+        public Command TappedCommand { get; }
         #endregion
 
 
         #region functions, methods, events and Navigations
+
+        private async Task GetTappedExecute(ExperienceData model)
+        {
+            try
+            {
+                var mod = model;
+
+                model.isSelected = model.isSelected ? false : true;
+                if (SelectedItems.Count > 0)
+                {
+                    SelectedItems.Clear();
+                }
+                SelectedItems.Add(model);
+
+                await Navigation.PushAsync(new ExperienceDetailPage(SelectedItems), true);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+
+
         private async Task FetchExperience()
         {
             try
             {
-                await LoadingPopup.Instance.Show("Loading Profile detail...");
+                await LoadingPopup.Instance.Show("Fetching Experience...");
 
                 var (ResponseData, ErrorData, StatusCode) = await _scamAppService.GetUserExperienceAsync();
                 if (ResponseData != null)
@@ -121,6 +152,8 @@ namespace ScamMobileApp.ViewModels.Experience
                     else
                     {
                         await MessagePopup.Instance.Show(ErrorData.message);
+                        EmptyPlaceholder = "No Experience found.";
+
                     }
                 }
                 else if (ErrorData != null && StatusCode == 401)

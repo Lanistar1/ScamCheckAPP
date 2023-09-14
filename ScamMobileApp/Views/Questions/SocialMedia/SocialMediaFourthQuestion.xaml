@@ -12,7 +12,7 @@
         <StackLayout>
             <Image Source="newforthscam.png"/>
         </StackLayout>
-        <Label Text="Are there any suspicious links or attachments in the email, especially if they redirect to unfamiliar websites?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+        <Label Text="Does the message include suspicious links or attachments, or does it redirect you to unfamiliar websites?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
         <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
             <RadioButton Content="YES" IsChecked="{Binding QuestionFourCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
@@ -34,7 +34,7 @@
         <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
             <StackLayout>
                 <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                <Label Text="Go through the email sent to you to check if the email contains some suspicious links or attachments which can expose you to a possible scam." 
+                <Label Text="This question asks whether the message you've received includes suspicious links, attachments, or redirects you to unfamiliar websites. Scammers often use these tactics to trick you into clicking on malicious links that can lead to phishing websites or infect your device with malware.  Avoid clicking on any links or downloading attachments from unknown sources. Instead, independently verify the sender's identity and the legitimacy of the content before taking any action." 
                        TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
                 <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>

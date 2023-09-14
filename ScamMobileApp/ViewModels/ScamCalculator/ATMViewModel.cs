@@ -1,9 +1,15 @@
-﻿using ScamMobileApp.Helpers;
+﻿using Newtonsoft.Json;
+using ScamMobileApp.Helpers;
+using ScamMobileApp.Models.Feedback;
+using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
+using ScamMobileApp.Views;
+using ScamMobileApp.Views.Identity;
 using ScamMobileApp.Views.Questions;
 using ScamMobileApp.Views.Questions.ATM;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -17,6 +23,9 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
         public ATMViewModel(INavigation navigation)
         {
             Navigation = navigation;
+
+            PostFeedbackCommand = new Command(async () => await PostFeedbackCommandExecute());
+
 
             ScamCalculatorCommand = new Command(async () => await ScamCalculatorCommandExecute());
             FirstQuestionCommand = new Command(async () => await FirstQuestionCommandExecute());
@@ -158,6 +167,63 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 OnPropertyChanged(nameof(Test4));
             }
         }
+
+
+        private string result1;
+        public string Result1
+        {
+            get => result1;
+            set
+            {
+                result1 = value;
+                OnPropertyChanged(nameof(Result1));
+            }
+        }
+
+        private string result2;
+        public string Result2
+        {
+            get => result2;
+            set
+            {
+                result2 = value;
+                OnPropertyChanged(nameof(Result2));
+            }
+        }
+
+        private string result3;
+        public string Result3
+        {
+            get => result3;
+            set
+            {
+                result3 = value;
+                OnPropertyChanged(nameof(Result3));
+            }
+        }
+
+        private string result4;
+        public string Result4
+        {
+            get => result4;
+            set
+            {
+                result4 = value;
+                OnPropertyChanged(nameof(Result4));
+            }
+        }
+
+
+        private string scamResult;
+        public string ScamResult
+        {
+            get => scamResult;
+            set
+            {
+                scamResult = value;
+                OnPropertyChanged(nameof(ScamResult));
+            }
+        }
         #endregion
 
         #region Commands
@@ -165,6 +231,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
         public ICommand FirstQuestionCommand { get; }
         public ICommand SecondQuestionCommand { get; }
         public ICommand ThirdQuestionCommand { get; }
+        public ICommand PostFeedbackCommand { get; }
 
         #endregion
 
@@ -175,10 +242,12 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             if (QuestionOneCheckYes == true && QuestionOneCheckNo == false)
             {
                 Test1 = "25";
+                Result1 = "YES";
             }
             else if (QuestionOneCheckYes == false && QuestionOneCheckNo == true)
             {
                 Test1 = "0";
+                Result1 = "NO";
             }
             else
             {
@@ -188,6 +257,8 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             int new1 = int.Parse(Test1);
 
             Global.firstTest = new1;
+
+            Global.newResult1 = Result1;
 
             await Navigation.PushAsync(new ATMSecondQuestion());
 
@@ -199,10 +270,14 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             if (QuestionTwoCheckYes == true && QuestionTwoCheckNo == false)
             {
                 Test2 = "25";
+                Result2 = "YES";
+
             }
             else if (QuestionTwoCheckYes == false && QuestionTwoCheckNo == true)
             {
                 Test2 = "0";
+                Result2 = "NO";
+
             }
             else
             {
@@ -213,6 +288,9 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             int new2 = int.Parse(Test2);
 
             Global.seconTest = new2;
+
+            Global.newResult2 = Result2;
+
             await Navigation.PushAsync(new ATMThirdQuestion());
 
         }
@@ -223,10 +301,14 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             if (QuestionThreeCheckYes == true && QuestionThreeCheckNo == false)
             {
                 Test3 = "25";
+                Result3 = "YES";
+
             }
             else if (QuestionThreeCheckYes == false && QuestionThreeCheckNo == true)
             {
                 Test3 = "0";
+                Result3 = "NO";
+
             }
             else
             {
@@ -237,12 +319,11 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
 
             Global.thirdTest = new3;
 
+            Global.newResult3 = Result3;
+
             await Navigation.PushAsync(new ATMFourthQuestion());
 
         }
-
-
-
 
         private async Task ScamCalculatorCommandExecute()
         {
@@ -253,16 +334,22 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 if (QuestionFourCheckYes == true && QuestionFourCheckNo == false)
                 {
                     Test4 = "25";
+                    Result4 = "YES";
+
                 }
                 else if (QuestionFourCheckYes == false && QuestionFourCheckNo == true)
                 {
                     Test4 = "0";
+                    Result4 = "NO";
+
                 }
                 else
                 {
                     await MessagePopup.Instance.Show("Please answer question 4 to proceed");
                     return;
                 }
+
+                Global.newResult4 = Result4;
 
 
                 int new4 = int.Parse(Test4);
@@ -284,17 +371,109 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                     //await Navigation.PushAsync(new ScamResult());
                     Application.Current.MainPage = new NavigationPage(new AtmLikelyResult());
 
+                    ScamResult = "The Q and A assessment strongly suggest a potential scam. If in doubt, don't use the ATM; report to the bank. Besides these questions, shield your PIN and watch for suspicious individuals. If you suspect a compromised ATM, alert the bank and avoid it. Regularly monitor statements for unauthorized transactions. Stay cautious to prevent ATM skimming scams and report if needed.";
                 }
                 else
                 {
                     //await Navigation.PushAsync(new ScamResultTwo());
                     Application.Current.MainPage = new NavigationPage(new AtmUnlikelyResult());
 
+                    ScamResult = "Based on the Q and A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection.";
                 }
+
+                Global.NewScamResult = ScamResult;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
+            }
+        }
+
+
+        public async Task PostFeedbackCommandExecute()
+        {
+            try
+            {
+                await LoadingPopup.Instance.Show("Saving Feedback...");
+
+                HttpClient client = new HttpClient();
+
+
+                string[] items = { "Does the ATM card slot look suspicious? ", 
+                                    "Does the ATM look different or show signs of damage compared to the last time you used it?",
+                                    "Is there a hidden camera or anything unusual around the ATM keypad area?",
+                                    "Does the ATM display show any error messages or appear to be malfunctioning?"
+                                };
+
+                var newTest1 = Global.newResult1;
+                var newTest2 = Global.newResult2;
+                var newTest3 = Global.newResult3;
+                var newTest4 = Global.newResult4;
+
+                string[] numbers = { newTest1, newTest2, newTest3, newTest4 };
+
+                List<QuestionAnswerData> itemList = new List<QuestionAnswerData>();
+
+                // Combine the item and number lists into a list of ItemInfo objects
+                for (int i = 0; i < Math.Min(items.Length, numbers.Length); i++)
+                {
+                    QuestionAnswerData itemInfo = new QuestionAnswerData
+                    {
+                        question = items[i],
+                        answer = numbers[i]
+                    };
+
+                    itemList.Add(itemInfo);
+                }
+
+                var updatedResult = Global.NewScamResult;
+
+                PostFeedbackRequestModel requestPayload = new PostFeedbackRequestModel()
+                { questionAnswer = itemList, comment = "Good app", output = updatedResult, rating = 4 };
+
+                string payloadJson = JsonConvert.SerializeObject(requestPayload);
+
+                Console.WriteLine(payloadJson);
+
+                string url = Global.PostFeedbackUrl;
+
+                Console.WriteLine(url);
+                StringContent content = new StringContent(payloadJson, Encoding.UTF8, "application/json");
+                client.DefaultRequestHeaders.Add("Authorization", $"{Global.Token}");
+
+                HttpResponseMessage response;
+                response = await client.PostAsync(url, content);
+
+                string result = await response.Content.ReadAsStringAsync();
+                Console.WriteLine(result);
+
+                if (response.StatusCode == System.Net.HttpStatusCode.Created)
+                {
+                    await MessagePopup.Instance.Show("Feedback saved Successfully");
+
+                    Application.Current.MainPage = new NavigationPage(new Tabbed());
+                }
+                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    Application.Current.MainPage = new NavigationPage(new Login());
+
+                }
+                else
+                {
+                    await MessagePopup.Instance.Show("Something went wrong. Please try again later");
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                await MessagePopup.Instance.Show("Something went wrong. Please try again later");
+
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                await LoadingPopup.Instance.Hide();
             }
         }
 

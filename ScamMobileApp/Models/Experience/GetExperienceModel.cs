@@ -18,6 +18,7 @@ namespace ScamMobileApp.Models.Experience
         public DateTime createdAt { get; set; }
         public DateTime updatedAt { get; set; }
         public int __v { get; set; }
+        public bool isSelected { get; set; }
     }
 
     public class GetExperienceModel
