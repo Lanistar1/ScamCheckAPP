@@ -224,6 +224,28 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 OnPropertyChanged(nameof(ScamResult));
             }
         }
+        
+        private string likelyOrNot;
+        public string LikelyOrNot
+        {
+            get => likelyOrNot;
+            set
+            {
+                likelyOrNot = value;
+                OnPropertyChanged(nameof(LikelyOrNot));
+            }
+        }
+
+        private string comment;
+        public string Comment
+        {
+            get => comment;
+            set
+            {
+                comment = value;
+                OnPropertyChanged(nameof(Comment));
+            }
+        }
         #endregion
 
         #region Commands
@@ -371,14 +393,22 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                     //await Navigation.PushAsync(new ScamResult());
                     Application.Current.MainPage = new NavigationPage(new AtmLikelyResult());
 
-                    ScamResult = "The Q and A assessment strongly suggest a potential scam. If in doubt, don't use the ATM; report to the bank. Besides these questions, shield your PIN and watch for suspicious individuals. If you suspect a compromised ATM, alert the bank and avoid it. Regularly monitor statements for unauthorized transactions. Stay cautious to prevent ATM skimming scams and report if needed.";
+                    ScamResult = "The Q&A assessment strongly suggest a potential scam. If in doubt, don't use the ATM; report to the bank. Besides these questions, shield your PIN and watch for suspicious individuals. If you suspect a compromised ATM, alert the bank and avoid it. Regularly monitor statements for unauthorized transactions. Stay cautious to prevent ATM skimming scams and report if needed.";
+
+                    LikelyOrNot = "Likely a scam";
+
+                    Global.likelyOrNot = LikelyOrNot;
                 }
                 else
                 {
                     //await Navigation.PushAsync(new ScamResultTwo());
                     Application.Current.MainPage = new NavigationPage(new AtmUnlikelyResult());
 
-                    ScamResult = "Based on the Q and A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection.";
+                    ScamResult = "Based on the Q&A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection.";
+
+                    LikelyOrNot = "Unlikely a scam";
+
+                    Global.likelyOrNot = LikelyOrNot;
                 }
 
                 Global.NewScamResult = ScamResult;
@@ -428,8 +458,14 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
 
                 var updatedResult = Global.NewScamResult;
 
+                 var scamlikely= Global.likelyOrNot;
+
+                 var newrating= Global.Rating;
+
+                 var UserComment = Global.comment;
+
                 PostFeedbackRequestModel requestPayload = new PostFeedbackRequestModel()
-                { questionAnswer = itemList, comment = "Good app", output = updatedResult, rating = 4 };
+                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "ATM Scam" };
 
                 string payloadJson = JsonConvert.SerializeObject(requestPayload);
 

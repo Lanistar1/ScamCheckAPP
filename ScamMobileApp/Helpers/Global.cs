@@ -34,6 +34,9 @@ namespace ScamMobileApp.Helpers
         public static string newResult3;
         public static string newResult4;
         public static string NewScamResult;
+        public static string likelyOrNot;
+        public static int Rating;
+        public static string comment;
 
         public static bool Contains(this string target, string value, StringComparison comparison)
         {

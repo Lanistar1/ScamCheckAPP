@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:ScamMobileApp.Views"
+             x:Class="ScamMobileApp.Views.StarRatingPage">
+
+    <StackLayout>
+        <!-- Star Rating View -->
+        <StackLayout Orientation="Horizontal" Spacing="5">
+            <local:CustomStarControl x:Name="star1" Rating="{Binding Star1Rating}" />
+            <local:CustomStarControl x:Name="star2" Rating="{Binding Star2Rating}" />
+            <local:CustomStarControl x:Name="star3" Rating="{Binding Star3Rating}" />
+            <local:CustomStarControl x:Name="star4" Rating="{Binding Star4Rating}" />
+            <local:CustomStarControl x:Name="star5" Rating="{Binding Star5Rating}" />
+        </StackLayout>
+
+        <Label Text="Total Rating: " />
+        <Label Text="{Binding TotalRating}" />
+    </StackLayout>
+    
+</ContentPage>

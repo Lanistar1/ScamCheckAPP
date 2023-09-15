@@ -23,10 +23,10 @@
                             VerticalTextAlignment="Center"
                             HorizontalTextAlignment="Start"
                             Grid.Column="0"
-                            Placeholder="Search Feedbacks"
+                            Placeholder="Search by scam type"
                             PlaceholderColor="#cccccc"
                             FontFamily="Poppins-Regular"
-                            Margin="0,0,0,0"
+                            Margin="0,0,0,-5"
                             FontSize="14"
                             Text="{Binding SearchEntry, Mode=TwoWay}"
                             TextColor="White"/>
@@ -40,15 +40,19 @@
                 <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
             </CollectionView.ItemsLayout>
             <CollectionView.EmptyView>
-                <Label  Text="{Binding EmptyPlaceholder}" 
-                        FontFamily="Inter-Mediun"
-                        LineBreakMode="CharacterWrap"
-                        Margin="0,10,0,0"
-                        HorizontalOptions="CenterAndExpand"
-                        HorizontalTextAlignment="Center"
-                        VerticalOptions="Center"
-                        TextColor="White" 
-                        FontSize="16"/>
+                <StackLayout>
+                    <Label  Text="{Binding EmptyPlaceholder}" 
+                            FontFamily="Inter-Mediun"
+                            LineBreakMode="CharacterWrap"
+                            Margin="0,50,0,0"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            TextColor="White" 
+                            FontSize="16"/>
+
+                    <Image Source="blank3.png" WidthRequest="120" HeightRequest="120" Margin="0,10"/>
+                </StackLayout>
             </CollectionView.EmptyView>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -57,15 +61,16 @@
                             <TapGestureRecognizer Command="{Binding Path=BindingContext.TappedCommand, Source={x:Reference cvBanner}}" CommandParameter="{Binding .}"/>
                         </Frame.GestureRecognizers>
                         <FlexLayout JustifyContent="SpaceBetween" VerticalOptions="Center">
-                            <Label Text="{Binding comment}" TextColor="#ffffff" FontSize="13" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                            <Label Text="{Binding createdAt}" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                        </FlexLayout>
-                        <!--<FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                            <Label Text="{Binding title}" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                             <StackLayout>
-                                <Image Source="scamarrow.png"/>
+                                <Label Text="{Binding output}" TextColor="{StaticResource TertiaryColor}" FontSize="16" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Type:" TextColor="#ffffff" FontSize="13" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding scamType}" TextColor="#ffffff" FontSize="14" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                                </StackLayout>
                             </StackLayout>
-                        </FlexLayout>-->
+                            <Label Text="{Binding createdAt}" TextColor="#ffffff" FontSize="14" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                        </FlexLayout>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

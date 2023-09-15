@@ -3,6 +3,7 @@ using ScamMobileApp.Models.Feedback;
 using ScamMobileApp.Models.Home;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
+using ScamMobileApp.Views.Feedback;
 using ScamMobileApp.Views.Identity;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,8 @@ namespace ScamMobileApp.ViewModels.Home
     public class DashboardViewModel : BaseViewModel
     {
         private INavigation Navigation;
+
+        private ObservableCollection<GetFeedbackData> SelectedItems = new ObservableCollection<GetFeedbackData>();
 
         private ObservableCollection<DashboardModel> dashboard;
         public ObservableCollection<DashboardModel> Dashboard
@@ -39,8 +42,8 @@ namespace ScamMobileApp.ViewModels.Home
             }
         }
 
-        private List<GetFeedbackData> feedbackData;
-        public List<GetFeedbackData> FeedbackData
+        private ObservableCollection<GetFeedbackData> feedbackData;
+        public ObservableCollection<GetFeedbackData> FeedbackData
         {
             get => feedbackData;
             set
@@ -90,6 +93,8 @@ namespace ScamMobileApp.ViewModels.Home
 
             Task _task = FetchFeedback(limit, offset);
 
+            TappedCommand = new Command<GetFeedbackData>(async (model) => await GetTappedExecute(model));
+
             Dashboard = new ObservableCollection<DashboardModel>{
                 new DashboardModel { ScamType = "Phishing scam check", Date = "04/08/2023"},
                 new DashboardModel { ScamType = "Vishing scam check", Date = "04/08/2023"},
@@ -99,6 +104,32 @@ namespace ScamMobileApp.ViewModels.Home
              };
 
             Username = Global.UserData.username;
+        }
+
+        #region Commands
+        public Command TappedCommand { get; }
+
+        #endregion
+
+        private async Task GetTappedExecute(GetFeedbackData model)
+        {
+            try
+            {
+                var mod = model;
+
+                model.isSelected = model.isSelected ? false : true;
+                if (SelectedItems.Count > 0)
+                {
+                    SelectedItems.Clear();
+                }
+                SelectedItems.Add(model);
+
+                await Navigation.PushAsync(new FeedbackDetailPage(SelectedItems), true);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
 
@@ -113,7 +144,14 @@ namespace ScamMobileApp.ViewModels.Home
                 {
                     if (ResponseData.data != null)
                     {
-                        FeedbackData = ResponseData.data;
+                        if (ResponseData.data.Count > 0)
+                        {
+                            FeedbackData = ResponseData.data;
+                        }
+                        else
+                        {
+                            EmptyPlaceholder = "No Feedback found.";
+                        }
                     }
                     else
                     {

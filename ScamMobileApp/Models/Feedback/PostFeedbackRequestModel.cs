@@ -13,6 +13,8 @@ namespace ScamMobileApp.Models.Feedback
     public class PostFeedbackRequestModel
     {
         public string output { get; set; }
+        public string outputDetails { get; set; }
+        public string scamType { get; set; }
         public List<QuestionAnswerData> questionAnswer { get; set; }
         public int rating { get; set; }
         public string comment { get; set; }

@@ -1,4 +1,7 @@
-﻿using ScamMobileApp.Utils;
+﻿using Rg.Plugins.Popup.Extensions;
+using ScamMobileApp.Popup;
+using ScamMobileApp.Utils;
+using ScamMobileApp.ViewModels.ScamCalculator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +19,8 @@ namespace ScamMobileApp.Views.Questions.Business
         public BusinessLikelyResult()
         {
             InitializeComponent();
+            BindingContext = new ATMViewModel(Navigation);
+
         }
 
         private void To_Dashboard(object sender, EventArgs e)
@@ -44,6 +49,11 @@ namespace ScamMobileApp.Views.Questions.Business
                 //}
             });
             return true;
+        }
+
+        private void To_FeedbackPopup(object sender, EventArgs e)
+        {
+            Navigation.PushPopupAsync(new FeedbackPopup());
         }
     }
 }
