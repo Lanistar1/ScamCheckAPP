@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.SocialMedia
         public SocialMediaLikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new SocialMediaViewModel(Navigation);
 
         }
 

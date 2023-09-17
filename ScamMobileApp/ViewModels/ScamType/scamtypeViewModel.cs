@@ -135,7 +135,7 @@ namespace ScamMobileApp.ViewModels.ScamType
             ScamType = new ObservableCollection<ScamTypeData>{
                 new ScamTypeData { ScamType = "PHISHING SCAM (email)", DishImage = "scamarrow.png"},
                 new ScamTypeData { ScamType = "VISHING SCAM (Phone calls or voice messages) ", DishImage = "scamarrow.png"},
-                new ScamTypeData { ScamType = "SMIShING SCAM (text messages SMS)   ", DishImage = "scamarrow.png"},
+                new ScamTypeData { ScamType = "SMISHING SCAM (text messages SMS)   ", DishImage = "scamarrow.png"},
                 new ScamTypeData { ScamType = "INVESTMENT SCAM", DishImage = "scamarrow.png"},
                 new ScamTypeData { ScamType = "ROMANCE SCAM", DishImage = "scamarrow.png"},
                 new ScamTypeData { ScamType = "QR CODE SCAMS", DishImage = "scamarrow.png"},

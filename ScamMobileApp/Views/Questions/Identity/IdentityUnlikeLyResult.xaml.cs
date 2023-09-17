@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Identity
         public IdentityUnlikeLyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new IdentityTheftViewModel(Navigation);
 
         }
 

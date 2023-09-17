@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Tech
         public TechLikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new TechSupportViewModel(Navigation);
 
         }
 

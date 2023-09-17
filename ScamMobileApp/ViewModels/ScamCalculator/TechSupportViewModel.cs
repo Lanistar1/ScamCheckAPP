@@ -391,7 +391,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                     //await Navigation.PushAsync(new ScamResult());
                     Application.Current.MainPage = new NavigationPage(new TechLikelyResult());
 
-                    ScamResult = "The Q and A assessment strongly suggest a potential scam. If in doubt, don't use the ATM; report to the bank. Besides these questions, shield your PIN and watch for suspicious individuals. If you suspect a compromised ATM, alert the bank and avoid it. Regularly monitor statements for unauthorized transactions. Stay cautious to prevent ATM skimming scams and report if needed.";
+                    ScamResult = "The Q&A assessment strongly suggests a probable scam. Tech support scammers aim for impulsive actions. Beware of rushed software downloads or sharing data. Be skeptical of unsolicited offers; verify the caller's identity. Legitimate tech support won't ask for personal info or instant payment. If doubtful, hang up, and contact the company through official channels to verify. Stay cautious and informed to safeguard against tech support scams.";
 
                     LikelyOrNot = "Likely a scam";
 
@@ -427,10 +427,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 HttpClient client = new HttpClient();
 
 
-                string[] items = { "Does the ATM card slot look suspicious? ",
-                                    "Does the ATM look different or show signs of damage compared to the last time you used it?",
-                                    "Is there a hidden camera or anything unusual around the ATM keypad area?",
-                                    "Does the ATM display show any error messages or appear to be malfunctioning?"
+                string[] items = {  "Did the caller or sender initiate contact unexpectedly, claiming to be from a tech support company (e.g., Microsoft, Apple) or a reputable organization (e.g. banks)?",
+                                    "Is the caller or sender using scare tactics, such as claiming that your computer is infected with a virus or facing imminent security threats?",
+                                    "Are they asking for remote access to your computer?",
+                                    "Is the tech support representative requesting payment for their services or software? "
                                 };
 
                 var newTest1 = Global.newResult1;
@@ -463,7 +463,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 var UserComment = Global.comment;
 
                 PostFeedbackRequestModel requestPayload = new PostFeedbackRequestModel()
-                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "ATM Scam" };
+                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "Tech Support Scam" };
 
                 string payloadJson = JsonConvert.SerializeObject(requestPayload);
 

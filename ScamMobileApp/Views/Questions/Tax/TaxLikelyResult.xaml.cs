@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Tax
         public TaxLikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new TaxViewModel(Navigation);
 
         }
 

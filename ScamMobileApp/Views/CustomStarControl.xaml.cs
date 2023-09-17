@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScamMobileApp.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,8 +16,10 @@ namespace ScamMobileApp.Views
 
     public partial class CustomStarControl : ContentView
     {
+        private Image[] stars;
+
         public static readonly BindableProperty RatingProperty =
-            BindableProperty.Create(nameof(Rating), typeof(int), typeof(CustomStarControl), 0, propertyChanged: RatingPropertyChanged);
+            BindableProperty.Create(nameof(Rating), typeof(int), typeof(CustomStarControl), 0, propertyChanged: RatingChanged);
 
         public int Rating
         {
@@ -24,38 +27,44 @@ namespace ScamMobileApp.Views
             set { SetValue(RatingProperty, value); }
         }
 
-        public event EventHandler<int> RatingChanged;
-
-        private static void RatingPropertyChanged(BindableObject bindable, object oldValue, object newValue)
+        private static void RatingChanged(BindableObject bindable, object oldValue, object newValue)
         {
             var control = (CustomStarControl)bindable;
             int rating = (int)newValue;
 
-            // Show/hide filled star based on the rating value
-            control.filledStar.IsVisible = rating > 0;
-
-            // Raise the RatingChanged event
-            control.OnRatingChanged(rating);
-        }
-
-        private void OnRatingChanged(int newRating)
-        {
-            RatingChanged?.Invoke(this, newRating);
+            // Update the appearance of the stars based on the rating value
+            for (int i = 0; i < control.stars.Length; i++)
+            {
+                control.stars[i].Source = i < rating ? "fillstar.png" : "emptystar.png";
+            }
         }
 
         public CustomStarControl()
         {
             InitializeComponent();
 
-            var tapGestureRecognizer = new TapGestureRecognizer();
-            tapGestureRecognizer.Tapped += (s, e) =>
-            {
-                // Toggle the rating when the star is tapped
-                Rating = Rating == 0 ? 1 : 0;
-            };
+            stars = new Image[] { star1, star2, star3, star4, star5 };
 
-            // Add the tap gesture to the grid
-            emptyStar.GestureRecognizers.Add(tapGestureRecognizer);
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += OnStarTapped;
+
+            // Add the tap gesture to each star
+            foreach (var star in stars)
+            {
+                star.GestureRecognizers.Add(tapGestureRecognizer);
+            }
+        }
+
+        private void OnStarTapped(object sender, EventArgs e)
+        {
+            var tappedStar = (Image)sender;
+            int starNumber = Array.IndexOf(stars, tappedStar) + 1;
+
+            // Set the rating to the star number and update the appearance
+            Rating = starNumber;
+
+            Global.Rating = Rating;
+
         }
     }
 }

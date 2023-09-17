@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ScamMobileApp.ViewModels.Experience;
+using ScamMobileApp.Views.Experience;
 
 namespace ScamMobileApp.Views.Home
 {
@@ -28,6 +29,11 @@ namespace ScamMobileApp.Views.Home
         private void To_Terms(object sender, EventArgs e)
         {
             Navigation.PushAsync(new TermsAndConditions());
+        }
+
+        private void To_ViewStories(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AllExperience());
         }
     }
 }

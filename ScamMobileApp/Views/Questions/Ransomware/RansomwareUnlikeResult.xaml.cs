@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Ransomware
         public RansomwareUnlikeResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new RansomewareViewModel(Navigation);
 
         }
 

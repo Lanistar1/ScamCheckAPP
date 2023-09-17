@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Grandparent
         public GrandParentUnlikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new GrandParentViewModel(Navigation);
 
         }
 

@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Investment
         public InvestmentUnlikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new InvestmentViewModel(Navigation);
 
         }
 

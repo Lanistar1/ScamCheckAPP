@@ -460,7 +460,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 var UserComment = Global.comment;
 
                 PostFeedbackRequestModel requestPayload = new PostFeedbackRequestModel()
-                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "ATM Scam" };
+                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "Investment Scam" };
 
                 string payloadJson = JsonConvert.SerializeObject(requestPayload);
 

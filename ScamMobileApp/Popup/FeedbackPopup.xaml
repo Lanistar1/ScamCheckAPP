@@ -23,13 +23,16 @@
             <Label Text="Please rate the app" TextColor="#ffffff" FontSize="15" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
 
-            <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="CenterAndExpand">
+            <!--<StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="CenterAndExpand">
                 <local:CustomStarControl x:Name="star1" Rating="{Binding Star1Rating}" />
                 <local:CustomStarControl x:Name="star2" Rating="{Binding Star2Rating}" />
                 <local:CustomStarControl x:Name="star3" Rating="{Binding Star3Rating}" />
                 <local:CustomStarControl x:Name="star4" Rating="{Binding Star4Rating}" />
                 <local:CustomStarControl x:Name="star5" Rating="{Binding Star5Rating}" />
-            </StackLayout>
+            </StackLayout>-->
+
+            <local:CustomStarControl x:Name="starRating" Rating="{Binding StarRating}" />
+
 
             <StackLayout Margin="0,10,0,0">
                 <Label  Text="Comment"

@@ -392,7 +392,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                     //await Navigation.PushAsync(new ScamResult());
                     Application.Current.MainPage = new NavigationPage(new SmishingLikelyResult());
 
-                    ScamResult = "The Q and A assessment strongly suggest a potential scam. If in doubt, don't use the ATM; report to the bank. Besides these questions, shield your PIN and watch for suspicious individuals. If you suspect a compromised ATM, alert the bank and avoid it. Regularly monitor statements for unauthorized transactions. Stay cautious to prevent ATM skimming scams and report if needed.";
+                    ScamResult = "The Q&A assessmnet strongly suggests a probable scam. Smishing messages can lead to harmful websites. Hover over links to identify suspicious URLs. Ask these questions to safeguard against smishing scams, stay cautious about sharing personal info, and avoid unknown links. Verify messages by contacting the sender through official channels or their website.";
 
                     LikelyOrNot = "Likely a scam";
 
@@ -403,7 +403,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                     //await Navigation.PushAsync(new ScamResultTwo());
                     Application.Current.MainPage = new NavigationPage(new SmishingUnlikelyResult());
 
-                    ScamResult = "Based on the Q and A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection.";
+                    ScamResult = "Based on the Q&A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection.";
 
                     LikelyOrNot = "Unlikely a scam";
 
@@ -428,10 +428,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 HttpClient client = new HttpClient();
 
 
-                string[] items = { "Does the ATM card slot look suspicious? ",
-                                    "Does the ATM look different or show signs of damage compared to the last time you used it?",
-                                    "Is there a hidden camera or anything unusual around the ATM keypad area?",
-                                    "Does the ATM display show any error messages or appear to be malfunctioning?"
+                string[] items = { "Did you receive an unsolicited text message?",
+                                    "Is the message asking for personal information, such as passwords, Social Security numbers, credit card details, or login credentials?",
+                                    "Does the message contain urgent or alarming language, pressuring you to take immediate action or respond quickly?",
+                                    "Does the message contain suspicious links or prompts to click on unknown URLs?"
                                 };
 
                 var newTest1 = Global.newResult1;
@@ -464,7 +464,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 var UserComment = Global.comment;
 
                 PostFeedbackRequestModel requestPayload = new PostFeedbackRequestModel()
-                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "ATM Scam" };
+                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "Smishing Scam" };
 
                 string payloadJson = JsonConvert.SerializeObject(requestPayload);
 

@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Romance
         public RomanceLikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new RomanceViewModel(Navigation);
 
         }
 

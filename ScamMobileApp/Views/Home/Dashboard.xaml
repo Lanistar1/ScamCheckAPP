@@ -75,9 +75,9 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,20">
+            <!--<StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,20">
                 <ImageButton BackgroundColor="Transparent" Clicked="To_firstQuestion" Source="scammeter.png" WidthRequest="100" HeightRequest="100" />
-            </StackLayout>
+            </StackLayout>-->
         </StackLayout>
     </Grid>
 </ContentPage>

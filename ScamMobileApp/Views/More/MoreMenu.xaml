@@ -5,7 +5,7 @@
              BackgroundColor="{StaticResource PrimaryColor}">
 
     <ScrollView VerticalScrollBarVisibility="Never">
-        <StackLayout Margin="50,20,50,20">
+        <StackLayout Margin="50,40,50,20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>

@@ -392,7 +392,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                     //await Navigation.PushAsync(new ScamResult());
                     Application.Current.MainPage = new NavigationPage(new RansomwareLikelyResult());
 
-                    ScamResult = "The Q and A assessment strongly suggest a potential scam. If in doubt, don't use the ATM; report to the bank. Besides these questions, shield your PIN and watch for suspicious individuals. If you suspect a compromised ATM, alert the bank and avoid it. Regularly monitor statements for unauthorized transactions. Stay cautious to prevent ATM skimming scams and report if needed.";
+                    ScamResult = "The Q&A assessment strongly indicates a probable scam. If in doubt, don't make payments; seek professional help. Be careful with email attachments and links, especially if unexpected. Ransomware can lead to file encryption and data breaches. If you suspect an attack or get suspicious messages, avoid engagement and report to IT or cybersecurity. Prevention and awareness are key to avoiding ransomware scams.";
 
                     LikelyOrNot = "Likely a scam";
 
@@ -403,7 +403,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                     //await Navigation.PushAsync(new ScamResultTwo());
                     Application.Current.MainPage = new NavigationPage(new RansomwareUnlikeResult());
 
-                    ScamResult = "Based on the Q and A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection.";
+                    ScamResult = "Based on the Q&A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection.";
 
                     LikelyOrNot = "Unlikely a scam";
 
@@ -428,10 +428,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 HttpClient client = new HttpClient();
 
 
-                string[] items = { "Does the ATM card slot look suspicious? ",
-                                    "Does the ATM look different or show signs of damage compared to the last time you used it?",
-                                    "Is there a hidden camera or anything unusual around the ATM keypad area?",
-                                    "Does the ATM display show any error messages or appear to be malfunctioning?"
+                string[] items = { "Is the email or message unexpected or from an unknown sender, especially if it contains urgent or alarming content?",
+                                    "Does the email or message contain links or attachments that you weren't anticipating or were not explicitly requested?",
+                                    "Is the email or message poorly written, contain spelling or grammar errors, or come from a suspicious or unusual email address?",
+                                    "Is the email or message asking for payment or providing instructions on how to make a payment to regain access to your files or computer?"
                                 };
 
                 var newTest1 = Global.newResult1;
@@ -464,7 +464,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 var UserComment = Global.comment;
 
                 PostFeedbackRequestModel requestPayload = new PostFeedbackRequestModel()
-                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "ATM Scam" };
+                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "Ransomeware Scam" };
 
                 string payloadJson = JsonConvert.SerializeObject(requestPayload);
 

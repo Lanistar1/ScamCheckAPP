@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Employment
         public EmploymentUnlikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new EmploymentViewModel(Navigation);
 
         }
 

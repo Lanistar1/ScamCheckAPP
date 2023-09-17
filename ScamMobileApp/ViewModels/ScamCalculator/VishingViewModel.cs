@@ -391,7 +391,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                     //await Navigation.PushAsync(new ScamResult());
                     Application.Current.MainPage = new NavigationPage(new VishingLikelyQuestion());
 
-                    ScamResult = "The Q and A assessment strongly suggest a potential scam. If in doubt, don't use the ATM; report to the bank. Besides these questions, shield your PIN and watch for suspicious individuals. If you suspect a compromised ATM, alert the bank and avoid it. Regularly monitor statements for unauthorized transactions. Stay cautious to prevent ATM skimming scams and report if needed.";
+                    ScamResult = "These Q&A assessment strongly suggest a high likelihood of a scam. Scammers exploit trust and unfamiliar payment methods. Asking these questions during calls can help spot vishing scams, but if in doubt, verify the caller independently through official contact info or their website before taking action.";
 
                     LikelyOrNot = "Likely a scam";
 
@@ -427,10 +427,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 HttpClient client = new HttpClient();
 
 
-                string[] items = { "Does the ATM card slot look suspicious? ",
-                                    "Does the ATM look different or show signs of damage compared to the last time you used it?",
-                                    "Is there a hidden camera or anything unusual around the ATM keypad area?",
-                                    "Does the ATM display show any error messages or appear to be malfunctioning?"
+                string[] items = {  "Did the caller initiate the contact and ask for personal information eg., your ID, financial details, etc?",
+                                    "Did the caller avoid giving you reliable contact details or act unclear when you requested their name, company, or a call-back number?",
+                                    "Did the caller create a sense of urgency, claiming that you must act immediately to prevent negative consequences?",
+                                    "Did the caller ask you to make a payment using unconventional methods?"
                                 };
 
                 var newTest1 = Global.newResult1;
@@ -463,7 +463,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 var UserComment = Global.comment;
 
                 PostFeedbackRequestModel requestPayload = new PostFeedbackRequestModel()
-                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "ATM Scam" };
+                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "Vishing Scam" };
 
                 string payloadJson = JsonConvert.SerializeObject(requestPayload);
 

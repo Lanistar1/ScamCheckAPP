@@ -51,8 +51,11 @@
                                             Margin="10"
                                         HorizontalOptions="Fill" 
                                         HeightRequest="50">
+                    <pv:PancakeView.Border>
+                        <pv:Border Color="Blue" Thickness="2"/>
+                    </pv:PancakeView.Border>
                     <Controls:CustomEntry PlaceholderColor="#cccccc" 
-                                                    Placeholder="Search" 
+                                                    Placeholder="Search Scam" 
                                                    ReturnType="Done"
                                                    Keyboard="Default"
                                                    FontSize="16"

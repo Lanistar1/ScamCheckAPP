@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Smishing
         public SmishingUnlikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new SmishingViewModel(Navigation);
 
         }
 

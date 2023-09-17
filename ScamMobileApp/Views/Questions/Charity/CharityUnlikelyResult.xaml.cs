@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Charity
         public CharityUnlikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new CharityViewModel(Navigation);
 
         }
 

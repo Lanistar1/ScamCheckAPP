@@ -20,8 +20,9 @@ namespace ScamMobileApp.ViewModels.FeedBack
 
             UserFeedbackData = new ObservableCollection<GetFeedbackData>(SelectedItems);
 
-            FirstName = UserFeedbackData.FirstOrDefault().userDetails.firstname;
-            //ProductName = ProductDetail.FirstOrDefault().name;
+            ScamType = UserFeedbackData.FirstOrDefault().scamType;
+
+            QuestionData = UserFeedbackData.FirstOrDefault().questionAnswer;
 
 
         }
@@ -49,25 +50,25 @@ namespace ScamMobileApp.ViewModels.FeedBack
                 OnPropertyChanged(nameof(UserFeedbackData));
             }
         }
-        private string firstName;
-        public string FirstName
+        private string scamType;
+        public string ScamType
         {
-            get => firstName;
+            get => scamType;
             set
             {
-                firstName = value;
-                OnPropertyChanged(nameof(FirstName));
+                scamType = value;
+                OnPropertyChanged(nameof(ScamType));
             }
         }
 
-        private string productName;
-        public string ProductName
+        private List<QuestionAnswer> questionData;
+        public List<QuestionAnswer> QuestionData
         {
-            get => productName;
+            get => questionData;
             set
             {
-                productName = value;
-                OnPropertyChanged(nameof(ProductName));
+                questionData = value;
+                OnPropertyChanged(nameof(QuestionData));
             }
         }
 

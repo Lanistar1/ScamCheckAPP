@@ -29,9 +29,22 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             SecondQuestionCommand = new Command(async () => await SecondQuestionCommandExecute());
             ThirdQuestionCommand = new Command(async () => await ThirdQuestionCommandExecute());
 
+            ScamQA = "ScamQ&A";
         }
 
         #region Bindings
+        private string scamQA;
+        public string ScamQA
+        {
+            get => scamQA;
+            set
+            {
+                scamQA = value;
+                OnPropertyChanged(nameof(ScamQA));
+            }
+        }
+
+
         private bool questionOneCheckYes;
         public bool QuestionOneCheckYes
         {
@@ -457,7 +470,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 var UserComment = Global.comment;
 
                 PostFeedbackRequestModel requestPayload = new PostFeedbackRequestModel()
-                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "ATM Scam" };
+                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "Business Email Compromise scams" };
 
                 string payloadJson = JsonConvert.SerializeObject(requestPayload);
 

@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Giftcard
         public GiftCardLikelyQuestion()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new GiftCardViewModel(Navigation);
 
         }
 

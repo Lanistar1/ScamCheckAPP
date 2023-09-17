@@ -391,7 +391,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                     //await Navigation.PushAsync(new ScamResult());
                     Application.Current.MainPage = new NavigationPage(new TaxLikelyResult());
 
-                    ScamResult = "The Q and A assessment strongly suggest a potential scam. If in doubt, don't use the ATM; report to the bank. Besides these questions, shield your PIN and watch for suspicious individuals. If you suspect a compromised ATM, alert the bank and avoid it. Regularly monitor statements for unauthorized transactions. Stay cautious to prevent ATM skimming scams and report if needed.";
+                    ScamResult = "The Q&A assessment strongly suggests a potential scam. If communication seems suspicious, avoid responding or sharing info. Contact the relevant tax agency directly using the official contact information to verify the situation. Don't click links or download attachments from unsolicited tax-related emails. Report if necessary.";
 
                     LikelyOrNot = "Likely a scam";
 
@@ -402,7 +402,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                     //await Navigation.PushAsync(new ScamResultTwo());
                     Application.Current.MainPage = new NavigationPage(new TaxUnlikelyResult());
 
-                    ScamResult = "Based on the Q and A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection.";
+                    ScamResult = "Based on the Q&A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection.";
 
                     LikelyOrNot = "Unlikely a scam";
 
@@ -427,10 +427,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 HttpClient client = new HttpClient();
 
 
-                string[] items = { "Does the ATM card slot look suspicious? ",
-                                    "Does the ATM look different or show signs of damage compared to the last time you used it?",
-                                    "Is there a hidden camera or anything unusual around the ATM keypad area?",
-                                    "Does the ATM display show any error messages or appear to be malfunctioning?"
+                string[] items = { "Is the communication from a known and legitimate tax authority, such as the IRS (Internal Revenue Service) or your country's official tax agency? ",
+                                    "Does the communication request personal information, such as your Social Security number, bank account details, or passwords?",
+                                    "Is the communication pressuring you to make an immediate payment or threatening legal consequences, such as arrest or legal action?",
+                                    "Is the communication filled with grammatical errors, spelling mistakes, or unusual formatting?"
                                 };
 
                 var newTest1 = Global.newResult1;
@@ -463,7 +463,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 var UserComment = Global.comment;
 
                 PostFeedbackRequestModel requestPayload = new PostFeedbackRequestModel()
-                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "ATM Scam" };
+                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "Tax Scam" };
 
                 string payloadJson = JsonConvert.SerializeObject(requestPayload);
 

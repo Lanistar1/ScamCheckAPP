@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.QRcode
         public QRcodeLikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new QrcodeViewModel(Navigation);
 
         }
 

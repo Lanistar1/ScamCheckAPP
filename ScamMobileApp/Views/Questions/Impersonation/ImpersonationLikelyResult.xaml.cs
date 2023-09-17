@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Impersonation
         public ImpersonationLikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new ImpersonationViewModel(Navigation);
 
         }
 

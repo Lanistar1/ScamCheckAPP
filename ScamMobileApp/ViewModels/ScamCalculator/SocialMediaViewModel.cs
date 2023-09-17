@@ -392,7 +392,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                     //await Navigation.PushAsync(new ScamResult());
                     Application.Current.MainPage = new NavigationPage(new SocialMediaLikelyResult());
 
-                    ScamResult = "The Q and A assessment strongly suggest a potential scam. If in doubt, don't use the ATM; report to the bank. Besides these questions, shield your PIN and watch for suspicious individuals. If you suspect a compromised ATM, alert the bank and avoid it. Regularly monitor statements for unauthorized transactions. Stay cautious to prevent ATM skimming scams and report if needed.";
+                    ScamResult = "The Q&A assessment strongly suggests a probable social media scam. Steer clear of links and attachments from unverified sources. If you get a doubtful message, don't respond or click links. Verify the sender separately, avoid sharing data or money, and report to the platform to protect others.";
 
                     LikelyOrNot = "Likely a scam";
 
@@ -428,10 +428,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 HttpClient client = new HttpClient();
 
 
-                string[] items = { "Does the ATM card slot look suspicious? ",
-                                    "Does the ATM look different or show signs of damage compared to the last time you used it?",
-                                    "Is there a hidden camera or anything unusual around the ATM keypad area?",
-                                    "Does the ATM display show any error messages or appear to be malfunctioning?"
+                string[] items = {  "Is the message or request coming from a verified and trusted account that you've interacted with before?",
+                                    "Does the message contain urgent language, asking you to act quickly or share personal information?",
+                                    "Is the message asking for money, gift cards, or any form of financial assistance?",
+                                    "Does the message include suspicious links or attachments, or does it redirect you to unfamiliar websites?"
                                 };
 
                 var newTest1 = Global.newResult1;
@@ -464,7 +464,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 var UserComment = Global.comment;
 
                 PostFeedbackRequestModel requestPayload = new PostFeedbackRequestModel()
-                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "ATM Scam" };
+                { questionAnswer = itemList, comment = UserComment, output = scamlikely, rating = newrating, outputDetails = updatedResult, scamType = "Social Media Scam" };
 
                 string payloadJson = JsonConvert.SerializeObject(requestPayload);
 

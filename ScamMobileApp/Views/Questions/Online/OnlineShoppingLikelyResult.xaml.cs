@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Online
         public OnlineShoppingLikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new OnlineShoppingViewmodel(Navigation);
 
         }
 

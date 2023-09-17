@@ -380,6 +380,9 @@
     <EmbeddedResource Update="Views\Questions\QRcode\QRcodeUnlikelyResult.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Questions\QuestionsAndAnswer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Questions\Ransomware\RansomewareFirstQuestion.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

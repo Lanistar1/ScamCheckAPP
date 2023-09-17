@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Lottery
         public LotteryUnlikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new LotteryViewModel(Navigation);
 
         }
 

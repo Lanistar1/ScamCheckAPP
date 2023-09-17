@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Vishing
         public VishingUnlikelyQuestion()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new VishingViewModel(Navigation);
 
         }
 

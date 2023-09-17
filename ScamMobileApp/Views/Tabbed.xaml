@@ -1,20 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-            xmlns:Pages1="clr-namespace:ScamMobileApp.Views.Home" 
-            xmlns:Pages2="clr-namespace:ScamMobileApp.Views.More"
             x:Class="ScamMobileApp.Views.Tabbed"
-            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" xmlns:Pages11="clr-namespace:ScamMobileApp.Views.Experience"
-            android:TabbedPage.ToolbarPlacement="Bottom"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:Pages1="clr-namespace:ScamMobileApp.Views.More" 
+            xmlns:Pages2="clr-namespace:ScamMobileApp.Views.Questions" 
+            xmlns:Pages3="clr-namespace:ScamMobileApp.Views.Home"
             NavigationPage.HasNavigationBar="False"
+            android:TabbedPage.ToolbarPlacement="Bottom"
             BarBackgroundColor="White"
-            android:TabbedPage.BarItemColor="#B2B2B2"
-            android:TabbedPage.BarSelectedItemColor="{StaticResource TertiaryColor}">
+            android:TabbedPage.BarItemColor="{StaticResource TertiaryColor}"
+            android:TabbedPage.BarSelectedItemColor="#FA941D">
 
 
     <!--Pages can be added as references or inline-->
-    <Pages1:Dashboard Title="Home" IconImageSource="scamhome.png"></Pages1:Dashboard>
-    <Pages11:AllExperience Title="Experience" IconImageSource="antiscam.png"></Pages11:AllExperience>
-    <Pages2:MoreMenu Title="Menu" IconImageSource="scammenu.png"></Pages2:MoreMenu>
+    <Pages1:MoreMenu Title="Menu" IconImageSource="scammenu.png"></Pages1:MoreMenu>
+    <Pages2:QuestionsAndAnswer IconImageSource="scamqa.png"></Pages2:QuestionsAndAnswer>
+    <Pages3:ShareScamExperience Title="Your Story" IconImageSource="antiscam.png"></Pages3:ShareScamExperience>
+    <Pages3:Dashboard Title="Home" IconImageSource="scamhome.png"></Pages3:Dashboard>
     
 </TabbedPage>

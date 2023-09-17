@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Phishing
         public PhishingLikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new PhishingViewModel(Navigation);
 
         }
 

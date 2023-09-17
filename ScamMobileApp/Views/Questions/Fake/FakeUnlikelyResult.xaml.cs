@@ -19,7 +19,7 @@ namespace ScamMobileApp.Views.Questions.Fake
         public FakeUnlikelyResult()
         {
             InitializeComponent();
-            BindingContext = new ATMViewModel(Navigation);
+            BindingContext = new FakeInvoiceViewModel(Navigation);
 
         }
 
