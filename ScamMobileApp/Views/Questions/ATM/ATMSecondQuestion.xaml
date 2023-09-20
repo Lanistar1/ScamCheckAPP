@@ -14,8 +14,8 @@
         <Label Text="Does the ATM look different or show signs of damage compared to the last time you used it?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
         <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
-            <RadioButton Content="YES" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
-            <RadioButton Content="NO" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
         </StackLayout>
         <FlexLayout JustifyContent="SpaceBetween">
             <StackLayout>
@@ -33,7 +33,7 @@
                 <Label Text="Skimmers - scammers? can physically alter ATMs to install their devices to capture keystrokes or display false instructions.   Scammers who set up skimming devices on ATMs might cause visible changes or damage to the machine. These changes could include loose parts, unusual attachments, or signs of tampering.  If you notice any differences or signs of damage you didn't see before, it's a sign that something might be wrong. Please don't use that ATM and report it to the bank or authorities. Prioritize using ATMs that look well-maintained and secure. Being cautious about changes in ATM appearance can help you avoid falling victim to skimming scams." 
                        TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
-                <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <!--<Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
             </StackLayout>
         </Frame>
     </StackLayout>

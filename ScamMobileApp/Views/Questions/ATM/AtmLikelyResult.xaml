@@ -19,12 +19,36 @@
                     <Label Text="Likely a scam" TextColor="#D03434" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                     <StackLayout>
                         <Label Text="The Q and A assessment strongly suggest a potential scam. If in doubt, don't use the ATM; report to the bank. Besides these questions, shield your PIN and watch for suspicious individuals. If you suspect a compromised ATM, alert the bank and avoid it. Regularly monitor statements for unauthorized transactions. Stay cautious to prevent ATM skimming scams and report if needed." 
-                   TextColor="#000000" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                               TextColor="#000000" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Recommendations:" TextColor="#000000" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
-                        <Label Text="1. Report this scam (report here)" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0"/>
-                        <Label Text="2. Share your experience in the Anti-Scam Movement page (Anti-Scam Movement)" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,-3"/>
+                        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="StartAndExpand" Margin="0">
+                            <Label Text="1. Report this scam" TextColor="#000000"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#01FF1A" Margin="5,0,0,0" FontSize="Subtitle">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text=" (report here)" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="To_ScamLink"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                        <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="2. Share your experience in the " />
+                                    <Span Text="Anti-Scam Movement" TextColor="#01FF1A" FontSize="Subtitle">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="To_AntiScam"/>
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                    <Span Text=" page" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
                         <Label Text="3. Scammed? Take Action." TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                     </StackLayout>
                     <Grid>
@@ -32,7 +56,7 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Frame BackgroundColor="#DA1651" CornerRadius="5" Margin="0,10" Grid.Column="0" Padding="0,10">
+                        <Frame BackgroundColor="#DA1651" CornerRadius="5" Margin="0,10" Grid.Column="0" Padding="0,10" IsVisible="True" x:Name="Atmlikely">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="To_FeedbackPopup"/>
                             </Frame.GestureRecognizers>
@@ -42,7 +66,7 @@
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding PostFeedbackCommand}"/>
                             </Frame.GestureRecognizers>
-                            <Label Text="OK" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,5"/>
+                            <Label Text="Save" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,5"/>
                         </Frame>
                     </Grid>
                     

@@ -15,8 +15,8 @@
         <Label Text="Does the email or message contain links or attachments that you weren't anticipating or were not explicitly requested?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
         <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
-            <RadioButton Content="YES" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
-            <RadioButton Content="NO" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
         </StackLayout>
         <FlexLayout JustifyContent="SpaceBetween">
             <StackLayout>
@@ -34,7 +34,7 @@
                 <Label Text="This question asks whether the email or message you received has any links or attachments that you didn't expect or didn't ask for. Ransomware scammers often send emails that look innocent but contain harmful links or files. Clicking on these can infect your device and lock your files until you pay a ransom. To protect yourself, be cautious when you see unexpected links or attachments in messages. Exercise caution and avoid clicking on them until you can verify their legitimacy. Hovering over links (without clicking) can help you identify suspicious URLs.  NEVER click on any links you receive through email or SMS, Instead, go directly to the official website of the company or service mentioned in the message." 
                        TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
-                <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <!--<Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
             </StackLayout>
         </Frame>
     </StackLayout>

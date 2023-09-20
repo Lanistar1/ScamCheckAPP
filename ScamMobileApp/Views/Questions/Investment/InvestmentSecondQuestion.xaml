@@ -15,8 +15,8 @@
         <Label Text="Is the investment opportunity being aggressively pushed, with pressure to invest immediately?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
         <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
-            <RadioButton Content="YES" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
-            <RadioButton Content="NO" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
         </StackLayout>
         <FlexLayout JustifyContent="SpaceBetween">
             <StackLayout>
@@ -34,7 +34,7 @@
                 <Label Text=" This question asks whether someone is pushing you really hard and making you feel like you need to invest money right away. Sometimes, scammers use aggressive tactics to pressure people into making quick decisions without thinking. A legitimate investment should give you time to consider and research before making a decision. If someone is rushing you or making you feel uncomfortable, it's a sign to step back. Take your time, gather information, and consult financial experts before committing to any investment. Your financial well-being is important, so don't let anyone pressure you into quick decisions." 
                        TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
-                <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <!--<Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
             </StackLayout>
         </Frame>
     </StackLayout>

@@ -15,8 +15,8 @@
         <Label Text="Are you pressured to act quickly, such as needing to provide payment or personal information immediately to claim the prize?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
         <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
-            <RadioButton Content="YES" IsChecked="{Binding QuestionFourCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
-            <RadioButton Content="NO" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionFourCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionFourCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+            <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionFourCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
         </StackLayout>
         <FlexLayout JustifyContent="SpaceBetween">
             <StackLayout>
@@ -34,7 +34,7 @@
                 <Label Text="This question asks whether you're feeling pressured to make quick decisions, like providing payment or personal information immediately to claim the prize you've been told about. Scammers often use urgency to prevent you from taking time to think and verify the legitimacy of the offer. Take your time to independently research and confirm the offer's authenticity before sharing any personal or financial details. If someone is pressuring you to act quickly, it's a red flag that something might be wrong. " 
                        TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
-                <Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <!--<Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
             </StackLayout>
         </Frame>
     </StackLayout>

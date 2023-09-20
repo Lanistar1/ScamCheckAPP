@@ -2,6 +2,8 @@
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.ViewModels.ScamCalculator;
+using ScamMobileApp.Views.Home;
+using ScamMobileApp.Views.More;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,10 +25,10 @@ namespace ScamMobileApp.Views.Questions.ATM
 
         }
 
-        private void To_Dashboard(object sender, EventArgs e)
-        {
-            Application.Current.MainPage = new NavigationPage(new Tabbed());
-        }
+        //private void To_Dashboard(object sender, EventArgs e)
+        //{
+        //    Application.Current.MainPage = new NavigationPage(new Tabbed());
+        //}
 
         protected override bool OnBackButtonPressed()
         {
@@ -54,6 +56,18 @@ namespace ScamMobileApp.Views.Questions.ATM
         private void To_FeedbackPopup(object sender, EventArgs e)
         {
             Navigation.PushPopupAsync(new FeedbackPopup());
+
+            Atmlikely.IsVisible = false;
+        }
+
+        private void To_AntiScam(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ShareScamExperience());
+        }
+
+        private void To_ScamLink(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ScamLink());
         }
     }
 }

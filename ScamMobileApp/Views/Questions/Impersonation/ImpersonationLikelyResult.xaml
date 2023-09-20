@@ -23,10 +23,35 @@
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Recommendations:" TextColor="#000000" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
-                        <Label Text="1. Report this scam (report here)" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0"/>
-                        <Label Text="2. Share your experience in the Anti-Scam Movement page (Anti-Scam Movement)" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,-3"/>
+                        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="StartAndExpand" Margin="0">
+                            <Label Text="1. Report this scam" TextColor="#000000"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#01FF1A" Margin="5,0,0,0" FontSize="Subtitle">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text=" (report here)" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="To_ScamLink"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                        <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="2. Share your experience in the " />
+                                    <Span Text="Anti-Scam Movement" TextColor="#01FF1A" FontSize="Subtitle">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="To_AntiScam"/>
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                    <Span Text=" page" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
                         <Label Text="3. Scammed? Take Action." TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                     </StackLayout>
+
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>

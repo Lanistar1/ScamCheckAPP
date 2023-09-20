@@ -1,6 +1,7 @@
 ﻿using ScamMobileApp.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace ScamMobileApp.Models.ScamType
@@ -8,6 +9,7 @@ namespace ScamMobileApp.Models.ScamType
     public class ScamTypeData : BaseViewModel
     {
         public string ScamType { get; set; }
+        public string ScamDetail { get; set; }
         public bool isSelected { get; set; }
 
 
@@ -25,6 +27,6 @@ namespace ScamMobileApp.Models.ScamType
 
     public class ScamTypeModel
     {
-        public List<ScamTypeData> data;
+        public ObservableCollection<ScamTypeData> data;
     }
 }

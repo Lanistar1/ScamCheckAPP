@@ -38,6 +38,12 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             set
             {
                 questionOneCheckYes = value;
+
+                if (QuestionOneCheckYes == true)
+                {
+                    FirstQuestionCommand.Execute(questionOneCheckYes);
+                }
+
                 OnPropertyChanged(nameof(QuestionOneCheckYes));
             }
         }
@@ -49,6 +55,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             set
             {
                 questionOneCheckNo = value;
+                if (QuestionOneCheckNo == true)
+                {
+                    FirstQuestionCommand.Execute(questionOneCheckNo);
+                }
                 OnPropertyChanged(nameof(QuestionOneCheckNo));
             }
         }
@@ -60,6 +70,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             set
             {
                 questionTwoCheckYes = value;
+                if (QuestionTwoCheckYes == true)
+                {
+                    SecondQuestionCommand.Execute(questionTwoCheckYes);
+                }
                 OnPropertyChanged(nameof(QuestionTwoCheckYes));
             }
         }
@@ -71,6 +85,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             set
             {
                 questionTwoCheckNo = value;
+                if (QuestionTwoCheckNo == true)
+                {
+                    SecondQuestionCommand.Execute(questionTwoCheckNo);
+                }
                 OnPropertyChanged(nameof(QuestionTwoCheckNo));
             }
         }
@@ -82,6 +100,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             set
             {
                 questionThreeCheckYes = value;
+                if (QuestionThreeCheckYes == true)
+                {
+                    ThirdQuestionCommand.Execute(questionThreeCheckYes);
+                }
                 OnPropertyChanged(nameof(QuestionThreeCheckYes));
             }
         }
@@ -93,6 +115,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
             set
             {
                 questionThreeCheckNo = value;
+                if (QuestionThreeCheckNo == true)
+                {
+                    ThirdQuestionCommand.Execute(questionThreeCheckNo);
+                }
                 OnPropertyChanged(nameof(QuestionThreeCheckNo));
             }
         }

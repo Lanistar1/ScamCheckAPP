@@ -1,4 +1,5 @@
-﻿using ScamMobileApp.ViewModels.ScamCalculator;
+﻿using ScamMobileApp.ViewModels.Home;
+using ScamMobileApp.ViewModels.ScamCalculator;
 using ScamMobileApp.Views.More;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace ScamMobileApp.Views.Questions
         public QuestionsAndAnswer()
         {
             InitializeComponent();
-            BindingContext = new BusinessViewModel(Navigation);
+            BindingContext = new ScamQuestionAndAnswerViewModel(Navigation);
 
 
         }

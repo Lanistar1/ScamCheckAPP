@@ -2,6 +2,8 @@
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.ViewModels.ScamCalculator;
+using ScamMobileApp.Views.Home;
+using ScamMobileApp.Views.More;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,6 +56,16 @@ namespace ScamMobileApp.Views.Questions.Phishing
         private void To_FeedbackPopup(object sender, EventArgs e)
         {
             Navigation.PushPopupAsync(new FeedbackPopup());
+        }
+
+        private void To_AntiScam(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ShareScamExperience());
+        }
+
+        private void To_ScamLink(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ScamLink());
         }
     }
 }

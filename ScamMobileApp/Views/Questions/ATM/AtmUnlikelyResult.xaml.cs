@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace ScamMobileApp.Views.Questions.ATM
@@ -23,10 +24,10 @@ namespace ScamMobileApp.Views.Questions.ATM
 
         }
 
-        private void To_Dashboard(object sender, EventArgs e)
-        {
-            Application.Current.MainPage = new NavigationPage(new Tabbed());
-        }
+        //private void To_Dashboard(object sender, EventArgs e)
+        //{
+        //    Application.Current.MainPage = new NavigationPage(new Tabbed());
+        //}
 
         protected override bool OnBackButtonPressed()
         {
@@ -54,6 +55,8 @@ namespace ScamMobileApp.Views.Questions.ATM
         private void To_FeedbackPopup(object sender, EventArgs e)
         {
             Navigation.PushPopupAsync(new FeedbackPopup());
+
+            Atmunlikely.IsVisible = false;
         }
     }
 }

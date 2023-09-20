@@ -56,7 +56,7 @@
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Close_Popup"/>
                 </Frame.GestureRecognizers>
-                <Label Text="Submit" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+                <Label Text="Done" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
             </Frame>
         </StackLayout>
     </pv:PancakeView>
