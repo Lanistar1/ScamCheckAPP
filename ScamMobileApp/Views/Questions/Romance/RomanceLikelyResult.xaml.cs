@@ -56,6 +56,9 @@ namespace ScamMobileApp.Views.Questions.Romance
         private void To_FeedbackPopup(object sender, EventArgs e)
         {
             Navigation.PushPopupAsync(new FeedbackPopup());
+
+            romancelikely.IsVisible = false;
+
         }
 
         private void To_AntiScam(object sender, EventArgs e)

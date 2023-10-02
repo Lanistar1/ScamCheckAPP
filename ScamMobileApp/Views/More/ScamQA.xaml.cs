@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScamMobileApp.Views.Questions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,11 @@ namespace ScamMobileApp.Views.More
         public ScamQA()
         {
             InitializeComponent();
+        }
+
+        private void To_QAsection(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new QuestionsAndAnswer());
         }
     }
 }

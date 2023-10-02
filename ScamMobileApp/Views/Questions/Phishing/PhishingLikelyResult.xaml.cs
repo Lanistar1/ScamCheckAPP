@@ -56,6 +56,9 @@ namespace ScamMobileApp.Views.Questions.Phishing
         private void To_FeedbackPopup(object sender, EventArgs e)
         {
             Navigation.PushPopupAsync(new FeedbackPopup());
+
+            phishinglikely.IsVisible = false;
+
         }
 
         private void To_AntiScam(object sender, EventArgs e)

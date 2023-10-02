@@ -2,6 +2,7 @@
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.ViewModels.ScamCalculator;
+using ScamMobileApp.Views.More;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,6 +58,11 @@ namespace ScamMobileApp.Views.Questions.ATM
             Navigation.PushPopupAsync(new FeedbackPopup());
 
             Atmunlikely.IsVisible = false;
+        }
+
+        private void To_unlikelyAscam(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ScamQA());
         }
     }
 }

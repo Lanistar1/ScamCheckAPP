@@ -28,7 +28,7 @@
             </StackLayout>
             <Frame CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Padding="10,12" Margin="0,10,0,0">
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer />
+                    <TapGestureRecognizer Tapped="To_QAsection"/>
                 </Frame.GestureRecognizers>
                 <Label Text="Start ScamQA" TextColor="White" FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             </Frame>

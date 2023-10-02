@@ -137,9 +137,6 @@ namespace ScamMobileApp.ViewModels.Identity
                 await LoadingPopup.Instance.Hide();
             }
         }
-
-
-
         #endregion
     }
 }

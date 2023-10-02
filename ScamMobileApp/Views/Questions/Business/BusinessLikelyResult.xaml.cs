@@ -56,6 +56,8 @@ namespace ScamMobileApp.Views.Questions.Business
         private void To_FeedbackPopup(object sender, EventArgs e)
         {
             Navigation.PushPopupAsync(new FeedbackPopup());
+
+            Businesslikely.IsVisible = false;
         }
 
         private void To_AntiScam(object sender, EventArgs e)

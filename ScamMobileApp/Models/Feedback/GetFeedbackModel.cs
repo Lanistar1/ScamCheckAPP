@@ -53,11 +53,11 @@ namespace ScamMobileApp.Models.Feedback
         }
 
 
-        public string NewOutput
+        public string Output
         {
             get
             {
-                if (output == "Likely a scam")
+                if (output == "Likely" || output.Contains("Likely") )
                 {
                     SubColor = Color.FromHex("FF0000");
                     return output;
@@ -70,7 +70,7 @@ namespace ScamMobileApp.Models.Feedback
             }
             set
             {
-                NewOutput = value;
+                Output = value;
             }
         }
 

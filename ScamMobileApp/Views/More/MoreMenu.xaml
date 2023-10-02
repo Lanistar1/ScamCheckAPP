@@ -34,7 +34,7 @@
                             <Image Source="scamlink.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Label Text="Scam Link" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="Report Scam" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
                 </StackLayout>
 

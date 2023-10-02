@@ -56,6 +56,9 @@ namespace ScamMobileApp.Views.Questions.Impersonation
         private void To_FeedbackPopup(object sender, EventArgs e)
         {
             Navigation.PushPopupAsync(new FeedbackPopup());
+
+            impersonlikely.IsVisible = false;
+
         }
 
         private void To_AntiScam(object sender, EventArgs e)

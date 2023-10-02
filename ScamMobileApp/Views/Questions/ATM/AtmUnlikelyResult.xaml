@@ -35,19 +35,33 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Frame BackgroundColor="#DA1651" CornerRadius="5" Margin="0,10" Grid.Column="0" IsVisible="True" x:Name="Atmunlikely">
+                        <Frame BackgroundColor="#DA1651" CornerRadius="5" Margin="0,10" Grid.Column="0" IsVisible="True" x:Name="Atmunlikely" Padding="0,10">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="To_FeedbackPopup"/>
                             </Frame.GestureRecognizers>
-                            <Label Text="Rate App" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+                            <Label Text="Rate App" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,5"/>
                         </Frame>
-                        <Frame BackgroundColor="{StaticResource PrimaryColor}" CornerRadius="5" Margin="0,10" Grid.Column="1">
+                        <Frame BackgroundColor="{StaticResource PrimaryColor}" CornerRadius="5" Margin="0,10" Grid.Column="1" Padding="0,10">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding PostFeedbackCommand}"/>
                             </Frame.GestureRecognizers>
-                            <Label Text="Save" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+                            <Label Text="Save" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,5"/>
                         </Frame>
                     </Grid>
+
+                    <Label HorizontalOptions="CenterAndExpand" TextColor="#000000" Margin="0,0,0,10">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Refer to " />
+                                <Span Text="Unlikely a scam page" TextColor="#3DBF4A" FontSize="Subtitle">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="To_unlikelyAscam"/>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                                <Span Text=" for guidance" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
                 </StackLayout>
             </Frame>
         </StackLayout>

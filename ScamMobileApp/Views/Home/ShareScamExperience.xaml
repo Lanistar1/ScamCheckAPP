@@ -44,12 +44,12 @@
 
                 <Frame Padding="10,0,10,0" BorderColor="White" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" Margin="0,0,0,10" HasShadow="False" CornerRadius="10">
                     <controls:CustomEntry 
-                                    VerticalTextAlignment="Center"
-                                    FontSize="14"
-                                    Text="{Binding Title}"
-                                    Placeholder="e.g Social media scam"
-                                    PlaceholderColor="#cccccc"
-                                    TextColor="White"/>
+                        VerticalTextAlignment="Center"
+                        FontSize="14"
+                        Text="{Binding Title}"
+                        Placeholder="e.g Social media scam"
+                        PlaceholderColor="#cccccc"
+                        TextColor="White"/>
                 </Frame>
             </StackLayout>-->
 

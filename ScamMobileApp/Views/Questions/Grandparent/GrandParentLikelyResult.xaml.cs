@@ -56,6 +56,9 @@ namespace ScamMobileApp.Views.Questions.Grandparent
         private void To_FeedbackPopup(object sender, EventArgs e)
         {
             Navigation.PushPopupAsync(new FeedbackPopup());
+
+            parentlikely.IsVisible = false;
+
         }
 
         private void To_AntiScam(object sender, EventArgs e)
