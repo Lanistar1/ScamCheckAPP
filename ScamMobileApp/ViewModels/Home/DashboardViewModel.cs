@@ -76,7 +76,7 @@ namespace ScamMobileApp.ViewModels.Home
             }
         }
 
-        private string limit = "5";
+        private string limit = "6";
         public string Limit
         {
             get => limit;

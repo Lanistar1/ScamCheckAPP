@@ -4,7 +4,7 @@
                     x:Class="ScamMobileApp.Styles.Colors">
 
 
-    <Color x:Key="PrimaryColor">#15203D</Color>
-    <Color x:Key="SecondaryColor">#374151</Color>
-    <Color x:Key="TertiaryColor">#0891B2</Color>
+    <Color x:Key="PrimaryColor">#EDEAEA</Color>
+    <Color x:Key="SecondaryColor">#101137</Color>
+    <Color x:Key="TertiaryColor">#A52A2A</Color>
 </ResourceDictionary>

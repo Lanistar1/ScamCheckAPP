@@ -8,7 +8,7 @@
 
 
     <ScrollView VerticalScrollBarVisibility="Never">
-        <StackLayout >
+        <StackLayout Margin="0,20">
             <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="20,0">
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Scam Type:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
@@ -16,7 +16,7 @@
                 </StackLayout>
             </Frame>
 
-            <StackLayout x:Name="cvBanner" BindableLayout.ItemsSource="{Binding UserFeedbackData}" Spacing="2" Margin="20,10,20,10">
+            <StackLayout x:Name="cvBanner" BindableLayout.ItemsSource="{Binding UserFeedbackData}" Spacing="2" Margin="20,5,20,5">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
@@ -37,7 +37,7 @@
                 </BindableLayout.ItemTemplate>
             </StackLayout>
 
-            <StackLayout x:Name="question" BindableLayout.ItemsSource="{Binding QuestionData}" Spacing="2" Margin="20,10,20,20">
+            <StackLayout x:Name="question" BindableLayout.ItemsSource="{Binding QuestionData}" Spacing="5" Margin="20,0,20,20">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>

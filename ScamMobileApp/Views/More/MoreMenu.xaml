@@ -34,7 +34,7 @@
                             <Image Source="scamlink.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Label Text="Report Scam" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="Report Scam" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
                 </StackLayout>
 
@@ -47,7 +47,7 @@
                             <Image Source="newscamhelp.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Label Text="Help Center" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="Help Center" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
                 </StackLayout>
             </Grid>
@@ -67,7 +67,7 @@
                             <Image Source="newscamterm.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Label Text="Terms" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="Terms" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
                 </StackLayout>
 
@@ -80,7 +80,7 @@
                             <Image Source="newscampassword.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Label Text="Change Password" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="Change Password" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
                 </StackLayout>
             </Grid>
@@ -100,7 +100,7 @@
                             <Image Source="type.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Label Text="Types of Scam" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="Types of Scam" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
                 </StackLayout>
 
@@ -113,7 +113,7 @@
                             <Image Source="scamqa.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Label Text="ScamQA" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="ScamQA" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
             </Grid>
 
@@ -132,7 +132,7 @@
                             <Image Source="antiscam.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Label Text="Anti-Scam Movement" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="Anti-Scam Movement" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
                 </StackLayout>
 
@@ -145,7 +145,7 @@
                             <Image Source="tips.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Label Text="Preventive Tips" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="Preventive Tips" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
             </Grid>
 
@@ -164,7 +164,7 @@
                             <Image Source="warnings.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Label Text="Warning Signs" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="Warning Signs" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
                 </StackLayout>
 
@@ -177,7 +177,7 @@
                             <Image Source="newscamlogout.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Label Text="Logout" TextColor="White" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="Logout" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
             </Grid>
         </StackLayout>

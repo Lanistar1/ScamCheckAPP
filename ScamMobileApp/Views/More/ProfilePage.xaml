@@ -22,8 +22,8 @@
         <ScrollView  Grid.Row="1" Margin="0,20">
             <StackLayout>
                 <StackLayout Margin="20,0">
-                    <Label Text="First Name" TextColor="#ffffff" FontSize="13"/>
-                    <Label Text="{Binding FirstName} " TextColor="#ffffff" FontSize="18"/>
+                    <Label Text="First Name" TextColor="{StaticResource SecondaryColor}" FontSize="13"/>
+                    <Label Text="{Binding FirstName} " TextColor="{StaticResource SecondaryColor}" FontSize="18"/>
                 </StackLayout>
                 <Line X1="0"
                       Y1="0"
@@ -31,13 +31,13 @@
                       Y2="0"
                       Margin="0,0"
                       Grid.Row="6"
-                      Stroke="#ffffff"
+                      Stroke="#101137"
                       StrokeDashArray="0,0"
                       StrokeDashOffset="2"/>
 
                 <StackLayout Margin="20,10,0,0">
-                    <Label Text="Last Name" TextColor="#ffffff" FontSize="13"/>
-                    <Label Text="{Binding LastName}" TextColor="#ffffff" FontSize="18"/>
+                    <Label Text="Last Name" TextColor="{StaticResource SecondaryColor}" FontSize="13"/>
+                    <Label Text="{Binding LastName}" TextColor="{StaticResource SecondaryColor}" FontSize="18"/>
                 </StackLayout>
                 <Line X1="0"
                       Y1="0"
@@ -45,13 +45,13 @@
                       Y2="0"
                       Margin="0,0"
                       Grid.Row="6"
-                      Stroke="#ffffff"
+                      Stroke="#101137"
                       StrokeDashArray="0,0"
                       StrokeDashOffset="2"/>
 
                 <StackLayout Margin="20,10,0,0">
-                    <Label Text="Email" TextColor="#ffffff" FontSize="13"/>
-                    <Label Text="{Binding Email}" TextColor="#ffffff" FontSize="18"/>
+                    <Label Text="Email" TextColor="{StaticResource SecondaryColor}" FontSize="13"/>
+                    <Label Text="{Binding Email}" TextColor="{StaticResource SecondaryColor}" FontSize="18"/>
                 </StackLayout>
                 <Line X1="0"
                       Y1="0"
@@ -59,7 +59,7 @@
                       Y2="0"
                       Margin="0,0"
                       Grid.Row="6"
-                      Stroke="#ffffff"
+                      Stroke="#101137"
                       StrokeDashArray="0,0"
                       StrokeDashOffset="2"/>
 
@@ -78,8 +78,8 @@
                       StrokeDashOffset="2"/>-->
 
                 <StackLayout Margin="20,10,0,0">
-                    <Label Text="User Name" TextColor="#ffffff" FontSize="13"/>
-                    <Label Text="{Binding UserName}" TextColor="#ffffff" FontSize="18"/>
+                    <Label Text="User Name" TextColor="{StaticResource SecondaryColor}" FontSize="13"/>
+                    <Label Text="{Binding UserName}" TextColor="{StaticResource SecondaryColor}" FontSize="18"/>
                 </StackLayout>
                 <Line X1="0"
                       Y1="0"
@@ -87,13 +87,13 @@
                       Y2="0"
                       Margin="0,0"
                       Grid.Row="6"
-                      Stroke="#ffffff"
+                      Stroke="#101137"
                       StrokeDashArray="0,0"
                       StrokeDashOffset="2"/>
 
                 <StackLayout Margin="20,10,0,0">
-                    <Label Text="Role" TextColor="#ffffff" FontSize="13"/>
-                    <Label Text="{Binding Role}" TextColor="#ffffff" FontSize="18"/>
+                    <Label Text="Role" TextColor="{StaticResource SecondaryColor}" FontSize="13"/>
+                    <Label Text="{Binding Role}" TextColor="{StaticResource SecondaryColor}" FontSize="18"/>
                 </StackLayout>
                 <Line X1="0"
                       Y1="0"
@@ -101,7 +101,7 @@
                       Y2="0"
                       Margin="0,0"
                       Grid.Row="6"
-                      Stroke="#ffffff"
+                      Stroke="#101137"
                       StrokeDashArray="0,0"
                       StrokeDashOffset="2"/>
 

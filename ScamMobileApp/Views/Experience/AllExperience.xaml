@@ -29,7 +29,7 @@
                 <Label Text="People Experience." 
                        TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
             </FlexLayout>-->
-            <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="5" BorderColor="#ffffff" CornerRadius="10" Margin="0,0">
+            <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="5" BorderColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="7*"/>
@@ -40,14 +40,14 @@
                             HorizontalTextAlignment="Start"
                             Grid.Column="0"
                             Placeholder="Search people experience"
-                            PlaceholderColor="#cccccc"
+                            PlaceholderColor="#645F5F"
                             FontFamily="Poppins-Regular"
-                            Margin="0,0,0,-5"
+                            Margin="0,0,0,0"
                             FontSize="14"
                             Text="{Binding SearchEntry, Mode=TwoWay}"
-                            TextColor="White"/>
+                            TextColor="{StaticResource SecondaryColor}"/>
                     <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
-                        <Image  Source="scamsearch.png"/>
+                        <Image  Source="search.png" WidthRequest="20" HeightRequest="20"/>
                     </StackLayout>
                 </Grid>
             </Frame>
@@ -65,7 +65,7 @@
                         HorizontalOptions="CenterAndExpand"
                         HorizontalTextAlignment="Center"
                         VerticalOptions="Center"
-                        TextColor="White" 
+                        TextColor="{StaticResource SecondaryColor}" 
                         FontSize="16"/>
                 </CollectionView.EmptyView>
                 <CollectionView.ItemTemplate>

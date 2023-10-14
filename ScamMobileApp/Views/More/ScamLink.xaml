@@ -6,125 +6,126 @@
              NavigationPage.HasNavigationBar="True"
              BackgroundColor="{StaticResource PrimaryColor}">
 
-    <ScrollView Margin="20" VerticalScrollBarVisibility="Never">
+    <ScrollView  VerticalScrollBarVisibility="Never">
         <StackLayout >
-            <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5">
+            <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" >
                 <StackLayout>
                     <Label Text="If you believe you have been scammed or suspect an email, message, call, etc., to be a scam, please select a country below to report the scam." 
-                       TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                       TextColor="#ffffff" FontSize="15" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Padding="10" BackgroundColor="{StaticResource SecondaryColor}"/>
                 </StackLayout>
             </Frame>
 
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ShowSolicitCommand}"/>
-                </Frame.GestureRecognizers>
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Australia" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <StackLayout>
-                        <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
+            <StackLayout Margin="20,10">
+                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ShowSolicitCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                        <Label Text="Australia" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <StackLayout>
+                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </FlexLayout>
+                </Frame>
 
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ShowSolicitCommand}"/>
-                </Frame.GestureRecognizers>
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Canada " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <StackLayout>
-                        <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
+                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ShowSolicitCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                        <Label Text="Canada " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <StackLayout>
+                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </FlexLayout>
+                </Frame>
 
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ShowSolicitCommand}"/>
-                </Frame.GestureRecognizers>
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Croatia " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <StackLayout>
-                        <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
+                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ShowSolicitCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                        <Label Text="Croatia " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <StackLayout>
+                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </FlexLayout>
+                </Frame>
 
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer />
-                </Frame.GestureRecognizers>
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="India" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <StackLayout>
-                        <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
+                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer />
+                    </Frame.GestureRecognizers>
+                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                        <Label Text="India" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <StackLayout>
+                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </FlexLayout>
+                </Frame>
 
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer />
-                </Frame.GestureRecognizers>
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Ireland" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <StackLayout>
-                        <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
+                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer />
+                    </Frame.GestureRecognizers>
+                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                        <Label Text="Ireland" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <StackLayout>
+                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </FlexLayout>
+                </Frame>
 
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer />
-                </Frame.GestureRecognizers>
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Mexico" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <StackLayout>
-                        <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
+                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer />
+                    </Frame.GestureRecognizers>
+                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                        <Label Text="Mexico" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <StackLayout>
+                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </FlexLayout>
+                </Frame>
 
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer />
-                </Frame.GestureRecognizers>
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="South Korea  " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <StackLayout>
-                        <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
+                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer />
+                    </Frame.GestureRecognizers>
+                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                        <Label Text="South Korea  " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <StackLayout>
+                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </FlexLayout>
+                </Frame>
 
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer />
-                </Frame.GestureRecognizers>
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="United Kingdom " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <StackLayout>
-                        <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
+                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer />
+                    </Frame.GestureRecognizers>
+                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                        <Label Text="United Kingdom " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <StackLayout>
+                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </FlexLayout>
+                </Frame>
 
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer />
-                </Frame.GestureRecognizers>
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="United States" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <StackLayout>
-                        <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
+                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer />
+                    </Frame.GestureRecognizers>
+                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                        <Label Text="United States" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <StackLayout>
+                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </FlexLayout>
+                </Frame>
+            </StackLayout>
 
-
-
+            
 
 
             <!--<StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="StartAndExpand" Margin="0,5">

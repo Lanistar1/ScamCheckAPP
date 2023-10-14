@@ -7,22 +7,22 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource PrimaryColor}">
 
-    <Grid Margin="20,20,20,20">
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackLayout Grid.Row="0">
-            <Label Text="The Anti-Scam Movement" TextColor="{StaticResource TertiaryColor}" FontSize="16" FontFamily="Inter-Bold"
+        <StackLayout Grid.Row="0" BackgroundColor="{StaticResource SecondaryColor}">
+            <Label Text="The Anti-Scam Movement" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Bold"
                    HorizontalTextAlignment="Center" Margin="0,0,0,0" Padding="0,10" BackgroundColor="White"/>
 
             <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5">
-                <StackLayout>
+                <StackLayout Padding="10">
                     <Label Text="The Anti-Scam Movement refers to a collective effort aimed at raising the awareness about scams, empowering individuals with knowledge and tools to identify and prevent scams, and promoting a community of vigilant individuals who actively combat fraudulent activities. The movement encourages people to unite against scams, share information, support victims, and work towards creating a safer environment." 
                        TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
 
-                    <Frame CornerRadius="5" BackgroundColor="{StaticResource TertiaryColor}" Padding="10" Margin="10,10" HorizontalOptions="EndAndExpand">
+                    <Frame CornerRadius="5" BackgroundColor="{StaticResource TertiaryColor}" Padding="10" Margin="10,0" HorizontalOptions="EndAndExpand">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="To_ViewStories"/>
                         </Frame.GestureRecognizers>
@@ -32,26 +32,9 @@
             </Frame>
         </StackLayout>
 
-        
 
-        <StackLayout Grid.Row="1" Margin="0,10,0,0">
-            <!--<StackLayout Margin="0,10,0,0">
-                <Label  Text="Title"
-                        FontFamily="Inter-Medium"
-                        FontSize="14"
-                        Margin="0,0"
-                        TextColor="White"/>
 
-                <Frame Padding="10,0,10,0" BorderColor="White" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" Margin="0,0,0,10" HasShadow="False" CornerRadius="10">
-                    <controls:CustomEntry 
-                        VerticalTextAlignment="Center"
-                        FontSize="14"
-                        Text="{Binding Title}"
-                        Placeholder="e.g Social media scam"
-                        PlaceholderColor="#cccccc"
-                        TextColor="White"/>
-                </Frame>
-            </StackLayout>-->
+        <StackLayout Grid.Row="1" Margin="20,10,20,20">
 
             <StackLayout Margin="0,0,0,5" Spacing="0">
 
@@ -59,15 +42,15 @@
                         FontFamily="Inter-Medium"
                         FontSize="16"
                         Margin="0,0,0,5"
-                        TextColor="White"/>
+                        TextColor="{StaticResource SecondaryColor}"/>
                 
-                <pv:PancakeView BackgroundColor="{StaticResource TertiaryColor}"
+                <pv:PancakeView BackgroundColor="{StaticResource SecondaryColor}"
                                 CornerRadius="5"
                                 HorizontalOptions="Fill" 
                                 HeightRequest="50"
                                 Padding="10,5">
                     <pv:PancakeView.Border>
-                        <pv:Border Color="#72708D" Thickness="1"/>
+                        <pv:Border Color="{StaticResource SecondaryColor}" Thickness="1"/>
                     </pv:PancakeView.Border>
                     <Grid HorizontalOptions="FillAndExpand"
                           VerticalOptions="FillAndExpand">
@@ -107,22 +90,22 @@
 
 
             <StackLayout Margin="0,0,0,0">
-                <Label Text="Your Experience" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                <Frame Padding="5" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="#ffffff" Margin="0,0,0,0" CornerRadius="5" HeightRequest="170">
+                <Label Text="Your Experience" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                <Frame Padding="5" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource SecondaryColor}" Margin="0,0,0,0" CornerRadius="5" HeightRequest="170">
                     <controls:XEditor
-                                    FontSize="14"
+                                    FontSize="16"
                                     AutoSize="TextChanges"
                                     FontFamily="Roboto-Medium"
                                     Text="{Binding Message}"
                                     Placeholder="Share your scam experience here"
-                                    PlaceholderColor="#cccccc"
-                                    TextColor="#ffffff"/>
+                                    PlaceholderColor="#645F5F"
+                                    TextColor="{StaticResource SecondaryColor}"/>
                 </Frame>
-                <Label Text="Max: 200 words" TextColor="#ffffff" FontSize="12" FontFamily="Inter-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                <Label Text="Max: 200 words" TextColor="{StaticResource SecondaryColor}" FontSize="12" FontFamily="Inter-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" Spacing="3" VerticalOptions="Center" >
-                <CheckBox Color="#01FF1A" VerticalOptions="CenterAndExpand"  Margin="0,0,0,10" IsChecked="{Binding ScamCheck}"/>
-                <Label Text="Accept Terms and Conditions." TextColor="#01FF1A" FontSize="14" FontFamily="Inter-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,0,10">
+                <CheckBox Color="{StaticResource SecondaryColor}" VerticalOptions="CenterAndExpand"  Margin="0,0,0,10" IsChecked="{Binding ScamCheck}"/>
+                <Label Text="Accept Terms and Conditions." TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,0,10">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="To_Terms"/>
                     </Label.GestureRecognizers>

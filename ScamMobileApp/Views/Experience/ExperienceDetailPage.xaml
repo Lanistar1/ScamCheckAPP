@@ -11,9 +11,9 @@
             <DataTemplate>
                 <StackLayout>
                     <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                        <StackLayout >
+                        <StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="Title:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                <Label Text="Scam Type:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                                 <Label Text="{Binding title}" TextColor="{StaticResource TertiaryColor}" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                             </StackLayout>
                             <StackLayout>
