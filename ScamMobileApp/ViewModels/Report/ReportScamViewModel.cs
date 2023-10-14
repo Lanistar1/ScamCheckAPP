@@ -91,6 +91,237 @@ namespace ScamMobileApp.ViewModels.Report
                 OnPropertyChanged(nameof(ScamCheck));
             }
         }
+
+        private bool australia = false;
+        public bool Australia
+        {
+            get => australia;
+            set
+            {
+                australia = value;
+                OnPropertyChanged(nameof(Australia));
+            }
+        }
+
+        private bool canada = false;
+        public bool Canada
+        {
+            get => canada;
+            set
+            {
+                canada = value;
+                OnPropertyChanged(nameof(Canada));
+            }
+        }
+
+        private bool france = false;
+        public bool France
+        {
+            get => france;
+            set
+            {
+                france = value;
+                OnPropertyChanged(nameof(France));
+            }
+        }
+
+        private bool germany = false;
+        public bool Germany
+        {
+            get => germany;
+            set
+            {
+                germany = value;
+                OnPropertyChanged(nameof(Germany));
+            }
+        }
+
+        private bool india = false;
+        public bool India
+        {
+            get => india;
+            set
+            {
+                india = value;
+                OnPropertyChanged(nameof(India));
+            }
+        }
+
+        private bool ireland = false;
+        public bool Ireland
+        {
+            get => ireland;
+            set
+            {
+                ireland = value;
+                OnPropertyChanged(nameof(Ireland));
+            }
+        }
+
+        private bool israel = false;
+        public bool Israel
+        {
+            get => israel;
+            set
+            {
+                israel = value;
+                OnPropertyChanged(nameof(Israel));
+            }
+        }
+
+        private bool italy = false;
+        public bool Italy
+        {
+            get => italy;
+            set
+            {
+                italy = value;
+                OnPropertyChanged(nameof(Italy));
+            }
+        }
+
+        private bool japan = false;
+        public bool Japan
+        {
+            get => japan;
+            set
+            {
+                japan = value;
+                OnPropertyChanged(nameof(Japan));
+            }
+        }
+
+        private bool netherland = false;
+        public bool Netherland
+        {
+            get => netherland;
+            set
+            {
+                netherland = value;
+                OnPropertyChanged(nameof(Netherland));
+            }
+        }
+
+        private bool zealand = false;
+        public bool Zealand
+        {
+            get => zealand;
+            set
+            {
+                zealand = value;
+                OnPropertyChanged(nameof(Zealand));
+            }
+        }
+
+        private bool saudi = false;
+        public bool Saudi
+        {
+            get => saudi;
+            set
+            {
+                saudi = value;
+                OnPropertyChanged(nameof(Saudi));
+            }
+        }
+
+        private bool singapore = false;
+        public bool Singapore
+        {
+            get => singapore;
+            set
+            {
+                singapore = value;
+                OnPropertyChanged(nameof(Singapore));
+            }
+        }
+
+        private bool sAfrica = false;
+        public bool SAfrica
+        {
+            get => sAfrica;
+            set
+            {
+                sAfrica = value;
+                OnPropertyChanged(nameof(SAfrica));
+            }
+        }
+
+        private bool sKorea = false;
+        public bool SKorea
+        {
+            get => sKorea;
+            set
+            {
+                sKorea = value;
+                OnPropertyChanged(nameof(SKorea));
+            }
+        }
+
+        private bool spain = false;
+        public bool Spain
+        {
+            get => spain;
+            set
+            {
+                spain = value;
+                OnPropertyChanged(nameof(Spain));
+            }
+        }
+
+        private bool switzerland = false;
+        public bool Switzerland
+        {
+            get => switzerland;
+            set
+            {
+                switzerland = value;
+                OnPropertyChanged(nameof(Switzerland));
+            }
+        }
+
+        private bool ukraine = false;
+        public bool Ukraine
+        {
+            get => ukraine;
+            set
+            {
+                ukraine = value;
+                OnPropertyChanged(nameof(Ukraine));
+            }
+        }
+
+        private bool uAE = false;
+        public bool UAE
+        {
+            get => uAE;
+            set
+            {
+                uAE = value;
+                OnPropertyChanged(nameof(UAE));
+            }
+        }
+
+        private bool unitedK = false;
+        public bool UnitedK
+        {
+            get => unitedK;
+            set
+            {
+                unitedK = value;
+                OnPropertyChanged(nameof(UnitedK));
+            }
+        }
+
+        private bool uSA = false;
+        public bool USA
+        {
+            get => uSA;
+            set
+            {
+                uSA = value;
+                OnPropertyChanged(nameof(USA));
+            }
+        }
         #endregion
 
 
@@ -107,27 +338,26 @@ namespace ScamMobileApp.ViewModels.Report
 
             List<SelectItemModel> responseToLightTypes = new List<SelectItemModel>()
             {
-                new SelectItemModel(1,"PHISHING SCAM"),
-                new SelectItemModel(2,"VISHING SCAM"),
-                new SelectItemModel(3,"SMISHING SCAM"),
-                new SelectItemModel(4,"INVESTMENT SCAM"),
-                new SelectItemModel(5,"ROMANCE SCAM"),
-                new SelectItemModel(6,"QR CODE SCAMS"),
-                new SelectItemModel(7,"IMPERSONATION SCAM"),
-                new SelectItemModel(8,"RANSOMWARE  SCAM"),
-                new SelectItemModel(9,"ATM SKIMMING SCAM"),
-                new SelectItemModel(10,"TECH SUPPORT SCAM"),
-                new SelectItemModel(11,"BUSINESS EMAIL COMPROMISE(BEC) SCAM"),
-                new SelectItemModel(12,"LOTTERY, PRIZE OR FREE GIFTS SCAM"),
-                new SelectItemModel(13,"SOCIAL MEDIA  SCAM"),
-                new SelectItemModel(14,"TAX SCAM"),
-                new SelectItemModel(15,"IDENTITY THEFT SCAM"),
-                new SelectItemModel(16,"GRANDPARENT OR PARENT SCAM"),
-                new SelectItemModel(17,"CHARITY SCAM"),
-                new SelectItemModel(18,"ONLINE SHOPPING SCAM"),
-                new SelectItemModel(19,"EMPLOYMENT OPPORTUNITY SCAM"),
-                new SelectItemModel(20,"FAKE INVOICE SCAM"),
-                new SelectItemModel(21,"GIFT CARD SCAM"),
+                new SelectItemModel(1,"Australia"),
+                new SelectItemModel(2,"Canada"),
+                new SelectItemModel(3,"France"),
+                new SelectItemModel(4,"Germany"),
+                new SelectItemModel(5,"India"),
+                new SelectItemModel(6,"Ireland"),
+                new SelectItemModel(7,"Israel"),
+                new SelectItemModel(8,"Italy"),
+                new SelectItemModel(9,"Japan"),
+                new SelectItemModel(10,"New Zealand"),
+                new SelectItemModel(11,"Saudi Arabia"),
+                new SelectItemModel(12,"Singapore"),
+                new SelectItemModel(13,"South Africa"),
+                new SelectItemModel(14,"South Korea"),
+                new SelectItemModel(15,"Spain"),
+                new SelectItemModel(16,"Switzerland"),
+                new SelectItemModel(17,"Ukraine"),
+                new SelectItemModel(18,"United Arab Emirate"),
+                new SelectItemModel(19,"United Kingdom"),
+                new SelectItemModel(20,"United State of America"),
 
             };
             var popup = new SelectItemPickerPopup(responseToLightTypes);
@@ -139,89 +369,465 @@ namespace ScamMobileApp.ViewModels.Report
 
 
 
-            if (Title == "PHISHING SCAM")
+            if (Title == "Australia")
             {
-                await Navigation.PushAsync(new PhishingFirstQuestion());
+                Australia = true;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "VISHING SCAM")
+            else if (Title == "Canada")
             {
-                await Navigation.PushAsync(new VishingFirstQuestion());
+                Australia = false;
+                Canada = true;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "SMISHING SCAM")
+            else if (Title == "France")
             {
-                await Navigation.PushAsync(new SmishingFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = true;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "INVESTMENT SCAM")
+            else if (Title == "Germany")
             {
-                await Navigation.PushAsync(new InvestmentFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = true;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "ROMANCE SCAM")
+            else if (Title == "India")
             {
-                await Navigation.PushAsync(new RomanceFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = true;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "QR CODE SCAMS")
+            else if (Title == "Ireland")
             {
-                await Navigation.PushAsync(new QRcodeFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = true;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "IMPERSONATION SCAM")
+            else if (Title == "Israel")
             {
-                await Navigation.PushAsync(new ImpersonationFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = true;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "RANSOMWARE  SCAM")
+            else if (Title == "Italy")
             {
-                await Navigation.PushAsync(new RansomewareFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = true;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "ATM SKIMMING SCAM")
+            else if (Title == "Japan")
             {
-                await Navigation.PushAsync(new ATMFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = true;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "TECH SUPPORT SCAM")
+            else if (Title == "New Zealand")
             {
-                await Navigation.PushAsync(new TechFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = true;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "BUSINESS EMAIL COMPROMISE(BEC) SCAM")
+            else if (Title == "Saudi Arabia")
             {
-                await Navigation.PushAsync(new BusinessFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = true;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "LOTTERY, PRIZE OR FREE GIFTS SCAM")
+            else if (Title == "Singapore")
             {
-                await Navigation.PushAsync(new LotteryFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = true;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "SOCIAL MEDIA  SCAM")
+            else if (Title == "South Africa")
             {
-                await Navigation.PushAsync(new SocialMediaFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = true;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "TAX SCAM")
+            else if (Title == "South Korea")
             {
-                await Navigation.PushAsync(new TaxFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = true;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "IDENTITY THEFT SCAM")
+            else if (Title == "Spain")
             {
-                await Navigation.PushAsync(new IdentityfirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = true;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "GRANDPARENT OR PARENT SCAM")
+            else if (Title == "Switzerland")
             {
-                await Navigation.PushAsync(new GrandParentFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = true;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "CHARITY SCAM")
+            else if (Title == "Ukraine")
             {
-                await Navigation.PushAsync(new CharityFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = true;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "ONLINE SHOPPING SCAM")
+            else if (Title == "United Arab Emirate")
             {
-                await Navigation.PushAsync(new OnlineShoppingFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = true;
+                UnitedK = false;
+                USA = false;
             }
-            else if (Title == "EMPLOYMENT OPPORTUNITY SCAM")
+            else if (Title == "United Kingdom")
             {
-                await Navigation.PushAsync(new EmploymentFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = true;
+                USA = false;
             }
-            else if (Title == "FAKE INVOICE SCAM")
+            else if (Title == "United State of America")
             {
-                await Navigation.PushAsync(new FakeFirstQuestion());
-            }
-            else if (Title == "GIFT CARD SCAM")
-            {
-                await Navigation.PushAsync(new GiftCardFirstQuestion());
+                Australia = false;
+                Canada = false;
+                France = false;
+                Germany = false;
+                India = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Zealand = false;
+                Saudi = false;
+                Singapore = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Switzerland = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = true;
             }
         }
 

@@ -4,39 +4,48 @@
              x:Class="ScamMobileApp.Views.Questions.Vishing.VishingSecondQuestion"
              Title="Question and answer"
              NavigationPage.HasBackButton="False"
-             BackgroundColor="{StaticResource PrimaryColor}">
+              BackgroundImageSource="bgscam">
 
-    <StackLayout Margin="20">
-        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
-
-        <StackLayout>
-            <Image Source="scamquestion2.png"/>
-        </StackLayout>
-        <Label Text="Did the caller avoid giving you reliable contact details or act unclear when you requested their name, company, or a call-back number?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-
-        <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
-            <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
-            <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
-        </StackLayout>
-        <FlexLayout JustifyContent="SpaceBetween">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
             <StackLayout>
-                <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
-                <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </StackLayout>
-            <StackLayout>
-                <ImageButton Command="{Binding SecondQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
-                <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </StackLayout>
-        </FlexLayout>
-        <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
-            <StackLayout>
-                <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                <Label Text="This question asks whether the person you're talking to didn't want to give you valid ways to contact them or if they were unclear when you asked for their name, the company they're from, or a number to call them back. This is important because scammers often avoid giving real information and might be trying to trick you. If the caller is being vague about these things, it's a sign that the call might not be trustworthy. Legitimate organizations should be transparent about their identity and provide a callback number for verification. " 
-                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <StackLayout>
+                    <Image Source="scamquestion2.png"/>
+                </StackLayout>
+                <Label Text="Did the caller avoid giving you reliable contact details or act unclear when you requested their name, company, or a call-back number?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                <!--<Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+                <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+                    <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+                    <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+                </StackLayout>
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <StackLayout>
+                        <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                        <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton Command="{Binding SecondQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
+                        <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </FlexLayout>
             </StackLayout>
         </Frame>
-    </StackLayout>
+        <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="20" HasShadow="False" Grid.Row="1">
+            <StackLayout>
+                <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+                    <StackLayout>
+                        <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Label Text="This question asks whether the person you're talking to didn't want to give you valid ways to contact them or if they were unclear when you asked for their name, the company they're from, or a number to call them back. This is important because scammers often avoid giving real information and might be trying to trick you. If the caller is being vague about these things, it's a sign that the call might not be trustworthy. Legitimate organizations should be transparent about their identity and provide a callback number for verification. " 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+      
+    </Grid>
 
 </ContentPage>

@@ -4,39 +4,48 @@
              x:Class="ScamMobileApp.Views.Questions.SocialMedia.SocialMedianThirdQuestion"
              Title="Question and answer"
              NavigationPage.HasBackButton="False"
-             BackgroundColor="{StaticResource PrimaryColor}">
+              BackgroundImageSource="bgscam">
 
-    <StackLayout Margin="20">
-        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
-
-        <StackLayout>
-            <Image Source="scamquestion3.png"/>
-        </StackLayout>
-        <Label Text="Is the message asking for money, gift cards, or any form of financial assistance?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-
-        <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
-            <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionThreeCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
-            <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionThreeCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
-        </StackLayout>
-        <FlexLayout JustifyContent="SpaceBetween">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
             <StackLayout>
-                <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
-                <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </StackLayout>
-            <StackLayout>
-                <ImageButton Command="{Binding ThirdQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
-                <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </StackLayout>
-        </FlexLayout>
-        <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
-            <StackLayout>
-                <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                <Label Text="This question asks whether the message you've received is requesting money, gift cards, or any form of financial assistance. Scammers often use sympathy or urgency to manipulate you into sending them money or valuable items. Be cautious if you're asked to provide financial assistance through social media messages. Avoid sending money or gift cards to anyone you haven't personally verified as trustworthy. Always verify the legitimacy of such requests by contacting the person through other means, like a known phone number, before taking any action." 
-                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <StackLayout>
+                    <Image Source="scamquestion3.png"/>
+                </StackLayout>
+                <Label Text="Is the message asking for money, gift cards, or any form of financial assistance?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                <!--<Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+                <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+                    <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionThreeCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+                    <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionThreeCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+                </StackLayout>
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <StackLayout>
+                        <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                        <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton Command="{Binding ThirdQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
+                        <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </FlexLayout>
             </StackLayout>
         </Frame>
-    </StackLayout>
+        <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="20" HasShadow="False" Grid.Row="1">
+            <StackLayout>
+                <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+                    <StackLayout>
+                        <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Label Text="This question asks whether the message you've received is requesting money, gift cards, or any form of financial assistance. Scammers often use sympathy or urgency to manipulate you into sending them money or valuable items. Be cautious if you're asked to provide financial assistance through social media messages. Avoid sending money or gift cards to anyone you haven't personally verified as trustworthy. Always verify the legitimacy of such requests by contacting the person through other means, like a known phone number, before taking any action." 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+        
+    </Grid>
 
 </ContentPage>

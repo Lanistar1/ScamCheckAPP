@@ -1,175 +1,843 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="ScamMobileApp.Views.More.ScamLink"
              Title="Report Scam"
              NavigationPage.HasNavigationBar="True"
              BackgroundColor="{StaticResource PrimaryColor}">
 
-    <ScrollView  VerticalScrollBarVisibility="Never">
-        <StackLayout >
-            <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" >
-                <StackLayout>
-                    <Label Text="If you believe you have been scammed or suspect an email, message, call, etc., to be a scam, please select a country below to report the scam." 
-                       TextColor="#ffffff" FontSize="15" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Padding="10" BackgroundColor="{StaticResource SecondaryColor}"/>
-                </StackLayout>
-            </Frame>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <StackLayout Margin="20,10">
-                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding ShowSolicitCommand}"/>
-                    </Frame.GestureRecognizers>
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="Australia" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                        <StackLayout>
-                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                        </StackLayout>
-                    </FlexLayout>
-                </Frame>
+        <StackLayout Padding="20,10" BackgroundColor="{StaticResource SecondaryColor}" Grid.Row="0">
+            <Label Text="Choose a country you are reporting from and get linked with organization(s) that can help you." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium"
+                   HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+        </StackLayout>
 
-                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding ShowSolicitCommand}"/>
-                    </Frame.GestureRecognizers>
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="Canada " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                        <StackLayout>
-                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                        </StackLayout>
-                    </FlexLayout>
-                </Frame>
+        <StackLayout Margin="20,10" Grid.Row="1">
+            <StackLayout Margin="0,0,0,5" Spacing="0">
 
-                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding ShowSolicitCommand}"/>
-                    </Frame.GestureRecognizers>
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="Croatia " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                        <StackLayout>
-                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                        </StackLayout>
-                    </FlexLayout>
-                </Frame>
+                <Label  Text="Select a Country"
+                        FontFamily="Inter-Medium"
+                        FontSize="16"
+                        Margin="0,0,0,5"
+                        TextColor="{StaticResource SecondaryColor}"/>
 
-                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer />
-                    </Frame.GestureRecognizers>
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="India" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                        <StackLayout>
-                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                        </StackLayout>
-                    </FlexLayout>
-                </Frame>
+                <pv:PancakeView BackgroundColor="{StaticResource SecondaryColor}"
+                                CornerRadius="5"
+                                HorizontalOptions="Fill" 
+                                HeightRequest="50"
+                                Padding="10,5">
+                    <pv:PancakeView.Border>
+                        <pv:Border Color="#72708D" Thickness="1"/>
+                    </pv:PancakeView.Border>
+                    <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid HorizontalOptions="StartAndExpand"
+                              VerticalOptions="CenterAndExpand">
 
-                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer />
-                    </Frame.GestureRecognizers>
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="Ireland" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                        <StackLayout>
-                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                        </StackLayout>
-                    </FlexLayout>
-                </Frame>
+                            <StackLayout Orientation="Vertical"
+                                         VerticalOptions="CenterAndExpand">
+                                <Label Text="{Binding Title}"
+                                       HorizontalOptions="StartAndExpand"
+                                       VerticalOptions="CenterAndExpand"
+                                       FontFamily="Roboto-Medium"
+                                       TextColor="#ffffff"
+                                       FontSize="16"/>
 
-                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer />
-                    </Frame.GestureRecognizers>
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="Mexico" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                        <StackLayout>
-                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                        </StackLayout>
-                    </FlexLayout>
-                </Frame>
+                            </StackLayout>
 
-                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer />
-                    </Frame.GestureRecognizers>
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="South Korea  " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                        <StackLayout>
-                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                        </StackLayout>
-                    </FlexLayout>
-                </Frame>
+                        </Grid>
 
-                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer />
-                    </Frame.GestureRecognizers>
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="United Kingdom " TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                        <StackLayout>
-                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                        <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,10,0">
+                            <ImageButton BackgroundColor="Transparent" Command="{Binding SelectPageCommand}" CommandParameter="{Binding .}" Source="scamarrowdown.png" WidthRequest="15" 
+                                         HeightRequest="15"/>
                         </StackLayout>
-                    </FlexLayout>
-                </Frame>
 
-                <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer />
-                    </Frame.GestureRecognizers>
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="United States" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                        <StackLayout>
-                            <ImageButton BackgroundColor="Transparent" Source="scamarrow.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
-                        </StackLayout>
-                    </FlexLayout>
-                </Frame>
+                    </Grid>
+                    <pv:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SelectPageCommand}"
+                                              CommandParameter="{Binding .}"
+                                              NumberOfTapsRequired="1"/>
+                    </pv:PancakeView.GestureRecognizers>
+                </pv:PancakeView>
             </StackLayout>
 
-            
+            <Grid Margin="0,15">
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Australia}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Scamwatch" TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Scamwatch"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Australia cyber security Center " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="AustraliaCyber"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="3. Organization name : ACMA " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ACMA"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
 
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Canada}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Canadian center for cyber security" TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="CyberSecurity"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Canadian Anti-Fraud Centre " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="AntiFraud" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="3. Organization name : Traffic Services - TSV " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TrafficServices"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
 
-            <!--<StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="StartAndExpand" Margin="0,5">
-            <Label Text="1. Check recent scam report in USA." TextColor="#ffffff"/>
-            <Label HorizontalOptions="CenterAndExpand" TextColor="#01FF1A" Margin="10,0,0,0" FontSize="Subtitle">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Click here" />
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="To_usa"/>
-                </Label.GestureRecognizers>
-            </Label>
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding France}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Ministere de l'Interieur et des Outre-Mer (PHAROS)" TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="OutreMer"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Ministry of Economy, Finance and Industrial and Digital Sovereignty " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="DigitalSovereignty"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="3. Organization name : Traffic Services - TSV " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="ServicePublic"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Germany}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Polizei" TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Polizei"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Bundeskriminalamt " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Bundeskriminalamt"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding India}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : National Cyber Crime Reporting Portal" TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="CyberCrime"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Cyber Crime Portal " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Portal"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="3. Organization name : Cyber Crime Unit- Delhi Police " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="DelhiPolice"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Ireland}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organisation name: Ireland's National Police and Security Service " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Ireland1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Ireland's National Police Service " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Ireland12"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Israel}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organisatin name : National Insurance Institute of Israel " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Israel1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Italy}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organisatin name : Polizia di Stato " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="italy1" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Japan}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organisatin name : Japan Anti Fraud Organization " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="japan1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Netherland}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Politie" TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Netherland1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Fraudehelpdesk " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Netherland2"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Zealand}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Department of Internal Affairs" TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Zealand1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Netsafe " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Zealand2"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="3. Organization name : Banking Ombudsman Scheme " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Zealand3"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Saudi}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Confidential Saudi Arabia" TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Arabia1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Saudi Central Bank – SAMA " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Arabia2"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Singapore}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : ScamShield " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Singapore1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Singapore Police Force " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Singapore2"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="3. Organization name : Consumers Association of Singapore " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Singapore3"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding SAfrica}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organisatin name : ICASA " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="SAfrica"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding SKorea}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Ministry of Justice " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Korea1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Korean National Police Agency " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Korea2"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Spain}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text=" Organisatin name : Policia Nacional  " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="10,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Spain"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Switzerland}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Suisse ePolice " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Switzerland1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : GovCERT " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Switzerland2"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding Ukraine}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Ministry of Internal Affairs of Ukraine " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Ukraine1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : National Anti-Corruption Bureau of Ukraine " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Ukraine2"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding UAE}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Federal Supreme Court " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="UAE1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding UnitedK}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : National Fruad and Cyber Crime Reporting Center" TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Kingdom1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : National Crime Agency " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Kingdom2"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="3. Organization name : Citizens Advice " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Kingdom3"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" HasShadow="False" IsVisible="{Binding USA}">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="1. Organization name : Federal Trade Commission" TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="USA1"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="2. Organization name : Identity Theft " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="USA2"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="3. Organization name : Internet Crime Complaint Center  " TextColor="White" FontSize="14"/>
+                            <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff" Margin="15,0,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Website:  " />
+                                        <Span Text="Click me" TextColor="#01FF1A" FontSize="14">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="USA3"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </Grid>
         </StackLayout>
-
-        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="StartAndExpand" Margin="0,5">
-            <Label Text="2. Check recent scam report in UK." TextColor="#ffffff"/>
-            <Label HorizontalOptions="CenterAndExpand" TextColor="#01FF1A" Margin="10,0,0,0" FontSize="Subtitle">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Click here" />
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="To_uk"/>
-                </Label.GestureRecognizers>
-            </Label>
-        </StackLayout>
-
-        <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="StartAndExpand" Margin="0,5">
-            <Label Text="3. Check recent scam report in Canada." TextColor="#ffffff"/>
-            <Label HorizontalOptions="CenterAndExpand" TextColor="#01FF1A" Margin="10,0,0,0" FontSize="Subtitle">
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Click here" />
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="To_canada"/>
-                </Label.GestureRecognizers>
-            </Label>
-        </StackLayout>-->
-        </StackLayout>
-
-    </ScrollView>
+    </Grid>
+    
 </ContentPage>

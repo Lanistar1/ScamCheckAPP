@@ -4,39 +4,49 @@
              x:Class="ScamMobileApp.Views.Questions.Employment.EmploymentThirdQuestion"
              Title="Question and answer"
              NavigationPage.HasBackButton="False"
-             BackgroundColor="{StaticResource PrimaryColor}">
+             BackgroundImageSource="bgscam">
 
-    <StackLayout Margin="20">
-        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
-
-        <StackLayout>
-            <Image Source="scamquestion3.png"/>
-        </StackLayout>
-        <Label Text="Is the job description vague, promising high earnings with little to no effort or experience?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-
-        <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
-            <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionThreeCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
-            <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionThreeCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
-        </StackLayout>
-        <FlexLayout JustifyContent="SpaceBetween">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
             <StackLayout>
-                <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
-                <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </StackLayout>
-            <StackLayout>
-                <ImageButton Command="{Binding ThirdQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
-                <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </StackLayout>
-        </FlexLayout>
-        <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
-            <StackLayout>
-                <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                <Label Text="This question asks whether the job description is vague and promises high earnings with little to no effort or experience required. Scammers often use enticing but unrealistic offers to lure job seekers into fraudulent schemes. Legitimate job opportunities usually provide clear job requirements and realistic expectations. Before committing to anything, carefully review the job description, research the company, and consider the industry standards for compensation and qualifications. If the job description raises doubts or seems unrealistic, it's wise to proceed with caution and verify the legitimacy of the opportunity. " 
-                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <StackLayout>
+                    <Image Source="scamquestion3.png"/>
+                </StackLayout>
+                <Label Text="Is the job description vague, promising high earnings with little to no effort or experience?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                <!--<Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+                <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+                    <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionThreeCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+                    <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionThreeCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+                </StackLayout>
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <StackLayout>
+                        <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                        <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton Command="{Binding ThirdQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
+                        <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </FlexLayout>
             </StackLayout>
         </Frame>
-    </StackLayout>
+        <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="20" HasShadow="False" Grid.Row="1">
+            <StackLayout>
+                <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+                    <StackLayout>
+                        <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Label Text="This question asks whether the job description is vague and promises high earnings with little to no effort or experience required. Scammers often use enticing but unrealistic offers to lure job seekers into fraudulent schemes. Legitimate job opportunities usually provide clear job requirements and realistic expectations. Before committing to anything, carefully review the job description, research the company, and consider the industry standards for compensation and qualifications. If the job description raises doubts or seems unrealistic, it's wise to proceed with caution and verify the legitimacy of the opportunity. " 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+        
+    </Grid>
 
 </ContentPage>

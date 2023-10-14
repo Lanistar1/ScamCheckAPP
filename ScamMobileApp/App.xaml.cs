@@ -1,4 +1,5 @@
 ﻿using ScamMobileApp.Views;
+using ScamMobileApp.Views.More;
 using ScamMobileApp.Views.Onboard;
 using ScamMobileApp.Views.Questions;
 using System;

@@ -4,42 +4,53 @@
              x:Class="ScamMobileApp.Views.Questions.ATM.ATMFourthQuestion"
              Title="Question and answer"
              NavigationPage.HasBackButton="False"
-             BackgroundColor="{StaticResource PrimaryColor}">
+             BackgroundImageSource="bgscam">
 
-    <StackLayout Margin="20">
-        
-
-        <StackLayout>
-            <Image Source="newforthscam.png"/>
-        </StackLayout>
-        <Label Text="Does the ATM display show any error messages or appear to be malfunctioning?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-
-        <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
-            <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionFourCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
-            <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionFourCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
-
-
-        </StackLayout>
-
-        <FlexLayout JustifyContent="SpaceBetween">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
             <StackLayout>
-                <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
-                <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </StackLayout>
-            <StackLayout>
-                <ImageButton BackgroundColor="Transparent" Command="{Binding ScamCalculatorCommand}" Source="scamresult.png"/>
-                <Label Text="Recommendation" TextColor="#0CC0EC" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </StackLayout>
-        </FlexLayout>
-        <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
-            <StackLayout>
-                <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                <Label Text="Scammers might manipulate ATMs to display fake error messages or to appear malfunctioning to distract you while they install skimming devices. To protect yourself, be alert when using an ATM. If you notice any unusual error messages, strange behavior, or the machine seems to be acting differently than usual, it's a sign that something might be wrong. It's best to avoid using that ATM and report your observations to the bank or authorities. " 
-                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <StackLayout>
+                    <Image Source="newforthscam.png"/>
+                </StackLayout>
+                <Label Text="Does the ATM display show any error messages or appear to be malfunctioning?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                <!--<Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+                <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+                    <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionFourCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+                    <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionFourCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+
+
+                </StackLayout>
+
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <StackLayout>
+                        <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                        <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton BackgroundColor="Transparent" Command="{Binding ScamCalculatorCommand}" Source="scamresult.png"/>
+                        <Label Text="Recommendation" TextColor="#0CC0EC" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </FlexLayout>
             </StackLayout>
         </Frame>
-    </StackLayout>
+
+        <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="20" HasShadow="False" Grid.Row="1">
+            <StackLayout>
+                <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+                    <StackLayout>
+                        <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Label Text="Scammers might manipulate ATMs to display fake error messages or to appear malfunctioning to distract you while they install skimming devices. To protect yourself, be alert when using an ATM. If you notice any unusual error messages, strange behavior, or the machine seems to be acting differently than usual, it's a sign that something might be wrong. It's best to avoid using that ATM and report your observations to the bank or authorities. " 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                        <!--<Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+    </Grid>
 
 </ContentPage>

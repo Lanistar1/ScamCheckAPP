@@ -4,39 +4,50 @@
              x:Class="ScamMobileApp.Views.Questions.Business.BusinessSecondQuestion"
              Title="Question and answer"
              NavigationPage.HasBackButton="False"
-             BackgroundColor="{StaticResource PrimaryColor}">
+             BackgroundImageSource="bgscam">
 
-    <StackLayout Margin="20">
-        <!--<Label Text="Answer our questions about Phishing scams below." TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
-
-        <StackLayout>
-            <Image Source="scamquestion2.png"/>
-        </StackLayout>
-        <Label Text="Is the request asking for a financial transaction, such as wire transfer or payment, and does it seem out of the ordinary?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-
-        <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
-            <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
-            <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
-        </StackLayout>
-        <FlexLayout JustifyContent="SpaceBetween">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
             <StackLayout>
-                <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
-                <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </StackLayout>
-            <StackLayout>
-                <ImageButton Command="{Binding SecondQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
-                <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </StackLayout>
-        </FlexLayout>
-        <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
-            <StackLayout>
-                <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                <Label Text="This question asks whether the request you've received is requesting a financial transaction, like a wire transfer or payment, and if it seems unusual or out of the ordinary. BEC scammers often use urgent or unexpected financial requests to manipulate you into transferring money to their accounts.  Always verify the request through a separate communication channel, like calling the person directly, to confirm its legitimacy before proceeding." 
-                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <StackLayout>
+                    <Image Source="scamquestion2.png"/>
+                </StackLayout>
+                <Label Text="Is the request asking for a financial transaction, such as wire transfer or payment, and does it seem out of the ordinary?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                <!--<Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+                <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+                    <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionTwoCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+                    <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+                </StackLayout>
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <StackLayout>
+                        <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                        <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton Command="{Binding SecondQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
+                        <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </FlexLayout>
             </StackLayout>
         </Frame>
-    </StackLayout>
+        <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="20" HasShadow="False" Grid.Row="1">
+            <StackLayout>
+                <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+                    <StackLayout>
+                        <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Label Text="This question asks whether the request you've received is requesting a financial transaction, like a wire transfer or payment, and if it seems unusual or out of the ordinary. BEC scammers often use urgent or unexpected financial requests to manipulate you into transferring money to their accounts.  Always verify the request through a separate communication channel, like calling the person directly, to confirm its legitimacy before proceeding." 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                        <!--<Label Text="Learn more about how this can lead to scam " TextColor="#01FF1A" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>-->
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+
+    </Grid>
 
 </ContentPage>

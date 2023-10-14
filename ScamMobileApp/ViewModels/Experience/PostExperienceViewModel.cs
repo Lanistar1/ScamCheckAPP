@@ -54,6 +54,17 @@ namespace ScamMobileApp.ViewModels.Experience
             }
         }
 
+        private string othertitle;
+        public string Othertitle
+        {
+            get => othertitle;
+            set
+            {
+                othertitle = value;
+                OnPropertyChanged(nameof(Othertitle));
+            }
+        }
+
         private bool scamCheck;
         public bool ScamCheck
         {
@@ -62,6 +73,17 @@ namespace ScamMobileApp.ViewModels.Experience
             {
                 scamCheck = value;
                 OnPropertyChanged(nameof(ScamCheck));
+            }
+        }
+
+        private bool others = false;
+        public bool Others
+        {
+            get => others;
+            set
+            {
+                others = value;
+                OnPropertyChanged(nameof(Others));
             }
         }
         #endregion
@@ -101,6 +123,7 @@ namespace ScamMobileApp.ViewModels.Experience
                 new SelectItemModel(19,"EMPLOYMENT OPPORTUNITY SCAM"),
                 new SelectItemModel(20,"FAKE INVOICE SCAM"),
                 new SelectItemModel(21,"GIFT CARD SCAM"),
+                new SelectItemModel(22,"Other SCAM"),
 
             };
             var popup = new SelectItemPickerPopup(responseToLightTypes);
@@ -109,6 +132,15 @@ namespace ScamMobileApp.ViewModels.Experience
 
             var result = await popup.PopupClosedTask;
             Title = result.Item1;
+
+            if (Title == "Other SCAM")
+            {
+                Others = true;
+            }
+            else
+            {
+                Others = false;
+            }
         }
 
         private async Task PostExerienceCommandExecute(string title, string message)
@@ -134,11 +166,18 @@ namespace ScamMobileApp.ViewModels.Experience
                 return;
             }
 
+            if (!string.IsNullOrWhiteSpace(Othertitle))
+            {
+                Title = Othertitle;
+            }
+
             if (string.IsNullOrWhiteSpace(Title))
             {
                 await MessagePopup.Instance.Show("Select a scam type to continue");
                 return;
             }
+
+
 
             try
             {
