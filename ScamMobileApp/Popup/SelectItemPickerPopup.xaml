@@ -8,14 +8,14 @@
 
     <pages:PopupPage.Animation>
         <pages:ScaleAnimation DurationIn="200"
-                                   DurationOut="200"
-                                   EasingIn="Linear"
-                                   EasingOut="Linear"
-                                   HasBackgroundAnimation="True"
-                                   PositionIn="Bottom"
-                                   PositionOut="Bottom"
-                                   ScaleIn="1.2"
-                                   ScaleOut="0.8" />
+                              DurationOut="200"
+                              EasingIn="Linear"
+                              EasingOut="Linear"
+                              HasBackgroundAnimation="True"
+                              PositionIn="Bottom"
+                              PositionOut="Bottom"
+                              ScaleIn="1.2"
+                              ScaleOut="0.8" />
     </pages:PopupPage.Animation>
 
     <!--  You can use any elements here which are extended from Xamarin.Forms.View  -->

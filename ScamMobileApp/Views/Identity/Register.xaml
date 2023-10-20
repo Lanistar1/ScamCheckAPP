@@ -21,7 +21,7 @@
 
         </StackLayout>
 
-        <ScrollView Grid.Row="1" VerticalScrollBarVisibility="Never">
+        <ScrollView Grid.Row="1" VerticalScrollBarVisibility="Never" Margin="10,0">
             <StackLayout>
                 <StackLayout Margin="0,20,0,0">
                     <Label Text="Register" TextColor="{StaticResource SecondaryColor}" FontSize="20" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
@@ -93,6 +93,31 @@
                         </Frame>
                     </StackLayout>
 
+                    <StackLayout Margin="0,5,0,0">
+                        <Label  Text="Select DOB"
+                                FontFamily="Inter-Medium"
+                                FontSize="14"
+                                Margin="0,0"
+                                TextColor="{StaticResource SecondaryColor}"/>
+
+                        <Frame Padding="10,0,10,0" BorderColor="{StaticResource SecondaryColor}" CornerRadius="10" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" Margin="0,0,0,10" HasShadow="False">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="7*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Controls:BorderlessDatePicker TextColor="Black" VerticalOptions="CenterAndExpand"
+                                                   x:Name="datePicker" DateSelected="DatePicker_SelectedDateChanged" />
+                                <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
+                                    <Image Source="downarrow1.png" WidthRequest="8" HeightRequest="8"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+
+                       
+                    </StackLayout>
+
                     <StackLayout>
                         <StackLayout>
 
@@ -140,10 +165,10 @@
                             </StackLayout>
                             <StackLayout >
                                 <Label Text="Confirm Password"
-                                    FontFamily="Euclid-Medium"
-                                    FontSize="15"
-                                    Margin="0,0,10,5"
-                                    TextColor="{StaticResource SecondaryColor}"/>
+                                        FontFamily="Inter-Medium"
+                                        FontSize="15"
+                                        Margin="0,0,10,5"
+                                        TextColor="{StaticResource SecondaryColor}"/>
 
                                 <Frame Padding="10,5,10,0" BorderColor="{StaticResource SecondaryColor}" BackgroundColor="{StaticResource PrimaryColor}" CornerRadius="10" HeightRequest="45" Margin="0,0,0,10" HasShadow="False">
                                     <Grid>

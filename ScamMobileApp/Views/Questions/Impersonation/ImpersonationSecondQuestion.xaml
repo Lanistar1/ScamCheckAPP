@@ -6,7 +6,7 @@
              NavigationPage.HasBackButton="False"
              BackgroundImageSource="bgscam">
 
-    <Grid Margin="20">
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>

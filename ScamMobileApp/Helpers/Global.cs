@@ -39,6 +39,8 @@ namespace ScamMobileApp.Helpers
         public static string likelyOrNot;
         public static int Rating;
         public static string comment;
+        public static DateTime DateType { get; set; }
+
 
         public static bool Contains(this string target, string value, StringComparison comparison)
         {

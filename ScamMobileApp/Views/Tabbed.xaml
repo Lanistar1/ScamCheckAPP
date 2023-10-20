@@ -15,8 +15,8 @@
 
     <!--Pages can be added as references or inline-->
     <Pages1:MoreMenu Title="Menu" IconImageSource="scammenu.png"></Pages1:MoreMenu>
-    <Pages2:QuestionsAndAnswer IconImageSource="scamqa.png"></Pages2:QuestionsAndAnswer>
-    <Pages3:ShareScamExperience Title="Your Story" IconImageSource="antiscam.png"></Pages3:ShareScamExperience>
+    <Pages2:QuestionsAndAnswer IconImageSource="qascam.png"></Pages2:QuestionsAndAnswer>
+    <Pages3:ShareScamExperience Title="Your Story" IconImageSource="urstory.png"></Pages3:ShareScamExperience>
     <Pages3:Dashboard Title="Home" IconImageSource="scamhome.png"></Pages3:Dashboard>
     
 </TabbedPage>
