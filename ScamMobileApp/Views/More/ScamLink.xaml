@@ -27,13 +27,13 @@
                         Margin="0,0,0,5"
                         TextColor="{StaticResource SecondaryColor}"/>
 
-                <pv:PancakeView BackgroundColor="{StaticResource SecondaryColor}"
+                <pv:PancakeView BackgroundColor="{StaticResource PrimaryColor}"
                                 CornerRadius="5"
                                 HorizontalOptions="Fill" 
-                                HeightRequest="50"
+                                HeightRequest="40"
                                 Padding="10,5">
                     <pv:PancakeView.Border>
-                        <pv:Border Color="#72708D" Thickness="1"/>
+                        <pv:Border Color="{StaticResource SecondaryColor}" Thickness="2"/>
                     </pv:PancakeView.Border>
                     <Grid HorizontalOptions="FillAndExpand"
                           VerticalOptions="FillAndExpand">
@@ -50,7 +50,7 @@
                                        HorizontalOptions="StartAndExpand"
                                        VerticalOptions="CenterAndExpand"
                                        FontFamily="Roboto-Medium"
-                                       TextColor="#ffffff"
+                                       TextColor="{StaticResource SecondaryColor}"
                                        FontSize="16"/>
 
                             </StackLayout>
@@ -58,7 +58,7 @@
                         </Grid>
 
                         <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,10,0">
-                            <ImageButton BackgroundColor="Transparent" Command="{Binding SelectPageCommand}" CommandParameter="{Binding .}" Source="scamarrowdown.png" WidthRequest="15" 
+                            <ImageButton BackgroundColor="Transparent" Command="{Binding SelectPageCommand}" CommandParameter="{Binding .}" Source="arr2.png" WidthRequest="15" 
                                          HeightRequest="15"/>
                         </StackLayout>
 

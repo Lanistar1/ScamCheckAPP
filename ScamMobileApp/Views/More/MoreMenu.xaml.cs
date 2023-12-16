@@ -69,7 +69,7 @@ namespace ScamMobileApp.Views.More
 
         private void To_ShareExperience(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ShareScamExperience());
+            Navigation.PushAsync(new ShareExperience());
         }
 
         private void To_Scamlink(object sender, EventArgs e)
