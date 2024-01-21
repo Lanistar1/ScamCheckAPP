@@ -29,31 +29,31 @@
                     <Frame BackgroundColor="#EAEAFB" Padding="10,10,0,0" CornerRadius="10" HasShadow="False">
                         <StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <Image Source="scammer.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"/>
-                                <Label Text="Is This A Scam?." TextColor="#110F0F" FontSize="15" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                <!--<Image Source="scammer.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"/>-->
+                                <Label Text="My previous activities" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Bold" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                             </StackLayout>
-                            <Label Text="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum." TextColor="#110F0F" FontSize="12" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,10,0"/>
-                            <Image Source="arr21.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0" HorizontalOptions="EndAndExpand"/>
+                            <Label Text="Click on the arrow button to see your recent activities." TextColor="#110F0F" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,10,0"/>
+                            <ImageButton BackgroundColor="Transparent" Clicked="To_recentActivity" Source="arr21.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0" HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
                     </Frame>
-                    <Frame BackgroundColor="#EAEAFB" Padding="10,10,0,0" CornerRadius="10" HasShadow="False">
+                    <Frame BackgroundColor="#EAEAFB" Padding="10,10,0,10" CornerRadius="10" HasShadow="False">
                         <StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="scammer.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"/>
-                                <Label Text="Is This A Scam?." TextColor="#110F0F" FontSize="15" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                <Label Text="What is SCAM?" TextColor="#110F0F" FontSize="15" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                             </StackLayout>
-                            <Label Text="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum." TextColor="#110F0F" FontSize="12" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,10,0"/>
-                            <Image Source="arr21.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0" HorizontalOptions="EndAndExpand"/>
+                            <Label Text="A scam generally refers to a deceptive or fraudulent scheme that aims to trick people into giving away their money or personal information. Scammers use various tactics to deceive people, such as posing as a legitimate business or government agency, offering fake investment opportunities, or using social engineering techniques to gain people's trust and extract sensitive information. " TextColor="#110F0F" FontSize="13" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,10,0"/>
+                            <!--<Image Source="arr21.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0" HorizontalOptions="EndAndExpand"/>-->
                         </StackLayout>
                     </Frame>
-                    <Frame BackgroundColor="#EAEAFB" Padding="10,10,0,0" CornerRadius="10" HasShadow="False">
+                    <Frame BackgroundColor="#EAEAFB" Padding="10,10,0,10" CornerRadius="10" HasShadow="False">
                         <StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="scammer.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"/>
-                                <Label Text="Is This A Scam?." TextColor="#110F0F" FontSize="15" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                <Label Text="What is FRAUD?" TextColor="#110F0F" FontSize="15" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                             </StackLayout>
-                            <Label Text="Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum." TextColor="#110F0F" FontSize="12" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,10,0"/>
-                            <Image Source="arr21.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0" HorizontalOptions="EndAndExpand"/>
+                            <Label Text="Fraud is a deliberate deception or misrepresentation that is made for personal gain or to cause harm to another person or organization. It involves taking advantage of someone by using false information or promises to induce them to give up something of value, such as money, property, or personal information. " TextColor="#110F0F" FontSize="13" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,10,0"/>
+                            <!--<Image Source="arr21.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0" HorizontalOptions="EndAndExpand"/>-->
                         </StackLayout>
                     </Frame>
                 </StackLayout>
@@ -74,7 +74,7 @@
                         <Frame BackgroundColor="#ffffff" Padding="10,10,10,10" CornerRadius="10" HasShadow="False" Grid.Column="1">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="scamtips.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"/>
-                                <Label Text="Phishing Scam." TextColor="#110F0F" FontSize="14" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                <Label Text="Gift card Scam." TextColor="#110F0F" FontSize="14" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                             </StackLayout>
                         </Frame>
                     </Grid>
@@ -86,13 +86,13 @@
                         <Frame BackgroundColor="#ffffff" Padding="10,10,10,10" CornerRadius="10" HasShadow="False" Grid.Column="0">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="scamtips.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"/>
-                                <Label Text="Phishing Scam." TextColor="#110F0F" FontSize="14" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                <Label Text="Investment Scam." TextColor="#110F0F" FontSize="14" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                             </StackLayout>
                         </Frame>
                         <Frame BackgroundColor="#ffffff" Padding="10,10,10,10" CornerRadius="10" HasShadow="False" Grid.Column="1">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="scamtips.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"/>
-                                <Label Text="Phishing Scam." TextColor="#110F0F" FontSize="14" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                <Label Text="Romance Scam." TextColor="#110F0F" FontSize="14" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                             </StackLayout>
                         </Frame>
                     </Grid>

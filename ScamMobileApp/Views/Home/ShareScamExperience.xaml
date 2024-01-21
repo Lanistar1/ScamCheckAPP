@@ -12,8 +12,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-
-            <StackLayout Grid.Row="0" BackgroundColor="{StaticResource SecondaryColor}">
+            <StackLayout  BackgroundColor="{StaticResource SecondaryColor}" Grid.Row="0">
                 <Label Text="The Anti-Scam Movement" TextColor="White" FontSize="18" FontFamily="Inter-Bold"
                    HorizontalTextAlignment="Start" Margin="0,0,0,0" Padding="20,10" BackgroundColor="{StaticResource SecondaryColor}"/>
 
@@ -32,17 +31,14 @@
                 </Frame>
             </StackLayout>
 
-
-
-            <StackLayout Grid.Row="1" Margin="20,10,20,20">
-
+            <StackLayout  Margin="20,10,20,20" Grid.Row="1">
                 <StackLayout Margin="0,0,0,5" Spacing="0">
 
                     <Label  Text="Type Of Scam"
-                        FontFamily="Inter-Medium"
-                        FontSize="16"
-                        Margin="0,0,0,5"
-                        TextColor="{StaticResource SecondaryColor}"/>
+                            FontFamily="Inter-Medium"
+                            FontSize="16"
+                            Margin="0,0,0,5"
+                            TextColor="{StaticResource SecondaryColor}"/>
 
                     <pv:PancakeView BackgroundColor="{StaticResource PrimaryColor}"
                                 CornerRadius="5"
@@ -86,31 +82,30 @@
                                               NumberOfTapsRequired="1"/>
                         </pv:PancakeView.GestureRecognizers>
                     </pv:PancakeView>
-
-                    <StackLayout IsVisible="{Binding Others}" Margin="0,10">
-                        <Label  Text="Enter the scam type"
-                            FontFamily="Inter-Medium"
-                            FontSize="16"
-                            Margin="0,5,0,0"
-                            TextColor="{StaticResource SecondaryColor}"/>
-                        <Frame Padding="5" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource SecondaryColor}" Margin="0,0,0,0"
-                               CornerRadius="5" >
-                            <controls:XEditor
-                                    FontSize="16"
-                                    AutoSize="TextChanges"
-                                    FontFamily="Roboto-Medium"
-                                    Text="{Binding Othertitle}"
-                                    PlaceholderColor="#645F5F"
-                                    TextColor="{StaticResource SecondaryColor}"/>
-                        </Frame>
-                    </StackLayout>
-
                 </StackLayout>
 
 
-                <StackLayout Margin="0,0,0,0">
+                <StackLayout  IsVisible="{Binding Others}" Margin="0,10">
+                    <Label   Text="Enter the scam type"
+                                 FontFamily="Inter-Medium"
+                                 FontSize="16"
+                                 Margin="0,5,0,0"
+                                 TextColor="{StaticResource SecondaryColor}"/>
+                    <Frame Padding="5" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource SecondaryColor}" Margin="0,0,0,0"
+                               CornerRadius="5" >
+                        <controls:XEditor
+                                 FontSize="16"
+                                 AutoSize="TextChanges"
+                                 FontFamily="Roboto-Medium"
+                                 Text="{Binding Othertitle}"
+                                 PlaceholderColor="#645F5F"
+                                 TextColor="{StaticResource SecondaryColor}"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout  Margin="0,0,0,0">
                     <Label Text="Your Experience" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <Frame Padding="5" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource SecondaryColor}" Margin="0,0,0,0" CornerRadius="5" HeightRequest="170">
+                    <Frame Padding="5" HasShadow="False" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource SecondaryColor}" Margin="0,0,0,0" CornerRadius="5" HeightRequest="170">
                         <controls:XEditor
                                     FontSize="16"
                                     AutoSize="TextChanges"
@@ -123,8 +118,8 @@
                     <Label Text="Max: 200 words" TextColor="{StaticResource SecondaryColor}" FontSize="12" FontFamily="Inter-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="3" VerticalOptions="Center" >
-                    <CheckBox Color="{StaticResource SecondaryColor}" VerticalOptions="CenterAndExpand"  Margin="0,0,0,10" IsChecked="{Binding ScamCheck}"/>
-                    <Label Text="Accept Terms and Conditions." TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,0,10">
+                    <CheckBox Color="{StaticResource TertiaryColor}" VerticalOptions="CenterAndExpand"  Margin="0,0,0,10" IsChecked="{Binding ScamCheck}"/>
+                    <Label Text="Accept Terms and Conditions." TextColor="{StaticResource TertiaryColor}" FontSize="14" FontFamily="Inter-Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,0,10">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="To_Terms"/>
                         </Label.GestureRecognizers>

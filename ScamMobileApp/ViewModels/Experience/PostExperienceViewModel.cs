@@ -27,7 +27,6 @@ namespace ScamMobileApp.ViewModels.Experience
             //LoginCommand = new Command(async () => await LoginCommandsExecute());
             SelectPageCommand = new Command(async () => await SelectPageCommandExecute());
 
-
         }
 
         #region Binding Properties
@@ -100,7 +99,7 @@ namespace ScamMobileApp.ViewModels.Experience
         private async Task SelectPageCommandExecute()
         {
 
-            List<SelectItemModel> responseToLightTypes = new List<SelectItemModel>()
+            List<SelectItemModel> scamsTypes = new List<SelectItemModel>()
             {
                 new SelectItemModel(1,"PHISHING SCAM"),
                 new SelectItemModel(2,"VISHING SCAM"),
@@ -126,7 +125,7 @@ namespace ScamMobileApp.ViewModels.Experience
                 new SelectItemModel(22,"Other SCAM"),
 
             };
-            var popup = new SelectItemPickerPopup(responseToLightTypes);
+            var popup = new SelectItemPickerPopup(scamsTypes);
 
             await PopupNavigation.Instance.PushAsync(popup);
 

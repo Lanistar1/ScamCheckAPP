@@ -62,7 +62,12 @@ namespace ScamMobileApp.Views.Home
             await Navigation.PushAsync(new ProfilePage());
         }
 
-        private async void To_AllFeedback(object sender, EventArgs e)
+        //private async void To_AllFeedback(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new AllFeedbackPage());
+        //}
+
+        private async void To_recentActivity(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AllFeedbackPage());
         }
