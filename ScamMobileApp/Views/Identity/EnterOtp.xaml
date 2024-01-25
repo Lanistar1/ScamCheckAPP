@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:Controls="clr-namespace:ScamMobileApp.Controls" xmlns:local="clr-namespace:ScamMobileApp.Utils"
+             xmlns:Controls="clr-namespace:ScamMobileApp.Controls" 
+             xmlns:local="clr-namespace:ScamMobileApp.Utils"
              x:Class="ScamMobileApp.Views.Identity.EnterOtp"
              BackgroundColor="{StaticResource PrimaryColor}"
              NavigationPage.HasNavigationBar="False">
@@ -27,7 +28,7 @@
                         Margin="0,0"
                         TextColor="{StaticResource SecondaryColor}"/>
 
-                <Frame Padding="10,0,10,0" BorderColor="{StaticResource SecondaryColor}" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" Margin="0,0,0,10" HasShadow="False" CornerRadius="10">
+                <Frame  Padding="10,0,10,0" BorderColor="{StaticResource SecondaryColor}" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="50" Margin="0,0,0,10" HasShadow="False" CornerRadius="10">
                     <Controls:CustomEntry 
                                     VerticalTextAlignment="Center"
                                     FontSize="14"
@@ -52,15 +53,15 @@
                         </Grid.ColumnDefinitions>
 
                         <Controls:CustomEntry 
-                                            VerticalOptions="CenterAndExpand"
-                                            FontFamily="Poppins-Light"
-                                            PlaceholderColor="#cccccc"
-                                            FontSize="14"
-                                            Text="{Binding NewPassword}"
-                                            Grid.Column="0"
-                                            TextColor="{StaticResource SecondaryColor}"
-                                            IsPassword="{Binding Source={x:Reference ShowNewPasswordActualTrigger}, Path=HidePassword}"
-                                            />
+                                VerticalOptions="CenterAndExpand"
+                                FontFamily="Poppins-Light"
+                                PlaceholderColor="#cccccc"
+                                FontSize="14"
+                                Text="{Binding NewPassword}"
+                                Grid.Column="0"
+                                TextColor="{StaticResource SecondaryColor}"
+                                IsPassword="{Binding Source={x:Reference ShowNewPasswordActualTrigger}, Path=HidePassword}"
+                                />
 
                         <ImageButton  Grid.Column="1"
                                               BackgroundColor="Transparent"
@@ -71,8 +72,8 @@
                             <ImageButton.Triggers>
                                 <EventTrigger Event="Clicked">
                                     <local:ShowPasswordTriggerAction ShowIcon="eyedd"
-                                                                             HideIcon="eyezz"
-                                                                             x:Name="ShowNewPasswordActualTrigger"/>
+                                                                     HideIcon="eyezz"
+                                                                     x:Name="ShowNewPasswordActualTrigger"/>
                                 </EventTrigger>
                             </ImageButton.Triggers>
                         </ImageButton>
@@ -81,7 +82,7 @@
             </StackLayout>
 
 
-            <Frame CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Padding="10,12" Margin="0,10,0,0">
+            <Frame HasShadow="False" CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Padding="10,12" Margin="0,10,0,0">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer  Command="{Binding ResetPasswordCommand}"/>
                 </Frame.GestureRecognizers>

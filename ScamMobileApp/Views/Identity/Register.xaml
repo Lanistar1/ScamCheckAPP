@@ -107,7 +107,7 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Controls:BorderlessDatePicker TextColor="Black" VerticalOptions="CenterAndExpand"
+                                <Controls:BorderlessDatePicker BackgroundColor="{StaticResource PrimaryColor}" TextColor="Black" VerticalOptions="CenterAndExpand"
                                                    x:Name="datePicker" DateSelected="DatePicker_SelectedDateChanged" />
                                 <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
                                     <Image Source="downarrow1.png" WidthRequest="8" HeightRequest="8"/>
@@ -141,6 +141,7 @@
                                             PlaceholderColor="#cccccc"
                                             FontSize="14"
                                             Text="{Binding Password}"
+                                            BackgroundColor="{StaticResource PrimaryColor}"
                                             Grid.Column="0"
                                             TextColor="{StaticResource SecondaryColor}"
                                             IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}"
@@ -183,6 +184,7 @@
                                             PlaceholderColor="#cccccc"
                                             FontSize="14"
                                             Text="{Binding ConfirmPassword}"
+                                            BackgroundColor="{StaticResource PrimaryColor}"
                                             Grid.Column="0"
                                             TextColor="{StaticResource SecondaryColor}"
                                             IsPassword="{Binding Source={x:Reference ShowConfirmPasswordActualTrigger}, Path=HidePassword}"
@@ -206,7 +208,7 @@
                                 </Frame>
                             </StackLayout>
 
-                            <Frame CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Padding="10,12" Margin="0,10,0,0">
+                            <Frame HasShadow="False" CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Padding="10,12" Margin="0,10,0,0">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding SignupCommand}"/>
                                 </Frame.GestureRecognizers>

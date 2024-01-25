@@ -103,7 +103,7 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Column="1" Margin="10,10">
+                <StackLayout Grid.Column="1" Margin="10,15,10,10">
                     <Frame Padding="10" CornerRadius="10" Background="#DF0A17" HeightRequest="60" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Logout"/>
