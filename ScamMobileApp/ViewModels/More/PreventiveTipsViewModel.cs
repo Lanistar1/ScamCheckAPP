@@ -48,7 +48,19 @@ namespace ScamMobileApp.ViewModels.More
             ShowEmotionalAppealsCommand = new Command(async () => await ShowEmotionalAppealsCommandCommandCommandExecute());
             ShowEmotionalAppealsDetailCommand = new Command(async () => await ShowEmotionalAppealsDetailCommandCommandExecute());
 
+            ScamQA = "Use ScamQ&A";
 
+        }
+
+        private string scamQA;
+        public string ScamQA
+        {
+            get => scamQA;
+            set
+            {
+                scamQA = value;
+                OnPropertyChanged(nameof(ScamQA));
+            }
         }
 
         private bool solicitVisible = true;

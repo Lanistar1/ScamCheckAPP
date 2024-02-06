@@ -4,31 +4,31 @@
              x:Class="ScamMobileApp.Views.Questions.Charity.CharityLikelyResult"
              Title="Is This A Scam?"
              NavigationPage.HasNavigationBar="False"
-             BackgroundImageSource="scambackground.png">
+             BackgroundColor="{StaticResource PrimaryColor}">
 
     <ScrollView>
         <StackLayout>
 
-            <Frame Padding="10" BackgroundColor="{StaticResource TertiaryColor}">
-                <Label Text="Is This A Scam?" TextColor="#ffffff" FontSize="18" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+            <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}">
+                <Label Text="Scam Check Result" TextColor="#ffffff" FontSize="18" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
             </Frame>
 
-            <Frame Padding="10" CornerRadius="10" BackgroundColor="#ffffff" Margin="10,50,10,0" VerticalOptions="StartAndExpand">
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="{StaticResource SecondaryColor}" Margin="10,50,10,0" VerticalOptions="StartAndExpand">
                 <StackLayout>
 
                     <StackLayout>
                         <Image Source="scamredlogo.png" WidthRequest="100" HeightRequest="100"/>
                     </StackLayout>
-                    <Label Text="Likely a scam" TextColor="#D03434" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <Label Text="Likely a scam" TextColor="#D03434" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
                     <StackLayout>
                         <Label Text="Based on the Q and A assessment, this indicates that there is a higher probability or greater chance that the situation or offer being assessed is fraudulent or deceptive. It suggests that there are significant red flags, suspicious indicators, or patterns aligning with known scam tactics, making it more probable that it is indeed a scam." 
-                   TextColor="#000000" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                   TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
                     </StackLayout>
                     <StackLayout>
-                        <Label Text="Recommendations:" TextColor="#000000" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+                        <Label Text="Recommendations:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
                         <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="StartAndExpand" Margin="0">
-                            <Label Text="1. Report this scam" TextColor="#000000"/>
+                            <Label Text="1. Report this scam" TextColor="#ffffff"/>
                             <Label HorizontalOptions="StartAndExpand" TextColor="#01FF1A" Margin="5,0,0,0" FontSize="Subtitle">
                                 <Label.FormattedText>
                                     <FormattedString>
@@ -40,7 +40,7 @@
                                 </Label.GestureRecognizers>
                             </Label>
                         </StackLayout>
-                        <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
+                        <Label HorizontalOptions="StartAndExpand" TextColor="#ffffff">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <Span Text="2. Share your experience in the " />
@@ -53,7 +53,7 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                        <Label Text="3. Scammed? Take Action." TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <Label Text="3. Scammed? Take Action." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                     </StackLayout>
 
                     <Grid>
@@ -67,7 +67,7 @@
                             </Frame.GestureRecognizers>
                             <Label Text="Rate App" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,5"/>
                         </Frame>
-                        <Frame BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" Margin="0,10" Grid.Column="1" Padding="0,10">
+                        <Frame BackgroundColor="{StaticResource btn}" CornerRadius="5" Margin="0,10" Grid.Column="1" Padding="0,10">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding PostFeedbackCommand}"/>
                             </Frame.GestureRecognizers>

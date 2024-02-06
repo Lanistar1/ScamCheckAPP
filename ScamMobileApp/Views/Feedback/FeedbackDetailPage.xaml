@@ -45,7 +45,8 @@
                                 <StackLayout >
                                     <StackLayout Spacing="0">
                                         <Label Text="Question:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                                        <Label Text="{Binding question}" TextColor="{StaticResource PrimaryColor}" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="{Binding question}" TextColor="{StaticResource PrimaryColor}" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" 
+                                               HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal">
                                         <Label Text="Answer:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>

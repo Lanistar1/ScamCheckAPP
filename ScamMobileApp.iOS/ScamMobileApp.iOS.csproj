@@ -378,4 +378,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\newforthscam.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamscale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgscam.png" />
+  </ItemGroup>
 </Project>

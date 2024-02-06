@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Rg.Plugins.Popup.Extensions;
+using ScamMobileApp.Popup;
 
 namespace ScamMobileApp.Views.More
 {
@@ -21,6 +23,11 @@ namespace ScamMobileApp.Views.More
             pageViewModel = new GetProfileViewModel(Navigation);
             InitializeComponent();
             BindingContext = pageViewModel;
+        }
+
+        private void DeleteAccount(object sender, EventArgs e)
+        {
+            Navigation.PushPopupAsync(new DeleteAccountPopup());
         }
     }
 }

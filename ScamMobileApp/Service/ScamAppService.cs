@@ -221,7 +221,6 @@ namespace ScamMobileApp.Service
 
         }
 
-
         public async Task<(ResetPasswordResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> ResetUserPasswordAsync(string code, string newPassword)
         {
             try
@@ -271,6 +270,60 @@ namespace ScamMobileApp.Service
             }
 
         }
+
+        // Delete
+        public async Task<(DeleteAccountModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> DeleteProfileAsync()
+        {
+            try
+            {
+                string url = Global.DeleteProfileUrl;
+
+                //var ResetPasswordData = new ResetPasswordRequest
+                //{
+                //    code = code,
+                //    newPassword = newPassword
+
+                //};
+                //var json = JsonConvert.SerializeObject(ResetPasswordData);
+                //StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                ErrorResponseModel errorData;
+
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                var response = await client.DeleteAsync(url);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        DeleteAccountModel data = JsonConvert.DeserializeObject<DeleteAccountModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, statusCode);
+                    default:
+                        return (null, null, statusCode);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+
+        }
+
 
         public async Task<(GetProfileModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> GetUserProfileAsync()
         {

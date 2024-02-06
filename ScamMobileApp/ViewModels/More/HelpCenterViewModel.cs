@@ -35,14 +35,27 @@ namespace ScamMobileApp.ViewModels.More
             }
         }
 
+        private string scamQA;
+        public string ScamQA
+        {
+            get => scamQA;
+            set
+            {
+                scamQA = value;
+                OnPropertyChanged(nameof(ScamQA));
+            }
+        }
 
-        
+
+
         public HelpCenterViewModel(INavigation navigation)
         {
             Navigation = navigation;
 
             ShowDetailCommand = new Command(async () => await ShowDetailCommandExecute());
             ShowNoDetailCommand = new Command(async () => await ShowNoDetailCommandExecute());
+
+            ScamQA = "What is ScamQ&A?";
 
         }
 

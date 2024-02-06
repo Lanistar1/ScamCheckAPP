@@ -1,5 +1,7 @@
 ﻿using Rg.Plugins.Popup.Extensions;
 using ScamMobileApp.Popup;
+using ScamMobileApp.ViewModels.FeedBack;
+using ScamMobileApp.ViewModels.Home;
 using ScamMobileApp.Views.Home;
 using ScamMobileApp.Views.Identity;
 using ScamMobileApp.Views.Questions;
@@ -17,9 +19,13 @@ namespace ScamMobileApp.Views.More
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MoreMenu : ContentPage
     {
+        private string ScamQA { get; set; }
+
         public MoreMenu()
         {
             InitializeComponent();
+            BindingContext = new OthersViewModel(Navigation);
+
         }
 
         private void To_Profile(object sender, EventArgs e)
@@ -27,9 +33,13 @@ namespace ScamMobileApp.Views.More
             Navigation.PushAsync(new ProfilePage());
         }
 
-        private void To_Terms(object sender, EventArgs e)
+        private async void To_Terms(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new TermsAndConditions());
+            string url = "https://thescamalicious.com/terms"; // Replace with your desired URL
+
+            await Navigation.PushAsync(new TermsWebview(url));
+
+            //Navigation.PushAsync(new TermsAndConditions());
         }
 
         private void Logout(object sender, EventArgs e)

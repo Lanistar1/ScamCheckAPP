@@ -1,4 +1,5 @@
-﻿using ScamMobileApp.Views.Questions;
+﻿using ScamMobileApp.ViewModels.More;
+using ScamMobileApp.Views.Questions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace ScamMobileApp.Views.More
         public ScamQA()
         {
             InitializeComponent();
+            BindingContext = new HelpCenterViewModel(Navigation);
+
         }
 
         private void To_QAsection(object sender, EventArgs e)

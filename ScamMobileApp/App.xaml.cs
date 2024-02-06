@@ -21,6 +21,8 @@ namespace ScamMobileApp
 
             MainPage = new NavigationPage(new Welcome2());
 
+            //MainPage = new NavigationPage(new ProfilePage());
+
         }
 
         protected override void OnStart()
