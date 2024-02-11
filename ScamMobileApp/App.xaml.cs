@@ -2,6 +2,7 @@
 using ScamMobileApp.Views.More;
 using ScamMobileApp.Views.Onboard;
 using ScamMobileApp.Views.Questions;
+using ScamMobileApp.Views.Questions.ZcamResultSuggestion;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,7 +22,7 @@ namespace ScamMobileApp
 
             MainPage = new NavigationPage(new Welcome2());
 
-            //MainPage = new NavigationPage(new ProfilePage());
+            //MainPage = new NavigationPage(new LikelyAScamSeggestion());
 
         }
 

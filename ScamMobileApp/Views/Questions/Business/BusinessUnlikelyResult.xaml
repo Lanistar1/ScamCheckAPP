@@ -54,7 +54,7 @@
                     <Label HorizontalOptions="CenterAndExpand" TextColor="#ffffff" Margin="0,0,0,10">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Refer to " />
+                                <Span Text="Refer to " TextColor="#ffffff"/>
                                 <Span Text="Unlikely a scam page" TextColor="#3DBF4A" FontSize="Subtitle">
                                     <Span.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="To_unlikelyAscam"/>

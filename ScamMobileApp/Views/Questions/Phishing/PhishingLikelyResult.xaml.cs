@@ -4,6 +4,7 @@ using ScamMobileApp.Utils;
 using ScamMobileApp.ViewModels.ScamCalculator;
 using ScamMobileApp.Views.Home;
 using ScamMobileApp.Views.More;
+using ScamMobileApp.Views.Questions.ZcamResultSuggestion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -69,6 +70,11 @@ namespace ScamMobileApp.Views.Questions.Phishing
         private void To_ScamLink(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ScamLink());
+        }
+
+        private void To_likelyAscam(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LikelyAScamSeggestion());
         }
     }
 }

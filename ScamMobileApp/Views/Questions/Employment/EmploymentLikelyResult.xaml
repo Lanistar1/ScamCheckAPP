@@ -71,6 +71,20 @@
                             <Label Text="Save" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,5"/>
                         </Frame>
                     </Grid>
+
+                    <Label HorizontalOptions="CenterAndExpand" TextColor="#ffffff" Margin="0,0,0,10">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Refer to " TextColor="#ffffff"/>
+                                <Span Text="Likely a scam page" TextColor="#3DBF4A" FontSize="Subtitle">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="To_likelyAscam"/>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                                <Span Text=" for guidance" TextColor="#ffffff"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
                 </StackLayout>
             </Frame>
         </StackLayout>

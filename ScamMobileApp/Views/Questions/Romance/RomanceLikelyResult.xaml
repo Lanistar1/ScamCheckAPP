@@ -16,7 +16,7 @@
                     <StackLayout>
                         <Image Source="scamredlogo.png" WidthRequest="100" HeightRequest="100"/>
                     </StackLayout>
-                    <Label Text="Likely a scam" TextColor="#D03434" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <Label Text="Likely a scam" TextColor="#D03434" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
                     <StackLayout>
                         <Label Text="The Q and A assessment indicates a high likelihood of a scam. Scammers often use love bombing to manipulate victims emotionally and gain their trust rapidly. Always exercise caution when communicating with individuals online or if financial assistance is requested. If suspicious, halt communication, don't send money, and report to authorities or the platform. Stay cautious and verify identities to guard against romance scams." 
                                TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,10"/>
@@ -70,6 +70,20 @@
                             <Label Text="Save" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,5"/>
                         </Frame>
                     </Grid>
+
+                    <Label HorizontalOptions="CenterAndExpand" TextColor="#ffffff" Margin="0,0,0,10">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Refer to " TextColor="#ffffff"/>
+                                <Span Text="Likely a scam page" TextColor="#3DBF4A" FontSize="Subtitle">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="To_likelyAscam"/>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                                <Span Text=" for guidance" TextColor="#ffffff"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
                 </StackLayout>
             </Frame>
         </StackLayout>

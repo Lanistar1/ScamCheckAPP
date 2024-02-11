@@ -3,6 +3,7 @@ using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.ViewModels.ScamCalculator;
 using ScamMobileApp.Views.More;
+using ScamMobileApp.Views.Questions.ZcamResultSuggestion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,7 +63,7 @@ namespace ScamMobileApp.Views.Questions.Business
 
         private void To_unlikelyAscam(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ScamQA());
+            Navigation.PushAsync(new UnlikelyAScamSuggestion());
         }
     }
 }

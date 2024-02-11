@@ -11,7 +11,7 @@
                 Margin="10,0,10,0"
                  BackgroundColor="White"
                  HorizontalOptions="Fill"
-                 HeightRequest="175"
+                 HeightRequest="155"
                  VerticalOptions="CenterAndExpand">
         <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
             <Grid.RowDefinitions>
