@@ -5,33 +5,35 @@
              BackgroundColor="{StaticResource PrimaryColor}"
              Title="{Binding ScamQA}">
 
-    <ScrollView Margin="20">
+    <ScrollView Margin="20" VerticalScrollBarVisibility="Never">
         <StackLayout>
-            <Label Text="A few simple steps to identify potential Scam/Fraud" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-
-            <StackLayout>
-                <Label Text="Don't let scammers take advantage of you! Stay one step ahead with ScamQA, the essential mobile app designed to help you make informed decisions and protect yourself from fraud. " TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="When faced with a suspicious offer, a questionable message, or a potential scam scenario, open the app and answer four tailored questions based on the situation and let ScamQA provide you with a scam assessment." TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Empower yourself with ScamQA's easy-to-understand results. Your scam result will provide a clear indication of the likelihood of a scam, allowing you to make smart decisions before proceeding further. ScamQA also provides valuable tips and recommendations to help you navigate through potentially. " TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Avoid scams, protect your finances, and make informed decisions with ease. ScamQA is your trusted companion in the fight against scammers. " TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Disclaimer:" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                <Label Text="ScamQA values your privacy and security. We do not collect any personally identifiable information from you, ensuring your data remains confidential. All answers and results are stored securely on your device, giving you full control over your information." TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
-            </StackLayout>
-            <Frame CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Padding="10,12" Margin="0,10,0,0">
+            <Frame CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Padding="10,12" Margin="0,5,0,0">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="To_QAsection"/>
                 </Frame.GestureRecognizers>
                 <Label Text="{Binding Title}" TextColor="White" FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
             </Frame>
+            
+            <Label Text="A few simple steps to identify potential Scam/Fraud" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" Margin="0,10,0,0"/>
+
+            <StackLayout>
+                <Label Text="{Binding Title1} " TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="{Binding Title2}" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="{Binding Title3} " TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="{Binding Title4} " TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Disclaimer:" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+
+                <Label Text="{Binding Title5}" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+            </StackLayout>
+            
         </StackLayout>
     </ScrollView>
 </ContentPage>

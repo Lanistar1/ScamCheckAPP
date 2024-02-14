@@ -1,4 +1,5 @@
-﻿using ScamMobileApp.Helpers;
+﻿using Rg.Plugins.Popup.Services;
+using ScamMobileApp.Helpers;
 using ScamMobileApp.Models.Identity;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
@@ -45,11 +46,15 @@ namespace ScamMobileApp.ViewModels.Identity
 
 
         #region functions, methods, events and Navigations
+        [Obsolete]
         private async Task DeleteCommandExecute()
         {
             try
             {
-                await LoadingPopup.Instance.Show("Delete account. Please wait...");
+                await PopupNavigation.PopAsync();
+
+
+                await LoadingPopup.Instance.Show("Deleting account. Please wait...");
 
                 var (ResponseData, ErrorData, StatusCode) = await _scamAppService.DeleteProfileAsync();
                 if (ResponseData != null && StatusCode == 200)
