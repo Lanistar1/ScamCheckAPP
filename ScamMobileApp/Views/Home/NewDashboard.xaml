@@ -59,7 +59,7 @@
                 </StackLayout>
 
                 <StackLayout Margin="0,20,0,0">
-                    <Label Text="The Most Popular Scam According To Your Location." TextColor="#110F0F" FontSize="15" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <Label Text="Some of the popular Scams people experience daily." TextColor="#110F0F" FontSize="15" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>

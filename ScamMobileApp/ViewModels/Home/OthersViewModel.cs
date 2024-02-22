@@ -1,4 +1,5 @@
 ﻿using Rg.Plugins.Popup.Services;
+using ScamMobileApp.Models;
 using ScamMobileApp.Models.Popup;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Views.Questions.ATM;
@@ -38,10 +39,49 @@ namespace ScamMobileApp.ViewModels.Home
             ScamQA = "ScamQ&A";
             Title = "Start ScamQ&A";
 
+            ContentList = new List<MoreModel>
+            {
+                new MoreModel { Name = "Report Scam", Image = "scamreportt.png"},
+                new MoreModel { Name = "Help Center", Image = "scamreportt.png"},
+                new MoreModel { Name = "Terms", Image = "scamtermss.png"},
+                new MoreModel { Name = "Change Password", Image = "scamchangee.png"},
+                new MoreModel { Name = "Types of Scam", Image = "scamtypee.png"},
+                new MoreModel { Name = "ScamQ&A", Image = "scamqaa.png"},
+                new MoreModel { Name = "Anti-Scam Movement", Image = "scamanti.png"},
+                new MoreModel { Name = "Preventive Tips", Image = "scamtipss.png"},
+                new MoreModel { Name = "Warning Signs", Image = "scamwarnn.png"},
+                
+
+            };
+
+            TappedCommand = new Command<MoreModel>(async (model) => await GetTappedExecute(model));
+
         }
 
-        #region Binding Properties
+        public Command TappedCommand { get; }
 
+        #region Binding Properties
+        private List<MoreModel> contentList;
+        public List<MoreModel> ContentList
+        {
+            get => contentList;
+            set
+            {
+                contentList = value;
+                OnPropertyChanged(nameof(ContentList));
+            }
+        }
+
+        private List<MoreModel> selectedItems;
+        public List<MoreModel> SelectedItems
+        {
+            get => selectedItems;
+            set
+            {
+                selectedItems = value;
+                OnPropertyChanged(nameof(SelectedItems));
+            }
+        }
 
         private string scamQA;
         public string ScamQA
@@ -79,6 +119,24 @@ namespace ScamMobileApp.ViewModels.Home
 
         #endregion
 
+        private async Task GetTappedExecute(MoreModel model)
+        {
+            try
+            {
+                if (model.Name.Contains("Report Scam"))
+                {
+
+                    //await Navigation.PushAsync(new GreetingPage());
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
 
     }
 
