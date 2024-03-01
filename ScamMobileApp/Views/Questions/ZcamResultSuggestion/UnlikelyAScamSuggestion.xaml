@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:ScamMobileApp.Controls"
              x:Class="ScamMobileApp.Views.Questions.ZcamResultSuggestion.UnlikelyAScamSuggestion"
-             Title="Likely a Scam"
+             Title="Unlikely a Scam"
              BackgroundColor="#ffffff">
 
-    <Grid>
+    <ContentPage.Content>
+        <local:CustomWebView Uri="Unlikelyscammed.pdf" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </ContentPage.Content>
+
+    <!--<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -181,10 +185,7 @@
                         </Label.FormattedText>
                     </Label>
                 </StackLayout>
-
             </StackLayout>
         </ScrollView>
-
-    </Grid>
-
+    </Grid>-->
 </ContentPage>

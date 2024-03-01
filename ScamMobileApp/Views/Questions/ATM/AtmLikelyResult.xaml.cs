@@ -75,5 +75,11 @@ namespace ScamMobileApp.Views.Questions.ATM
         {
             Navigation.PushAsync(new LikelyAScamSeggestion());
         }
+
+        private void To_Scammed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Scammed());
+
+        }
     }
 }

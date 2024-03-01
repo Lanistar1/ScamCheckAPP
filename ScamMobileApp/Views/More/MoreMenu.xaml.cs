@@ -1,16 +1,20 @@
 ﻿using Rg.Plugins.Popup.Extensions;
 using ScamMobileApp.Popup;
+using ScamMobileApp.Utils;
 using ScamMobileApp.ViewModels.FeedBack;
 using ScamMobileApp.ViewModels.Home;
 using ScamMobileApp.Views.Home;
 using ScamMobileApp.Views.Identity;
 using ScamMobileApp.Views.Questions;
+using ScamMobileApp.Views.Questions.ZcamResultSuggestion;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,6 +32,29 @@ namespace ScamMobileApp.Views.More
 
         }
 
+        protected override bool OnBackButtonPressed()
+        {
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                //var result = await this.DisplayAlert("Alert!", "Do you really want to exit?", "Yes", "No");
+                string msg = "Do you really want to exit this app?";
+                await ConfirmPopup.Instance.Show(
+                             title: "Message",
+                             message: msg,
+                             closeButtonText: "No",
+                             acceptButtonText: "Yes",
+                             acceptCommand: new Command(() =>
+                             {
+                                 System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow(); // Or anything else
+                             }));
+                //if (result)
+                //{
+                //    System.Diagnostics.Process.GetCurrentProcess().CloseMainWindow(); // Or anything else
+                //}
+            });
+            return true;
+        }
+
         private void To_Profile(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ProfilePage());
@@ -42,10 +69,17 @@ namespace ScamMobileApp.Views.More
             //Navigation.PushAsync(new TermsAndConditions());
         }
 
+
         private void Logout(object sender, EventArgs e)
         {
             Navigation.PushPopupAsync(new LogoutPopup());
         }
+
+        //private void Logout(object sender, EventArgs e)
+        //{
+            
+        //    Navigation.PushAsync(new PdfWebViewPage());
+        //}
 
         private void To_HelpCenter(object sender, EventArgs e)
         {
@@ -85,6 +119,24 @@ namespace ScamMobileApp.Views.More
         private void To_Scamlink(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ScamLink());
+        }
+
+        private void To_UnlikelyScam(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new UnlikelyAScamSuggestion());
+
+        }
+
+        private void To_LikelyScam(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LikelyAScamSeggestion());
+
+        }
+
+        private void To_Scammed(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Scammed());
+
         }
     }
 }

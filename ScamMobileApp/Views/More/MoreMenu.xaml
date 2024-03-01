@@ -5,57 +5,20 @@
              BackgroundColor="{StaticResource PrimaryColor}">
 
     <ScrollView VerticalScrollBarVisibility="Never" >
-        <StackLayout Margin="30,30,30,20">
+        <StackLayout Margin="20,20,20,20">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                
-                <StackLayout Grid.Column="0" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_Scamlink" Source="scamreportt.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Report Scam" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-
-                <StackLayout Grid.Column="1" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_HelpCenter" Source="scamreportt.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Help Center" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-            </Grid>
-
-            <Grid Margin="0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
 
                 <StackLayout Grid.Column="0" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_Terms" Source="scamtermss.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Terms" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-
-                </StackLayout>
-
-                <StackLayout Grid.Column="1" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_ChangePassword" Source="scamchangee.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Change Password" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-
-                </StackLayout>
-            </Grid>
-
-            <Grid Margin="0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <StackLayout Grid.Column="0" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_typeOFScam" Source="scamtypee.png" VerticalOptions="CenterAndExpand"/>
+                    <ImageButton BackgroundColor="Transparent" Clicked="To_typeOFScam" Source="typescam.png" VerticalOptions="CenterAndExpand"/>
                     <Label Text="Types of Scam" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
 
-                Nothing for this
                 <StackLayout Grid.Column="1" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_ScamQA" Source="scamqaa.png" VerticalOptions="CenterAndExpand"/>
+                    <ImageButton BackgroundColor="Transparent" Clicked="To_ScamQA" Source="scamqa.png" VerticalOptions="CenterAndExpand"/>
                     <Label Text="{Binding ScamQA}" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
             </Grid>
@@ -67,32 +30,121 @@
                 </Grid.ColumnDefinitions>
 
                 <StackLayout Grid.Column="0" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_ShareExperience" Source="scamanti.png" VerticalOptions="CenterAndExpand"/>
+                    <ImageButton BackgroundColor="Transparent" Clicked="To_ShareExperience" Source="antiscam.png" VerticalOptions="CenterAndExpand"/>
                     <Label Text="Anti-Scam Movement" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
                 </StackLayout>
 
                 <StackLayout Grid.Column="1" Margin="0,0,0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_PreventiveTips" Source="scamtipss.png" VerticalOptions="CenterAndExpand"/>
+                    <ImageButton BackgroundColor="Transparent" Clicked="To_PreventiveTips" Source="preventivetip.png" VerticalOptions="CenterAndExpand"/>
                     <Label Text="Preventive Tips" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
             </Grid>
 
-            <Grid>
+            <Grid Margin="0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <StackLayout Grid.Column="0" Margin="0,0">
-                    
-                    <ImageButton BackgroundColor="Transparent" Clicked="TowarningSign" Source="scamwarnn.png" VerticalOptions="CenterAndExpand"/>
+                    <ImageButton BackgroundColor="Transparent" Clicked="TowarningSign" Source="warningsign.png" VerticalOptions="CenterAndExpand"/>
                     <Label Text="Warning Signs" TextColor="{StaticResource SecondaryColor}"  FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,-5,0,0"/>
-
                 </StackLayout>
 
-                <StackLayout Grid.Column="1" Margin="0,15,0,10">
-                    <Frame Padding="10" CornerRadius="10" Background="#DF0A17" HeightRequest="60" WidthRequest="40">
+                <StackLayout Grid.Column="1" Margin="0,0" Spacing="0">
+                    <ImageButton BackgroundColor="Transparent" Clicked="To_Scamlink" Source="reportscam.png" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="Report Scam" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Margin="0,0,2,5">
+                    <Frame Padding="10" CornerRadius="10" Background="#233651" HeightRequest="70" WidthRequest="40">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_LikelyScam"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <Image Source="infolikely.png" WidthRequest="80" HeightRequest="80" Margin="0,0,0,0" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Frame>
+                    <Label Text="Likely a scam" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Margin="2,0,0,5">
+                    <Frame Padding="10" CornerRadius="10" Background="#DEE8EB" HeightRequest="70" WidthRequest="40">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_UnlikelyScam"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <Image Source="infoUnlikely.png" WidthRequest="60" HeightRequest="60" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Frame>
+                    <Label Text="Unlikely a scam" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                </StackLayout>
+            </Grid>
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Margin="0,0,2,5">
+                    <Frame Padding="10" CornerRadius="10" Background="#ACA564" HeightRequest="70" WidthRequest="40">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_Scammed"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <Image Source="infoscam.png" WidthRequest="60" HeightRequest="60" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                    <Label Text="Scammed" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Margin="2,0,0,5">
+                    <Frame Padding="10" CornerRadius="10" Background="#A8B9D2" HeightRequest="70" WidthRequest="40">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_HelpCenter"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout>
+                            <Image Source="helpicon.png" WidthRequest="60" HeightRequest="60" VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                    <Label Text="Help Center" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid Margin="0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0" Margin="0,0" Spacing="0">
+                    <ImageButton BackgroundColor="Transparent" Clicked="To_Terms" Source="terms.png" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="Terms" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Margin="0,0" Spacing="0">
+                    <ImageButton BackgroundColor="Transparent" Clicked="To_ChangePassword" Source="passwordchange.png" VerticalOptions="CenterAndExpand"/>
+                    <Label Text="Change Password" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+
+                </StackLayout>
+            </Grid>
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Margin="0,5,0,10">
+                    <Frame Padding="10" CornerRadius="10" Background="#DF0A17" HeightRequest="70" WidthRequest="40">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Logout"/>
                         </Frame.GestureRecognizers>
@@ -106,20 +158,4 @@
         </StackLayout>
     </ScrollView>
 
-    <!--<CollectionView x:Name="cvBanners" ItemsSource="{Binding ContentList}" Margin="0,20" >
-        <CollectionView.ItemsLayout>
-            <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical" Span="2"/>
-        </CollectionView.ItemsLayout>
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout >
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding Path=BindingContext.TappedCommand, Source={x:Reference cvBanners}}" CommandParameter="{Binding .}"/>
-                    </StackLayout.GestureRecognizers>
-                    <Image Source="{Binding Image}" WidthRequest="100" HeightRequest="100" HorizontalOptions="FillAndExpand"/>
-                    <Label Text="{Binding Name}" TextColor="#272728" FontSize="14" Margin="0,0,0,0" FontFamily="DMSans-Regular" HorizontalTextAlignment="Center"/>
-                </StackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>-->
 </ContentPage>

@@ -70,7 +70,19 @@
                 </CollectionView.EmptyView>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
+                        <Frame Padding="10" BackgroundColor="#1D2530" CornerRadius="10">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <StackLayout>
+                                    <Image Source="{Binding DishImage}"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="{Binding title}" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <Label Text="{Binding message}" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                        
+                        <!--<Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding Path=BindingContext.TappedCommand, Source={x:Reference cvBanner}}" CommandParameter="{Binding .}"/>
                             </Frame.GestureRecognizers>
@@ -80,7 +92,7 @@
                                     <Image Source="scamarrow.png"/>
                                 </StackLayout>
                             </FlexLayout>
-                        </Frame>
+                        </Frame>-->
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

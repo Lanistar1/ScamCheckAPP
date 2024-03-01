@@ -22,6 +22,7 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
         public GrandParentViewModel(INavigation navigation)
         {
             Navigation = navigation;
+            PostFeedbackCommand = new Command(async () => await PostFeedbackCommandExecute());
 
             ScamCalculatorCommand = new Command(async () => await ScamCalculatorCommandExecute());
             FirstQuestionCommand = new Command(async () => await FirstQuestionCommandExecute());
