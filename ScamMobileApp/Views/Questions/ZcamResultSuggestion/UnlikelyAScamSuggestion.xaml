@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:ScamMobileApp.Controls"
+             x:Class="ScamMobileApp.Views.Questions.ZcamResultSuggestion.UnlikelyAScamSuggestion"
+             Title="Unlikely a Scam"
+             BackgroundColor="#101137">
+
+    <!--<ContentPage.Content>
+        <local:CustomWebView Uri="Unlikelyscammed.pdf" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </ContentPage.Content>-->
+
+    <ScrollView>
+        <StackLayout Margin="0,10,0,0">
+            <Image Source="unlikeascam.png"/>
+            <StackLayout Margin="10,0">
+                <Label Text="When a situation is deemed “unlikely a scam,” it suggests that there are minimal indicators or red flags pointing to fraudulent activity. In such cases, while the risk of a scam may be lo, it’s sill recommended to exercise caution and follow these actions:"
+                       HorizontalTextAlignment="Center" FontSize="14" TextColor="White"/>
+            </StackLayout>
+            <StackLayout  Margin="10,0">
+                <Image Source="conductfurther.png"/>
+                <Image Source="checkfor.png"/>
+                <Image Source="avoidsharing.png"/>
+                <Image Source="verifyidentity.png"/>
+                <Image Source="readthe.png"/>
+                <Image Source="trustyour.png"/>
+                <Image Source="stayvigilant.png"/>
+                <Image Source="usesecure.png"/>
+                <Image Source="becautious.png"/>
+                <Image Source="protectyour.png"/>
+                <Image Source="educateyourself.png"/>
+                <Image Source="getasecond.png"/>
+                <Image Source="reportsuspicious.png"/>
+                <Image Source="educateothers.png"/>
+            </StackLayout>
+            <StackLayout Margin="10,0">
+                <Label Text="By taking these actions, you can further validate the legitimacy of the situation and make a more informed decision. While it’s essential to approach unlikely scam situations with caution, remember that not every unfamiliar opportunity is fraudulent. The goal is to strike a balance between being cautious and open to legitimate opportunities while minimizing risks."
+                       HorizontalTextAlignment="Center" FontSize="14" TextColor="White"/>
+            </StackLayout>
+            <Image Source="downline.png"/>
+        </StackLayout>
+    </ScrollView>
+
+
+</ContentPage>

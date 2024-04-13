@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Tech.TechFourthQuestion"
+             Title="Question and answer"
+             NavigationPage.HasBackButton="False"
+             BackgroundImageSource="bgscam">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
+            <StackLayout>
+                <StackLayout>
+                    <Image Source="newforthscam.png"/>
+                </StackLayout>
+                <Label Text="Is the tech support representative requesting payment for their services or software? " TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+                    <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionFourCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+                    <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionFourCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+
+
+                </StackLayout>
+
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <StackLayout>
+                        <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                        <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton BackgroundColor="Transparent" Command="{Binding ScamCalculatorCommand}" Source="scamresult.png"/>
+                        <Label Text="Recommendation" TextColor="#0CC0EC" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </FlexLayout>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="20" HasShadow="False" Grid.Row="1">
+            <StackLayout>
+                <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+                    <StackLayout>
+                        <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Label Text="Scammers often try to trick you into paying for unnecessary services or software that may not even be legitimate. Legitimate tech support would usually provide help without demanding payment upfront. To protect yourself, be cautious when someone you didn't directly contact is requesting payment for their services or software. If you're unsure, verify their legitimacy by independently reaching out to the official contact information of the tech support company. Don't provide any payment until you're certain about the authenticity of the request. Staying vigilant can help you avoid falling victim to tech support scams." 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+      
+    </Grid>
+
+</ContentPage>

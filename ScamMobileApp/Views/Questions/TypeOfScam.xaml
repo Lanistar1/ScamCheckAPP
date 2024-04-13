@@ -5,11 +5,16 @@
              Title="Types Of Scam"
              BackgroundColor="{StaticResource PrimaryColor}">
 
-    <ScrollView Margin="20">
-        <StackLayout>
-            <Label Text="Choose a category the type of suspected scam falls into." TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" BackgroundColor="{StaticResource SecondaryColor}" Padding="20">
+            <Label Text="It's important to stay informed about the latest scams and to be cautious about any requests for money or personal information, especially if they come from unsolicited sources or seem too good to be true. Take steps to protect yourself from falling victim to them." TextColor="#ffffff" FontSize="14" 
+                   FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
 
-            <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="5" BorderColor="#ffffff" CornerRadius="10" Margin="0,10">
+            <Frame BackgroundColor="{StaticResource SecondaryColor}" Padding="5" BorderColor="{StaticResource PrimaryColor}" CornerRadius="10" Margin="0,10">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="7*"/>
@@ -18,299 +23,52 @@
 
                     <Controls:CustomEntry 
                             VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
                             Grid.Column="0"
-                            FontSize="14"
-                            Text="{Binding Username}"
+                            Placeholder="Search scam type"
                             PlaceholderColor="#cccccc"
-                            Placeholder="Search by scam name"
-                            TextColor="White"/>
+                            FontFamily="Poppins-Regular"
+                            Margin="0,0,0,0"
+                            FontSize="14"
+                            Text="{Binding SearchEntry, Mode=TwoWay}"
+                            TextColor="#ffffff"/>
                     <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
-                        <Image  Source="scamsearch.png"/>
+                        <Image  Source="scamsearch.png" WidthRequest="20" HeightRequest="20"/>
                     </StackLayout>
                 </Grid>
             </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding DeatilVisible}">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ShowDetailCommand}"/>
-                </Frame.GestureRecognizers>
-                <StackLayout >
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="Phishing Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                        <StackLayout>
-                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowDetailCommand}" CommandParameter="{Binding .}"/>
-                        </StackLayout>
-                    </FlexLayout>
-                    <Label Text="This type of scam involves sending emails or messages that appear to be from a legitimate source, such as a bank or government agency, in order to trick people into giving away their personal information."
-                           TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <Frame BackgroundColor="{StaticResource TertiaryColor}" Padding="10,5" CornerRadius="5" HorizontalOptions="EndAndExpand">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="To_firstQuestion"/>
-                        </Frame.GestureRecognizers>
-                        <Label Text="ScamQA" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    </Frame>
-                </StackLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Vishing Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Smishing Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Investment Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Ransomware Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="ATM Skimming Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Gift Card Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Tech Support Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Tech Support Pop-up Scam" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Sweepstakes and Lottery Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Charity Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Romance Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Employment Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Business Email Compromise(BEC) Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Rental Scam" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Grandparent Scam" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Fake Invoice Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Government Scam" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Covid-19 Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Fake Check Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Employment Opportunity Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Psychic Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Work-From-Home Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Health Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Debt Relief Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Travel Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Utility Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Tax Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Social Media Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="Real Estate Scams" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
-                    <StackLayout>
-                        <Image Source="scamarrowdown.png"/>
-                    </StackLayout>
-                </FlexLayout>
-            </Frame>
         </StackLayout>
-    </ScrollView>
+
+        <CollectionView x:Name="cvBanner" ItemsSource="{Binding RealScamType}" Margin="20,10" VerticalScrollBarVisibility="Never" Grid.Row="1">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.EmptyView>
+                <Label  Text="{Binding EmptyPlaceholder}" 
+                            FontFamily="Inter-Mediun"
+                            LineBreakMode="CharacterWrap"
+                            Margin="0,10,0,0"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="Center"
+                            TextColor="{StaticResource SecondaryColor}" 
+                            FontSize="16"/>
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" BackgroundColor="#1D2530" CornerRadius="10">
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <StackLayout>
+                                <Image Source="{Binding DishImage}"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Label Text="{Binding ScamType}" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                <Label Text="{Binding ScamDetail}" TextColor="#ffffff" FontSize="12" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 </ContentPage>

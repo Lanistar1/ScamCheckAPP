@@ -8,14 +8,14 @@
 
     <pages:PopupPage.Animation>
         <pages:ScaleAnimation DurationIn="200"
-                                   DurationOut="200"
-                                   EasingIn="Linear"
-                                   EasingOut="Linear"
-                                   HasBackgroundAnimation="True"
-                                   PositionIn="Bottom"
-                                   PositionOut="Bottom"
-                                   ScaleIn="1.2"
-                                   ScaleOut="0.8" />
+                              DurationOut="200"
+                              EasingIn="Linear"
+                              EasingOut="Linear"
+                              HasBackgroundAnimation="True"
+                              PositionIn="Bottom"
+                              PositionOut="Bottom"
+                              ScaleIn="1.2"
+                              ScaleOut="0.8" />
     </pages:PopupPage.Animation>
 
     <!--  You can use any elements here which are extended from Xamarin.Forms.View  -->
@@ -38,7 +38,7 @@
                          VerticalOptions="StartAndExpand">
 
                 <BoxView BackgroundColor="#7B86D7" HeightRequest="3" WidthRequest="40" 
-                                             HorizontalOptions="Center" Color="#7B86D7" CornerRadius="8">
+                         HorizontalOptions="Center" Color="#7B86D7" CornerRadius="8">
                     <BoxView.GestureRecognizers>
                         <SwipeGestureRecognizer Direction="Down"
                                                 Command="{Binding CancelCommand}"
@@ -47,20 +47,23 @@
                 </BoxView>
 
                 <pv:PancakeView BackgroundColor="#ffffff" 
-                                             CornerRadius="10"
-                                            Margin="10"
-                                        HorizontalOptions="Fill" 
-                                        HeightRequest="50">
+                                CornerRadius="10"
+                                Margin="10"
+                                HorizontalOptions="Fill" 
+                                HeightRequest="50">
+                    <pv:PancakeView.Border>
+                        <pv:Border Color="Blue" Thickness="2"/>
+                    </pv:PancakeView.Border>
                     <Controls:CustomEntry PlaceholderColor="#cccccc" 
-                                                    Placeholder="Search" 
-                                                   ReturnType="Done"
-                                                   Keyboard="Default"
-                                                   FontSize="16"
-                                                    TextColor="Black" 
-                                                   Margin="10,0,0,0"
-                                                   Text="{Binding SearchEntry, Mode=TwoWay}"
-                                                   HorizontalOptions="Fill"
-                                                   FontFamily="Roboto-Medium"/>
+                                          Placeholder="Search Scam" 
+                                          ReturnType="Done"
+                                          Keyboard="Default"
+                                          FontSize="16"
+                                          TextColor="Black" 
+                                          Margin="10,0,0,0"
+                                          Text="{Binding SearchEntry, Mode=TwoWay}"
+                                          HorizontalOptions="Fill"
+                                          FontFamily="Roboto-Medium"/>
                 </pv:PancakeView>
             </StackLayout>
 
@@ -105,7 +108,7 @@
                                          HeightRequest="1"
                                          Color="Blue"/>
                                 <Label Text="{Binding Value}" VerticalOptions="CenterAndExpand" Padding="2" VerticalTextAlignment="Center" TextColor="Black"
-                                                   FontFamily="Roboto-Regular" FontSize="16" 
+                                       FontFamily="Roboto-Regular" FontSize="16" 
                                        Margin="0,10"/>
                                 <BoxView HorizontalOptions="Fill"
                                          HeightRequest="1"
@@ -122,19 +125,19 @@
             </StackLayout>
 
             <Button HorizontalOptions="CenterAndExpand"
-                        Text="Cancel"
+                    Text="Cancel"
                     Grid.Row="2"
                     FontFamily="Roboto-Medium"
-                        TextColor="red"
-                        FontSize="16"
+                    TextColor="red"
+                    FontSize="16"
                     Command="{Binding CancelCommand}"
-                        VerticalOptions="End"
-                        BackgroundColor="Transparent"/>
+                    VerticalOptions="End"
+                    BackgroundColor="Transparent"/>
         </Grid>
         <pv:PancakeView.GestureRecognizers>
             <SwipeGestureRecognizer Direction="Down"
-                                                Command="{Binding CancelCommand}"
-                                                CommandParameter="{Binding .}"/>
+                                    Command="{Binding CancelCommand}"
+                                    CommandParameter="{Binding .}"/>
         </pv:PancakeView.GestureRecognizers>
     </pv:PancakeView>
 </pages:PopupPage>

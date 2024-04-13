@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Lottery.LotteryFirstQuestion"
+             Title="Question and answer"
+             NavigationPage.HasBackButton="False"
+              BackgroundImageSource="bgscam">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
+            <StackLayout>
+                <StackLayout>
+                    <Image Source="scamquestion1.png"/>
+                </StackLayout>
+                <Label Text="Did you enter a legitimate contest or lottery that you remember participating in?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+                    <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionOneCheckYes}" BorderColor="#fff"  BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+                    <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionOneCheckNo}" GroupName="Activity"  Padding="0,0,5,0"/>
+                </StackLayout>
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <StackLayout>
+                        <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                        <Label Text="Previous" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton Command="{Binding FirstQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png" />
+                        <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </FlexLayout>
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="20" HasShadow="False" Grid.Row="1">
+            <StackLayout>
+                <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+                    <StackLayout>
+                        <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Label Text="This question asks whether you actually entered a contest or lottery that you recall participating in. Scammers often send messages claiming you've won a prize or gift, even though you never entered any such contest. They use this tactic to excite you and make you more likely to fall for their scam. Genuine contest winnings usually come from sources you recognize and remember participating in. If you're unsure, independently verify the legitimacy of the contest or prize before sharing any personal information or paying fees. " TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+    </Grid>
+
+</ContentPage>

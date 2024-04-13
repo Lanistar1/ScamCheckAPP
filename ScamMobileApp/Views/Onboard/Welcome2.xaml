@@ -2,18 +2,36 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScamMobileApp.Views.Onboard.Welcome2"
-             BackgroundImageSource="scamwelcome2.png"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#C3C5C9">
 
 
-    <StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,120">
-        <Label Text="The only scam we are falling for is the one we get rich by being ourselves!!!" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" VerticalOptions="StartAndExpand">
 
-        <Frame Padding="10" CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Margin="50,10">
-            <Frame.GestureRecognizers>
-                <TapGestureRecognizer Tapped="To_Register"/>
-            </Frame.GestureRecognizers>
-            <Label Text="Get Started" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
-        </Frame>
-    </StackLayout>
+            <Image Source="bg.png"/>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Image Source="scamlogo.png" />
+            </StackLayout>
+
+            <Label Text="Welcome!" Margin="20,0,20,40" TextColor="#ffffff" FontSize="24" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="End"/>
+
+        </Grid>
+        <StackLayout Margin="0,0,0,0" Grid.Row="1" VerticalOptions="CenterAndExpand">
+            <Label Text="Ever met an online millionaire willing to share their wealth with you?" Margin="20,0" TextColor="#110F0F" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            <Label Text="Neither have we!" Margin="20,0" TextColor="#110F0F" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Margin="50,20">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_Register"/>
+                </Frame.GestureRecognizers>
+                <Label Text="Let's get started" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            </Frame>
+        </StackLayout>
+    </Grid>
+    
 </ContentPage>

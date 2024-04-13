@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.CustomStarControl">
+
+    <StackLayout Orientation="Horizontal" Spacing="5">
+        <Image x:Name="star1" Source="emptystar.png" />
+        <Image x:Name="star2" Source="emptystar.png" />
+        <Image x:Name="star3" Source="emptystar.png" />
+        <Image x:Name="star4" Source="emptystar.png" />
+        <Image x:Name="star5" Source="emptystar.png" />
+    </StackLayout>
+</ContentView>

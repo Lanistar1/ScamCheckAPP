@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Business.BusinessThirdQuestion"
+             Title="Question and answer"
+             NavigationPage.HasBackButton="False"
+             BackgroundImageSource="bgscam">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
+            <StackLayout>
+                <StackLayout>
+                    <Image Source="scamquestion3.png"/>
+                </StackLayout>
+                <Label Text="Is the communication requesting personal information, like employee data, confidential financial details, or login credentials?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+                    <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionThreeCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+                    <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionThreeCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+                </StackLayout>
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <StackLayout>
+                        <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                        <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton Command="{Binding ThirdQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
+                        <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </FlexLayout>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="20" HasShadow="False" Grid.Row="1">
+            <StackLayout>
+                <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+                    <StackLayout>
+                        <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Label Text="This question asks whether the communication you've received is requesting personal information, such as employee data, confidential financial details, or login credentials. BEC scammers often use this tactic to gain access to valuable information that they can misuse. Always double-check the legitimacy of the request with the supposed sender through a different communication channel to confirm its authenticity. " 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+
+    </Grid>
+
+</ContentPage>

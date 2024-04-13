@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Identity.IdentityThirdQuestion"
+             Title="Question and answer"
+             NavigationPage.HasBackButton="False"
+             BackgroundImageSource="bgscam">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
+            <StackLayout>
+                <StackLayout>
+                    <Image Source="scamquestion3.png"/>
+                </StackLayout>
+                <Label Text="Have you noticed a sudden drop in your credit score or an increase in credit inquiries you didn't initiate?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+                    <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionThreeCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+                    <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionThreeCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+                </StackLayout>
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <StackLayout>
+                        <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                        <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton Command="{Binding ThirdQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
+                        <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </FlexLayout>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="20" HasShadow="False" Grid.Row="1">
+            <StackLayout>
+                <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+                    <StackLayout>
+                        <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Label Text="This question asks whether you've observed a sudden decrease in your credit score or increased credit inquiries that you didn't initiate. Identity thieves may use your personal information to apply for credit or loans without your knowledge. Regularly monitor your credit score and check for any unexpected drops or an influx of credit inquiries you didn't initiate. If you notice these changes, it could be a sign that someone is fraudulently using your identity. Take immediate action by contacting credit reporting agencies, reviewing your credit reports, and addressing any unauthorized activities. " 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+       
+    </Grid>
+
+</ContentPage>

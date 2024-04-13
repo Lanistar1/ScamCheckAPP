@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.More.WarningSigns"
+             Title="Warning Signs"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <Label Text="Below are some common warning signs that you should look out for when you suspect that you may be targeted by a scam or fraud:" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Regular" 
+                   HorizontalTextAlignment="Start" Margin="0,0,0,0" Padding="20,0,20,10" BackgroundColor="{StaticResource SecondaryColor}"/>
+        </StackLayout>
+        <ScrollView VerticalScrollBarVisibility="Never" Grid.Row="1">
+            <StackLayout Margin="0,0,0,10">
+                <StackLayout Margin="20,10" Spacing="0">
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowSolicitCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamsign.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Unsolicited communication" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowSolicitDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamsign.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Unsolicited communication" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowSolicitDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="If someone contacts you out of the blue via phone, email, or social media, offering you an opportunity that seems too good to be true, it may be a scam."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PressureTacticsVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPressureTacticsCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamsign.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="High-pressure tactics" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowPressureTacticsCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PressureTacticsDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPressureTacticsDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamsign.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="High-pressure tactics" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowPressureTacticsDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="Scammers often use high-pressure tactics to make you act quickly without thinking through the consequences. For example, they may say that an offer is only available for a limited time or that you must act immediately to avoid missing out."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PersonalInfoVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPersonalInfoCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamsign.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Request for personal or financial information" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowPersonalInfoCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PersonalInfoDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPersonalInfoDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamsign.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="7*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="Request for personal or financial information" Grid.Column="0" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <!--<ImageButton BackgroundColor="Transparent" Grid.Column="1" Source="scamarrowup.png" Command="{Binding ShowPersonalInfoDetailCommand}" CommandParameter="{Binding .}"/>-->
+                                        </StackLayout>
+                                    </Grid>
+                                    <Label Text="Scammers may ask for personal or financial information such as your social security number/ national ID number, credit card details, or bank account information. Be cautious when sharing this type of information, especially with people or companies that you don't know."
+                                       TextColor="#ffffff" LineBreakMode="WordWrap" FontSize="14" FontFamily="Inter-Medium" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding GoodOfferVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowGoodOfferCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamsign.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Offers that seem too good to be true" TextColor="#ffffff" LineBreakMode="WordWrap" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowGoodOfferCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding GoodOfferDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowGoodOfferDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamsign.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="7*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="Offers that seem too good to be true" Grid.Column="0" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <!--<ImageButton BackgroundColor="Transparent" Grid.Column="1" Source="scamarrowup.png" Command="{Binding ShowPersonalInfoDetailCommand}" CommandParameter="{Binding .}"/>-->
+                                        </StackLayout>
+                                    </Grid>
+                                    <Label Text="Scammers may ask for personal or financial information such as your social security number/ national ID number, credit card details, or bank account information. Be cautious when sharing this type of information, especially with people or companies that you don't know."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SuspiciousPaymentVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowSuspiciousPaymentCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamsign.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Suspicious payment methods" TextColor="#ffffff" LineBreakMode="WordWrap" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowSuspiciousPaymentCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SuspiciousPaymentDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowSuspiciousPaymentDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamsign.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Suspicious payment methods" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowSuspiciousPaymentDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="Scammers may ask for personal or financial information such as your social security number/ national ID number, credit card details, or bank account information. Be cautious when sharing this type of information, especially with people or companies that you don't know."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PoorGrammarVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPoorGrammarCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamsign.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Poor grammar and spelling" TextColor="#ffffff" LineBreakMode="WordWrap" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowPoorGrammarCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PoorGrammarDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPoorGrammarDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamsign.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Poor grammar and spelling" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowPoorGrammarDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="Scammers may ask for personal or financial information such as your social security number/ national ID number, credit card details, or bank account information. Be cautious when sharing this type of information, especially with people or companies that you don't know."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding FakeWebsiteVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowFakeWebsiteCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamsign.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Fake websites and email addresses" TextColor="#ffffff" LineBreakMode="WordWrap" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowFakeWebsiteCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding FakeWebsiteDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowFakeWebsiteDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamsign.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Fake websites and email addresses" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowFakeWebsiteDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="Scammers may ask for personal or financial information such as your social security number/ national ID number, credit card details, or bank account information. Be cautious when sharing this type of information, especially with people or companies that you don't know."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding EmotionalAppealsVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowEmotionalAppealsCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamsign.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Emotional appeals " TextColor="#ffffff" LineBreakMode="WordWrap" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowEmotionalAppealsCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding EmotionalAppealsDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowEmotionalAppealsDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamsign.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Emotional appeals " LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowEmotionalAppealsDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="Scammers may ask for personal or financial information such as your social security number/ national ID number, credit card details, or bank account information. Be cautious when sharing this type of information, especially with people or companies that you don't know."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </Grid>
+    
+</ContentPage>

@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.More.PreventiveTips"
+             Title="Preventive Tips"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <Label Text="Remember, prevention is key when it comes to avoiding scams and frauds. By being aware of the warning signs, staying informed, and taking steps to protect yourself and your personal information, you can reduce your risk of falling victim to these types of scams. Some tips on how to prevent falling victim to scams and frauds:"
+                   TextColor="#ffffff" FontSize="14" FontFamily="Inter-Regular" Padding="20,0,20,10" HorizontalTextAlignment="Start" Margin="0,0,0,0" BackgroundColor="{StaticResource SecondaryColor}"/>
+        </StackLayout>
+
+        <ScrollView VerticalScrollBarVisibility="Never" Margin="0,0,0,10" Grid.Row="1">
+            <StackLayout>
+                <StackLayout Margin="20,10" Spacing="0">
+                    <Grid >
+                        <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowSolicitCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamtips.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Protect personal information" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowSolicitCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SolicitDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowSolicitDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamtips.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Protect personal information" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowSolicitDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text=" Never give out personal information, such as your social security number, bank account numbers, or credit card information, to anyone who contacts you unsolicited. Be cautious when giving out personal information online, especially on social media and other public forums."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PressureTacticsVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPressureTacticsCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamtips.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Be wary of unsolicited offers" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowPressureTacticsCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PressureTacticsDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPressureTacticsDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamtips.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Be wary of unsolicited offers" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowPressureTacticsDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="Be suspicious of any offers that come to you out of the blue, especially those that require you to act quickly or pay money upfront. Remember, if it sounds too good to be true, it probably is."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PersonalInfoVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPersonalInfoCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamtips.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Verify before you trust" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowPersonalInfoCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PersonalInfoDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPersonalInfoDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamtips.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Verify before you trust" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowPersonalInfoDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="Verify the identity and credentials of anyone who contacts you and claims to be a representative of a company or organization. Check with the company or organization directly to confirm their claims."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding GoodOfferVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowGoodOfferCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamtips.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Stay Informed" TextColor="#ffffff" LineBreakMode="WordWrap" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowGoodOfferCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding GoodOfferDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowGoodOfferDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamtips.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Stay Informed" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowGoodOfferDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="Stay up-to-date on the latest scams and frauds, and be aware of the warning signs. This will help you recognize suspicious activity and avoid falling victim to scams."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SuspiciousPaymentVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowSuspiciousPaymentCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamtips.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Secure your devices" TextColor="#ffffff" LineBreakMode="WordWrap" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowSuspiciousPaymentCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding SuspiciousPaymentDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowSuspiciousPaymentDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamtips.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Secure your devices" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowSuspiciousPaymentDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="Keep your devices and accounts secure by using strong passwords and two-factor authentication, and keeping your software and antivirus programs up-to-date."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PoorGrammarVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPoorGrammarCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamtips.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Check your accounts regularly" TextColor="#ffffff" LineBreakMode="WordWrap" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowPoorGrammarCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding PoorGrammarDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowPoorGrammarDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamtips.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Check your accounts regularly" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowPoorGrammarDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="Regularly review your bank and credit card statements to look for any unauthorized charges or withdrawals. If you see anything suspicious, report it immediately."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding FakeWebsiteVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowFakeWebsiteCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamtips.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="Use reputable sources" TextColor="#ffffff" LineBreakMode="WordWrap" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowFakeWebsiteCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding FakeWebsiteDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowFakeWebsiteDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamtips.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="Use reputable sources" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowFakeWebsiteDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="Use reputable sources for information, such as government websites or established news outlets. Be wary of information that comes from unknown or unverified sources."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding EmotionalAppealsVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowEmotionalAppealsCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Image Source="scamtips.png" WidthRequest="30" HeightRequest="30" />
+                                </StackLayout>
+                                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Grid.Column="1">
+                                    <Label Text="{Binding ScamQA}" TextColor="#ffffff" LineBreakMode="WordWrap" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <StackLayout>
+                                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowEmotionalAppealsCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout>
+                                </FlexLayout>
+                            </Grid>
+                        </Frame>
+                        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding EmotionalAppealsDetailVisible}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ShowEmotionalAppealsDetailCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="scamtips.png" VerticalOptions="StartAndExpand" WidthRequest="30" HeightRequest="30"/>
+                                <StackLayout >
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                        <Label Text="{Binding ScamQA}" LineBreakMode="WordWrap" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout>
+                                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowEmotionalAppealsDetailCommand}" CommandParameter="{Binding .}"/>
+                                        </StackLayout>
+                                    </FlexLayout>
+                                    <Label Text="if/when you have any doubts or should you just need to do a sanity check when you are unsure of a situation."
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

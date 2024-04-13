@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:ScamMobileApp.Controls"
+             x:Class="ScamMobileApp.Views.Questions.ZcamResultSuggestion.Scammed"
+             Title="Scammed"
+             BackgroundColor="#101137">
+
+
+    <!--<ContentPage.Content>
+        <local:CustomWebView Uri="Scammed.pdf" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </ContentPage.Content>-->
+
+    <ScrollView>
+        <StackLayout Margin="0,10,0,0">
+            <Image Source="scammed21.png"/>
+            <StackLayout Margin="10,0">
+                <Label Text="What to do if you think you have been scammed? If you think you have been scammed, it’s crucial to take immediate action to mitigate the damage and potentially recover any losses. Here’s a list of recommendations if you have fallen victim to a scam:"
+                       HorizontalTextAlignment="Center" FontSize="14" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Spacing="0" Margin="10,0">
+                <Image Source="stayscam.png"/>
+                <Image Source="documenteverything.png"/>
+                <Image Source="contactyoufinancial.png"/>
+                <Image Source="changepasswords.png"/>
+                <Image Source="reporttoauthorities.png"/>
+                <Image Source="onlineplatforms.png"/>
+                <Image Source="educateyouself2.png"/>
+                <Image Source="becautiousoffollowup.png"/>
+                <Image Source="seeklegaladvice.png"/>
+            </StackLayout>
+            <StackLayout Margin="10,0">
+                <Label Text="Remember that time is of the essence when dealing with a scam. The sooner you take action to report the incident and protect your financial assets, the better your chances of minimizing the damage and potentially apprehending the scammer."
+                       HorizontalTextAlignment="Center" FontSize="14" TextColor="White"/>
+            </StackLayout>
+            <Image Source="downline.png"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

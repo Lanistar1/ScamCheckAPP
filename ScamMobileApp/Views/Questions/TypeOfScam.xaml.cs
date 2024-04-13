@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ScamMobileApp.ViewModels.Home;
+using ScamMobileApp.ViewModels.ScamType;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,11 +17,9 @@ namespace ScamMobileApp.Views.Questions
         public TypeOfScam()
         {
             InitializeComponent();
+            BindingContext = new scamtypeViewModel(Navigation);
+
         }
 
-        private void To_firstQuestion(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new FirstQuestion());
-        }
     }
 }

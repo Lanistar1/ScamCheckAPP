@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:ScamMobileApp.Controls"
+             x:Class="ScamMobileApp.Views.Questions.ZcamResultSuggestion.LikelyAScamSeggestion"
+             Title="Likely a Scam"
+             BackgroundColor="#101137">
+
+    <!--<ContentPage.Content>
+        <local:CustomWebView Uri="Likelyscammed.pdf" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </ContentPage.Content>-->
+
+    
+    <!--<ScrollView>
+        <Image Source="testscam.jpg" WidthRequest="1000"/>
+    </ScrollView>-->
+
+    <ScrollView>
+        <StackLayout Margin="0,10,0,0">
+            <Image Source="likelyascam.png"/>
+            <StackLayout Margin="10,0">
+                <Label Text="When a situation is deemed “likely a scam,” it’s crucial to exercise extreme caution and take specific actions to protect yourselves. Here are some recommended steps in such situations:"
+                       HorizontalTextAlignment="Center" FontSize="14" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Spacing="-13" Margin="10,0">
+                <Image Source="donotengage.png"/>
+                <Image Source="verifyidentityindependently.png"/>
+                <Image Source="donotshare.png"/>
+                <Image Source="blockorreport.png"/>
+                <Image Source="warnoreducate.png"/>
+                <Image Source="consulttrusted.png"/>
+                <Image Source="monitoryour.png"/>
+                <Image Source="changepassword21.png"/>
+                <Image Source="strengthenyour.png"/>
+                <Image Source="learnfrom.png"/>
+            </StackLayout>
+            <StackLayout Margin="10,0">
+                <Label Text="Remember that scammers are skilled at manipulating individuals, so it’s essential to stay vigilant and take immediate action when you suspect a scam. Timely reporting and cautious behavior can help minimize the potential harm and protect your financial and personal information. By reporting the scam, warning others, and strengthening your security measures, you can minimize the impact of the scam and help prevent others from falling victim to it."
+                       HorizontalTextAlignment="Center" FontSize="14" TextColor="White"/>
+            </StackLayout>
+            <Image Source="downline.png"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

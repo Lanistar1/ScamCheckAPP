@@ -1,4 +1,9 @@
-﻿using ScamMobileApp.Views.Onboard;
+﻿using ScamMobileApp.Views;
+using ScamMobileApp.Views.More;
+using ScamMobileApp.Views.Onboard;
+using ScamMobileApp.Views.Questions;
+using ScamMobileApp.Views.Questions.Impersonation;
+using ScamMobileApp.Views.Questions.ZcamResultSuggestion;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,6 +22,8 @@ namespace ScamMobileApp
             InitializeComponent();
 
             MainPage = new NavigationPage(new Welcome2());
+
+            //MainPage = new NavigationPage(new MoreMenu());
 
         }
 

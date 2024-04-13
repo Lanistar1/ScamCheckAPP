@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Ransomware.RansomwareThirdQuestion"
+             Title="Question and answer"
+             NavigationPage.HasBackButton="False"
+             BackgroundImageSource="bgscam">
+
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
+            <StackLayout>
+                <StackLayout>
+                    <Image Source="scamquestion3.png"/>
+                </StackLayout>
+                <Label Text="Is the email or message poorly written, contain spelling or grammar errors, or come from a suspicious or unusual email address?" TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
+                    <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionThreeCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
+                    <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionThreeCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
+                </StackLayout>
+                <FlexLayout JustifyContent="SpaceBetween">
+                    <StackLayout>
+                        <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
+                        <Label Text="Previous question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton Command="{Binding ThirdQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png"/>
+                        <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </FlexLayout>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="20" HasShadow="False" Grid.Row="1">
+            <StackLayout>
+                <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
+                    <StackLayout>
+                        <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Label Text="This question asks whether the email or message you received looks poorly written, has spelling or grammar mistakes, or comes from an email address that seems strange or suspicious. Ransomware scammers might not pay much attention to their messages, leading to errors. They might also use unusual email addresses that don't match the official ones from reputable companies. These are red flags that something might not be correct. To protect yourself, be cautious if you notice these signs. Don't click on links or download attachments from such messages. Verifying the source of emails can help you steer clear of ransomware scams." 
+                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+       
+    </Grid>
+
+</ContentPage>

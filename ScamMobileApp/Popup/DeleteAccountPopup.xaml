@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+                 xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+                 x:Class="ScamMobileApp.Popup.DeleteAccountPopup">
+
+
+    <pv:PancakeView Padding="10,5,10,5" 
+                CornerRadius="5,5,5,5"
+                Margin="10,0,10,0"
+                 BackgroundColor="White"
+                 HorizontalOptions="Fill"
+                 HeightRequest="175"
+                 VerticalOptions="CenterAndExpand">
+        <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" Margin="20,20,20,10">
+                <Label Text="Pressing the proceed button will delete all your details from our system and you will never be able to access your account again." FontFamily="poppins-Medium" FontSize="16" 
+                       HorizontalTextAlignment="Start"  TextColor="Black"/>
+            </StackLayout>
+
+            <Grid Grid.Row="1" Margin="20,0,20,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame CornerRadius="5" BackgroundColor="#DA1651" Grid.Column="0" Padding="5" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Close_Popup"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Cancel" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Frame CornerRadius="5" BackgroundColor="{StaticResource SecondaryColor}" Grid.Column="1" Padding="5" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding DeleteCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Proceed" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Frame>
+            </Grid>
+        </Grid>
+    </pv:PancakeView>
+
+</pages:PopupPage>

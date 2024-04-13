@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Home.ShareExperience"
+             xmlns:controls="clr-namespace:ScamMobileApp.Controls" 
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             NavigationPage.HasNavigationBar="True"
+             Title="The Anti-Scam Movement"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <ScrollView>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" BackgroundColor="{StaticResource SecondaryColor}">
+                <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5">
+                    <StackLayout Padding="10">
+                        <Label Text="The Anti-Scam Movement refers to a collective effort aimed at raising the awareness about scams, empowering individuals with knowledge and tools to identify and prevent scams, and promoting a community of vigilant individuals who actively combat fraudulent activities. The movement encourages people to unite against scams, share information, support victims, and work towards creating a safer environment." 
+                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Margin="20,10,20,20">
+                <StackLayout Margin="0,0,0,5" Spacing="0">
+                    <Label  Text="Type Of Scam"
+                            FontFamily="Inter-Medium"
+                            FontSize="16"
+                            Margin="0,0,0,5"
+                            TextColor="{StaticResource SecondaryColor}"/>
+
+                    <pv:PancakeView BackgroundColor="{StaticResource PrimaryColor}"
+                                    CornerRadius="5"
+                                    HorizontalOptions="Fill" 
+                                    HeightRequest="40"
+                                    Padding="10,5">
+                        <pv:PancakeView.Border>
+                            <pv:Border Color="{StaticResource SecondaryColor}" Thickness="2"/>
+                        </pv:PancakeView.Border>
+                        <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid HorizontalOptions="StartAndExpand"
+                              VerticalOptions="CenterAndExpand">
+
+                                <StackLayout Orientation="Vertical"
+                                         VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding Title}"
+                                       HorizontalOptions="StartAndExpand"
+                                       VerticalOptions="CenterAndExpand"
+                                       FontFamily="Roboto-Medium"
+                                       TextColor="{StaticResource SecondaryColor}"
+                                       FontSize="16"/>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,10,0">
+                                <ImageButton BackgroundColor="Transparent" Command="{Binding SelectPageCommand}" CommandParameter="{Binding .}" Source="arr2.png" WidthRequest="15" 
+                                             HeightRequest="15"/>
+                            </StackLayout>
+
+                        </Grid>
+                        <pv:PancakeView.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SelectPageCommand}"
+                                                  CommandParameter="{Binding .}"
+                                                  NumberOfTapsRequired="1"/>
+                        </pv:PancakeView.GestureRecognizers>
+                    </pv:PancakeView>
+
+                    <StackLayout IsVisible="{Binding Others}" Margin="0,10">
+                        <Label  Text="Enter the scam type"
+                                FontFamily="Inter-Medium"
+                                FontSize="16"
+                                Margin="0,5,0,0"
+                                TextColor="{StaticResource SecondaryColor}"/>
+                        <Frame Padding="5" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource SecondaryColor}" Margin="0,0,0,0"
+                               CornerRadius="5" >
+                            <controls:XEditor
+                                    FontSize="16"
+                                    AutoSize="TextChanges"
+                                    FontFamily="Roboto-Medium"
+                                    Text="{Binding Othertitle}"
+                                    PlaceholderColor="#645F5F"
+                                    TextColor="{StaticResource SecondaryColor}"/>
+                        </Frame>
+                    </StackLayout>
+
+                </StackLayout>
+
+
+                <StackLayout Margin="0,0,0,0">
+                    <Label Text="Your Experience" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <Frame Padding="5" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource SecondaryColor}" Margin="0,0,0,0" CornerRadius="5" HeightRequest="170">
+                        <controls:XEditor
+                                FontSize="16"
+                                AutoSize="TextChanges"
+                                FontFamily="Roboto-Medium"
+                                Text="{Binding Message}"
+                                Placeholder="Share your scam experience here"
+                                PlaceholderColor="#645F5F"
+                                TextColor="{StaticResource SecondaryColor}"/>
+                    </Frame>
+                    <Label Text="Max: 200 words" TextColor="{StaticResource SecondaryColor}" FontSize="12" FontFamily="Inter-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="3" VerticalOptions="Center" >
+                    <CheckBox Color="{StaticResource TertiaryColor}" VerticalOptions="CenterAndExpand"  Margin="0,0,0,10" IsChecked="{Binding ScamCheck}"/>
+                    <Label Text="Accept Terms and Conditions." TextColor="{StaticResource TertiaryColor}" FontSize="14" FontFamily="Inter-Medium" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,0,10">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_Terms"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <Frame CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Padding="10,12" Margin="0,10,0,0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding PostExerienceCommand}" CommandParameter="{Binding .}"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Submit" TextColor="White" FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                </Frame>
+                <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="CenterAndExpand" Margin="0,5">
+                    <Label Text="Not sure about sharing?" TextColor="#000000" FontAttributes="Bold"/>
+                    <Label HorizontalOptions="StartAndExpand" TextColor="{StaticResource TertiaryColor}" Margin="5,0,0,0" FontSize="Subtitle">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Check others story" FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_ViewStories"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

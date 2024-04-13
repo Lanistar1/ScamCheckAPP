@@ -51,6 +51,8 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>None</MtouchLink>
     <MtouchInterpreter>-all</MtouchInterpreter>
+    <CodesignProvision>
+    </CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -62,7 +64,11 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Controls\CustomWebViewRenderer.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -70,47 +76,62 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20@1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20@2x1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29@1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29@2x1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40@1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40@2x1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60@2x1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76@1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ItunesArtwork@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
@@ -129,6 +150,9 @@
     <PackageReference Include="Rg.Plugins.Popup">
       <Version>2.1.0</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfPdfViewer">
+      <Version>24.2.8</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xamarin.Forms.PancakeView">
@@ -141,5 +165,242 @@
       <Project>{7DA2FAAB-E8E5-4168-B8F7-7405BF16CA08}</Project>
       <Name>ScamMobileApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\newscamavatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\newscambackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\newscamhelp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\newscamlegal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\newscamlogout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\newscampassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\newscamterm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\passwordchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\preventivetip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\qascam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\reportscam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scam1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Scam2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamarrowdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamarrowup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamavatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scambackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamcancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamdash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamdetector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scameyeclose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamgreenlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamhelp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamhome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamicon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamicon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamlink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamlogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamlogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamlogout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scammenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scammer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scammeter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamnext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamopeneye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamprevious.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamprofile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamqa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamquestion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamquestion2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamquestion3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamquestion4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamredlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamresult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamsearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamsign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamterms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamtips.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamtype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamtypebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamwelcome1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamwelcome2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamwelcomebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\terms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tips.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\type.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\typescam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\urstory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\warnings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\warningsign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\antiscam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arr2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arr21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bgscam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blank3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\emptystar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\eyedd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\eyezz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fillstar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\myprofile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\newforthscam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamscale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgscam.png" />
   </ItemGroup>
 </Project>

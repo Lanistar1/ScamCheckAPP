@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="ScamMobileApp.Popup.FeedbackPopup"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+                 xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" 
+                 xmlns:local="clr-namespace:ScamMobileApp.Views" 
+                 xmlns:Controls="clr-namespace:ScamMobileApp.Controls"
+                 >
+
+
+    <pv:PancakeView Padding="15,25,15,30" 
+                    CornerRadius="10"
+                    Margin="0,0,0,0"
+                    BackgroundColor="{StaticResource SecondaryColor}"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="CenterAndExpand">
+
+
+        <StackLayout>
+            <Label Text="Please rate the app" TextColor="#ffffff" FontSize="15" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+
+            <local:CustomStarControl x:Name="starRating" Rating="{Binding StarRating}" />
+
+            <StackLayout Margin="0,10,0,0">
+                <Label  Text="Comment"
+                        FontFamily="Inter-Medium"
+                        FontSize="14"
+                        Margin="0,0"
+                        TextColor="White"/>
+
+                <Frame Padding="10,0,10,0" BorderColor="{StaticResource SecondaryColor}" Margin="0,0,0,10" HasShadow="False" CornerRadius="10">
+                    <Controls:XEditor
+                            FontSize="16"
+                            AutoSize="TextChanges"
+                            FontFamily="Roboto-Medium"
+                            x:Name="comment"
+                            PlaceholderColor="#cccccc"
+                            TextColor="{StaticResource SecondaryColor}"/>
+                </Frame>
+            </StackLayout>
+
+            <Frame HorizontalOptions="CenterAndExpand" BackgroundColor="{StaticResource TertiaryColor}" CornerRadius="5" Padding="40,5" Margin="0,10">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Close_Popup"/>
+                </Frame.GestureRecognizers>
+                <Label Text="Done" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+            </Frame>
+        </StackLayout>
+    </pv:PancakeView>
+
+</pages:PopupPage>

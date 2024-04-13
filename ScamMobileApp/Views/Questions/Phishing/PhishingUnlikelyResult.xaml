@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Questions.Phishing.PhishingUnlikelyResult"
+             Title="Is This A Scam?"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <ScrollView>
+        <StackLayout>
+            <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}">
+                <Label Text="Scam Check Result" TextColor="#ffffff" FontSize="18" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+            </Frame>
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="{StaticResource SecondaryColor}" Margin="10,50,10,0" VerticalOptions="StartAndExpand">
+                <StackLayout>
+                    <StackLayout>
+                        <Image Source="scamgreenlogo.png" WidthRequest="100" HeightRequest="100"/>
+                    </StackLayout>
+                    <Label Text="Unlikely a scam" TextColor="#3DBF4A" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <StackLayout>
+                        <Label Text="Based on the Q and A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection. " 
+                           TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Guidance:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+                        <Label Text="It's still recommended to exercise caution and follow these actions:" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+                        <Label Text="1. Conduct further research." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0"/>
+                        <Label Text="2. Verify the source." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,-3"/>
+                        <Label Text="3. Read the fine print." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <Label Text="4. Trust your instincts." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <Label Text="5. Stay vigilant." TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    </StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame BackgroundColor="#DA1651" CornerRadius="5" Margin="0,10" Grid.Column="0" Padding="0,10" IsVisible="True" x:Name="phishingunlikely">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="To_FeedbackPopup"/>
+                            </Frame.GestureRecognizers>
+                            <Label Text="Rate App" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,5"/>
+                        </Frame>
+                        <Frame BackgroundColor="{StaticResource BTNColor}" CornerRadius="5" Margin="0,10" Grid.Column="1" Padding="0,10">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PostFeedbackCommand}"/>
+                            </Frame.GestureRecognizers>
+                            <Label Text="Save" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,5"/>
+                        </Frame>
+                    </Grid>
+
+                    <Label HorizontalOptions="CenterAndExpand" TextColor="#ffffff" Margin="0,0,0,10">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Refer to " TextColor="#ffffff"/>
+                                <Span Text="Unlikely a scam page" TextColor="#3DBF4A" FontSize="Subtitle">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="To_unlikelyAscam"/>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                                <Span Text=" for guidance" TextColor="#ffffff"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

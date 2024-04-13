@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:Controls="clr-namespace:ScamMobileApp.Controls"
+             x:Class="ScamMobileApp.Views.Experience.AllExperience"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             NavigationPage.HasNavigationBar="True"
+             Title="All Stories">
+
+    <Grid Margin="20,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0">
+            <!--<Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="5" >
+                <StackLayout>
+                    <Label Text="Have you ever had an encounter with scammers? Please share your experience so that others can learn from it." 
+                       TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <Frame CornerRadius="5" BackgroundColor="{StaticResource TertiaryColor}" Padding="10" Margin="10,10" HorizontalOptions="EndAndExpand">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_ShareExperience"/>
+                        </Frame.GestureRecognizers>
+                        <Label Text="Share experience" TextColor="White" FontSize="16" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    </Frame>
+                </StackLayout>
+            </Frame>-->
+            <!--<FlexLayout Margin="0,0,0,0">
+                <Label Text="People Experience." 
+                       TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+            </FlexLayout>-->
+            <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="5" BorderColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Controls:CustomEntry 
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            Grid.Column="0"
+                            Placeholder="Search people experience"
+                            PlaceholderColor="#645F5F"
+                            FontFamily="Poppins-Regular"
+                            Margin="0,0,0,0"
+                            FontSize="14"
+                            Text="{Binding SearchEntry, Mode=TwoWay}"
+                            TextColor="{StaticResource SecondaryColor}"/>
+                    <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand">
+                        <Image  Source="search.png" WidthRequest="20" HeightRequest="20"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+        </StackLayout>
+        <StackLayout Grid.Row="1">
+            <CollectionView x:Name="cvBanner" ItemsSource="{Binding NewExperienceData}" Margin="0,10" VerticalScrollBarVisibility="Never">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.EmptyView>
+                    <Label  Text="{Binding EmptyPlaceholder}" 
+                        FontFamily="Inter-Mediun"
+                        LineBreakMode="CharacterWrap"
+                        Margin="0,10,0,0"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Center"
+                        TextColor="{StaticResource SecondaryColor}" 
+                        FontSize="16"/>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10" BackgroundColor="#1D2530" CornerRadius="10">
+                            <StackLayout Orientation="Horizontal" Spacing="10">
+                                <StackLayout>
+                                    <Image Source="{Binding DishImage}"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="{Binding title}" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <Label Text="{Binding message}" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                        
+                        <!--<Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Path=BindingContext.TappedCommand, Source={x:Reference cvBanner}}" CommandParameter="{Binding .}"/>
+                            </Frame.GestureRecognizers>
+                            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                                <Label Text="{Binding title}" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                <StackLayout>
+                                    <Image Source="scamarrow.png"/>
+                                </StackLayout>
+                            </FlexLayout>
+                        </Frame>-->
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </Grid>
+</ContentPage>

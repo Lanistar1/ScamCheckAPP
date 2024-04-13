@@ -113,7 +113,7 @@ namespace ScamMobileApp.ViewModels.Identity
                 {
                     Global.UserData = ResponseData.data.profile;
                     Global.Token = ResponseData.data.token;
-                    await MessagePopup.Instance.Show("Login successful");
+                    //await MessagePopup.Instance.Show("Login successful");
 
                     Application.Current.MainPage = new NavigationPage(new Tabbed());
                 }
@@ -137,101 +137,6 @@ namespace ScamMobileApp.ViewModels.Identity
                 await LoadingPopup.Instance.Hide();
             }
         }
-
-        private async Task LoginCommandsExecute()
-        {
-            try
-            {
-                Console.WriteLine("something pressed");
-                if (string.IsNullOrWhiteSpace(Email))
-                {
-                   
-                    await Application.Current.MainPage.DisplayAlert("Email field not correct", "Field should not be empty", "OK");
-                }
-                else
-                {
-                    var x = EmailRegex.Match(Email);
-                    if (x.Success)
-                    {
-                        // do something
-                    }
-                    else
-                    {
-                        // do something
-                        //bool isEmail = Regex.IsMatch(Username, EmailRegex);
-                        await Application.Current.MainPage.DisplayAlert("Email field not correct", "Field must contain @ and .com ", "OK");
-                        return;
-                    }
-                }
-                if (string.IsNullOrWhiteSpace(Password))
-                {
-                    await Application.Current.MainPage.DisplayAlert("Password field not correct", "Field should not be empty", "OK");
-                    return;
-                }
-
-                HttpClient client = new HttpClient();
-
-                await LoadingPopup.Instance.Show("Logging in...");
-
-                LoginRequestModel request = new LoginRequestModel { email = Email, password = Password };
-
-                string body = JsonConvert.SerializeObject(request);
-                Console.WriteLine(Email);
-                Console.WriteLine(Password);
-
-                string url = Global.LoginUrl;
-                Console.WriteLine(url);
-                StringContent content = new StringContent(body, Encoding.UTF8, "application/json");
-
-                HttpResponseMessage response = null;
-                response = await client.PostAsync(url, content);
-
-                string result = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(result);
-
-                if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                {
-                    LoginResponseModel data = JsonConvert.DeserializeObject<LoginResponseModel>(result);
-                    Console.WriteLine(data.data.token);
-                   
-
-                    await Application.Current.MainPage.DisplayAlert("User Login Successful", "", "OK");
-                    
-                    Console.WriteLine("Good");
-                }
-                else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                {
-                    LoginResponseModel data = JsonConvert.DeserializeObject<LoginResponseModel>(result);
-                   
-                    await Application.Current.MainPage.DisplayAlert("Login not successfully", "Username or password not correct", "OK");
-                    
-                }
-                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-                {
-                    await Application.Current.MainPage.DisplayAlert("Login not successfully", "Username or password not correct", "OK");
-                    
-                }
-                else
-                {
-                    LoginResponseModel data = JsonConvert.DeserializeObject<LoginResponseModel>(result);
-
-                    await Application.Current.MainPage.DisplayAlert("Something went wrong", "Please try again later", "OK");
-                    
-                    response.Dispose();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
-            finally
-            {
-                await LoadingPopup.Instance.Hide();
-            }
-        }
-
-
         #endregion
     }
 }

@@ -6,11 +6,11 @@
              BackgroundColor="{StaticResource PrimaryColor}">
 
     <StackLayout Margin="20">
-        <Label Text="What can we help you with today?" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+        <Label Text="What can we help you with today?" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
 
         <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
             <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                <Label Text="How to use Scam Detector app?" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                <Label Text="How to use SCAMalicious app?" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
 
                 <StackLayout>
                     <Image Source="scamarrowdown.png"/>
@@ -49,8 +49,7 @@
         
         <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
             <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                <Label Text="What is ScamQA?" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-
+                <Label Text="{Binding ScamQA}" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                 <StackLayout>
                     <Image Source="scamarrowdown.png"/>
                 </StackLayout>

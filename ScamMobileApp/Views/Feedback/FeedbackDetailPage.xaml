@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Feedback.FeedbackDetailPage"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             NavigationPage.HasNavigationBar="True"
+             Title="Feedback Detail">
+
+
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <StackLayout Margin="0,20">
+            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="20,0">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Scam Type:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <Label Text="{Binding ScamType}" TextColor="{StaticResource PrimaryColor}" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                </StackLayout>
+            </Frame>
+
+            <StackLayout x:Name="cvBanner" BindableLayout.ItemsSource="{Binding UserFeedbackData}" Spacing="2" Margin="20,5,20,5">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
+                                <StackLayout >
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Result:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="{Binding output}" TextColor="{StaticResource PrimaryColor}" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Label Text="Feedback:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,10,0,0"/>
+                                        <Label Text="{Binding outputDetails}" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+
+            <StackLayout x:Name="question" BindableLayout.ItemsSource="{Binding QuestionData}" Spacing="5" Margin="20,0,20,20">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
+                                <StackLayout >
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Question:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="{Binding question}" TextColor="{StaticResource PrimaryColor}" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" 
+                                               HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Answer:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="{Binding answer}" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

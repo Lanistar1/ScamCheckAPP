@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="ScamMobileApp.Views.Questions.QuestionsAndAnswer"
+             Title="{Binding ScamQA}"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <Label Text="Scam Questions and answers" TextColor="White" FontSize="18" FontFamily="Inter-Bold"
+                   HorizontalTextAlignment="Start" Margin="0,0,0,-5" Padding="20,10" BackgroundColor="{StaticResource SecondaryColor}"/>
+
+            <Frame Padding="20,20,20,10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="0" Margin="0,-5,0,10">
+                <StackLayout>
+                    <Label Text="{Binding Message}" 
+                       TextColor="#ffffff" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Margin="20,0,20,0">
+
+            <StackLayout Margin="0,0,0,5" Spacing="0">
+
+                <Label  Text="Choose Type Of Scam"
+                        FontFamily="Inter-Medium"
+                        FontSize="16"
+                        Margin="0,0,0,5"
+                        TextColor="{StaticResource SecondaryColor}"/>
+
+                <pv:PancakeView BackgroundColor="{StaticResource PrimaryColor}"
+                                CornerRadius="5"
+                                HorizontalOptions="Fill" 
+                                HeightRequest="40"
+                                Padding="10,5">
+                    <pv:PancakeView.Border>
+                        <pv:Border Color="{StaticResource SecondaryColor}" Thickness="2"/>
+                    </pv:PancakeView.Border>
+                    <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid HorizontalOptions="StartAndExpand"
+                              VerticalOptions="CenterAndExpand">
+
+                            <StackLayout Orientation="Vertical"
+                                         VerticalOptions="CenterAndExpand">
+                                <Label Text="{Binding Title}"
+                                       HorizontalOptions="StartAndExpand"
+                                       VerticalOptions="CenterAndExpand"
+                                       FontFamily="Roboto-Medium"
+                                       TextColor="{StaticResource SecondaryColor}"
+                                       FontSize="16"/>
+
+                            </StackLayout>
+
+                        </Grid>
+
+                        <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,10,0">
+                            <ImageButton BackgroundColor="Transparent" Command="{Binding SelectPageCommand}" CommandParameter="{Binding .}" Source="arr2.png" WidthRequest="15" 
+                                         HeightRequest="15"/>
+                        </StackLayout>
+
+                    </Grid>
+                    <pv:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SelectPageCommand}"
+                                              CommandParameter="{Binding .}"
+                                              NumberOfTapsRequired="1"/>
+                    </pv:PancakeView.GestureRecognizers>
+                </pv:PancakeView>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
