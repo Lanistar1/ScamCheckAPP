@@ -12,9 +12,11 @@ namespace ScamMobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PdfWebViewPage : ContentPage
     {
-        public PdfWebViewPage()
+        public PdfWebViewPage(string url)
         {
             InitializeComponent();
+            webView.Source = new UrlWebViewSource { Url = url };
+
         }
     }
 }

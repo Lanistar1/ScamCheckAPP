@@ -72,6 +72,10 @@ namespace ScamMobileApp.Views.More
 
         private void Logout(object sender, EventArgs e)
         {
+            //string url = "https://res.cloudinary.com/dj5o5rd0s/image/upload/v1711358540/sivaamalar_FINAL03_zmaww7.ai"; // Replace with your desired URL
+
+            //await Navigation.PushAsync(new PdfWebViewPage(url));
+
             Navigation.PushPopupAsync(new LogoutPopup());
         }
 
@@ -135,6 +139,7 @@ namespace ScamMobileApp.Views.More
 
         private void To_Scammed(object sender, EventArgs e)
         {
+            
             Navigation.PushAsync(new Scammed());
 
         }

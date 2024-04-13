@@ -6,6 +6,10 @@
              NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Content>
-        <local:CustomWebView Uri="Likelyscammed.pdf" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <WebView x:Name="webView" VerticalOptions="FillAndExpand" Margin="10"/>
     </ContentPage.Content>
+
+    <!--<ContentPage.Content>
+        <local:CustomWebView Uri="Likelyscammed.pdf" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+    </ContentPage.Content>-->
 </ContentPage>

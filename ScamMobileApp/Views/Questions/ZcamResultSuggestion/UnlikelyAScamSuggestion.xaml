@@ -3,189 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:ScamMobileApp.Controls"
              x:Class="ScamMobileApp.Views.Questions.ZcamResultSuggestion.UnlikelyAScamSuggestion"
              Title="Unlikely a Scam"
-             BackgroundColor="#ffffff">
+             BackgroundColor="#101137">
 
-    <ContentPage.Content>
+    <!--<ContentPage.Content>
         <local:CustomWebView Uri="Unlikelyscammed.pdf" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-    </ContentPage.Content>
+    </ContentPage.Content>-->
 
-    <!--<Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <StackLayout Grid.Row="0">
-            <Label Text="When a situation is deemed unlikely a scam, it suggests that there are minimal indicators or red flags pointing to fraudulent activity. In such cases, while the risk of a scam may be low, it's still recommended to exercise caution and follow these actions:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium" 
-                   HorizontalTextAlignment="Start" Margin="0,0,0,0" Padding="20,0,20,10" BackgroundColor="{StaticResource SecondaryColor}"/>
-        </StackLayout>
-
-        <ScrollView VerticalScrollBarVisibility="Never" Grid.Row="1" Margin="20,10,20,20">
-            <StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="1. Conduct further research: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text="Even if it seems unlikely to be a scam, it's wise to gather more information about the offer, product, or service. Look for reviews, testimonials, or independent sources to verify its legitimacy." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="2. Check for Red Flags: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text="Be on the lookout for common scam red flags, such as pressure to act quickly, requests for payment via untraceable methods (e.g., gift card payment or cryptocurrency etc.), and promises of unrealistic returns or benefits." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="3. Avoid Sharing Personal Information: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text=" Even if a situation seems legitimate, be cautious about sharing personal or financial information unless you have a high degree of confidence in the other party's authenticity." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="4. Verify Identity: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text="Always verify the identity of the person or organization you're dealing with, especially if you have any doubts. Confirm their contact information through official websites or directories, and don't rely solely on phone numbers or email addresses provided in unsolicited messages." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="5. Read the fine print: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text=" Carefully review any terms, conditions, or contracts associated with the offer. Pay attention to hidden fees, cancellation policies, or any unusual clauses that could raise concerns." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="6. Trust your instincts: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text="If something doesn't feel right or raises suspicion, trust your instincts. It's better to be safe than sorry. Even if it's considered unlikely a scam, it's important to prioritize your own peace of mind and well-being." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="7. Stay vigilant: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text="While the initial assessment indicates a low scam risk, it's crucial to remain vigilant and be mindful of any potential changes or new information that may arise. Continuously monitor the situation for any signs of suspicious behavior or unexpected developments." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="8. Use Secure Communication: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text="When communicating with unfamiliar individuals or organizations, use secure means of communication, such as official websites, verified social media profiles, or known phone numbers." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="9. Be Cautious Online: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text="Be wary of online interactions, including social media requests and unsolicited emails or messages. Verify the identities of individuals before engaging in online conversations or transactions." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="10. Protect Your Devices: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text="Ensure your devices are protected with up-to-date antivirus software and firewalls. Scammers may try to compromise your devices through malicious links or downloads." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="11. Educate Yourself Continuously: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text="Stay informed about new scams and fraud tactics, as scammers continually adapt and develop new methods. Knowledge is your best defense against evolving threats." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="12. Get a Second Opinion: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text="If you're unsure about a situation, seek advice from a trusted friend, family member, or financial advisor. A second perspective can help you see potential risks you might have missed." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="13. Report Suspicious Activity: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text=" If you encounter a situation that seems questionable but isn't definitively a scam, consider reporting it to relevant authorities or consumer protection agencies. They can investigate and determine if there's a potential issue. Go to “Report a Scam” to find out more." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="14. Educate Others: " FontSize="16" FontFamily="Inter-Bold" />
-                                <Span Text="Encourage friends and family to also be cautious and provide them with information on how to recognize and avoid scams. Collective awareness can help protect the community. Share in our The Anti-Scam Movement community Page." TextColor="#000000" FontSize="16" FontFamily="Inter-Regular" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal" Margin="0,5,0,0">
-                    <Label HorizontalOptions="StartAndExpand" TextColor="#000000">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="By taking these actions, you can further validate the legitimacy of the situation and make a more informed decision. While it's essential to approach unlikely scam situations with caution, remember that not every unfamiliar opportunity is fraudulent. The goal is to strike a balance between being cautious and open to legitimate opportunities while minimizing risks  " FontSize="16" FontFamily="Inter-Bold" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
+    <ScrollView>
+        <StackLayout Margin="0,10,0,0">
+            <Image Source="unlikeascam.png"/>
+            <StackLayout Margin="10,0">
+                <Label Text="When a situation is deemed “unlikely a scam,” it suggests that there are minimal indicators or red flags pointing to fraudulent activity. In such cases, while the risk of a scam may be lo, it’s sill recommended to exercise caution and follow these actions:"
+                       HorizontalTextAlignment="Center" FontSize="14" TextColor="White"/>
             </StackLayout>
-        </ScrollView>
-    </Grid>-->
+            <StackLayout  Margin="10,0">
+                <Image Source="conductfurther.png"/>
+                <Image Source="checkfor.png"/>
+                <Image Source="avoidsharing.png"/>
+                <Image Source="verifyidentity.png"/>
+                <Image Source="readthe.png"/>
+                <Image Source="trustyour.png"/>
+                <Image Source="stayvigilant.png"/>
+                <Image Source="usesecure.png"/>
+                <Image Source="becautious.png"/>
+                <Image Source="protectyour.png"/>
+                <Image Source="educateyourself.png"/>
+                <Image Source="getasecond.png"/>
+                <Image Source="reportsuspicious.png"/>
+                <Image Source="educateothers.png"/>
+            </StackLayout>
+            <StackLayout Margin="10,0">
+                <Label Text="By taking these actions, you can further validate the legitimacy of the situation and make a more informed decision. While it’s essential to approach unlikely scam situations with caution, remember that not every unfamiliar opportunity is fraudulent. The goal is to strike a balance between being cautious and open to legitimate opportunities while minimizing risks."
+                       HorizontalTextAlignment="Center" FontSize="14" TextColor="White"/>
+            </StackLayout>
+            <Image Source="downline.png"/>
+        </StackLayout>
+    </ScrollView>
+
+
 </ContentPage>
