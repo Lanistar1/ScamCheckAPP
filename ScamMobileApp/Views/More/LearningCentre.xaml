@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.More.LearningCentre"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="Learning Centre">
+
+    <StackLayout Margin="20">
+        <Frame CornerRadius="10" Padding="10,20" BackgroundColor="#EEE9ED" HasShadow="False">
+            <Label Text="Welcome to our learning facility, here you learn how to protect yourself from been scammed." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+        </Frame>
+
+        <Frame CornerRadius="10" Padding="10,0" BackgroundColor="#EEE9ED" HasShadow="False">
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <Label Text="Introduction" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+        </Frame>
+
+        <Frame CornerRadius="10" Padding="10,0" BackgroundColor="#EEE9ED" HasShadow="False">
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="T0_ScamType"/>
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <Label Text="Scam Types" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+        </Frame>
+
+        <Frame CornerRadius="10" Padding="10,0" BackgroundColor="#EEE9ED" HasShadow="False">
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_PreventiveTips"/>
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <Label Text="Prevention Tips" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+        </Frame>
+
+        <Frame CornerRadius="10" Padding="10,0" BackgroundColor="#EEE9ED" HasShadow="False"> 
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_WarningSign"/>
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <Label Text="Warning Signs" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

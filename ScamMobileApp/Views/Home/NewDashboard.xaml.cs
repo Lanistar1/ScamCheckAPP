@@ -71,5 +71,10 @@ namespace ScamMobileApp.Views.Home
         {
             await Navigation.PushAsync(new AllFeedbackPage());
         }
+
+        private  void To_LearnCentre(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LearningCentre());
+        }
     }
 }
