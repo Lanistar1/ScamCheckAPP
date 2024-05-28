@@ -1,12 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ScamMobileApp.Views.More.PreventiveTips"
-             Title="Preventive Tips"
-             BackgroundColor="{StaticResource PrimaryColor}">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:ScamMobileApp.ViewModels.Others"
+             x:Class="ScamMobileApp.Views.More.IntroductionPage"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="Learning Centre">
 
+    <ContentPage.BindingContext>
+        <local:ScamViewModel />
+    </ContentPage.BindingContext>
     <StackLayout Margin="20">
-        <ListView x:Name="cvBannerss" ItemsSource="{Binding Scams}" HasUnevenRows="True">
+        <ListView ItemsSource="{Binding Scams}" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -17,8 +21,7 @@
                                 <Label Text="{Binding Description}" TextColor="Black"/>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="End">
                                     <StackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.ToggleDescriptionCommand, Source={x:Reference cvBannerss}}" CommandParameter="{Binding .}"/>
-                                        <!--<TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type local:ScamViewModel}}, Path=ToggleDescriptionCommand}" CommandParameter="{Binding .}"/>-->
+                                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type local:ScamViewModel}}, Path=ToggleDescriptionCommand}" CommandParameter="{Binding .}"/>
                                     </StackLayout.GestureRecognizers>
                                     <Label Text="{Binding ReadMoreText}" TextColor="Red"  HorizontalTextAlignment="End"/>
                                     <Image Source="{Binding ReadMoreArrow}" WidthRequest="15" HeightRequest="15" Margin="0,0" VerticalOptions="Center"/>

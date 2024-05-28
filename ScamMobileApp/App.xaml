@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:Styles="clr-namespace:ScamMobileApp.Styles"
+             xmlns:Styles="clr-namespace:ScamMobileApp.Styles" 
+             xmlns:local="clr-namespace:ScamMobileApp.Converters"
              x:Class="ScamMobileApp.App">
     <Application.Resources>
         <ResourceDictionary>
+            <local:BoolToIntConverter x:Key="BoolToIntConverter" />
+            <local:BoolToReadMoreTextConverter x:Key="BoolToReadMoreTextConverter" />
             <ResourceDictionary.MergedDictionaries>
                 <Styles:Colors/>
                 <ResourceDictionary>

@@ -13,7 +13,7 @@
         <Frame CornerRadius="10" Padding="10,0" BackgroundColor="#EEE9ED" HasShadow="False">
             <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
                 <FlexLayout.GestureRecognizers>
-                    <TapGestureRecognizer />
+                    <TapGestureRecognizer Tapped="To_Introduction"/>
                 </FlexLayout.GestureRecognizers>
                 <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
                     <Label Text="Introduction" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
