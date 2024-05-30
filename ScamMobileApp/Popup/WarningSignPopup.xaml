@@ -30,7 +30,7 @@
                 </FlexLayout>
                 
                 <Label Text="This section contains some common warning signs that you should look out for when you suspect that you may be targeted by a scam or fraud." FontFamily="Airbnb-Medium" FontSize="14" 
-                       HorizontalTextAlignment="Start"  TextColor="Black"/>
+                       HorizontalTextAlignment="Start"  TextColor="#3A4756"/>
             </StackLayout>
 
             <Grid Grid.Row="1" Margin="20,0,20,20">

@@ -30,7 +30,7 @@
                 </FlexLayout>
                 
                 <Label Text="It’s important to stay informed about the latest scams and to be cautious about any requests for money or personal information, especially if they come from unsolicited sources or seem too good to be true. Take steps to protect yourself from falling victim to them." FontFamily="Airbnb-Medium" FontSize="14" 
-                       HorizontalTextAlignment="Start"  TextColor="Black"/>
+                       HorizontalTextAlignment="Start"  TextColor="#3A4756"/>
             </StackLayout>
 
             <Grid Grid.Row="1" Margin="20,0,20,20">

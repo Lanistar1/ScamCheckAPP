@@ -30,7 +30,7 @@
                 </FlexLayout>
                 
                 <Label Text="Remember, prevention is key when it comes to avoiding scams and frauds. By being aware of the warning signs, staying informed, and taking steps to protect yourself and your personal information, you can reduce your risk of falling victim to these types of scams. Some tips on how to prevent falling victim to scams and frauds." FontFamily="Airbnb-Medium" FontSize="14" 
-                       HorizontalTextAlignment="Start"  TextColor="Black"/>
+                       HorizontalTextAlignment="Start"  TextColor="#3A4756"/>
             </StackLayout>
 
             <Grid Grid.Row="1" Margin="20,0,20,20">

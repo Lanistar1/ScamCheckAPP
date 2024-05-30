@@ -1,4 +1,5 @@
 ﻿using ScamMobileApp.Helpers;
+using ScamMobileApp.Models;
 using ScamMobileApp.Models.Experience;
 using ScamMobileApp.Models.Identity;
 using ScamMobileApp.Models.ScamType;
@@ -13,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace ScamMobileApp.ViewModels.Experience
@@ -105,6 +107,13 @@ namespace ScamMobileApp.ViewModels.Experience
         public Command SearchEntryTextChangedCommand => new Command<string>((searchEntry) => SearchBar_TextChanged(searchEntry));
         public Command SearchCommand { get; }
         public Command TappedCommand { get; }
+
+        public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(ToggleDescription);
+
+        private void ToggleDescription(ExperienceData scam)
+        {
+            scam.IsExpanded = !scam.IsExpanded;
+        }
         #endregion
 
 

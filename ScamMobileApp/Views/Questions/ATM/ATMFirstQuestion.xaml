@@ -3,50 +3,69 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScamMobileApp.Views.Questions.ATM.ATMFirstQuestion"
              Title="Question and answer"
-             NavigationPage.HasBackButton="False"
-             BackgroundImageSource="bgscam">
+             NavigationPage.HasBackButton="True"
+             BackgroundColor="{StaticResource PrimaryColor}">
 
-    <Grid >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
-            <StackLayout>
-                <StackLayout>
-                    <Image Source="scamquestion1.png"/>
-                </StackLayout>
-                <Label Text="Does the ATM card slot look suspicious? " TextColor="#ffffff" FontSize="18" Margin="0,10,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
-                <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
-                    <RadioButton Content="YES"  TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionOneCheckYes}" BorderColor="#fff"  BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
-                    <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionOneCheckNo}" GroupName="Activity"  Padding="0,0,5,0"/>
-                </StackLayout>
-                <FlexLayout JustifyContent="SpaceBetween">
-                    <StackLayout>
-                        <ImageButton Clicked="Back" BackgroundColor="Transparent" Source="scamprevious.png"/>
-                        <Label Text="Previous" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                    </StackLayout>
-                    <StackLayout>
-                        <ImageButton Command="{Binding FirstQuestionCommand}" BackgroundColor="Transparent" Source="scamnext.png" />
-                        <Label Text="Next question" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                    </StackLayout>
+
+    <ScrollView Margin="20">
+        <StackLayout >
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <Label Text="Answer the following questions about ATM Skimming scam below." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+            </Frame>
+
+            <Label Text="Question 1" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,10,0,5"/>
+
+            <Frame CornerRadius="20" Padding="10,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <Label Text="Does the ATM card slot look suspicious?" TextColor="#374352" FontSize="20" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False" Margin="0,10">
+                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                    <Label Text="YES" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,5"/>
+                    <RadioButton IsChecked="{Binding QuestionOneCheckYes}" GroupName="Activity" Padding="0,0,5,0"/>
                 </FlexLayout>
-            </StackLayout>
-        </Frame>
+            </Frame>
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                    <Label Text="NO" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,5"/>
+                    <RadioButton  IsChecked="{Binding QuestionOneCheckNo}" GroupName="Activity"  Padding="0,0,5,0"/>
+                </FlexLayout>
+            </Frame>
 
-        <Frame BackgroundColor="{StaticResource PrimaryColor}" Padding="20" HasShadow="False" Grid.Row="1">
-            <StackLayout>
-                <Frame BorderColor="{StaticResource SecondaryColor}" Padding="20" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                    <StackLayout>
-                        <Label Text="Note:" TextColor="#ffffff" FontSize="14" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                        <Label Text="This question asks whether the card slot on the ATM looks unusual or different from what you're used to. ATM skimming scammers attach devices to the card slot to capture your card information when you insert it. These devices might look out of place or different from the normal ATM design. If the card slot looks suspicious, scratched, or different in any way, it's a sign that someone might have tampered with it. Don't use that ATM and report it to the bank or authorities. Choose ATMs located in well-lit areas and those that seem secure." 
-                       TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False" Margin="0,20">
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Note: " TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="16"/>
+                            <Span Text="This question asks whether the card slot on the ATM looks unusual or different from what you're used to. ATM skimming scammers attach devices to the card slot to capture your card information when you insert it. These devices might look out of place or different from the normal ATM design. If the card slot looks suspicious, scratched, or different in any way, it's a sign that someone might have tampered with it. Don't use that ATM and report it to the bank or authorities. Choose ATMs located in well-lit areas and those that seem secure." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <!--<Label Text="This question asks whether the card slot on the ATM looks unusual or different from what you're used to. ATM skimming scammers attach devices to the card slot to capture your card information when you insert it. These devices might look out of place or different from the normal ATM design. If the card slot looks suspicious, scratched, or different in any way, it's a sign that someone might have tampered with it. Don't use that ATM and report it to the bank or authorities. Choose ATMs located in well-lit areas and those that seem secure." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>-->
+            </Frame>
 
-                    </StackLayout>
+            <Grid  Margin="0,10" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="#E6E8EA" Grid.Column="0" Padding="0" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Back"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Back" FontSize="16" FontAttributes="Bold"  TextColor="{StaticResource SecondaryColor}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
                 </Frame>
-            </StackLayout>
-        </Frame>
-    </Grid>
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="1" Padding="0" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding FirstQuestionCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Next" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Frame>
+            </Grid>
+        </StackLayout>
+
+    </ScrollView>
 
 </ContentPage>

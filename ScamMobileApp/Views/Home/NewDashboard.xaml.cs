@@ -76,5 +76,10 @@ namespace ScamMobileApp.Views.Home
         {
             Navigation.PushAsync(new LearningCentre());
         }
+
+        private void To_ActionPoint(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ActionPoints());
+        }
     }
 }

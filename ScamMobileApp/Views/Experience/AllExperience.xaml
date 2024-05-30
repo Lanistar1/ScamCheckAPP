@@ -53,7 +53,7 @@
             </Frame>
         </StackLayout>
         <StackLayout Grid.Row="1">
-            <CollectionView x:Name="cvBanner" ItemsSource="{Binding NewExperienceData}" Margin="0,10" VerticalScrollBarVisibility="Never">
+            <CollectionView x:Name="cvBannerz" ItemsSource="{Binding NewExperienceData}" Margin="0,10" VerticalScrollBarVisibility="Never">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
                 </CollectionView.ItemsLayout>
@@ -70,29 +70,50 @@
                 </CollectionView.EmptyView>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="10" BackgroundColor="#1D2530" CornerRadius="10">
-                            <StackLayout Orientation="Horizontal" Spacing="10">
-                                <StackLayout>
-                                    <Image Source="{Binding DishImage}"/>
+                        <StackLayout>
+                            <StackLayout>
+                                <StackLayout >
+                                    <StackLayout Orientation="Horizontal" Margin="0,0,0,5">
+                                        <Image  Source="scamredlogo.png" HeightRequest="30" WidthRequest="30" VerticalOptions="Start"/>
+                                        <StackLayout Spacing="0">
+                                            <Label Text="{Binding title}" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="{Binding Description}" TextColor="#374352" FontSize="12" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10,0,0">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding firstname}" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Path=BindingContext.ToggleDescriptionCommand, Source={x:Reference cvBannerz}}" CommandParameter="{Binding .}"/>
+                                            </StackLayout.GestureRecognizers>
+                                            <Label Text="{Binding ReadMoreText}" TextColor="Red"  HorizontalTextAlignment="End"/>
+                                            <Image Source="{Binding ReadMoreArrow}" WidthRequest="15" HeightRequest="15" Margin="0,0" VerticalOptions="Center"/>
+                                        </StackLayout>
+                                    </FlexLayout>
                                 </StackLayout>
-                                <StackLayout>
-                                    <Label Text="{Binding title}" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                                    <Label Text="{Binding message}" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                                </StackLayout>
+                                <Line X1="0"
+                                      Y1="0"
+                                      X2="400"
+                                      Y2="0"
+                                      Stroke="#EEE9ED" />
                             </StackLayout>
-                        </Frame>
-                        
-                        <!--<Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Path=BindingContext.TappedCommand, Source={x:Reference cvBanner}}" CommandParameter="{Binding .}"/>
-                            </Frame.GestureRecognizers>
-                            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                                <Label Text="{Binding title}" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                                <StackLayout>
-                                    <Image Source="scamarrow.png"/>
+                            <!--<Frame Padding="10" BackgroundColor="#1D2530" CornerRadius="10">
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <StackLayout>
+                                        <Image Source="{Binding DishImage}"/>
+                                    </StackLayout>
+                                    <StackLayout>
+                                        <Label Text="{Binding title}" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="{Binding message}" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
                                 </StackLayout>
-                            </FlexLayout>
-                        </Frame>-->
+                            </Frame>-->
+                        </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

@@ -70,11 +70,17 @@
             <StackLayout>
 
                 <Frame BackgroundColor="#EEE9ED" CornerRadius="20" Padding="20,0,20,20" HasShadow="False">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="To_LearnCentre"/>
+                    </Frame.GestureRecognizers>
                     <FlexLayout AlignContent="Center" AlignItems="Center">
                         <StackLayout>
                             <Label Text="Protect Yourself" TextColor="{StaticResource TertiaryColor}" FontSize="18" VerticalTextAlignment="Center" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                             <Label Text="Learn more about different types of scams and how to protect yourself." TextColor="#9B9EA7" FontSize="14" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,10,0"/>
                             <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="0,10,0,0">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="To_LearnCentre"/>
+                                </StackLayout.GestureRecognizers>
                                 <Label Text="Visit Learning Centre" TextColor="{StaticResource SecondaryColor}" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                                 <Image  Source="arrowright1.png" HeightRequest="15" WidthRequest="20" Margin="0,3,0,0"/>
                             </StackLayout>
@@ -133,7 +139,7 @@
                             <Label Text="What to do when you suspect a scam has happened or is about too." TextColor="#9B9EA7" FontSize="14" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" />
                             <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="0,10,0,0">
                                 <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="To_LearnCentre"/>
+                                    <TapGestureRecognizer Tapped="To_ActionPoint"/>
                                 </StackLayout.GestureRecognizers>
                                 <Label Text="Learn More" TextColor="{StaticResource SecondaryColor}" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                                 <Image  Source="arrowright1.png" HeightRequest="15" WidthRequest="20" Margin="0,3,0,0"/>

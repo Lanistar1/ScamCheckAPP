@@ -78,7 +78,7 @@ namespace ScamMobileApp.Views.Questions.ATM
 
         private void To_Scammed(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Scammed());
+            Navigation.PushAsync(new ActionPoints());
 
         }
     }
