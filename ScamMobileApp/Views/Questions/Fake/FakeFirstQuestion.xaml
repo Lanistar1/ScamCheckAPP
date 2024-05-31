@@ -3,14 +3,75 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScamMobileApp.Views.Questions.Fake.FakeFirstQuestion"
              Title="Question and answer"
-             NavigationPage.HasBackButton="False"
-             BackgroundImageSource="bgscam">
+             NavigationPage.HasBackButton="True"
+             BackgroundColor="{StaticResource PrimaryColor}">
 
-    <Grid >
+
+    <ScrollView Margin="20">
+        <StackLayout >
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <Label Text="Answer the following questions about Fake Invoice scam below." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+            </Frame>
+
+            <Label Text="Question 1" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,10,0,5"/>
+
+            <Frame CornerRadius="20" Padding="10,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <Label Text="Is the invoice from a known and verified supplier or service provider that you have previously done business with?" TextColor="#374352" FontSize="20" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+            </Frame> 
+
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False" Margin="0,10">
+                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                    <Label Text="YES" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,5"/>
+                    <RadioButton IsChecked="{Binding QuestionOneCheckYes}" GroupName="Activity" Padding="0,0,5,0"/>
+                </FlexLayout>
+            </Frame>
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                    <Label Text="NO" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,5"/>
+                    <RadioButton  IsChecked="{Binding QuestionOneCheckNo}" GroupName="Activity"  Padding="0,0,5,0"/>
+                </FlexLayout>
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False" Margin="0,20">
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Note: " TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="16"/>
+                            <Span Text="This question asks whether the invoice you've received is from a known and verified supplier or service provider that you have previously done business with. Scammers often send fake invoices pretending to be legitimate companies to trick you into making unauthorized payments.  Before making any payments, independently verify the authenticity of the invoice by reaching out to the known contact information of the supplier or service provider. Avoid rushing into payments without confirming the legitimacy of the invoice." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+
+            <Grid  Margin="0,10" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="#E6E8EA" Grid.Column="0" Padding="0" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Back"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Back" FontSize="16" FontAttributes="Bold"  TextColor="{StaticResource SecondaryColor}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="1" Padding="0" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding FirstQuestionCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Next" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+
+    <!--<Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
         <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
             <StackLayout>
                 <StackLayout>
@@ -47,6 +108,6 @@
                 </Frame>
             </StackLayout>
         </Frame>
-    </Grid>
+    </Grid>-->
 
 </ContentPage>

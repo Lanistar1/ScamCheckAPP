@@ -11,6 +11,120 @@
             <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}">
                 <Label Text="Scam Check Result" TextColor="#ffffff" FontSize="18" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
             </Frame>
+            <StackLayout Margin="20">
+                <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEF2EB" HasShadow="False">
+                    <StackLayout>
+                        <StackLayout>
+                            <Image Source="scamgreenlogo.png" WidthRequest="100" HeightRequest="100"/>
+                        </StackLayout>
+                        <Label Text="Tech Scam" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Center" Margin="0,5"/>
+
+                        <Label Text="Unlikely a Scam" TextColor="#3DBF4A" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Feedback" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,10,0,5"/>
+
+                <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                    <Label Text="Based on the Q and A assessment, it indicates that there is a lower probability or minimal indication that the situation or offer is fraudulent. However, it's still important to remain cautious and attentive. While the initial evaluation suggests a lower likelihood of it being a scam, it's essential to understand that scammers are constantly evolving their tactics and can employ new techniques that may not yet be widely known or detected. Therefore, maintaining a vigilant mindset helps ensure ongoing scrutiny and proactive protection." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                </Frame>
+
+                <Label HorizontalOptions="StartAndExpand" Margin="0,5">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Guidance: " TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="16"/>
+                            <Span Text="It’s still recommended to exercise caution and follow these actions:" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Frame Padding="5" HeightRequest="20" WidthRequest="20" HasShadow="False" CornerRadius="5" BackgroundColor="#fff" >
+                            <Label Text="1" TextColor="{StaticResource TertiaryColor}" FontSize="16" FontFamily="Airbnb-Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                        </Frame>
+                        <Label Text="Conduct further research." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,10,0,5"/>
+                    </StackLayout>
+                </Frame>
+                <Frame CornerRadius="20"  Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Frame Padding="5" HeightRequest="20" WidthRequest="20" HasShadow="False" CornerRadius="5" BackgroundColor="#fff">
+                            <Label Text="2" TextColor="{StaticResource TertiaryColor}" FontSize="16" FontFamily="Airbnb-Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                        </Frame>
+                        <Label Text="Verify the source." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,10,0,5"/>
+                    </StackLayout>
+                </Frame>
+                <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Frame Padding="5" HeightRequest="20" WidthRequest="20" HasShadow="False" CornerRadius="5" BackgroundColor="#fff">
+                            <Label Text="3" TextColor="{StaticResource TertiaryColor}" FontSize="16" FontFamily="Airbnb-Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                        </Frame>
+                        <Label Text="Read the fine print." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,10,0,5"/>
+                    </StackLayout>
+                </Frame>
+                <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Frame Padding="5" HeightRequest="20" WidthRequest="20" HasShadow="False" CornerRadius="5" BackgroundColor="#fff">
+                            <Label Text="4" TextColor="{StaticResource TertiaryColor}" FontSize="16" FontFamily="Airbnb-Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                        </Frame>
+                        <Label Text="Trust your instincts." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,10,0,5"/>
+                    </StackLayout>
+                </Frame>
+                <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Frame Padding="5" HeightRequest="20" WidthRequest="20" HasShadow="False" CornerRadius="5" BackgroundColor="#fff">
+                            <Label Text="5" TextColor="{StaticResource TertiaryColor}" FontSize="16" FontFamily="Airbnb-Bold" VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" />
+                        </Frame>
+                        <Label Text="Stay vigilant." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,10,0,5"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" Spacing="10">
+                        <Frame Padding="5" HeightRequest="20" WidthRequest="20" HasShadow="False" CornerRadius="5" BackgroundColor="#fff">
+                            <Image Source="dot.png" WidthRequest="15" HeightRequest="15"/>
+                        </Frame>
+                        <StackLayout Spacing="0">
+                            <Label Text="Need more guidance?" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" />
+
+                            <Label Text="Click here for more information" TextColor="{StaticResource TertiaryColor}" FontSize="15" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="To_unlikelyAscam"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Grid  Margin="0,20" VerticalOptions="EndAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame CornerRadius="5" HasShadow="False" IsVisible="True" x:Name="techunlikely" BackgroundColor="#E6E8EA" Grid.Column="0" Padding="0" Margin="5,0" HeightRequest="50">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_FeedbackPopup"/>
+                        </Frame.GestureRecognizers>
+                        <Label Text="Rate App" FontSize="16" FontAttributes="Bold"  TextColor="{StaticResource SecondaryColor}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame CornerRadius="5" HasShadow="False" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="1" Padding="0" Margin="5,0" HeightRequest="50">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding PostFeedbackCommand}"/>
+                        </Frame.GestureRecognizers>
+                        <Label Text="Back to Home" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+
+    <!--<ScrollView>
+        <StackLayout>
+            <Frame Padding="10" BackgroundColor="{StaticResource SecondaryColor}">
+                <Label Text="Scam Check Result" TextColor="#ffffff" FontSize="18" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+            </Frame>
             <Frame Padding="10" CornerRadius="10" BackgroundColor="{StaticResource SecondaryColor}" Margin="10,50,10,0" VerticalOptions="StartAndExpand">
                 <StackLayout>
                     <StackLayout>
@@ -65,5 +179,5 @@
                 </StackLayout>
             </Frame>
         </StackLayout>
-    </ScrollView>
+    </ScrollView>-->
 </ContentPage>

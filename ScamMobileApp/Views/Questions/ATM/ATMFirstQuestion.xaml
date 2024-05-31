@@ -42,7 +42,6 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <!--<Label Text="This question asks whether the card slot on the ATM looks unusual or different from what you're used to. ATM skimming scammers attach devices to the card slot to capture your card information when you insert it. These devices might look out of place or different from the normal ATM design. If the card slot looks suspicious, scratched, or different in any way, it's a sign that someone might have tampered with it. Don't use that ATM and report it to the bank or authorities. Choose ATMs located in well-lit areas and those that seem secure." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>-->
             </Frame>
 
             <Grid  Margin="0,10" VerticalOptions="EndAndExpand">
@@ -65,7 +64,5 @@
                 </Frame>
             </Grid>
         </StackLayout>
-
     </ScrollView>
-
 </ContentPage>

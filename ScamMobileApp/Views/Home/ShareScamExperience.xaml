@@ -35,7 +35,6 @@
 
             <StackLayout  Margin="20,10,20,20" Grid.Row="1">
                 <StackLayout Margin="0,0,0,5" Spacing="0">
-
                     <Label  Text="Type Of Scam"
                             FontFamily="Airbnb-Medium"
                             FontSize="14"
@@ -43,10 +42,10 @@
                             TextColor="{StaticResource SecondaryColor}"/>
 
                     <pv:PancakeView BackgroundColor="#ffffff"
-                                CornerRadius="5"
-                                HorizontalOptions="Fill" 
-                                HeightRequest="40"
-                                Padding="10,5">
+                                    CornerRadius="5"
+                                    HorizontalOptions="Fill" 
+                                    HeightRequest="40"
+                                    Padding="10,5">
                         <Grid HorizontalOptions="FillAndExpand"
                           VerticalOptions="FillAndExpand">
                             <Grid.ColumnDefinitions>
@@ -57,13 +56,13 @@
                               VerticalOptions="CenterAndExpand">
 
                                 <StackLayout Orientation="Vertical"
-                                         VerticalOptions="CenterAndExpand">
+                                             VerticalOptions="CenterAndExpand">
                                     <Label Text="{Binding Title}"
-                                       HorizontalOptions="StartAndExpand"
-                                       VerticalOptions="CenterAndExpand"
-                                       FontFamily="Roboto-Medium"
-                                       TextColor="{StaticResource SecondaryColor}"
-                                       FontSize="16"/>
+                                           HorizontalOptions="StartAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                           FontFamily="Roboto-Medium"
+                                           TextColor="{StaticResource SecondaryColor}"
+                                           FontSize="16"/>
 
                                 </StackLayout>
 

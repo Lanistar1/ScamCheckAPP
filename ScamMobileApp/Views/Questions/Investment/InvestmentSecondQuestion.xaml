@@ -3,10 +3,69 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScamMobileApp.Views.Questions.Investment.InvestmentSecondQuestion"
              Title="Question and answer"
-             NavigationPage.HasBackButton="False"
-            BackgroundImageSource="bgscam">
+             NavigationPage.HasBackButton="True"
+             BackgroundColor="{StaticResource PrimaryColor}">
 
-    <Grid >
+    <ScrollView Margin="20">
+        <StackLayout >
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <Label Text="Answer the following questions about Investment scam below." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+            </Frame>
+
+            <Label Text="Question 2" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,10,0,5"/>
+
+            <Frame CornerRadius="20" Padding="10,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <Label Text="Is the investment opportunity being aggressively pushed, with pressure to invest immediately?" TextColor="#374352" FontSize="20" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False" Margin="0,10">
+                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                    <Label Text="YES" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,5"/>
+                    <RadioButton IsChecked="{Binding QuestionTwoCheckYes}" GroupName="Activity" Padding="0,0,5,0"/>
+                </FlexLayout>
+            </Frame>
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                    <Label Text="NO" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,5"/>
+                    <RadioButton  IsChecked="{Binding QuestionTwoCheckNo}" GroupName="Activity"  Padding="0,0,5,0"/>
+                </FlexLayout>
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False" Margin="0,20">
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Note: " TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="16"/>
+                            <Span Text="This question asks whether someone is pushing you really hard and making you feel like you need to invest money right away. Sometimes, scammers use aggressive tactics to pressure people into making quick decisions without thinking. A legitimate investment should give you time to consider and research before making a decision. If someone is rushing you or making you feel uncomfortable, it's a sign to step back. Take your time, gather information, and consult financial experts before committing to any investment. Your financial well-being is important, so don't let anyone pressure you into quick decisions." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+
+            <Grid  Margin="0,10" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="#E6E8EA" Grid.Column="0" Padding="0" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Back"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Back" FontSize="16" FontAttributes="Bold"  TextColor="{StaticResource SecondaryColor}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="1" Padding="0" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SecondQuestionCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Next" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+
+    <!--<Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -46,6 +105,6 @@
             </StackLayout>
         </Frame>
        
-    </Grid>
+    </Grid>-->
 
 </ContentPage>

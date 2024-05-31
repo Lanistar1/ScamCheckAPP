@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScamMobileApp.Views.Questions.ATM.ATMThirdQuestion"
              Title="Question and answer"
-             NavigationPage.HasBackButton="False"
+             NavigationPage.HasBackButton="True"
              BackgroundColor="{StaticResource PrimaryColor}">
 
 
