@@ -1,6 +1,7 @@
 ﻿using ScamMobileApp.Helpers;
 using ScamMobileApp.Models;
 using ScamMobileApp.Models.Experience;
+using ScamMobileApp.Models.Feedback;
 using ScamMobileApp.Models.Identity;
 using ScamMobileApp.Models.ScamType;
 using ScamMobileApp.Popup;
@@ -77,6 +78,28 @@ namespace ScamMobileApp.ViewModels.Experience
             {
                 emptyPlaceholder = value;
                 OnPropertyChanged(nameof(EmptyPlaceholder));
+            }
+        }
+
+        private UserDetailsData userData;
+        public UserDetailsData UserData
+        {
+            get => userData;
+            set
+            {
+                userData = value;
+                OnPropertyChanged(nameof(UserData));
+            }
+        }
+        
+        private List<UserDetailsData> userDetails;
+        public List<UserDetailsData> UserDetails
+        {
+            get => userDetails;
+            set
+            {
+                userDetails = value;
+                OnPropertyChanged(nameof(UserDetails));
             }
         }
 
@@ -157,6 +180,27 @@ namespace ScamMobileApp.ViewModels.Experience
 
                         NewExperienceData = UserExperienceData;
 
+
+                        var newDetails = new List<UserDetailsData>();
+                        //var userDetails = new List<UserDetailsData>();
+
+                        foreach (var item in NewExperienceData)
+                        {
+
+                            UserData = item.userDetails;
+
+
+                            //item.userDetails = item.userDetails;
+
+                            //userDetails = new ObservableCollection<UserDetailsData>(item.userDetails);
+                        }
+
+                        UserDetails.Add(UserData);
+
+
+                        //newDetails.Add(userDetails);
+
+
                     }
                     else
                     {
@@ -183,7 +227,7 @@ namespace ScamMobileApp.ViewModels.Experience
             }
             catch (Exception ex)
             {
-                string message = "Error fetching user detail. Do you want to RETRY?";
+                string message = "Something went wrong. Try again later. ";
                 await MessagePopup.Instance.Show(
                     message: message);
                 Console.WriteLine(ex);

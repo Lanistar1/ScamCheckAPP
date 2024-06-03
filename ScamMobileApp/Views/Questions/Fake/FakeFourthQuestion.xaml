@@ -3,10 +3,70 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScamMobileApp.Views.Questions.Fake.FakeFourthQuestion"
              Title="Question and answer"
-             NavigationPage.HasBackButton="False"
-            BackgroundImageSource="bgscam">
+             NavigationPage.HasBackButton="True"
+             BackgroundColor="{StaticResource PrimaryColor}">
 
-    <Grid >
+
+    <ScrollView Margin="20">
+        <StackLayout >
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <Label Text="Answer the following questions about Fake Invoice scam below." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+            </Frame>
+
+            <Label Text="Question 4" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,10,0,5"/>
+
+            <Frame CornerRadius="20" Padding="10,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <Label Text="Are you being pressured to pay the invoice immediately or face consequences, such as penalties or legal action?" TextColor="#374352" FontSize="20" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False" Margin="0,10">
+                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                    <Label Text="YES" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,5"/>
+                    <RadioButton IsChecked="{Binding QuestionFourCheckYes}" GroupName="Activity" Padding="0,0,5,0"/>
+                </FlexLayout>
+            </Frame>
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                    <Label Text="NO" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,5"/>
+                    <RadioButton  IsChecked="{Binding QuestionFourCheckNo}" GroupName="Activity"  Padding="0,0,5,0"/>
+                </FlexLayout>
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False" Margin="0,20">
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Note: " TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="16"/>
+                            <Span Text="This question asks whether you're being pressured to pay the invoice immediately or facing consequences like penalties or legal action. Scammers often use urgency and threats to make you act quickly without thinking. Legitimate companies typically provide reasonable payment terms and communication without resorting to threats. Before making any payments, take the time to verify the authenticity of the situation and the invoice details. Reach out to the company using their official contact information to confirm the urgency and consequences. Avoid rushing into payments due to pressure and verify the situation independently." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+
+            <Grid  Margin="0,10" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="#E6E8EA" Grid.Column="0" Padding="0" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Back"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Back" FontSize="16" FontAttributes="Bold"  TextColor="{StaticResource SecondaryColor}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="1" Padding="0" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ScamCalculatorCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Submit" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+
+    <!--<Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -44,7 +104,7 @@
                 <Frame BorderColor="{StaticResource SecondaryColor}" Padding="10" Margin="0,10" BackgroundColor="{StaticResource SecondaryColor}" >
                     <StackLayout>
                         <Label Text="Note:" TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
-                        <Label Text="This question asks whether you're being pressured to pay the invoice immediately or facing consequences like penalties or legal action. Scammers often use urgency and threats to make you act quickly without thinking. Legitimate companies typically provide reasonable payment terms and communication without resorting to threats. Before making any payments, take the time to verify the authenticity of the situation and the invoice details. Reach out to the company using their official contact information to confirm the urgency and consequences. Avoid rushing into payments due to pressure and verify the situation independently. ." 
+                        <Label Text="This question asks whether you're being pressured to pay the invoice immediately or facing consequences like penalties or legal action. Scammers often use urgency and threats to make you act quickly without thinking. Legitimate companies typically provide reasonable payment terms and communication without resorting to threats. Before making any payments, take the time to verify the authenticity of the situation and the invoice details. Reach out to the company using their official contact information to confirm the urgency and consequences. Avoid rushing into payments due to pressure and verify the situation independently. " 
                        TextColor="#ffffff" FontSize="12" Margin="0,0,0,0" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
                     </StackLayout>
                 </Frame>
@@ -52,6 +112,6 @@
         </Frame>
 
        
-    </Grid>
+    </Grid>-->
 
 </ContentPage>

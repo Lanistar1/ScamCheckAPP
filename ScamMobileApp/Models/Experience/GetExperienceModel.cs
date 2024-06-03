@@ -17,6 +17,7 @@ namespace ScamMobileApp.Models.Experience
         public string title { get; set; }
         public string userId { get; set; }
         public UserDetailsData userDetails { get; set; }
+        //public ObservableCollection<UserDetailsData> userDetails { get; set; }
         public DateTime createdAt { get; set; }
         public DateTime updatedAt { get; set; }
         public int __v { get; set; }

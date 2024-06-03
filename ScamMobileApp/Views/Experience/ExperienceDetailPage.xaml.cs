@@ -18,7 +18,7 @@ namespace ScamMobileApp.Views.Experience
         public ExperienceDetailPage(ObservableCollection<ExperienceData> selectedItems)
         {
             InitializeComponent();
-            BindingContext = new ExperienceDetailViewModel(Navigation, selectedItems);
+            //BindingContext = new ExperienceDetailViewModel(Navigation, selectedItems);
 
         }
     }

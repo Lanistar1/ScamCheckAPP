@@ -49,6 +49,9 @@
                 </StackLayout>
                 <StackLayout Grid.Row="0" Grid.Column="1" Spacing="10">
                     <Frame Grid.Row="0" Grid.Column="1" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#B0E6E6" VerticalOptions="Start" HeightRequest="100">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_ReportScam"/>
+                        </Frame.GestureRecognizers>
                         <StackLayout VerticalOptions="CenterAndExpand">
                             <Image  Source="reportScams.png" HeightRequest="40" WidthRequest="40"/>
                             <Label Text="Report a Scam" TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>

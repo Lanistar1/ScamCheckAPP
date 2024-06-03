@@ -3,14 +3,74 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScamMobileApp.Views.Questions.Grandparent.GrandParentFourthQuestion"
              Title="Question and answer"
-             NavigationPage.HasBackButton="False"
-             BackgroundImageSource="bgscam">
+             NavigationPage.HasBackButton="True"
+             BackgroundColor="{StaticResource PrimaryColor}">
 
-    <Grid >
+    <ScrollView Margin="20">
+        <StackLayout >
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <Label Text="Answer the following questions about Grandparent or Parent scam below." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+            </Frame>
+
+            <Label Text="Question 4" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,10,0,5"/>
+
+            <Frame CornerRadius="20" Padding="10,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <Label Text="Can you reach out to other family members using known, reliable contact information to confirm the situation?" TextColor="#374352" FontSize="20" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False" Margin="0,10">
+                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                    <Label Text="YES" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,5"/>
+                    <RadioButton IsChecked="{Binding QuestionFourCheckYes}" GroupName="Activity" Padding="0,0,5,0"/>
+                </FlexLayout>
+            </Frame>
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
+                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                    <Label Text="NO" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,5"/>
+                    <RadioButton  IsChecked="{Binding QuestionFourCheckNo}" GroupName="Activity"  Padding="0,0,5,0"/>
+                </FlexLayout>
+            </Frame>
+
+            <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False" Margin="0,20">
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Note: " TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="16"/>
+                            <Span Text="This question suggests that you try to reach out to other family members using trusted contact information to confirm the situation before taking any action.  Scammers often impersonate family members and claim to be in urgent need of money, targeting the emotions of grandparents or parents. If you receive a request for financial help from a family member, especially if it's unexpected, reach out to other family members through trusted means to confirm if the situation is genuine.  This extra step can help you confirm the legitimacy of the request before sending money or sharing personal information. Trust your instincts." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+
+            <Grid  Margin="0,10" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="#E6E8EA" Grid.Column="0" Padding="0" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Back"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Back" FontSize="16" FontAttributes="Bold"  TextColor="{StaticResource SecondaryColor}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Frame>
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="1" Padding="0" Margin="5,0" HeightRequest="50">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ScamCalculatorCommand}"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Submit" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+
+    <!--<Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
         <Frame CornerRadius="10" Padding="10" HasShadow="False" Margin="20" Grid.Row="0" BackgroundColor="#353B46">
             <StackLayout>
                 <StackLayout>
@@ -21,8 +81,6 @@
                 <StackLayout HorizontalOptions="Center" Margin="0,10,0,20" Orientation="Horizontal">
                     <RadioButton Content="YES" TextColor="{StaticResource Primary}" IsChecked="{Binding QuestionFourCheckYes}" BorderColor="#fff" BackgroundColor="White" GroupName="Activity" Padding="0,0,5,0"/>
                     <RadioButton Content="NO" TextColor="{StaticResource Primary}" BorderColor="#fff" BackgroundColor="White" IsChecked="{Binding QuestionFourCheckNo}" GroupName="Activity" Padding="0,0,5,0"/>
-
-
                 </StackLayout>
 
                 <FlexLayout JustifyContent="SpaceBetween">
@@ -48,6 +106,6 @@
                 </Frame>
             </StackLayout>
         </Frame>
-    </Grid>
+    </Grid>-->
 
 </ContentPage>

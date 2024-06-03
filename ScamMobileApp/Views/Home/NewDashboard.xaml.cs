@@ -81,5 +81,10 @@ namespace ScamMobileApp.Views.Home
         {
             Navigation.PushAsync(new ActionPoints());
         }
+
+        private void To_ReportScam(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ScamLink());
+        }
     }
 }
