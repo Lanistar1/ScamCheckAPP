@@ -8,50 +8,50 @@
     <StackLayout Margin="20">
         <Label Text="What can we help you with today?" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
 
-        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
+        <Frame Padding="10,15" HasShadow="False" BackgroundColor="#ffffff" BorderColor="#cccccc" CornerRadius="10">
             <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                <Label Text="How to use SCAMalicious app?" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                <Label Text="How to use SCAMalicious app?" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
 
                 <StackLayout>
-                    <Image Source="scamarrowdown.png"/>
+                    <Image Source="scamdownwardarrow.png" WidthRequest="20" HeightRequest="20"/>
                 </StackLayout>
             </FlexLayout>
         </Frame>
         <Grid>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding DeatilNotVisible}">
+            <Frame Padding="10,15" HasShadow="False" BackgroundColor="#ffffff" BorderColor="#cccccc" CornerRadius="10" Margin="0,5" IsVisible="{Binding DeatilNotVisible}">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding ShowNoDetailCommand}"/>
                 </Frame.GestureRecognizers>
                 <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="What is scam?" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <Label Text="What is scam?" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                     <StackLayout>
-                        <ImageButton BackgroundColor="Transparent" Source="scamarrowdown.png" Command="{Binding ShowNoDetailCommand}" CommandParameter="{Binding .}"/>
+                        <ImageButton WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Source="scamdownwardarrow.png" Command="{Binding ShowNoDetailCommand}" CommandParameter="{Binding .}"/>
                     </StackLayout>
                 </FlexLayout>
             </Frame>
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="0,5" IsVisible="{Binding DeatilVisible}">
+            <Frame Padding="10,15" HasShadow="False" BackgroundColor="#ffffff" BorderColor="#cccccc" CornerRadius="10" Margin="0,5" IsVisible="{Binding DeatilVisible}">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding ShowDetailCommand}"/>
                 </Frame.GestureRecognizers>
                 <StackLayout >
                     <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="What is scam?" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <Label Text="What is scam?" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                         <StackLayout>
-                            <ImageButton BackgroundColor="Transparent" Source="scamarrowup.png" Command="{Binding ShowDetailCommand}" CommandParameter="{Binding .}"/>
+                            <ImageButton WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Source="scamupwardarrow.png" Command="{Binding ShowDetailCommand}" CommandParameter="{Binding .}"/>
                         </StackLayout>
                     </FlexLayout>
                     <Label Text="In summary, a scam is a specific type of fraud that typically involves some form of trickery or deception to obtain money or personal information from victims."
-                               TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <Label Text="A scam generally refers to a deceptive or fraudulent scheme that aims to trick people into giving away their money or personal information. Scammers use various tactics to deceive people, such as posing as a legitimate business or government agency, offering fake investment opportunities, or using social engineering techniques to gain people's trust and extract sensitive information. " TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                               TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <Label Text="A scam generally refers to a deceptive or fraudulent scheme that aims to trick people into giving away their money or personal information. Scammers use various tactics to deceive people, such as posing as a legitimate business or government agency, offering fake investment opportunities, or using social engineering techniques to gain people's trust and extract sensitive information. " TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                 </StackLayout>
             </Frame>
         </Grid>
-        
-        <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
+
+        <Frame Padding="10,15" HasShadow="False" BackgroundColor="#ffffff" BorderColor="#cccccc" CornerRadius="10">
             <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                <Label Text="{Binding ScamQA}" TextColor="#ffffff" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                <Label Text="{Binding ScamQA}"  TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                 <StackLayout>
-                    <Image Source="scamarrowdown.png"/>
+                    <Image WidthRequest="20" HeightRequest="20" Source="scamdownwardarrow.png"/>
                 </StackLayout>
             </FlexLayout>
         </Frame>

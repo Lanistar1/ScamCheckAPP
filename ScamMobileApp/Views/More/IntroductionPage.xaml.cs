@@ -1,4 +1,5 @@
 ﻿using ScamMobileApp.ViewModels.Identity;
+using ScamMobileApp.ViewModels.More;
 using ScamMobileApp.ViewModels.Others;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,11 @@ namespace ScamMobileApp.Views.More
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class IntroductionPage : ContentPage
 	{
-        ScamViewModel pageViewModel = null;
-
         public IntroductionPage ()
 		{
-            //pageViewModel = new ScamViewModel();
             InitializeComponent();
-            //BindingContext = pageViewModel;
+            BindingContext = new LearningCentreViewModel(Navigation);
+
         }
-	}
+    }
 }

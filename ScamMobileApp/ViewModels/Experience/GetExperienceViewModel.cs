@@ -181,21 +181,21 @@ namespace ScamMobileApp.ViewModels.Experience
                         NewExperienceData = UserExperienceData;
 
 
-                        var newDetails = new List<UserDetailsData>();
-                        //var userDetails = new List<UserDetailsData>();
+                        //var newDetails = new List<UserDetailsData>();
+                        ////var userDetails = new List<UserDetailsData>();
 
-                        foreach (var item in NewExperienceData)
-                        {
+                        //foreach (var item in NewExperienceData)
+                        //{
 
-                            UserData = item.userDetails;
+                        //    UserData = item.userDetails;
 
 
-                            //item.userDetails = item.userDetails;
+                        //    //item.userDetails = item.userDetails;
 
-                            //userDetails = new ObservableCollection<UserDetailsData>(item.userDetails);
-                        }
+                        //    //userDetails = new ObservableCollection<UserDetailsData>(item.userDetails);
+                        //}
 
-                        UserDetails.Add(UserData);
+                        //UserDetails.Add(UserData);
 
 
                         //newDetails.Add(userDetails);

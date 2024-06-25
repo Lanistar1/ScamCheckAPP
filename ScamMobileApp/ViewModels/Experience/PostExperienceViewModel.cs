@@ -31,6 +31,20 @@ namespace ScamMobileApp.ViewModels.Experience
 
         #region Binding Properties
 
+        private string _errorMessage;
+        public string ErrorMessage
+        {
+            get => _errorMessage;
+            set
+            {
+                if (_errorMessage != value)
+                {
+                    _errorMessage = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         private string message;
         public string Message
         {
@@ -39,6 +53,7 @@ namespace ScamMobileApp.ViewModels.Experience
             {
                 message = value;
                 OnPropertyChanged(nameof(Message));
+                ValidateInput();
             }
         }
 
@@ -85,16 +100,37 @@ namespace ScamMobileApp.ViewModels.Experience
                 OnPropertyChanged(nameof(Others));
             }
         }
+
         #endregion
 
 
-        #region Events, Methods, Functions and Navigations
+        #region commands
         public Command PostExerienceCommand { get; }
         public Command SelectPageCommand { get; }
 
         #endregion
 
-        #region
+        #region Events, Methods, Functions and Navigations
+
+        // vlidate input field
+
+        private void ValidateInput()
+        {
+            // Regular expressions to match email addresses, URLs, and phone numbers
+            string emailPattern = @"[^@\s]+@[^@\s]+\.[^@\s]+";
+            string urlPattern = @"(http[s]?://|www\.)";
+            string phonePattern = @"^\+?[0-9]{1,4}?[-. ]?(\(?[0-9]{1,3}?\)?[-. ]?)?[0-9]{1,4}[-. ]?[0-9]{1,4}[-. ]?[0-9]{1,9}$|^(090|081|070|091|080|071)[0-9]{7,}$";
+
+
+            if (Regex.IsMatch(Message, emailPattern) || Regex.IsMatch(Message, urlPattern) || Regex.IsMatch(Message, phonePattern))
+            {
+                ErrorMessage = "Input cannot be an email, URL, or phone number with specific prefixes.";
+            }
+            else
+            {
+                ErrorMessage = string.Empty;
+            }
+        }
 
         private async Task SelectPageCommandExecute()
         {
@@ -176,6 +212,11 @@ namespace ScamMobileApp.ViewModels.Experience
                 return;
             }
 
+            if (!string.IsNullOrEmpty(ErrorMessage))
+            {
+                await MessagePopup.Instance.Show(ErrorMessage);
+                return;
+            }
 
 
             try

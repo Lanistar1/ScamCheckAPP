@@ -48,7 +48,7 @@
                                 <StackLayout>
                                     <StackLayout Orientation="Horizontal" Spacing="5">
                                         <Frame Padding="5" CornerRadius="5" BackgroundColor="#ffffff" HasShadow="False">
-                                            <Label Text="Q" TextColor="{StaticResource TertiaryColor}" FontSize="14" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                            <Label Text="Q" TextColor="{StaticResource TertiaryColor}" FontSize="14" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
                                         </Frame>
                                         <Label Text="{Binding question}" TextColor="#646C79" FontSize="13" FontFamily="Airbnb-Mediun"  
                                                HorizontalTextAlignment="Start" Margin="0,0,0,0"/>

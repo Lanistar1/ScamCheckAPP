@@ -1,6 +1,7 @@
 ﻿using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using ScamMobileApp.Popup;
+using ScamMobileApp.ViewModels.More;
 using ScamMobileApp.Views.Questions;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,8 @@ namespace ScamMobileApp.Views.More
 		public LearningCentre ()
 		{
 			InitializeComponent ();
-		}
+
+        }
 
         private void T0_ScamType(object sender, EventArgs e)
         {

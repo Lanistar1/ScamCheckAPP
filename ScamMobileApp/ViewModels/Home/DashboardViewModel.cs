@@ -18,6 +18,18 @@ namespace ScamMobileApp.ViewModels.Home
     {
         private INavigation Navigation;
 
+        #region Bindings
+        private string title;
+        public string Title
+        {
+            get => title;
+            set
+            {
+                title = value;
+                OnPropertyChanged(nameof(Title));
+            }
+        }
+
         private ObservableCollection<GetFeedbackData> SelectedItems = new ObservableCollection<GetFeedbackData>();
 
         private ObservableCollection<DashboardModel> dashboard;
@@ -87,9 +99,20 @@ namespace ScamMobileApp.ViewModels.Home
             }
         }
 
+        #endregion
+
+
+        #region Commands
+        public Command TappedCommand { get; }
+
+        #endregion
+
+        #region functions
         public DashboardViewModel(INavigation navigation)
         {
             Navigation = navigation;
+
+            Title = "Scam Q&A";
 
             Task _task = FetchFeedback(limit, offset);
 
@@ -106,10 +129,7 @@ namespace ScamMobileApp.ViewModels.Home
             Username = Global.UserData.username;
         }
 
-        #region Commands
-        public Command TappedCommand { get; }
 
-        #endregion
 
         private async Task GetTappedExecute(GetFeedbackData model)
         {
@@ -188,6 +208,11 @@ namespace ScamMobileApp.ViewModels.Home
                 await LoadingPopup.Instance.Hide();
             }
         }
+
+        #endregion
+
+
+
 
     }
 }

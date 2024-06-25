@@ -1,5 +1,8 @@
-﻿using ScamMobileApp.Utils;
+﻿using Rg.Plugins.Popup.Services;
+using ScamMobileApp.Popup;
+using ScamMobileApp.Utils;
 using ScamMobileApp.ViewModels.Home;
+using ScamMobileApp.Views.Experience;
 using ScamMobileApp.Views.Feedback;
 using ScamMobileApp.Views.More;
 using ScamMobileApp.Views.Questions;
@@ -85,6 +88,21 @@ namespace ScamMobileApp.Views.Home
         private void To_ReportScam(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ScamLink());
+        }
+
+        private void To_WarningSign(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new WarningSigns());
+        }
+
+        private void To_AntiScam(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MyStory());
+        }
+
+        private void To_ScamQAPopup(object sender, EventArgs e)
+        {
+            PopupNavigation.Instance.PushAsync(new ScamQAPopup(Navigation));
         }
     }
 }
