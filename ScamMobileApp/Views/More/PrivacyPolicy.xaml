@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.More.PrivacyPolicy"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="Privacy Policy">
+
+    <ScrollView Margin="20">
+        <StackLayout>
+            <StackLayout>
+                <Label Text="1. Information Collection" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Types of Information: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="SCAMalicious collects personal information (name, email, etc.) provided by users during registration or account setup. Additionally, non-personal information, such as device information and usage data, may be collected automatically." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Purpose of Collection: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="The collected information is used to provide and improve services, personalize user experience, and communicate with users." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="c. Cookies and Tracking: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="SCAMalicious may use cookies and similar technologies to enhance user experience and collect data for analytics purposes. Users can manage cookie preferences through browser settings. " TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="2. Data Usage and Sharing" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Use of Information: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="User data is used to operate and maintain SCAMalicious, personalize content, and communicate with users. Aggregated or anonymized data may be used for analytics and service improvements." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Third-Party Sharing: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="SCAMalicious may share user information with trusted third-party service providers to facilitate services, analytics, and marketing. However, user data is not sold or rented to third parties for their marketing purposes without user consent." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="3. Data Security" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Security Measures: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" SCAMalicious employs industry-standard security measures to protect user data from unauthorized access, alteration, disclosure, or destruction." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Data Retention: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" User data is retained only for as long as necessary to provide services or as required by law. Users can request data deletion in accordance with applicable regulations." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="4. Information Collection" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Access and Correction: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Users have the right to access, correct, or update their personal information. They can do so by accessing their account settings or contacting SCAMalicious support." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Data Portability: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Upon request, users can receive a copy of their data in a commonly used and machine-readable format." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="c. Data Deletion: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Users can request the deletion of their account and associated data. However, certain information may be retained as necessary for legal or legitimate business purposes. " TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="5. Children's Privacy" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="SCAMalicious is not intended for children under the age of 13. If a user is under 13, parental consent is required for account creation and data processing." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="6. Updates to Privacy Policy" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="SCAMalicious reserves the right to update the Privacy Policy. Users will be notified of any material changes through the App/Website." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="7. User Consent" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="By using SCAMalicious, users consent to the collection, processing, and storage of their information as outlined in this Privacy Policy.Users can withdraw their consent for data processing by deleting their account or contacting SCAMalicious support." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="8. Communication Preferences" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Marketing Communications: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Users can choose to receive promotional communications and can opt-out at any time by following the provided instructions or contacting support." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Transactional Communications: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Users cannot opt-out of essential communications related to their account or service updates." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="9. Third-Party Links" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="SCAMalicious may contain links to third-party websites or services. This Privacy Policy applies solely to information collected on SCAMalicious, and SCAMalicious is not responsible for the privacy practices of external sites." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="10. Data Transfers" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="User data may be transferred and processed in countries outside the user's country of residence, where data protection laws may differ. SCAMalicious takes measures to ensure adequate protection of transferred data." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="11. Compliance with Laws" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="SCAMalicious may disclose user information if required by law or in response to valid legal requests from government authorities." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="12. Contact Information" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Data Retention: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Users can contact SCAMalicious regarding privacy-related concerns or inquiries using the provided contact information." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="13. Analytics and Advertising" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Analytics Services: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="SCAMalicious may use third-party analytics services to analyze user interactions and improve services. These services may collect and process data in accordance with their privacy policies." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Advertising: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="SCAMalicious may use advertising partners or networks. These partners may collect information through cookies or similar technologies to provide tailored advertisements. Users can manage ad preferences through settings or opt-out mechanisms provided by these partners." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="14. User Contributions and Public Information" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. User Contributions: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Any information or content voluntarily provided by users in public areas of SCAMalicious may be viewed and used by others. Users should exercise caution when sharing personal information publicly." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Moderation: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="SCAMalicious reserves the right to moderate user-contributed content to ensure compliance with guidelines and remove inappropriate content." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="15. Data Breach Notification" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="In the event of a data breach that compromises user data, SCAMalicious will notify affected users promptly as required by law." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="16. Business Transfers" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="In the event of a merger, acquisition, or sale of assets, user information may be transferred as part of the transaction. Users will be notified of any change in ownership or control of their information." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="17. Consent to Processing Outside Home Country" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="By using SCAMalicious, users acknowledge and consent to the transfer and processing of their information outside their country of residence, including to countries with different data protection laws." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="18. Changes to the Privacy Policy" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Policy Updates:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" SCAMalicious reserves the right to modify this Privacy Policy at any time. Any changes will be effective upon posting the updated policy on the App/Website." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Notification of Changes: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Users will be notified of significant changes to the Privacy Policy via email or through a notice on the App/Website." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="19. User Acknowledgment" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Acceptance of Policy:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" By continuing to use SCAMalicious after revisions to the Privacy Policy, users acknowledge and agree to the updated terms." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="20. How to Contact Us" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="For questions, concerns, or requests regarding this Privacy Policy or data privacy practices, users can contact SCAMalicious via the provided contact details." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="21. Language Interpretation" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="This Privacy Policy is originally written in English. In case of any discrepancies between translated versions and the original English version, the English version prevails." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="22. Effective Date" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="This Privacy Policy is effective as of December 2, 2023. Updates or revisions will be effective from the date of publication." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="23. Governing Law" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="SCAMalicious operates in accordance with applicable laws and regulations globally but does not warrant compliance with specific laws of individual jurisdictions." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="24. Severability " TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="In the event that any provision of this Privacy Policy is deemed to be invalid or unenforceable, the remainder of the provisions shall remain in full force and effect." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="25. Entire Agreement " TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="This Privacy Policy constitutes the entire agreement between users and SCAMalicious concerning the collection, use, and processing of personal information, superseding any prior agreements or understandings." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="26. User Responsibility to Review " TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Users are responsible for regularly reviewing this Privacy Policy for any updates or changes." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="28. Consent " TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="By using SCAMalicious, users signify their acceptance of this Privacy Policy and agree to its terms and conditions." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

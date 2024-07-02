@@ -1,14 +1,11 @@
 ﻿using Rg.Plugins.Popup.Services;
-using ScamMobileApp.Helpers;
 using ScamMobileApp.Models.Popup;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views;
-using ScamMobileApp.Views.Experience;
 using ScamMobileApp.Views.Identity;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -124,7 +121,7 @@ namespace ScamMobileApp.ViewModels.Experience
 
             if (Regex.IsMatch(Message, emailPattern) || Regex.IsMatch(Message, urlPattern) || Regex.IsMatch(Message, phonePattern))
             {
-                ErrorMessage = "Input cannot be an email, URL, or phone number with specific prefixes.";
+                ErrorMessage = "Input cannot be an email, URL, or phone number.";
             }
             else
             {

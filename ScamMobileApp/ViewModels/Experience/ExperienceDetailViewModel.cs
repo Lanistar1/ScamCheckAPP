@@ -1,16 +1,4 @@
-﻿using ScamMobileApp.Models.Experience;
-using ScamMobileApp.Popup;
-using ScamMobileApp.Utils;
-using ScamMobileApp.Views.Experience;
-using ScamMobileApp.Views.Identity;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
-using Xamarin.Forms;
-using System.Linq;
+﻿
 
 namespace ScamMobileApp.ViewModels.Experience
 {

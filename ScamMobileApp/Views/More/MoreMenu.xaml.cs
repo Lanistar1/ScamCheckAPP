@@ -62,11 +62,11 @@ namespace ScamMobileApp.Views.More
 
         private async void To_Terms(object sender, EventArgs e)
         {
-            string url = "https://thescamalicious.com/terms"; // Replace with your desired URL
+            //string url = "https://thescamalicious.com/terms"; // Replace with your desired URL
 
-            await Navigation.PushAsync(new TermsWebview(url));
+            //await Navigation.PushAsync(new TermsWebview(url));
 
-            //Navigation.PushAsync(new TermsAndConditions());
+            await Navigation.PushAsync(new TermsAndConditions());
         }
 
 
@@ -142,6 +142,11 @@ namespace ScamMobileApp.Views.More
             
             Navigation.PushAsync(new Scammed());
 
+        }
+
+        private void To_Privacy(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PrivacyPolicy());
         }
     }
 }

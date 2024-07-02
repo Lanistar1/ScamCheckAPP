@@ -1,6 +1,4 @@
-﻿using ScamMobileApp.ViewModels.More;
-using ScamMobileApp.ViewModels.Report;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,13 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace ScamMobileApp.Views.More
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TermsAndConditions : ContentPage
+    public partial class PrivacyPolicy : ContentPage
     {
-        public TermsAndConditions()
+        public PrivacyPolicy()
         {
             InitializeComponent();
-            BindingContext = new TermsViewModel(Navigation);
-
         }
     }
 }

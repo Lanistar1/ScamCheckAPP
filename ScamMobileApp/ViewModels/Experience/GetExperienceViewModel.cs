@@ -1,9 +1,5 @@
 ﻿using ScamMobileApp.Helpers;
-using ScamMobileApp.Models;
 using ScamMobileApp.Models.Experience;
-using ScamMobileApp.Models.Feedback;
-using ScamMobileApp.Models.Identity;
-using ScamMobileApp.Models.ScamType;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views.Experience;
@@ -12,7 +8,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;

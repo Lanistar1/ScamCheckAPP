@@ -104,5 +104,10 @@ namespace ScamMobileApp.Views.Home
         {
             PopupNavigation.Instance.PushAsync(new ScamQAPopup(Navigation));
         }
+
+        private void To_Videos(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new VideosPage());
+        }
     }
 }

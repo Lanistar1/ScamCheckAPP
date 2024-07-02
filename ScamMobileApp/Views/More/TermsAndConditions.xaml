@@ -6,35 +6,392 @@
              BackgroundColor="{StaticResource PrimaryColor}">
 
 
-    <ScrollView Margin="20" VerticalScrollBarVisibility="Never">
+    <ScrollView Margin="20">
         <StackLayout>
             <StackLayout>
-                <Label Text="The following disclaimer is provided for the purpose of clarifying the guidelines and limitations regarding the sharing of scam/fraud stories on this platform:" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                <Label Text="1. Introduction" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding Intro}" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
+
             <StackLayout>
-                <Label Text="Users are welcome to share their scam or fraud experiences in text format on this page. However, it is important to note that this platform strictly prohibits the inclusion of any website URLs, links, email addresses, or contact numbers within the user-generated content." TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                <Label Text="2. User Conduct" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Content Guidelines: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" Users must respect others' privacy and refrain from engaging in harassing,threatening, or harmful interactions." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Interactions: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="The collected information is used to provide and improve services, personalize user experience, and communicate with users." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="c. Prohibited Activities: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Users shall not engage in any activity that disrupts the properfunctioning of the App/Website, including but not limited to hacking, data mining, or introducing viruses" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
+
             <StackLayout>
-                <Label Text="This restriction is in place to ensure the safety and security of our users. By disallowing the sharing of such information, we aim to prevent scammers or malicious entities from exploiting this platform to promote or engage in fraudulent activities." TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                <Label Text="3. Intellectual Property" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Ownership: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="All content, trademarks, and copyrights on the App/Website belong toSCAMalicious unless stated otherwise." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. User Content: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Users retain ownership rights to the content they upload or share on theApp/Website. By sharing, users grant SCAMalicious a non-exclusive, royalty-free license to use, reproduce, modify, and distribute the content." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
+
             <StackLayout>
-                <Label Text="While we strive to maintain a safe environment, please be aware that the information shared by users is their own personal experience and does not necessarily reflect the views or opinions of this platform or its administrators. We cannot guarantee the accuracy or validity of the shared stories." TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                <Label Text="4. Liability" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Limitation of Liability: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="SCAMalicious shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of the App/Website." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Disclaimer of Warranties: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" The information provided on SCAMalicious is for informationalpurposes only and does not constitute professional advice. Users should exercise discretionwhen using the information provided." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
+
             <StackLayout>
-                <Label Text="Users are solely responsible for the content they contribute, and any reliance on such information is at the discretion and risk of the reader. We strongly encourage users to exercise caution and conduct their own research or seek professional advice when dealing with scams or fraud." TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                <Label Text="5. Governing Law" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="SCAMalicious operates in accordance with applicable laws and regulations globally but doesnot warrant compliance with specific laws of individual jurisdictions." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
+
             <StackLayout>
-                <Label Text="The platform reserves the right to moderate and remove any content that violates these guidelines or is deemed inappropriate, offensive, or potentially harmful." TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                <Label Text="6. Termination" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Account Termination: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="SCAMalicious reserves the right to terminate user accounts in case of violation of these Terms and Conditions." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Termination by User: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" Users can terminate their accounts by following the specifiedprocedure on the App/Website." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
+
             <StackLayout>
-                <Label Text="By using this platform and engaging in the sharing of scam or fraud stories, users agree to comply with these guidelines and understand the platform's limitations in preventing the posting of malicious content." TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                <Label Text="7. Updates to Terms" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Modification Clause: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="SCAMalicious reserves the right to modify or update these Terms and Conditions. Users are responsible for reviewing changes periodically." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Notification: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Changes to the terms will be notified through a notice on the App/Website." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
+
             <StackLayout>
-                <Label Text="Please proceed with the understanding that the shared stories are based on individual experiences and may not serve as conclusive evidence or a substitute for legal or professional advice." TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                <Label Text="8. Anti-Scam Movement Integration" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Users participating in The Anti-Scam Movement must adhere to additional terms specified under The Anti-Scam Movement section." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <StackLayout>
+                    <Label Text="Reporting Scams and Fraud per Country:" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                    <Label HorizontalOptions="StartAndExpand" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="a. Contact Information:" TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="16"/>
+                                <Span Text=" SCAMalicious provides contact details for government frauddepartments or police agencies in various countries in the" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                                <Span Text=" Reporting Scams and Fraud per country" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Bold" />
+                                <Span Text=" section of the app." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label HorizontalOptions="StartAndExpand" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="b. Accuracy Disclaimer:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                                <Span Text=" While every effort has been made to ensure the accuracy and reliability of the provided information at the time of publication, users should note thedynamic nature of government agencies and their contact details." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label HorizontalOptions="StartAndExpand" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="c. Recommended Verification:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                                <Span Text=" Users are advised to independently verify the provided contact information, as changes or updates might have occurred since publication." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label HorizontalOptions="StartAndExpand" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="d. User Responsibility:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                                <Span Text="Users should exercise due diligence when using the provided contact information and report any inaccuracies or changes they encounter." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
             </StackLayout>
+
             <StackLayout>
-                <Label Text="Thank you for your understanding and cooperation in maintaining a secure and informative environment for all users." TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
+                <Label Text="{Binding QuestionandAnswer}" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Automated Assessment: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="{Binding AutomatedQA}" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Decision Accuracy: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="{Binding DecisionQA}" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="c. Next Steps Recommendations: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="{Binding NextQA}" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
+
+            <StackLayout>
+                <Label Text="10. Privacy and GDPR Compliance" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Information Collection: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="SCAMalicious collects user data for the purpose of providing services. The Privacy Policy outlines the types of information collected, how it is used, and user rights." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Cookies and Tracking:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" Users are informed about the use of cookies and trackingtechnologies through the Cookie Policy." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="c. Data Sharing:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="SCAMalicious may share user data with third parties as outlined in the Privacy Policy." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="d. Security Measures:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" Measures are in place to protect user data, as detailed in the Privacy Policy." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="e. User Rights:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" Users have rights regarding their data, including access, correction, and deletion, as specified in the Privacy Policy." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="f. Changes to Policy:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" Changes to the Privacy Policy will be communicated through the App/Website." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="11. The Anti-Scam Movement" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Etiquette for Personal Stories: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Users participating in The Anti-Scam Movement mustadhere to specific terms and conditions outlined in the separate document titled TheAnti-Scam Movement Terms and Conditions." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Personal Responsibility:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" Users are responsible for understanding and complying with theetiquette guidelines when sharing personal stories within The Anti-Scam Movement section." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="c. Integration with Main TCs:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" By participating in The Anti-Scam Movement, users agree to be bound by both the general Terms and Conditions of SCAMalicious and The Anti-Scam Movement Terms and Conditions." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="12. User Responsibilities" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Accuracy of Information: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Users are responsible for the accuracy and truthfulness of the information they provide on SCAMalicious." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Account Security:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" Users must maintain the security and confidentiality of their account credentials. SCAMalicious is not liable for unauthorized access due to negligence in safeguarding login information." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="13. Communication and Notifications" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Communication Channels:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" SCAMalicious may communicate with users through email, notifications within the app, or other provided contact information." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="b. Promotional Communications:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" Users may receive promotional materials or newsletters based on their preferences, as outlined in the Privacy Policy." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="14. Age Restriction" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text=" Users must be at least 13 years old to access SCAMalicious. Users below this age must have parental consent." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="15. Severability" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="a. Invalidity of Terms:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+
+                            <Span Text="If any provision of these Terms and Conditions is deemed invalid or unenforceable, the remaining provisions shall remain valid and enforceable." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="16. Entire Agreement" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="These Terms and Conditions constitute the entire agreement between users and SCAMalicious regarding the use of the App/Website, superseding any prior agreements or understandings." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="{Binding AntiScam}" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="{Binding Terms}" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+
+                <Label Text="The following disclaimer is provided for the purpose of clarifying the guidelines andlimitations regarding the sharing of scam/fraud stories on this platform:" TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="16"/>
+
+                <Label Text="a. Users are welcome to share their scam or fraud experiences in text format on this page. However, it is important to note that this platform strictly prohibits the inclusion of any website URLs, links, email addresses, or contact numbers within the user-generated content." TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="14"/>
+                <Label Text="b. This restriction is in place to ensure the safety and security of our users. By disallowing the sharing of such information, we aim to prevent scammers or malicious entities from exploiting this platform to promote or engage in fraudulent activities." TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="14"/>
+                <Label Text="c. While we strive to maintain a safe environment, please be aware that the information shared by users is their own personal experience and does not necessarily reflect the views or opinions of this platform or its administrators. We cannot guarantee the accuracy or validity of the shared stories." TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="14"/>
+                <Label Text="d. Users are solely responsible for the content they contribute, and any reliance on such information is at the discretion and risk of the reader. We strongly encourage users to exercise caution and conduct their own research or seek professional advice when dealing with scams or fraud." TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="14"/>
+                <Label Text="e. The platform reserves the right to moderate and remove any content that violates these guidelines or is deemed inappropriate, offensive, or potentially harmful." TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="14"/>
+                <Label Text="f. By using this platform and engaging in the sharing of scam or fraud stories, users agree to comply with these guidelines and understand the platform's limitations in preventing the posting of malicious content." TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="14"/>
+                <Label Text="g. Please proceed with the understanding that the shared stories are based on individual experiences and may not serve as conclusive evidence or a substitute for legal or professional advice." TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="14"/>
+                <Label Text="Thank you for your understanding and cooperation in maintaining a secure and informative environment for all users." TextColor="#374352"  FontFamily="Airbnb-Mediun" FontSize="14"/>
+            </StackLayout>
+
+
         </StackLayout>
+
     </ScrollView>
 </ContentPage>

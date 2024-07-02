@@ -19,18 +19,18 @@ namespace ScamMobileApp.Service
         ProfileData userData = Global.UserData == null ? null : Global.UserData;
         string token = Global.Token;
 
-        public async Task<(LoginResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> LoginUserAsync(string email, string password)
+        public async Task<(LoginResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> LoginUserAsync(LoginRequestModel request)
         {
             try
             {
                 string url = Global.LoginUrl;
 
-                var loginData = new LoginRequestModel
-                {
-                    email = email,
-                    password = password
-                };
-                var json = JsonConvert.SerializeObject(loginData);
+                //var loginData = new LoginRequestModel
+                //{
+                //    email = email,
+                //    password = password
+                //};
+                var json = JsonConvert.SerializeObject(request);
                 StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
                 ErrorResponseModel errorData;
                 

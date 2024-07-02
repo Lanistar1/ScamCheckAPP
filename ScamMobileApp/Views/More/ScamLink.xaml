@@ -163,6 +163,319 @@
                     </StackLayout>
                 </ScrollView>
 
+                <ScrollView IsVisible="{Binding Argentina}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Argentina." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Ministry of Industry and Productive Development" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.argentina.gob.ar/servicio/denunciar-un-delito-informatico" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Argentina"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Austria}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Austria." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Federal Ministry of Finance" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.bmf.gv.at/en/the-ministry/internal-organisation" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="austria1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="FMA Financial Market Authority Austria" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.fma.gv.at/en/complaints-and-points-of-contact" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="austria2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Belgium}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Belgium." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="CERT.be an operational department of the Centre for Cybersecurity Belgium" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.cert.be/en/report-incident" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Belgium1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="FOD Werkgelegenheid, Arbeid en Sociaal Overleg " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://meldpunt.belgie.be/meldpunt" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Belgium2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Federal Police" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="ACMA" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.police.be/en/online-reporting/online-reporting" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Belgium3"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Brazil}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Brazil." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="CERT" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.cert.br/en/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Brazil1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Bulgaria}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Bulgaria." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Ministry of Foreign Affairs of the Republic of Bulgaria" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.cert.be/en/report-incident" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Bulgaria1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="CYBERCRIME Bulgaria " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://meldpunt.belgie.be/meldpunt/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Bulgaria2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="GDBOP" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.police.be/en/online-reporting/online-reporting" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Bulgaria3"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
                 <ScrollView IsVisible="{Binding Canada}">
                     <StackLayout >
                         <Label Text="Organizations for reporting scams in Canada." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
@@ -244,6 +557,409 @@
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TrafficServices"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Croatia}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Croatia." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Government of the Republic of Croatia" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://gov.hr/en/reporting-a-criminal-offence/1134" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Croatia1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Czech}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Czech Republic." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Ministry of the interior of the Czech Republic" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.mvcr.cz/mvcren/article/complaints.aspx" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Czech1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Bílý kruh bezpeči, zs " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.bkb.cz/en/victim-support" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Czech2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Policie ČR" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.policie.cz/clanek/Police-of-the-Czech-Republic.aspx" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Czech3"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Denmark}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Denmark." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Politi" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://politi.dk/anmeld-kriminalitet" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Denmark1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Copenhagen municipality " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://international.kk.dk/live/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Denmark2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Ministry of Foreign Affairs of Denmark" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://um.dk/en/travel-and-residence/visa-complaint" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Denmark3"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Egypt}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Egypt." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Consumer Protection Agency " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.cpa.gov.eg/en-us/Complaints" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Egypt1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Estonia}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Estonia." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Politsei" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://cyber.politsei.ee/en" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Estonia1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="esti " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.eesti.ee/en/legal-advice/crime-and-punishments" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Estonia2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Finland}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Finland." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Poliisi" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://poliisi.fi/en/net-tip" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Finland1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Finnish Competition and Consumer Authority " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.kkv.fi/en/consumer-affairs/scams/report-a-scam" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Finland2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Anti-Corruption" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://korruptiontorjunta.fi/en/report-corruption" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Finland3"/>
                                     </StackLayout.GestureRecognizers>
                                     <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
                                     <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
@@ -406,6 +1122,104 @@
                     </StackLayout>
                 </ScrollView>
 
+                <ScrollView IsVisible="{Binding Greece}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Greece." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="GOV.GR" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.gov.gr/en/sdg/public-contracts" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                    Y1="0"
+                                    X2="400"
+                                    Y2="0"
+                                    Stroke="gray"
+                                    StrokeDashArray="1,1"
+                                    StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Greece1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Hungary}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Hungary." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Transparency International Hungary" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://transparency.hu/en/rolunk/panaszkezeles/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Hungary1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Rendőrség " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.police.hu/en" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Hungary2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
                 <ScrollView IsVisible="{Binding India}">
                     <StackLayout >
                         <Label Text="Organizations for reporting scams in India." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
@@ -496,6 +1310,41 @@
                     </StackLayout>
                 </ScrollView>
 
+                <ScrollView IsVisible="{Binding Indonesia}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Indonesia." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Indonesian National Police" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.polri.go.id/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Indonesia1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
                 <ScrollView IsVisible="{Binding Ireland}">
                     <StackLayout >
                         <Label Text="Organizations for reporting scams in Ireland." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
@@ -548,7 +1397,7 @@
                                         StrokeDashOffset="2"/>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
                                     <StackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="Ireland12"/>
+                                        <TapGestureRecognizer Tapped="Ireland2"/>
                                     </StackLayout.GestureRecognizers>
                                     <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
                                     <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
@@ -661,6 +1510,291 @@
                             </StackLayout>
                         </Frame>
 
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Latvia}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Latvia." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Policija" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.vp.gov.lv/en/branches" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Latvia1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Lithuania}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Lithuania." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Financial Crime Investigation Service " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.fntt.lt/en/investigation/224?" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Lithuania1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="INVEGA" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://invega.lt/en/report-corruption/107" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Lithuania2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Malaysia}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Malaysia." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Royal Malaysia Police " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="http://www.rmp.gov.my/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Malaysia1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="National Scam Response Centre (NSRC)" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://nfcc.jpm.gov.my/index.php/en/soalan/mengenainsrc" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Malaysia2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Mauritius}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Mauritius." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Bank of Mauritius " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.bom.mu/financial-stability" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Mauritius1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="The Mauritian Cybercrime Online Reporting System (MAUCORS)" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://maucors.govmu.org/maucors/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Mauritius2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Mexico}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Mexico." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="The Mexico City PROFECO " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://mexicocity.cdmx.gob.mx/e/basics-for-mexico-city-travel" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Mexico1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Banco De Mexico" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.banxico.org.mx/footer-en/warning-queries-banco-mexic.html" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Mexico2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
                     </StackLayout>
                 </ScrollView>
 
@@ -817,6 +1951,408 @@
                     </StackLayout>
                 </ScrollView>
 
+                <ScrollView IsVisible="{Binding Norway}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Norway." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Politiet" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.politiet.no/en/english/report-a-crime" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Norway1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Norwegian Human Rights Fund" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://nhrf.no/contact/report-fraud-or-abuse" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Norway2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Sikresiden" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.sikresiden.no/en/onlinefraud" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Norway3"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Pakistan}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Pakistan." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Cyber Crime Wing FIA " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.nr3c.gov.pk/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Pakistan1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Federal Investigation Agency (FIA)" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://fia.gov.pk/complaints_dept" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Pakistan2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Philippines}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Philippines." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="DOF " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.dof.gov.ph/anti-fraud/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Philippines1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="FOI Philippines" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.foi.gov.ph/requests?agency=NBI" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Philippines2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Poland}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Poland." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Komenda Stołeczna Policji " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://lublin.policja.gov.pl/llu/prewencja/for-foreigners" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Poland1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Europejskie Centrum Konsumenckie" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://konsument.gov.pl/en/complaint/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Poland2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Portugal}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Portugal." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Policia Judiciaria " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.policiajudiciaria.pt/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Portugal1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Tribunal Administrativo e Fiscal do Porto" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://en.ministeriopublico.pt/perguntas-frequentes/corruption" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Portugal2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Europejskie Centrum Konsumenckie" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="Safe Communities Portugal" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Portugal3"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Romania}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Romania." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Romanian Police " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.politiaromana.ro/en/romanian-policel" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Romania1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
                 <ScrollView IsVisible="{Binding Saudi}">
                     <StackLayout >
                         <Label Text="Organizations for reporting scams in Saudi Arabia." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
@@ -870,6 +2406,41 @@
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="Arabia2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Serbia}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Serbia." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Ministry of Interior of the Republic of Serbia " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="http://www.mup.gov.rs/wps/portal/en/directorate" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Serbia1"/>
                                     </StackLayout.GestureRecognizers>
                                     <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
                                     <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
@@ -967,6 +2538,104 @@
                                 </StackLayout>
                             </StackLayout>
                         </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Slovakia}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Slovakia." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Ministerstvo vnútra Slovenskej republiky " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.minv.sk/swift_data/source/images/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Slovakia1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Slovenia}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Slovenia." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Policija " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.policija.si/eng/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Slovenia1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Vlada Republike Slovenije " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.gov.si/en/state-authorities/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Slovenia2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
                     </StackLayout>
                 </ScrollView>
 
@@ -1101,6 +2770,186 @@
                     </StackLayout>
                 </ScrollView>
 
+                <ScrollView IsVisible="{Binding Sri}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Sri Lanka." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="ciaboc " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://ciaboc.gov.lk/contact/complaints" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Lanka1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Online Safety" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.onlinesafety.lk" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Lanka2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="ECPAT Sri lanka / PEaCE" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.ecpat.lk/reporting-mechanism/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Lanka3"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Sweden}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Sweden." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Polisen " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.politiet.no/en/english/report-a-crime" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Sweden1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Finansinspektionen" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.fi.se/en/consumer-protection/investment-fraud" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Sweden2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Skatteverket" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="http://skatteverket.se/servicelankar/otherlanguages" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Sweden3"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
                 <ScrollView IsVisible="{Binding Switzerland}">
                     <StackLayout >
                         <Label Text="Organizations for reporting scams in Switzerland." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
@@ -1160,6 +3009,76 @@
                                 </StackLayout>
                             </StackLayout>
                         </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Thailand}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Thailand." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Thailand Law" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.thailandlaw.org/fraud-in-thailand.html" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Thailand1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <ScrollView IsVisible="{Binding Turkey}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in Turkey." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="Information Technologies and Communications Authority" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://tib.gov.tr/" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Turkey1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
                     </StackLayout>
                 </ScrollView>
 

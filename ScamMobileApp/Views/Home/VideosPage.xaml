@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.Home.VideosPage"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="Videos">
+
+    <ScrollView Margin="20">
+        <StackLayout>
+            <StackLayout>
+                <Image Source="videobox.png" />
+                <Label Text="How to spot a scam" TextColor="#110F0F" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start"/>
+            </StackLayout>
+            <StackLayout>
+                <Image Source="videobox.png" />
+                <Label Text="How to download our app" TextColor="#110F0F" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start"/>
+            </StackLayout>
+            <StackLayout>
+                <Image Source="videobox.png" />
+                <Label Text="How to spot a scam" TextColor="#110F0F" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start"/>
+            </StackLayout>
+            <StackLayout>
+                <Image Source="videobox.png" />
+                <Label Text="How to download our app" TextColor="#110F0F" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start"/>
+            </StackLayout>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
