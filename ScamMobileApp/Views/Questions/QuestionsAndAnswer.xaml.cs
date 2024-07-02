@@ -22,5 +22,10 @@ namespace ScamMobileApp.Views.Questions
 
 
         }
+
+        private void To_LearningCentre(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LearningCentre());
+        }
     }
 }

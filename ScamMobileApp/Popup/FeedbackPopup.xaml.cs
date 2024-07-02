@@ -31,6 +31,11 @@ namespace ScamMobileApp.Popup
             BindingContext = this;
         }
 
+        private void cancel(object sender, EventArgs e)
+        {
+            PopupNavigation.Instance.PopAsync(); // Close the popup first
+        }
+
         private async void Close_Popup(object sender, EventArgs e)
         {
             newComment = comment.Text;

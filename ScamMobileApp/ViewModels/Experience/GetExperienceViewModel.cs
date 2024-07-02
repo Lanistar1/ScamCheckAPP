@@ -1,7 +1,5 @@
 ﻿using ScamMobileApp.Helpers;
 using ScamMobileApp.Models.Experience;
-using ScamMobileApp.Models.Identity;
-using ScamMobileApp.Models.ScamType;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views.Experience;
@@ -10,9 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace ScamMobileApp.ViewModels.Experience
@@ -78,6 +76,28 @@ namespace ScamMobileApp.ViewModels.Experience
             }
         }
 
+        private UserDetailsData userData;
+        public UserDetailsData UserData
+        {
+            get => userData;
+            set
+            {
+                userData = value;
+                OnPropertyChanged(nameof(UserData));
+            }
+        }
+        
+        private List<UserDetailsData> userDetails;
+        public List<UserDetailsData> UserDetails
+        {
+            get => userDetails;
+            set
+            {
+                userDetails = value;
+                OnPropertyChanged(nameof(UserDetails));
+            }
+        }
+
         private ObservableCollection<ExperienceData> userExperienceData;
         public ObservableCollection<ExperienceData> UserExperienceData
         {
@@ -105,6 +125,13 @@ namespace ScamMobileApp.ViewModels.Experience
         public Command SearchEntryTextChangedCommand => new Command<string>((searchEntry) => SearchBar_TextChanged(searchEntry));
         public Command SearchCommand { get; }
         public Command TappedCommand { get; }
+
+        public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(ToggleDescription);
+
+        private void ToggleDescription(ExperienceData scam)
+        {
+            scam.IsExpanded = !scam.IsExpanded;
+        }
         #endregion
 
 
@@ -148,6 +175,27 @@ namespace ScamMobileApp.ViewModels.Experience
 
                         NewExperienceData = UserExperienceData;
 
+
+                        //var newDetails = new List<UserDetailsData>();
+                        ////var userDetails = new List<UserDetailsData>();
+
+                        //foreach (var item in NewExperienceData)
+                        //{
+
+                        //    UserData = item.userDetails;
+
+
+                        //    //item.userDetails = item.userDetails;
+
+                        //    //userDetails = new ObservableCollection<UserDetailsData>(item.userDetails);
+                        //}
+
+                        //UserDetails.Add(UserData);
+
+
+                        //newDetails.Add(userDetails);
+
+
                     }
                     else
                     {
@@ -174,7 +222,7 @@ namespace ScamMobileApp.ViewModels.Experience
             }
             catch (Exception ex)
             {
-                string message = "Error fetching user detail. Do you want to RETRY?";
+                string message = "Something went wrong. Try again later. ";
                 await MessagePopup.Instance.Show(
                     message: message);
                 Console.WriteLine(ex);

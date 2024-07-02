@@ -12,6 +12,11 @@ using Xamarin.Forms.Xaml;
 [assembly: ExportFont("Inter-Medium.ttf", Alias = "Inter-Medium")]
 [assembly: ExportFont("Inter-Bold.ttf", Alias = "Inter-Bold")]
 [assembly: ExportFont("Inter-Black.ttf", Alias = "Inter-Black")]
+[assembly: ExportFont("AirbnbCereal-XBold.otf", Alias = "Airbnb-xBold")]
+[assembly: ExportFont("AirbnbCereal-Medium.otf", Alias = "Airbnb-Medium")]
+[assembly: ExportFont("AirbnbCereal-Light.otf", Alias = "Airbnb-Light")]
+[assembly: ExportFont("AirbnbCereal-Bold.otf", Alias = "Airbnb-Bold")]
+[assembly: ExportFont("AirbnbCereal-Black.otf", Alias = "Airbnb-Black")]
 
 namespace ScamMobileApp
 {
@@ -21,7 +26,7 @@ namespace ScamMobileApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Welcome2());
+            MainPage = new NavigationPage(new WelcomePage());
 
             //MainPage = new NavigationPage(new MoreMenu());
 

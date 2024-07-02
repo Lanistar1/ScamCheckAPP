@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ScamMobileApp.ViewModels.More;
+using ScamMobileApp.ViewModels.Report;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,8 @@ namespace ScamMobileApp.Views.More
         public TermsAndConditions()
         {
             InitializeComponent();
+            BindingContext = new TermsViewModel(Navigation);
+
         }
     }
 }

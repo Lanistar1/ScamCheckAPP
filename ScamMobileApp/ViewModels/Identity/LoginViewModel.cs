@@ -1,17 +1,13 @@
-﻿using Newtonsoft.Json;
-using ScamMobileApp.Helpers;
+﻿using ScamMobileApp.Helpers;
 using ScamMobileApp.Models.Identity;
 using ScamMobileApp.Popup;
-using ScamMobileApp.Service;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views;
-using ScamMobileApp.Views.Home;
 using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ScamMobileApp.ViewModels.Identity
@@ -23,7 +19,7 @@ namespace ScamMobileApp.ViewModels.Identity
             Navigation = navigation;
 
 
-            LoginCommand = new Command(async () => await LoginCommandExecute(email, password));
+            LoginCommand = new Command(async () => await LoginCommandExecute());
 
             //LoginCommand = new Command(async () => await LoginCommandsExecute());
 
@@ -67,47 +63,72 @@ namespace ScamMobileApp.ViewModels.Identity
         #endregion
 
 
-        #region Events, Methods, Functions and Navigations
+        #region Commands
         public Command LoginCommand { get; }
         #endregion
 
-        #region
-        private async Task LoginCommandExecute(string email, string password)
+        #region Events, Methods, Functions and Navigations
+
+        private async Task LoginCommandExecute()
         {
-            if (string.IsNullOrWhiteSpace(Email))
+            bool checker = await VerifyBioDataEntry();
+            if (checker)
             {
-                await MessagePopup.Instance.Show("Email field should not be empty");
-
+                await LoginCustomerAsync();
             }
-            else
+        }
+        private async Task LoginCustomerAsync()
+        {
+            //var newEmail = Email.Trim();
+            //var newPassword = Password.Trim();
+            //if (string.IsNullOrWhiteSpace(newEmail))
+            //{
+            //    await MessagePopup.Instance.Show("Email field should not be empty");
+
+            //}
+            //else
+            //{
+            //    var x = EmailRegex.Match(newEmail);
+            //    if (x.Success)
+            //    {
+            //        // do something
+            //    }
+            //    else
+            //    {
+
+            //        await MessagePopup.Instance.Show("Email field not correct. Field must contain @ and .com ");
+
+            //        return;
+            //    }
+            //}
+
+
+            //if (string.IsNullOrWhiteSpace(Password))
+            //{
+            //    await MessagePopup.Instance.Show("Password field should not be empty");
+
+            //    return;
+            //} email = Email.Trim(),
+
+            var current = Connectivity.NetworkAccess;
+
+            if (current != NetworkAccess.Internet)
             {
-                var x = EmailRegex.Match(Email);
-                if (x.Success)
-                {
-                    // do something
-                }
-                else
-                {
-
-                    await MessagePopup.Instance.Show("Email field not correct. Field must contain @ and .com ");
-
-                    return;
-                }
-            }
-
-
-            if (string.IsNullOrWhiteSpace(Password))
-            {
-                await MessagePopup.Instance.Show("Password field should not be empty");
-
+                await MessagePopup.Instance.Show("Internet connection not available");
                 return;
             }
+
             try
             {
+                LoginRequestModel request = new LoginRequestModel()
+                { 
+                    email = Email.Trim(),
+                    password = Password
+                };
 
                 await LoadingPopup.Instance.Show("Logging In...");
 
-                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.LoginUserAsync(Email, Password);
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.LoginUserAsync(request);
 
                 if (ResponseData != null)
                 {
@@ -119,6 +140,10 @@ namespace ScamMobileApp.ViewModels.Identity
                 }
 
                 else if (ErrorData != null && StatusCode == 401)
+                {
+                    await MessagePopup.Instance.Show("Invalid credentials. Please check and try again");
+                }
+                else if (ErrorData != null && StatusCode == 400)
                 {
                     await MessagePopup.Instance.Show("Invalid credentials. Please check and try again");
                 }
@@ -137,6 +162,48 @@ namespace ScamMobileApp.ViewModels.Identity
                 await LoadingPopup.Instance.Hide();
             }
         }
+
+        private async Task<bool> VerifyBioDataEntry()
+        {
+            //if (string.IsNullOrWhiteSpace(Title))
+            //{
+            //    await MessagePopup.Instance.Show("Select title to continue.");
+            //    return false;
+            //}
+            var emailTrim = Email.Trim();
+            if (string.IsNullOrWhiteSpace(emailTrim))
+            {
+                await MessagePopup.Instance.Show("Email field should not be empty.");
+                return false;
+            }
+            else
+            {
+                var x = EmailRegex.Match(emailTrim);
+                if (x.Success)
+                {
+                    // do something
+                }
+                else
+                {
+
+                    await MessagePopup.Instance.Show("Email field not correct. Field must contain @ and .com ");
+
+                    return false;
+                }
+            }
+
+
+            if (string.IsNullOrWhiteSpace(Password))
+            {
+                await MessagePopup.Instance.Show("Password field should not be empty.");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         #endregion
     }
 }

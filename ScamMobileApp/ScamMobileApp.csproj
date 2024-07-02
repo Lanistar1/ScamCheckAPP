@@ -11,6 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\AirbnbCereal-Black.otf" />
+    <None Remove="Fonts\AirbnbCereal-Bold.otf" />
+    <None Remove="Fonts\AirbnbCereal-Light.otf" />
+    <None Remove="Fonts\AirbnbCereal-Medium.otf" />
+    <None Remove="Fonts\AirbnbCereal-XBold.otf" />
     <None Remove="Fonts\Inter-Black.ttf" />
     <None Remove="Fonts\Inter-Bold.ttf" />
     <None Remove="Fonts\Inter-Light.ttf" />
@@ -19,6 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Fonts\AirbnbCereal-Black.otf" />
+    <EmbeddedResource Include="Fonts\AirbnbCereal-Bold.otf" />
+    <EmbeddedResource Include="Fonts\AirbnbCereal-Light.otf" />
+    <EmbeddedResource Include="Fonts\AirbnbCereal-Medium.otf" />
+    <EmbeddedResource Include="Fonts\AirbnbCereal-XBold.otf" />
     <EmbeddedResource Include="Fonts\Inter-Black.ttf" />
     <EmbeddedResource Include="Fonts\Inter-Bold.ttf" />
     <EmbeddedResource Include="Fonts\Inter-Light.ttf" />
@@ -51,7 +61,19 @@
     <EmbeddedResource Update="Popup\LogoutPopup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Popup\PreventiveTipsPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Popup\ScamQAPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Popup\ScamTypePopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Popup\SelectItemPickerPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Popup\WarningSignPopup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Styles\Colors.xaml">
@@ -72,6 +94,9 @@
     <EmbeddedResource Update="Views\Experience\ExperienceDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Experience\MyStory.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Feedback\AllFeedbackPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -90,6 +115,9 @@
     <EmbeddedResource Update="Views\Home\ShareScamExperience.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Home\VideosPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Identity\ChangePassword.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -105,7 +133,16 @@
     <EmbeddedResource Update="Views\Identity\Register.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\More\ActionPoints.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\More\HelpCenter.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\More\IntroductionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\More\LearningCentre.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\More\Menu.xaml">
@@ -115,6 +152,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\More\PreventiveTips.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\More\PrivacyPolicy.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\More\ProfilePage.xaml">
@@ -547,6 +587,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Tabbed.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WelcomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

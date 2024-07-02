@@ -3,20 +3,25 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
             x:Class="ScamMobileApp.Views.Tabbed"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
-            xmlns:Pages1="clr-namespace:ScamMobileApp.Views.More" 
+            xmlns:Pages1="clr-namespace:ScamMobileApp.Views.Home" 
             xmlns:Pages2="clr-namespace:ScamMobileApp.Views.Questions" 
-            xmlns:Pages3="clr-namespace:ScamMobileApp.Views.Home"
+            xmlns:Pages4="clr-namespace:ScamMobileApp.Views.Feedback" 
+            xmlns:Pages5="clr-namespace:ScamMobileApp.Views.More" 
+            xmlns:Pages3="clr-namespace:ScamMobileApp.Views.Experience"
             NavigationPage.HasNavigationBar="False"
             android:TabbedPage.ToolbarPlacement="Bottom"
-            BarBackgroundColor="White"
-            android:TabbedPage.BarItemColor="{StaticResource TertiaryColor}"
-            android:TabbedPage.BarSelectedItemColor="#FA941D">
+            BarBackgroundColor="{StaticResource SecondaryColor}"
+            android:TabbedPage.BarItemColor="#ffffff"
+            android:TabbedPage.BarSelectedItemColor="{StaticResource TertiaryColor}">
 
 
     <!--Pages can be added as references or inline-->
-    <Pages1:MoreMenu Title="Menu" IconImageSource="scammenu.png"></Pages1:MoreMenu>
+    <Pages1:NewDashboard Title="Home" IconImageSource="scamhome.png"></Pages1:NewDashboard>
     <Pages2:QuestionsAndAnswer IconImageSource="qascam.png"></Pages2:QuestionsAndAnswer>
-    <Pages3:ShareScamExperience Title="Your Story" IconImageSource="urstory.png"></Pages3:ShareScamExperience>
-    <Pages3:NewDashboard Title="Home" IconImageSource="scamhome.png"></Pages3:NewDashboard>
+    <Pages3:MyStory Title="Your Story" IconImageSource="urstory.png"></Pages3:MyStory>
+    <Pages4:AllFeedbackPage Title="Activities" IconImageSource="activities.png"></Pages4:AllFeedbackPage>
+    <Pages5:MoreMenu Title="Menu" IconImageSource="moremenu.png"></Pages5:MoreMenu>
+
+
     
 </TabbedPage>

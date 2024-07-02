@@ -4,32 +4,33 @@
              x:Class="ScamMobileApp.Views.Feedback.FeedbackDetailPage"
              BackgroundColor="{StaticResource PrimaryColor}"
              NavigationPage.HasNavigationBar="True"
-             Title="Feedback Detail">
+             Title="Activity Details">
 
 
     <ScrollView VerticalScrollBarVisibility="Never">
         <StackLayout Margin="0,20">
-            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10" Margin="20,0">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Scam Type:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <Label Text="{Binding ScamType}" TextColor="{StaticResource PrimaryColor}" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                </StackLayout>
-            </Frame>
+            
 
             <StackLayout x:Name="cvBanner" BindableLayout.ItemsSource="{Binding UserFeedbackData}" Spacing="2" Margin="20,5,20,5">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
-                            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
-                                <StackLayout >
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label Text="Result:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                                        <Label Text="{Binding output}" TextColor="{StaticResource PrimaryColor}" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                            <Frame Padding="10,15" BackgroundColor="#EEE9ED" CornerRadius="10" Margin="0,0,0,10" HasShadow="False">
+                                <StackLayout Spacing="15" Orientation="Horizontal" Margin="0,0,0,5">
+                                    <Image  Source="scamredlogo.png" HeightRequest="30" WidthRequest="30"/>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="{Binding scamType}" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Result" TextColor="{StaticResource SecondaryColor}" FontSize="12" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                            <Label Text="{Binding output}" TextColor="{StaticResource TertiaryColor}" FontSize="12" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        </StackLayout>
                                     </StackLayout>
-                                    <StackLayout>
-                                        <Label Text="Feedback:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,10,0,0"/>
-                                        <Label Text="{Binding outputDetails}" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                            <Label Text="Feedback" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                            <Frame Padding="10,15" BackgroundColor="#EEE9ED" CornerRadius="10" HasShadow="False">
+                                <StackLayout>
+                                    <Label Text="{Binding outputDetails}" TextColor="#646C79" FontSize="13" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
@@ -41,7 +42,25 @@
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
-                            <Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
+                            <Label Text="Questions Answered" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+
+                            <Frame Padding="10,15" BackgroundColor="#EEE9ED" CornerRadius="10" HasShadow="False">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Frame Padding="5" CornerRadius="5" BackgroundColor="#ffffff" HasShadow="False">
+                                            <Label Text="Q" TextColor="{StaticResource TertiaryColor}" FontSize="14" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
+                                        </Frame>
+                                        <Label Text="{Binding question}" TextColor="#646C79" FontSize="13" FontFamily="Airbnb-Mediun"  
+                                               HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Margin="25,0,0,0">
+                                        <Label Text="Answer:" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="{Binding answer}" TextColor="{StaticResource TertiaryColor}" FontSize="13" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--<Frame Padding="10,15" BackgroundColor="{StaticResource SecondaryColor}" CornerRadius="10">
                                 <StackLayout >
                                     <StackLayout Spacing="0">
                                         <Label Text="Question:" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
@@ -53,7 +72,7 @@
                                         <Label Text="{Binding answer}" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Mediun" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                                     </StackLayout>
                                 </StackLayout>
-                            </Frame>
+                            </Frame>-->
                         </StackLayout>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
