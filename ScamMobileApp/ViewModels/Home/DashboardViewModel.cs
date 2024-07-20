@@ -1,6 +1,7 @@
 ﻿using ScamMobileApp.Helpers;
 using ScamMobileApp.Models.Feedback;
 using ScamMobileApp.Models.Home;
+using ScamMobileApp.Models.Identity;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views.Feedback;
@@ -8,8 +9,10 @@ using ScamMobileApp.Views.Identity;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ScamMobileApp.ViewModels.Home
@@ -99,6 +102,28 @@ namespace ScamMobileApp.ViewModels.Home
             }
         }
 
+        private GetProfileData profileData;
+        public GetProfileData ProfileData
+        {
+            get => profileData;
+            set
+            {
+                profileData = value;
+                OnPropertyChanged(nameof(ProfileData));
+            }
+        }
+
+        private string pimage;
+        public string PImage
+        {
+            get => pimage;
+            set
+            {
+                pimage = value;
+                OnPropertyChanged(nameof(PImage));
+            }
+        }
+
         #endregion
 
 
@@ -115,6 +140,8 @@ namespace ScamMobileApp.ViewModels.Home
             Title = "Scam Q&A";
 
             Task _task = FetchFeedback(limit, offset);
+            Task _tsk = FetchUserProfile();
+
 
             TappedCommand = new Command<GetFeedbackData>(async (model) => await GetTappedExecute(model));
 
@@ -127,6 +154,66 @@ namespace ScamMobileApp.ViewModels.Home
              };
 
             Username = Global.UserData.username;
+        }
+
+
+        // Endpoint to fetch user details
+        private async Task FetchUserProfile()
+        {
+            try
+            {
+                await LoadingPopup.Instance.Show("Loading Profile detail...");
+
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.GetUserProfileAsync();
+                if (ResponseData != null)
+                {
+                    if (ResponseData.data != null)
+                    {
+                        ProfileData = ResponseData.data;
+
+
+                        if (string.IsNullOrEmpty(ProfileData.profileImgeUrl))
+                        {
+                            PImage = "dashboardImage.png";
+                        }
+                        else
+                        {
+                            PImage = ProfileData.profileImgeUrl;
+                        }
+
+                    }
+                    else
+                    {
+                        await MessagePopup.Instance.Show(ErrorData.message);
+                    }
+                }
+                else if (ErrorData != null && StatusCode == 401)
+                {
+                    Application.Current.MainPage = new NavigationPage(new Login());
+                }
+                else if (ErrorData != null)
+                {
+                    string message = "Error fetching user detail. Do you want to RETRY?";
+                    await MessagePopup.Instance.Show(
+                        message: message);
+
+                }
+                else
+                {
+                    await MessagePopup.Instance.Show(ErrorData.message);
+                }
+            }
+            catch (Exception ex)
+            {
+                string message = "Error fetching user detail. Do you want to RETRY?";
+                await MessagePopup.Instance.Show(
+                    message: message);
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                await LoadingPopup.Instance.Hide();
+            }
         }
 
 

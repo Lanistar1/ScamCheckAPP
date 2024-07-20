@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.More.HowToUseScamaliciousApp"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="How to use SCAMalicious APP?">
+
+
+
+    <ScrollView Margin="20">
+        <StackLayout>
+            <Label Text="The SCAMalicious APP is your essential tool for combating fraud and other malicious activities. It is designed to educate, empower, and protect users against scams. Here's how you can make the most of its features:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+
+            <StackLayout Margin="0,5,0,0">
+                <Label Text="Educate Yourself" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="14"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="The SCAMalicious APP provides resources on various types of scams, their warning signs, and best practices for staying safe online. This knowledge helps you recognize and avoid potential scams, protecting you from financial losses and other negative consequences." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Empowerment Through Information" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="14"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Scammers often target vulnerable individuals. The SCAMalicious APP empowers you by providing tools and resources to identify and report scams. With its user-friendly interface, you can easily access vital information for your online safety." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Our standout features in the SCAMalicious APP" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="14"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="1. " TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                            <Span Text="{Binding ScamQA}" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="2. The Anti-Scam Movement" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="3. Report a Scam" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Support Law Enforcement" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="14"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Reporting scams will assist law enforcement agencies in tracking down and prosecuting criminals. Your vigilance and proactive reporting make a significant difference in combating fraud." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

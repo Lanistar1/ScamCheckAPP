@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.AIScam.AIDrivenScam"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="AI-Driven Scams">
+
+    <ScrollView Margin="20">
+        <StackLayout>
+            <StackLayout>
+                <Label Text="AI Voice Cloning" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Scammers use AI-driven voice cloning technology to mimic the voice of a trusted person, such as a family member, friend, or colleague. They can then make phone calls or send voice messages that sound incredibly convincing, tricking victims into believing they are speaking with someone they know. This technique is often used in emergency scams, where the scammer pretends to be a relative in distress needing immediate financial assistance." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0">
+                <Label Text="Deepfake Videos" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Deepfake technology allows scammers to create realistic videos of people saying or doing things they never actually said or did. These videos can be used to impersonate CEOs, celebrities, or loved ones, convincing victims to transfer money, share sensitive information, or take other harmful actions. The realism of these videos makes it difficult for victims to distinguish between genuine and fake content." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0">
+                <Label Text="AI-Generated Profiles" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="AI can create highly realistic images of non-existent people. Scammers use these AI-generated photos to build fake profiles on social media or dating platforms, gaining the trust of victims over time before asking for money or personal information. These profiles often include a detailed backstory and interactions that appear legitimate." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0">
+                <Label Text="Automated Chatbots" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Advanced AI chatbots can engage in convincing conversations with victims, often posing as customer service representatives or potential romantic partners. These chatbots can carry out extended interactions, gradually extracting personal information or convincing victims to make payments." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0">
+                <Label Text="Synthetic Identity Fraud" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Scammers combine real and fake information to create synthetic identities. For example, they might use a real social security number with a fake name and address to create a new identity. These synthetic identities are used to open bank accounts, obtain credit, and commit other types of fraud, which can go undetected for a long time." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <StackLayout Margin="0,10,0,0">
+                <Label Text="Phishing with AI" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="AI is used to enhance phishing scams by generating highly personalized and context-aware messages. These messages are tailored to the victim's interests, recent activities, or personal connections, making them more likely to fall for the scam. AI can also mimic the writing style of trusted contacts, further increasing the likelihood of deception." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -112,6 +112,30 @@ namespace ScamMobileApp.ViewModels.More
             }
         }
 
+        private string title6;
+        public string Title6
+        {
+            get => title6;
+            set
+            {
+                title6 = value;
+                OnPropertyChanged(nameof(Title6));
+            }
+        }
+
+
+        private string title7;
+        public string Title7
+        {
+            get => title7;
+            set
+            {
+                title7 = value;
+                OnPropertyChanged(nameof(Title7));
+            }
+        }
+
+
         public HelpCenterViewModel(INavigation navigation)
         {
             Navigation = navigation;
@@ -123,12 +147,13 @@ namespace ScamMobileApp.ViewModels.More
 
             Title = "Start ScamQ&A";
 
-            Title1 = "Don't let scammers take advantage of you! Stay one step ahead with ScamQ&A, the essential mobile app designed to help you make informed decisions and protect yourself from fraud.";
-            Title2 = "When faced with a suspicious offer, a questionable message, or a potential scam scenario, open the app and answer four tailored questions based on the situation and let ScamQ&A provide you with a scam assessment.";
-            Title3 = "Empower yourself with ScamQ&A's easy-to-understand results. Your scam result will provide a clear indication of the likelihood of a scam, allowing you to make smart decisions before proceeding further. ScamQ&A also provides valuable tips and recommendations to help you navigate through potentially.";
-            Title4 = "Avoid scams, protect your finances, and make informed decisions with ease. ScamQ&A is your trusted companion in the fight against scammers.";
-            Title5 = "ScamQ&A values your privacy and security. We do not collect any personally identifiable information from you, ensuring your data remains confidential. All answers and results are stored securely on your device, giving you full control over your information.";
-
+            Title1 = "Don't let scammers take advantage of you! Stay one step ahead with ScamQ&A.";
+            Title2 = "The ScamQ&A check feature can help you assess the likelihood of a scam, especially when encountering suspicious activities involving AI-driven deception. If you have doubts about a suspicious activity, simply";
+            Title3 = "1. Open the ScamQ&A page.";
+            Title4 = "2. Choose the relevant category.";
+            Title5 = "3. Answer four yes/no questions.";
+            Title6 = "4  Receive a score indicating the likelihood of a scam.";
+            Title7 = "Your scam result will provide a clear indication of the likelihood of a scam, allowing you to make smart decisions before proceeding further.  ScamQ&A also provides valuable tips and recommendations to help you navigate through potentially situations. Avoid scams, protect your finances, and make informed decisions with ease. ";
         }
 
         public ICommand ShowDetailCommand { get; }

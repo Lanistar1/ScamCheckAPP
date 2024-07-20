@@ -16,7 +16,7 @@
                     <TapGestureRecognizer Tapped="To_Introduction"/>
                 </FlexLayout.GestureRecognizers>
                 <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
-                    <Label Text="Introduction" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <Label Text="AI-Driven Scams" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
                 <StackLayout>
                     <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />

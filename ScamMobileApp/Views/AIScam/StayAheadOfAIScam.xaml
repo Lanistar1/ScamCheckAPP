@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.AIScam.StayAheadOfAIScam"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="Staying Ahead of AI-Driven Scams.">
+
+    <ScrollView Margin="20">
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Educate Yourself" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="1. Stay Informed: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Regularly update your knowledge about the latest scam tactics and AI technologies used by fraudsters." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="2. Use Trusted Sources: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Follow news and alerts from reputable cybersecurity organizations and law enforcement agencies" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Verify Identities" TextColor="#374352" Margin="0,8,0,0"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="1. Double-Check Requests" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Always verify unexpected requests for personal information or financial transactions through a separate, trusted communication channel." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="2.	Ask Personal Questions:  " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text=" When contacted by someone you know, ask questions only they would know the answers to" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Strengthen Your Digital Security" Margin="0,8,0,0" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="1.	Enable Two-Factor Authentication (2FA): " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Use 2FA for all your accounts to add an extra layer of security." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="2. Update Software Regularly:  " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Ensure your devices and applications are updated with the latest security patches." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="3. 	Use Strong, Unique Passwords" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Create complex passwords and use a password manager to keep track of them." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Be Cautious on Social Media" Margin="0,8,0,0" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="1.	Limit Information Sharing:  " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Be mindful of the personal information you share online, as scammers can use this information to personalize their attacks." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="2.	Review Privacy Settings: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Adjust your social media privacy settings to limit who can see your posts and personal details." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Report Suspicious Activity" Margin="0,8,0,0" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="1. 	Notify Authorities:  " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Report any suspicious encounters to the relevant platform, service, or local authorities." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="2.	Share Experiences:  " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Inform friends and family about potential scams to help them stay vigilant. Share your stories on The Anti-Scam Movement page. By joining the movement, you become part of a community of individuals dedicated to learning, sharing experiences, and supporting one another in the fight against scams. Together, we empower ourselves to be better, more informed, and more secure." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -53,28 +53,68 @@ namespace ScamMobileApp.Models.Feedback
         }
 
 
-        public string Output
+        //public string Output
+        //{
+        //    get
+        //    {
+        //        if (output == "Likely a scam" || output.Contains("Likely a scam") )
+        //        {
+        //            SubColor = Color.FromHex("FF0000");
+        //            return output;
+        //        }
+        //        else
+        //        {
+        //            SubColor = Color.FromHex("4CC98D");
+        //            return output;
+        //        }
+        //    }
+        //    set
+        //    {
+        //        Output = value;
+        //    }
+        //}
+
+        public Color SubColor
         {
             get
             {
-                if (output == "Likely" || output.Contains("Likely") )
+                if (output == "Likely a scam" || output.Contains("Likely a scam"))
                 {
-                    SubColor = Color.FromHex("FF0000");
-                    return output;
+                    Color source1 = Color.FromHex("FF0000");
+                    return source1;
                 }
                 else
                 {
-                    SubColor = Color.FromHex("4CC98D");
-                    return output;
+                    Color source2 = Color.FromHex("4CC98D");
+                    return source2;
                 }
             }
             set
             {
-                Output = value;
+                SubColor = value;
             }
         }
 
-        public Color SubColor { get; set; }
+        //public Color SubColor { get; set; }
+
+        public ImageSource TransImage
+        {
+            get
+            {
+                if (output == "Likely a scam" || output.Contains("Likely a scam"))
+                {
+                    ImageSource source1 = ImageSource.FromFile("scamredlogo.png");
+                    return source1;
+                }
+                else
+                {
+                    ImageSource source = ImageSource.FromFile("scamgreenlogo.png");
+                    return source;
+                }
+
+            }
+            set { TransImage = value; }
+        }
 
 
     }
