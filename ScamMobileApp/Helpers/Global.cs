@@ -22,6 +22,9 @@ namespace ScamMobileApp.Helpers
         public static string PostFeedbackUrl => $"{BaseUrl}/feedback";
         public static string GetFeedbackUrl => $"{BaseUrl}/feedback/user/all";
         public static string DeleteProfileUrl => $"{BaseUrl}/auth/delete-account";
+        public static string PickFileUrl => $"{BaseUrl}/auth/upload-image";
+
+
 
 
 

@@ -19,5 +19,16 @@ namespace ScamMobileApp.Views.More
             InitializeComponent();
             BindingContext = new HelpCenterViewModel(Navigation);
         }
+
+        private void To_HowToUseApp(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HowToUseScamaliciousApp());
+        }
+
+        private void To_ScamQA(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ScamQA());
+
+        }
     }
 }

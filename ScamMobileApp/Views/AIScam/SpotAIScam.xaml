@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.AIScam.SpotAIScam"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="How to spot AI-Driven Scams?">
+
+    <ScrollView Margin="20">
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Tips for Spotting AI Voice Cloning Scams" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="1. Unexpected Calls: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Be wary of unexpected calls from known contacts asking for urgent help, especially involving financial transactions." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="2.	Verify Identity: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Ask personal questions that only the real person would know. If in doubt, hang up and call the person back using a known number. Establish a code word with your family or friends to verify their identity in such situations." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="3.	Voice Quality:  " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Listen for unusual speech patterns, slight delays, or robotic tones that may indicate the use of AI." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Tips for Detecting Deepfake Videos" Margin="0,8,0,0" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="1.	Look for Inconsistencies: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Pay attention to any unnatural movements, mismatched lip-syncing, or unusual facial expressions." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="2.	Check Sources:  " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Verify the video’s source. Be cautious of videos sent via unfamiliar channels or from unverified sources." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="3.	Cross-Verify: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Look for the same video from trusted news outlets or official channels to confirm its authenticity." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Tips for Identifying AI-Generated Profiles" Margin="0,8,0,0" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="1.	Profile Details: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Scrutinize the profile’s details. AI-generated profiles often have inconsistencies or generic information." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="2.	Reverse Image Search: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Use reverse image search on profile photos to check if they appear elsewhere on the internet, indicating they might be stolen or fake." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="3.	Interaction Patterns: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Be cautious of profiles that quickly escalate the conversation to personal or financial topics." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Tips for Spotting Phishing Attempts Enhanced by AI" Margin="0,8,0,0" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="1.	Personalization: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Be skeptical of emails or messages that seem unusually personalized, especially if they prompt urgent action or contain suspicious links." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="2.	Check URLs: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Hover over links to see the actual URL before clicking. Look for slight misspellings or strange domain names." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="3.	Verify Requests: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Contact the purported sender through a trusted method to verify the legitimacy of the request." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="General Tips for All AI-Driven Scams" Margin="0,8,0,0" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="1. Two-Factor Authentication (2FA): " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Enable 2FA on your accounts to add an extra layer of security." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="2.	Report Suspicious Activity: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Report any suspicious encounters to the platform or service involved, and consider notifying local authorities." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="3.	Stay Informed: " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                            <Span Text="Regularly update your knowledge about the latest scam tactics and techniques used by fraudsters." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

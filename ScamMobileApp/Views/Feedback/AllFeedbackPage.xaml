@@ -67,13 +67,13 @@
                         <StackLayout >
                             <StackLayout Orientation="Horizontal" Margin="0,0,0,5">
                                 <Frame Padding="10" CornerRadius="10" BackgroundColor="#EEE9ED" HasShadow="False">
-                                    <Image  Source="scamredlogo.png" HeightRequest="30" WidthRequest="30"/>
+                                    <Image  Source="{Binding TransImage}" HeightRequest="30" WidthRequest="30"/>
                                 </Frame>
                                 <StackLayout Spacing="0" VerticalOptions="Center">
                                     <Label Text="{Binding scamType}" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                                     <StackLayout Orientation="Horizontal">
                                         <Label Text="Result:" TextColor="{StaticResource SecondaryColor}" FontSize="12" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                                        <Label Text="{Binding output}" TextColor="{StaticResource TertiaryColor}" FontSize="12" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="{Binding output}" TextColor="{Binding SubColor}" FontSize="12" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                                     </StackLayout>
                                 </StackLayout>
                             </StackLayout>

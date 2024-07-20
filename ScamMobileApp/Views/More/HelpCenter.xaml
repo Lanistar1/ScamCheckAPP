@@ -9,11 +9,14 @@
         <Label Text="What can we help you with today?" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,10"/>
 
         <Frame Padding="10,15" HasShadow="False" BackgroundColor="#ffffff" BorderColor="#cccccc" CornerRadius="10">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="To_HowToUseApp"/>
+            </Frame.GestureRecognizers>
             <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                <Label Text="How to use SCAMalicious app?" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                <Label Text="How to use SCAMalicious app?" TextColor="#000000" FontSize="14" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
 
                 <StackLayout>
-                    <Image Source="scamdownwardarrow.png" WidthRequest="20" HeightRequest="20"/>
+                    <Image Source="arrowright2.png" WidthRequest="20" HeightRequest="20"/>
                 </StackLayout>
             </FlexLayout>
         </Frame>
@@ -23,7 +26,7 @@
                     <TapGestureRecognizer Command="{Binding ShowNoDetailCommand}"/>
                 </Frame.GestureRecognizers>
                 <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="What is scam?" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <Label Text="What is scam?" TextColor="#000000" FontSize="14" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                     <StackLayout>
                         <ImageButton WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Source="scamdownwardarrow.png" Command="{Binding ShowNoDetailCommand}" CommandParameter="{Binding .}"/>
                     </StackLayout>
@@ -33,25 +36,41 @@
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding ShowDetailCommand}"/>
                 </Frame.GestureRecognizers>
-                <StackLayout >
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                        <Label Text="What is scam?" TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                        <StackLayout>
-                            <ImageButton WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Source="scamupwardarrow.png" Command="{Binding ShowDetailCommand}" CommandParameter="{Binding .}"/>
-                        </StackLayout>
-                    </FlexLayout>
-                    <Label Text="In summary, a scam is a specific type of fraud that typically involves some form of trickery or deception to obtain money or personal information from victims."
+                <StackLayout>
+                    <StackLayout >
+                        <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                            <Label Text="What is SCAM?" TextColor="#000000" FontSize="14" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                            <StackLayout>
+                                <ImageButton WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Source="scamupwardarrow.png" Command="{Binding ShowDetailCommand}" CommandParameter="{Binding .}"/>
+                            </StackLayout>
+                        </FlexLayout>
+                        <Label Text="In summary, a scam is a specific type of fraud that typically involves some form of trickery or deception to obtain money or personal information from victims."
                                TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <Label Text="A scam generally refers to a deceptive or fraudulent scheme that aims to trick people into giving away their money or personal information. Scammers use various tactics to deceive people, such as posing as a legitimate business or government agency, offering fake investment opportunities, or using social engineering techniques to gain people's trust and extract sensitive information. " TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <Label Text="A scam generally refers to a deceptive or fraudulent scheme that aims to trick people into giving away their money or personal information. Scammers use various tactics to deceive people, such as posing as a legitimate business or government agency, offering fake investment opportunities, or using social engineering techniques to gain people's trust and extract sensitive information. " TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    </StackLayout>
+                    <StackLayout Margin="0,10,0,5">
+                        <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                            <Label Text="What is FRAUD?" TextColor="#000000" FontSize="14" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                            <!--<StackLayout>
+                                <ImageButton WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Source="scamupwardarrow.png" Command="{Binding ShowDetailCommand}" CommandParameter="{Binding .}"/>
+                            </StackLayout>-->
+                        </FlexLayout>
+                        <Label Text="Fraud is a deliberate deception or misrepresentation that is made for personal gain or to cause harm to another person or organization. It involves taking advantage of someone by using false information or promises to induce them to give up something of value, such as money, property, or personal information. Examples of fraud include identity theft, financial fraud, insurance fraud, and online scams. Fraud is often illegal and can result in criminal charges and legal consequences."
+                               TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    </StackLayout>
+
                 </StackLayout>
             </Frame>
         </Grid>
 
         <Frame Padding="10,15" HasShadow="False" BackgroundColor="#ffffff" BorderColor="#cccccc" CornerRadius="10">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="To_ScamQA"/>
+            </Frame.GestureRecognizers>
             <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                <Label Text="{Binding ScamQA}"  TextColor="#000000" FontSize="14" FontFamily="Inter-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                <Label Text="{Binding ScamQA}"  TextColor="#000000" FontSize="14" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                 <StackLayout>
-                    <Image WidthRequest="20" HeightRequest="20" Source="scamdownwardarrow.png"/>
+                    <Image WidthRequest="20" HeightRequest="20" Source="arrowright2.png"/>
                 </StackLayout>
             </FlexLayout>
         </Frame>

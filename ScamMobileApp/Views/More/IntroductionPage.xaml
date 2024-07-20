@@ -6,6 +6,53 @@
              Title="Learning Centre">
 
     <StackLayout Margin="20">
+        <Label HorizontalOptions="StartAndExpand" >
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Artificial Intelligence (AI) " TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
+                    <Span Text="refers to the simulation of human intelligence in machines that are programmed to think and learn like humans. Recent trends in scamming involve the use of sophisticated AI technologies, particularly in voice and face intelligence, to deceive victims. Here are some of the key methods:" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        
+        <Frame Padding="10,15" HasShadow="False" BackgroundColor="#ffffff" Margin="0,8,0,0" BorderColor="#cccccc" CornerRadius="10">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="To_AIDrivenScam"/>
+            </Frame.GestureRecognizers>
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                <Label Text="AI-Driven Scams" TextColor="#000000" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                <StackLayout>
+                    <Image Source="arrowright2.png" WidthRequest="20" HeightRequest="20"/>
+                </StackLayout>
+            </FlexLayout>
+        </Frame>
+
+        <Frame Padding="10,15" HasShadow="False" BackgroundColor="#ffffff" BorderColor="#cccccc" CornerRadius="10">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="To_SpotAIScam"/>
+            </Frame.GestureRecognizers>
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                <Label Text="How to spot AI-Driven Scams?"  TextColor="#000000" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                <StackLayout>
+                    <Image WidthRequest="20" HeightRequest="20" Source="arrowright2.png"/>
+                </StackLayout>
+            </FlexLayout>
+        </Frame>
+
+        <Frame Padding="10,15" HasShadow="False" BackgroundColor="#ffffff" BorderColor="#cccccc" CornerRadius="10">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="To_StayAhead"/>
+            </Frame.GestureRecognizers>
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
+                <Label Text="Staying Ahead of AI-Driven Scams."  TextColor="#000000" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                <StackLayout>
+                    <Image WidthRequest="20" HeightRequest="20" Source="arrowright2.png"/>
+                </StackLayout>
+            </FlexLayout>
+        </Frame>
+    </StackLayout>
+
+    <!--<StackLayout Margin="20">
         <CollectionView x:Name="cvBannerss" ItemsSource="{Binding Scams}">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
@@ -21,7 +68,7 @@
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="End">
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding Path=BindingContext.ToggleDescriptionCommand, Source={x:Reference cvBannerss}}" CommandParameter="{Binding .}"/>
-                                        <!--<TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type local:ScamViewModel}}, Path=ToggleDescriptionCommand}" CommandParameter="{Binding .}"/>-->
+                                        --><!--<TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type local:ScamViewModel}}, Path=ToggleDescriptionCommand}" CommandParameter="{Binding .}"/>--><!--
                                     </StackLayout.GestureRecognizers>
                                     <Label Text="{Binding ReadMoreText}" TextColor="Red"  HorizontalTextAlignment="End"/>
                                     <Image Source="{Binding ReadMoreArrow}" WidthRequest="15" HeightRequest="15" Margin="0,0" VerticalOptions="Center"/>
@@ -37,6 +84,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </StackLayout>
+    </StackLayout>-->
 
 </ContentPage>

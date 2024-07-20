@@ -17,6 +17,7 @@ namespace ScamMobileApp.Models.Identity
         public DateTime updatedAt { get; set; }
         public int __v { get; set; }
         public string forgotPasswordCode { get; set; }
+        public string profileImgeUrl { get; set; }
         public string name
         {
             get
