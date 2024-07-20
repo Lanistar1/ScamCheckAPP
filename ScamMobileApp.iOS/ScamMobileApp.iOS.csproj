@@ -413,4 +413,286 @@
   <ItemGroup>
     <BundleResource Include="Resources\imgscam.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stayvigilant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\strengthenyour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\termsRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\testscam.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tips1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tips2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\trustyour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\unlikeascam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\unlikelyscamimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\usesecure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\verifyidentity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\verifyidentityindependently.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\videobox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\warningSigns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\warnoreducate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\warnothers2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\abouttips.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\activities.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\antiScamImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\antiScams.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrowdown1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrowright1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrowright2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\arrowup1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\avoidsharing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\backgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\becautious.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\becautiousoffollowup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\blockorreport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cancelButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\changepassword21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\changepasswords.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\checkfor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\conductfurther.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\consulttrusted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\contactyoufinancial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dashboardImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dashMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\disclaimer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\documenteverything.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\donotengage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\donotshare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\downline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\educateothers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\educateyourself.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\educateyouself2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\forgotPassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\getasecond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\global.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\helpicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\helpRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\infolikely.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\infoscam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\infoUnlikely.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\isThisAScam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\learnfrom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\likelyascam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\likelyscamimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logouts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\markButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monitoryour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\moremenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\newScamLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\onlineplatforms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\passwordRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\popularscam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\privacy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\profileRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\protectyour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\readMore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\readthe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\reportScams.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\reportsuspicious.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\reporttoauthorities.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamanti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamchangee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamdownwardarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamhistoryy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamLikelys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scammed21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamprofilee.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamqaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamQAs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamreportt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamtermss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamtipss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamtypee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamupwardarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\scamwarnn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\seeklegaladvice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stayscam.png" />
+  </ItemGroup>
 </Project>
