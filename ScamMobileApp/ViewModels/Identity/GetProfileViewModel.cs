@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
-using Plugin.FileUploader.Abstractions;
-using Plugin.FileUploader;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 using ScamMobileApp.Helpers;
 using ScamMobileApp.Models.Identity;
 using ScamMobileApp.Popup;
@@ -15,8 +15,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Plugin.Media.Abstractions;
-using Plugin.Media;
+
+
 
 namespace ScamMobileApp.ViewModels.Identity
 {
@@ -379,82 +379,82 @@ namespace ScamMobileApp.ViewModels.Identity
         }
 
 
-            //public async Task GetUpdateProfileExecute()
-            //{
-            //    // Check and request storage permission
-            //    var status = await CheckAndRequestStoragePermission();
-            //    if (status != PermissionStatus.Granted)
-            //    {
-            //        await MessagePopup.Instance.Show("Permission Denied. Storage read permission was not granted. Please enable storage access in your device settings.");
+        //public async Task GetUpdateProfileExecute()
+        //{
+        //    // Check and request storage permission
+        //    var status = await CheckAndRequestStoragePermission();
+        //    if (status != PermissionStatus.Granted)
+        //    {
+        //        await MessagePopup.Instance.Show("Permission Denied. Storage read permission was not granted. Please enable storage access in your device settings.");
 
-            //        return;
-            //    }
+        //        return;
+        //    }
 
-            //    try
-            //    {
-            //        await LoadingPopup.Instance.Show("Uploading Image...");
+        //    try
+        //    {
+        //        await LoadingPopup.Instance.Show("Uploading Image...");
 
-            //        var result = await FilePicker.PickAsync(PickOptions.Images);
+        //        var result = await FilePicker.PickAsync(PickOptions.Images);
 
-            //        if (result != null)
-            //        {
-            //            var stream = await result.OpenReadAsync();
-            //            byte[] data;
-            //            using (MemoryStream ms = new MemoryStream())
-            //            {
-            //                stream.CopyTo(ms);
-            //                data = ms.ToArray();
-            //            }
+        //        if (result != null)
+        //        {
+        //            var stream = await result.OpenReadAsync();
+        //            byte[] data;
+        //            using (MemoryStream ms = new MemoryStream())
+        //            {
+        //                stream.CopyTo(ms);
+        //                data = ms.ToArray();
+        //            }
 
-            //            FileBytesItem fileItem = new FileBytesItem("file", data, result.FileName);
+        //            FileBytesItem fileItem = new FileBytesItem("file", data, result.FileName);
 
-            //            FileUploadResponse response = null;
-            //            try
-            //            {
-            //                response = await CrossFileUploader.Current.UploadFileAsync("http://209.97.184.81:5000/auth/upload-image", fileItem, new Dictionary<string, string>
-            //                {
-            //                    { "Authorization", Helpers.Global.Token }
+        //            FileUploadResponse response = null;
+        //            try
+        //            {
+        //                response = await CrossFileUploader.Current.UploadFileAsync("http://209.97.184.81:5000/auth/upload-image", fileItem, new Dictionary<string, string>
+        //                {
+        //                    { "Authorization", Helpers.Global.Token }
 
-            //                    //{ "Authorization", "Bearer " + Helpers.Global.Token }
-            //                });
-            //            }
-            //            catch (Exception ex)
-            //            {
-            //                await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
-            //                return;
-            //            }
+        //                    //{ "Authorization", "Bearer " + Helpers.Global.Token }
+        //                });
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
+        //                return;
+        //            }
 
-            //            if (response.StatusCode == 200)
-            //            {
+        //            if (response.StatusCode == 200)
+        //            {
 
-            //                await MessagePopup.Instance.Show("Image upload successfully.");
+        //                await MessagePopup.Instance.Show("Image upload successfully.");
 
-            //                // Parse the response to get the image URL
-            //                var jsonResponse = JsonConvert.DeserializeObject<pickImageResponseModel>(response.Message);
-            //                var imageUrl = jsonResponse.data.url;
+        //                // Parse the response to get the image URL
+        //                var jsonResponse = JsonConvert.DeserializeObject<pickImageResponseModel>(response.Message);
+        //                var imageUrl = jsonResponse.data.url;
 
-            //                // Update the user profile
-            //                await UpdateUserProfile(imageUrl);
-            //            }
-            //            else if (response.StatusCode == 401)
-            //            {
-            //                await MessagePopup.Instance.Show("You are not authorized to upload this file.");
+        //                // Update the user profile
+        //                await UpdateUserProfile(imageUrl);
+        //            }
+        //            else if (response.StatusCode == 401)
+        //            {
+        //                await MessagePopup.Instance.Show("You are not authorized to upload this file.");
 
-            //            }
-            //            else
-            //            {
-            //                await MessagePopup.Instance.Show("File upload fail.");
-            //            }
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
-            //    }
-            //}
+        //            }
+        //            else
+        //            {
+        //                await MessagePopup.Instance.Show("File upload fail.");
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
+        //    }
+        //}
 
 
-            private async Task UpdateUserProfile(string imageUrl)
+        private async Task UpdateUserProfile(string imageUrl)
         {
             try
             {
@@ -509,6 +509,7 @@ namespace ScamMobileApp.ViewModels.Identity
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
             }
             finally

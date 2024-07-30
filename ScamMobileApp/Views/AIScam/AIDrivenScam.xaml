@@ -5,7 +5,7 @@
              BackgroundColor="{StaticResource PrimaryColor}"
              Title="AI-Driven Scams">
 
-    <ScrollView Margin="20">
+    <ScrollView Margin="20" VerticalScrollBarVisibility="Never">
         <StackLayout>
             <StackLayout>
                 <Label Text="AI Voice Cloning" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>

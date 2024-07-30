@@ -7,12 +7,11 @@
 
 
     <pv:PancakeView Padding="10,5,10,5" 
-                CornerRadius="5,5,5,5"
-                Margin="10,0,10,0"
+                CornerRadius="20,20,0,0"
+                Margin="0,0,0,0"
                  BackgroundColor="White"
                  HorizontalOptions="Fill"
-                 HeightRequest="175"
-                 VerticalOptions="CenterAndExpand">
+                 VerticalOptions="EndAndExpand">
         <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -30,13 +29,13 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Frame CornerRadius="5" BackgroundColor="#DA1651" Grid.Column="0" Padding="5" Margin="5,0" HeightRequest="50">
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="#DA1651" Grid.Column="0" Padding="5" Margin="5,0" HeightRequest="40">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Close_Popup"/>
                     </Frame.GestureRecognizers>
                     <Label Text="Cancel" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
                 </Frame>
-                <Frame CornerRadius="5" BackgroundColor="{StaticResource SecondaryColor}" Grid.Column="1" Padding="5" Margin="5,0" HeightRequest="50">
+                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="{StaticResource SecondaryColor}" Grid.Column="1" Padding="5" Margin="5,0" HeightRequest="40">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding DeleteCommand}"/>
                     </Frame.GestureRecognizers>

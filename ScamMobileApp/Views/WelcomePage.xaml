@@ -7,13 +7,13 @@
 
 
     <StackLayout Margin="20">
-        <StackLayout   Margin="0,20,0,0">
+        <StackLayout   Margin="0,70,0,0">
             <Image Source="scamicon2.png" WidthRequest="200" HeightRequest="200"/>
 
-            <StackLayout Margin="0,40,0,0">
+            <StackLayout Margin="0,60,0,0">
                 <Label Text="Hello!" FontFamily="Airbnb-Black" TextColor="White" FontSize="18" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
-                <Label Text="Prevention is better than cure. Learn how to avoid being scammed. Let’s get started!" FontFamily="Airbnb-Medium" TextColor="White" FontSize="14" Margin="0,0,80,0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <Label Text="Prevention is better than cure. Learn how to avoid being scammed. Let’s get started!" FontFamily="Airbnb-Medium" TextColor="White" FontSize="16" Margin="0,0,60,0" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
 
             </StackLayout>
         </StackLayout>

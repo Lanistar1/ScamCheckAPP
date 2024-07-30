@@ -7,7 +7,7 @@
 
 
 
-    <ScrollView Margin="20">
+    <ScrollView Margin="20" VerticalScrollBarVisibility="Never">
         <StackLayout>
             <Label Text="The SCAMalicious APP is your essential tool for combating fraud and other malicious activities. It is designed to educate, empower, and protect users against scams. Here's how you can make the most of its features:" TextColor="#374352"  FontFamily="Airbnb-Bold" FontSize="16"/>
 

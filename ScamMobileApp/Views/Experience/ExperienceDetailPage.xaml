@@ -6,7 +6,9 @@
              NavigationPage.HasNavigationBar="True"
              Title="Experience Detail">
 
-    <StackLayout x:Name="cvBanner" BindableLayout.ItemsSource="{Binding UserExperienceData}" Spacing="2" Margin="20,40,20,20">
+    <ScrollView VerticalOptions="FillAndExpand">
+
+        <StackLayout x:Name="cvBanner" BindableLayout.ItemsSource="{Binding UserExperienceData}" Spacing="2" Margin="20,40,20,20" VerticalOptions="FillAndExpand">
         <BindableLayout.ItemTemplate>
             <DataTemplate>
                 <StackLayout>
@@ -26,5 +28,7 @@
             </DataTemplate>
         </BindableLayout.ItemTemplate>
     </StackLayout>
+    </ScrollView>
+    
 
 </ContentPage>

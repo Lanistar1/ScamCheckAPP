@@ -19,7 +19,7 @@ namespace ScamMobileApp.ViewModels.Home
 {
     public class DashboardViewModel : BaseViewModel
     {
-        private INavigation Navigation;
+        //private INavigation Navigation;
 
         #region Bindings
         private string title;

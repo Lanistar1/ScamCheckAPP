@@ -5,9 +5,9 @@
              Title="Warning Signs"
              BackgroundColor="{StaticResource PrimaryColor}">
 
-
-    <StackLayout Margin="20">
-        <CollectionView x:Name="cvBannerss" ItemsSource="{Binding Scams}" >
+    <ScrollView VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
+        <StackLayout Margin="20" VerticalOptions="FillAndExpand">
+        <CollectionView x:Name="cvBannerss" ItemsSource="{Binding Scams}" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
             </CollectionView.ItemsLayout>
@@ -40,5 +40,8 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
     </StackLayout>
+
+    </ScrollView>
+
 
 </ContentPage>

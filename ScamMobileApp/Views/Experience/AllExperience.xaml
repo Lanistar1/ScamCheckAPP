@@ -7,7 +7,9 @@
              NavigationPage.HasNavigationBar="True"
              Title="All Stories">
 
-    <Grid Margin="20,10">
+    <ScrollView VerticalScrollBarVisibility="Never" VerticalOptions="FillAndExpand">
+
+         <Grid Margin="20,10">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -29,7 +31,7 @@
                 <Label Text="People Experience." 
                        TextColor="#ffffff" FontSize="16" FontFamily="Inter-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
             </FlexLayout>-->
-            <Frame BackgroundColor="#ffffff" HasShadow="False" Padding="5" CornerRadius="10" Margin="0,0">
+            <Frame BackgroundColor="#ffffff" HeightRequest="45" HasShadow="False" Padding="5" CornerRadius="10" Margin="0,0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -53,7 +55,7 @@
             </Frame>
         </StackLayout>
         <StackLayout Grid.Row="1">
-            <CollectionView x:Name="cvBannerz" ItemsSource="{Binding NewExperienceData}" Margin="0,10" VerticalScrollBarVisibility="Never">
+            <CollectionView x:Name="cvBannerz" VerticalOptions="FillAndExpand" ItemsSource="{Binding NewExperienceData}" Margin="0,10" VerticalScrollBarVisibility="Never">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
                 </CollectionView.ItemsLayout>
@@ -128,4 +130,6 @@
             </CollectionView>
         </StackLayout>
     </Grid>
+    </ScrollView>
+   
 </ContentPage>

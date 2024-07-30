@@ -6,7 +6,7 @@
              BackgroundColor="{StaticResource PrimaryColor}">
 
 
-    <ScrollView Margin="20">
+    <ScrollView Margin="20" VerticalScrollBarVisibility="Never">
         <StackLayout>
             <StackLayout>
                 <Label Text="1. Introduction" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>

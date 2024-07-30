@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v13.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -71,20 +70,14 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
     </PackageReference>
-    <PackageReference Include="Plugin.FileUploader">
-      <Version>1.4.0</Version>
-    </PackageReference>
     <PackageReference Include="Rg.Plugins.Popup">
       <Version>2.1.0</Version>
-    </PackageReference>
-    <PackageReference Include="Syncfusion.Xamarin.SfPdfViewer">
-      <Version>24.2.8</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Media">
       <Version>6.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
-      <Version>1.7.3</Version>
+      <Version>1.8.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>5.0.0.2578</Version>
@@ -96,7 +89,6 @@
   <ItemGroup>
     <Compile Include="Controls\BorderlessDatePickerRenderer.cs" />
     <Compile Include="Controls\CustomEntryRenderer.cs" />
-    <Compile Include="Controls\CustomWebViewRenderer.cs" />
     <Compile Include="Controls\XEditorRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -433,7 +425,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ScamMobileApp\ScamMobileApp.csproj">
-      <Project>{7DA2FAAB-E8E5-4168-B8F7-7405BF16CA08}</Project>
+      <Project>{D29C1E37-9FF6-4AD0-8A0F-2B3EF2E1968D}</Project>
       <Name>ScamMobileApp</Name>
     </ProjectReference>
   </ItemGroup>

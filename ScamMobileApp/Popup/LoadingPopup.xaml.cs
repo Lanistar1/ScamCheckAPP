@@ -100,27 +100,27 @@ namespace ScamMobileApp.Popup
 
         #region ClosePopupCommand
 
-        public static readonly BindableProperty ClosePopupCommandProperty =
+        public static new readonly BindableProperty ClosePopupCommandProperty =
             BindableProperty.Create(nameof(ClosePopupCommand),
                 typeof(ICommand),
                 typeof(PopupBasePage),
                 null,
                 BindingMode.TwoWay);
 
-        public ICommand ClosePopupCommand
+        public new ICommand ClosePopupCommand
         {
             get => (ICommand)GetValue(ClosePopupCommandProperty);
             set => SetValue(ClosePopupCommandProperty, value);
         }
 
-        public static readonly BindableProperty ClosePopupCommandParameterProperty =
+        public static new readonly BindableProperty ClosePopupCommandParameterProperty =
             BindableProperty.Create(nameof(ClosePopupCommandParameter),
                 typeof(object),
                 typeof(PopupBasePage),
                 null,
                 BindingMode.TwoWay);
 
-        public object ClosePopupCommandParameter
+        public new object ClosePopupCommandParameter
         {
             get => GetValue(ClosePopupCommandParameterProperty);
             set => SetValue(ClosePopupCommandParameterProperty, value);
@@ -130,7 +130,7 @@ namespace ScamMobileApp.Popup
 
         #region CancelLoading
 
-        protected async void ClosePopupEvent(object sender, EventArgs e)
+        protected new async void ClosePopupEvent(object sender, EventArgs e)
         {
             await Hide();
             ClosePopupCommand?.Execute(ClosePopupCommandParameter);

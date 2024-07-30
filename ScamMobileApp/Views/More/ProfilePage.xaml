@@ -39,7 +39,7 @@
 
                 <Frame Padding="20" BackgroundColor="#EEE9ED" CornerRadius="10" HasShadow="False">
                     <StackLayout Orientation="Horizontal">
-                        <Frame Padding="10" BackgroundColor="#ffffff" CornerRadius="5">
+                        <Frame Padding="10" BackgroundColor="#ffffff" CornerRadius="5" HasShadow="False">
                             <Image Source="scamredlogo.png" WidthRequest="30" HeightRequest="30"/>
                         </Frame>
                         <StackLayout Spacing="10">
@@ -50,7 +50,7 @@
                 </Frame>
                 <Frame Padding="20" BackgroundColor="#EEF2EB" CornerRadius="10" HasShadow="False" Margin="0,10">
                     <StackLayout Orientation="Horizontal">
-                        <Frame Padding="10" BackgroundColor="#ffffff" CornerRadius="5">
+                        <Frame Padding="10" BackgroundColor="#ffffff" CornerRadius="5" HasShadow="False">
                             <Image Source="scamgreenlogo.png" WidthRequest="30" HeightRequest="30"/>
                         </Frame>
                         <StackLayout Spacing="10">

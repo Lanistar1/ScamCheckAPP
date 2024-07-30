@@ -5,7 +5,8 @@
              BackgroundColor="{StaticResource PrimaryColor}"
              NavigationPage.HasNavigationBar="False">
 
-    <Grid>
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -185,4 +186,6 @@
             </StackLayout>
         </ScrollView>
     </Grid>
+    </ScrollView>
+    
 </ContentPage>

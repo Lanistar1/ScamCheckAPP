@@ -11,7 +11,7 @@ namespace ScamMobileApp.ViewModels.More
 {
     public class HelpCenterViewModel : BaseViewModel
     {
-        private INavigation Navigation;
+        //private INavigation Navigation;
 
         private bool deatilNotVisible = true;
         public bool DeatilNotVisible
@@ -158,7 +158,7 @@ namespace ScamMobileApp.ViewModels.More
 
         public ICommand ShowDetailCommand { get; }
 
-        private async Task ShowDetailCommandExecute()
+        private Task ShowDetailCommandExecute()
         {
             try
             {
@@ -169,11 +169,13 @@ namespace ScamMobileApp.ViewModels.More
             {
                 Console.WriteLine(ex);
             }
+
+            return Task.CompletedTask;
         }
 
         public ICommand ShowNoDetailCommand { get; }
 
-        private async Task ShowNoDetailCommandExecute()
+        private Task ShowNoDetailCommandExecute()
         {
             try
             {
@@ -184,6 +186,8 @@ namespace ScamMobileApp.ViewModels.More
             {
                 Console.WriteLine(ex);
             }
+
+            return Task.CompletedTask;
         }
     }
 }

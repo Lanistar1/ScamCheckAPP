@@ -3,7 +3,9 @@ using ScamMobileApp.Models.Identity;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views;
+using ScamMobileApp.Views.Identity;
 using System;
+using System.Data;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -18,6 +20,7 @@ namespace ScamMobileApp.ViewModels.Identity
         {
             Navigation = navigation;
 
+            //Task _tsk = FetchUserProfile();
 
             LoginCommand = new Command(async () => await LoginCommandExecute());
 
@@ -68,6 +71,58 @@ namespace ScamMobileApp.ViewModels.Identity
         #endregion
 
         #region Events, Methods, Functions and Navigations
+        //private async Task FetchUserProfile()
+        //{
+        //    try
+        //    {
+        //        await LoadingPopup.Instance.Show("Loading Profile detail...");
+
+        //        var (ResponseData, ErrorData, StatusCode) = await _scamAppService.GetUserProfileAsync();
+        //        if (ResponseData != null)
+        //        {
+        //            if (ResponseData.data != null)
+        //            {
+        //                var test = ResponseData.data;
+
+                        
+
+        //            }
+        //            else
+        //            {
+        //                await MessagePopup.Instance.Show(ErrorData.message);
+        //            }
+        //        }
+        //        else if (ErrorData != null && StatusCode == 401)
+        //        {
+        //            Application.Current.MainPage = new NavigationPage(new Login());
+        //        }
+        //        else if (ErrorData != null)
+        //        {
+        //            string message = "Error fetching user detail. Do you want to RETRY?";
+        //            await MessagePopup.Instance.Show(
+        //                message: message);
+
+        //        }
+        //        //else
+        //        //{
+        //        //    await MessagePopup.Instance.Show(ErrorData.message);
+        //        //}
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        string message = "Error fetching user detail. Do you want to RETRY?";
+        //        await MessagePopup.Instance.Show(
+        //            message: message);
+        //        Console.WriteLine(ex);
+        //    }
+        //    finally
+        //    {
+        //        await LoadingPopup.Instance.Hide();
+        //    }
+        //}
+
+
+
 
         private async Task LoginCommandExecute()
         {
@@ -79,36 +134,6 @@ namespace ScamMobileApp.ViewModels.Identity
         }
         private async Task LoginCustomerAsync()
         {
-            //var newEmail = Email.Trim();
-            //var newPassword = Password.Trim();
-            //if (string.IsNullOrWhiteSpace(newEmail))
-            //{
-            //    await MessagePopup.Instance.Show("Email field should not be empty");
-
-            //}
-            //else
-            //{
-            //    var x = EmailRegex.Match(newEmail);
-            //    if (x.Success)
-            //    {
-            //        // do something
-            //    }
-            //    else
-            //    {
-
-            //        await MessagePopup.Instance.Show("Email field not correct. Field must contain @ and .com ");
-
-            //        return;
-            //    }
-            //}
-
-
-            //if (string.IsNullOrWhiteSpace(Password))
-            //{
-            //    await MessagePopup.Instance.Show("Password field should not be empty");
-
-            //    return;
-            //} email = Email.Trim(),
 
             var current = Connectivity.NetworkAccess;
 
@@ -122,7 +147,7 @@ namespace ScamMobileApp.ViewModels.Identity
             {
                 LoginRequestModel request = new LoginRequestModel()
                 { 
-                    email = Email.Trim(),
+                    email = Email,
                     password = Password
                 };
 

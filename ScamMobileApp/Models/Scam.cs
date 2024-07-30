@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ScamMobileApp.ViewModels;
 using Xamarin.Forms;
 
 namespace ScamMobileApp.Models
 {
-    public class Scam : BindableObject
+    public class Scam : BaseViewModel
     {
         public string Title { get; set; }
         public string FullDescription { get; set; }

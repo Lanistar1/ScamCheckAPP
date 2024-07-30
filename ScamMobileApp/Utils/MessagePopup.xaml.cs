@@ -34,7 +34,7 @@ namespace ScamMobileApp.Utils
             await LoadingPopup.Instance.Hide();
             //await LoaderPop.Instance.Hide();
 
-            await DeviceExtension.BeginInvokeOnMainThreadAsync(async () =>
+            await DeviceExtension.BeginInvokeOnMainThreadAsync( () =>
             {
                 if (message != null)
                     LabelMessage.Text = message.ToString();

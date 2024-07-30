@@ -13,8 +13,6 @@ using ScamMobileApp.Popup;
 using System.Net.Http.Headers;
 using System.Net.Http;
 using Xamarin.Essentials;
-using Plugin.FileUploader.Abstractions;
-using Plugin.FileUploader;
 using System.IO;
 using Newtonsoft.Json;
 using ScamMobileApp.Models.Identity;
@@ -27,8 +25,8 @@ namespace ScamMobileApp.Views.More
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilePage : ContentPage
     {
-        private FileResult _selectedImage;
-        public bool IsImageSelected => _selectedImage != null;
+        //private FileResult _selectedImage;
+        //public bool IsImageSelected => _selectedImage != null;
 
         private string PImage { get; set; }
 

@@ -40,7 +40,10 @@ namespace ScamMobileApp.Popup
         {
             newComment = comment.Text;
             Global.comment = newComment;
-            await PopupNavigation.RemovePageAsync(this);
+
+            await PopupNavigation.Instance.PopAsync(); // Close the popup first
+
+            //await PopupNavigation.RemovePageAsync(this);
         }
     }
 

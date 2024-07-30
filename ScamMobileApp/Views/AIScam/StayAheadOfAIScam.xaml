@@ -5,7 +5,7 @@
              BackgroundColor="{StaticResource PrimaryColor}"
              Title="Staying Ahead of AI-Driven Scams.">
 
-    <ScrollView Margin="20">
+    <ScrollView Margin="20" VerticalScrollBarVisibility="Never">
         <StackLayout>
             <StackLayout>
                 <Label Text="Educate Yourself" TextColor="#374352"  FontFamily="Airbnb-Black" FontSize="16"/>

@@ -46,12 +46,11 @@ namespace ScamMobileApp.ViewModels.Identity
 
 
         #region functions, methods, events and Navigations
-        [Obsolete]
         private async Task DeleteCommandExecute()
         {
             try
             {
-                await PopupNavigation.PopAsync();
+                await PopupNavigation.Instance.PopAsync(); // Close the popup first
 
 
                 await LoadingPopup.Instance.Show("Deleting account. Please wait...");

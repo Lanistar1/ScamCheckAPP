@@ -1,4 +1,5 @@
 ﻿using ScamMobileApp.Helpers;
+using ScamMobileApp.Models;
 using ScamMobileApp.Models.Experience;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
@@ -7,6 +8,7 @@ using ScamMobileApp.Views.Identity;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -128,9 +130,27 @@ namespace ScamMobileApp.ViewModels.Experience
 
         public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(ToggleDescription);
 
+        //private void ToggleDescription(ExperienceData scam)
+        //{
+        //    scam.IsExpanded = !scam.IsExpanded;
+        //}
+
         private void ToggleDescription(ExperienceData scam)
         {
-            scam.IsExpanded = !scam.IsExpanded;
+            if (scam == null)
+            {
+                Debug.WriteLine("Scam parameter is null in ToggleDescription.");
+                return;
+            }
+
+            try
+            {
+                scam.IsExpanded = !scam.IsExpanded;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Exception in ToggleDescription: {ex.Message}");
+            }
         }
         #endregion
 

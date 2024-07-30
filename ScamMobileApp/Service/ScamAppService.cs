@@ -15,9 +15,21 @@ namespace ScamMobileApp.Service
 {
     public class ScamAppService
     {
-        HttpClient client;
+        //HttpClient client;
         ProfileData userData = Global.UserData == null ? null : Global.UserData;
         string token = Global.Token;
+
+        public static class HttpClientSingleton
+        {
+            private static readonly HttpClient _httpClientInstance;
+
+            static HttpClientSingleton()
+            {
+                _httpClientInstance = new HttpClient();
+            }
+
+            public static HttpClient Instance => _httpClientInstance;
+        }
 
         public async Task<(LoginResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> LoginUserAsync(LoginRequestModel request)
         {
@@ -30,34 +42,103 @@ namespace ScamMobileApp.Service
                 //    email = email,
                 //    password = password
                 //};
-                var json = JsonConvert.SerializeObject(request);
-                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
-                ErrorResponseModel errorData;
-                
-                HttpClient client = new HttpClient();
-                var response = await client.PostAsync(url, content);
-                int statusCode = (int)response.StatusCode;
-                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
-                string result = await response.Content.ReadAsStringAsync();
-                switch (_status)
+                if (string.IsNullOrEmpty(url))
                 {
-                    case 200:
-                        LoginResponseModel data = JsonConvert.DeserializeObject<LoginResponseModel>(result);
-                        return (data, null, statusCode);
-                    case 300:
-                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
-                        return (null, errorData, statusCode);
-                    case 400:
-                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
-                        return (null, errorData, statusCode);
-                    case 500:
-                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
-                        return (null, errorData, statusCode);
-                    case 0:
-                        return (null, null, statusCode);
-                    default:
-                        return (null, null, statusCode);
+                    Console.WriteLine("Login URL is null or empty.");
+                    return (null, null, 0);
                 }
+
+                if (request == null)
+                {
+                    Console.WriteLine("Login request is null.");
+                    return (null, null, 0);
+                }
+                var json = JsonConvert.SerializeObject(request);
+                StringContent content;
+
+                try
+                {
+                    content = new StringContent(json, Encoding.UTF8, "application/json");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Exception while creating StringContent: " + ex.Message);
+                    Console.WriteLine("Stack Trace: " + ex.StackTrace);
+                    return (null, null, 0);
+                }
+                //StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                try
+                {
+                    ErrorResponseModel errorData;
+
+                    HttpClient client = HttpClientSingleton.Instance;
+                    Console.WriteLine("Sending POST request to: " + url);
+                    var response = await client.PostAsync(url, content);
+                    Console.WriteLine("Received response with status code: " + response.StatusCode);
+
+                    int statusCode = (int)response.StatusCode;
+                    int _status = StringHelper.ConvertStatusCode(statusCode);
+                    string result = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine("Response content: " + result);
+
+                    switch (_status)
+                    {
+                        case 200:
+                            LoginResponseModel data = JsonConvert.DeserializeObject<LoginResponseModel>(result);
+                            return (data, null, statusCode);
+                        case 300:
+                            errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                            return (null, errorData, statusCode);
+                        case 400:
+                            errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                            return (null, errorData, statusCode);
+                        case 500:
+                            errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                            return (null, errorData, statusCode);
+                        case 0:
+                            return (null, null, statusCode);
+                        default:
+                            return (null, null, statusCode);
+                    }
+                }
+                catch (HttpRequestException httpEx)
+                {
+                    Console.WriteLine("HTTP Request Exception: " + httpEx.Message);
+                    return (null, null, 0);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Exception during POST request: " + ex.Message);
+                    return (null, null, 0);
+                }
+
+                //HttpClient client = new HttpClient();
+                //HttpClient client = HttpClientSingleton.Instance;
+
+                //var response = await client.PostAsync(url, content);
+                //int statusCode = (int)response.StatusCode;
+                //int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                //string result = await response.Content.ReadAsStringAsync();
+                //switch (_status)
+                //{
+                //    case 200:
+                //        LoginResponseModel data = JsonConvert.DeserializeObject<LoginResponseModel>(result);
+                //        return (data, null, statusCode);
+                //    case 300:
+                //        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                //        return (null, errorData, statusCode);
+                //    case 400:
+                //        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                //        return (null, errorData, statusCode);
+                //    case 500:
+                //        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                //        return (null, errorData, statusCode);
+                //    case 0:
+                //        return (null, null, statusCode);
+                //    default:
+                //        return (null, null, statusCode);
+                //}
 
             }
             catch (Exception ex)

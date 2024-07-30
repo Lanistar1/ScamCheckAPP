@@ -7,7 +7,8 @@
              NavigationPage.HasNavigationBar="True"
              Title="My Scam Check">
 
-    <Grid Margin="20,10">
+    <ScrollView VerticalScrollBarVisibility="Never" VerticalOptions="FillAndExpand"> 
+        <Grid Margin="20,10">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -17,7 +18,7 @@
             <Label Text="My Activities" TextColor="{StaticResource SecondaryColor}" FontSize="15" FontFamily="Airbnb-Bold"
                    HorizontalTextAlignment="Center" Margin="0,0,0,0" Padding="20,10"/>
             
-            <Frame BackgroundColor="#ffffff" HasShadow="False" Padding="5,4" CornerRadius="10" Margin="0,0">
+            <Frame BackgroundColor="#ffffff" HeightRequest="45" HasShadow="False" Padding="5,4" CornerRadius="10" Margin="0,0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="7*"/>
@@ -42,7 +43,7 @@
 
         </StackLayout>
 
-        <CollectionView x:Name="cvBanner" ItemsSource="{Binding FeedbackData}" Margin="0,10" VerticalScrollBarVisibility="Never" Grid.Row="1">
+        <CollectionView x:Name="cvBanner" ItemsSource="{Binding FeedbackData}" Margin="0,10" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never" Grid.Row="1">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
             </CollectionView.ItemsLayout>
@@ -58,7 +59,7 @@
                             TextColor="{StaticResource SecondaryColor}" 
                             FontSize="16"/>
 
-                    <Image Source="blank3.png" WidthRequest="120" HeightRequest="120" Margin="0,10"/>
+                    <!--<Image Source="blank3.png" WidthRequest="120" HeightRequest="120" Margin="0,10"/>-->
                 </StackLayout>
             </CollectionView.EmptyView>
             <CollectionView.ItemTemplate>
@@ -147,5 +148,8 @@
         </CollectionView>-->
 
 
-    </Grid>
+    </Grid> 
+
+    </ScrollView>
+    
 </ContentPage>

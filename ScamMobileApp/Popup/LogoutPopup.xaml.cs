@@ -22,16 +22,23 @@ namespace ScamMobileApp.Popup
         }
 
         [Obsolete]
-        private void Close_Popup(object sender, EventArgs e)
+        private async void Close_Popup(object sender, EventArgs e)
         {
-            PopupNavigation.RemovePageAsync(this);
+            var popupNavigation = Rg.Plugins.Popup.Services.PopupNavigation.Instance;
+
+            // Close the current popup
+            await popupNavigation.PopAsync();
+
+            //PopupNavigation.RemovePageAsync(this);
         }
 
         [Obsolete]
         private async void Confirm(object sender, EventArgs e)
         {
             Global.Token = null;
-            await PopupNavigation.RemovePageAsync(this);
+            await PopupNavigation.Instance.PopAsync(); // Close the popup first
+
+            //await PopupNavigation.RemovePageAsync(this);
             Application.Current.MainPage = new Login();
 
         }

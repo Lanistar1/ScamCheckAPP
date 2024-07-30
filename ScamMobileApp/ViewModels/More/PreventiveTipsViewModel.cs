@@ -12,7 +12,7 @@ namespace ScamMobileApp.ViewModels.More
 
     public class PreventiveTipsViewModel : BaseViewModel
     {
-        private INavigation Navigation;
+        //private INavigation Navigation;
 
         public ObservableCollection<Scam> Scams { get; set; }
 

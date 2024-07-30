@@ -11,7 +11,7 @@ namespace ScamMobileApp.ViewModels.More
 
     public class TermsViewModel : BaseViewModel
     {
-        private INavigation Navigation;
+        //private INavigation Navigation;
 
         #region Bindings
         private string antiScam;

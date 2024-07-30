@@ -151,6 +151,7 @@
                                               BackgroundColor="Transparent"
                                               Margin="0,0,10,5"
                                               HeightRequest="20"
+                                                      WidthRequest="20"
                                               HorizontalOptions="End"
                                               Source="eyezz">
                                             <ImageButton.Triggers>
@@ -183,7 +184,7 @@
                                             FontFamily="Poppins-Light"
                                             PlaceholderColor="#cccccc"
                                             FontSize="14"
-                                            Placeholder="Confirm Password"
+                                            Placeholder="*******"
                                             Text="{Binding ConfirmPassword}"
                                             Grid.Column="0"
                                             TextColor="{StaticResource SecondaryColor}"
@@ -194,6 +195,7 @@
                                               BackgroundColor="Transparent"
                                               Margin="0,0,10,5"
                                               HeightRequest="20"
+                                                      WidthRequest="20"
                                               HorizontalOptions="End"
                                               Source="eyezz">
                                             <ImageButton.Triggers>

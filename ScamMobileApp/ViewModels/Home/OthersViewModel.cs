@@ -54,7 +54,7 @@ namespace ScamMobileApp.ViewModels.Home
 
             };
 
-            TappedCommand = new Command<MoreModel>(async (model) => await GetTappedExecute(model));
+            TappedCommand = new Command<MoreModel>( (model) => GetTappedExecute(model));
 
         }
 
@@ -119,7 +119,7 @@ namespace ScamMobileApp.ViewModels.Home
 
         #endregion
 
-        private async Task GetTappedExecute(MoreModel model)
+        private void GetTappedExecute(MoreModel model)
         {
             try
             {

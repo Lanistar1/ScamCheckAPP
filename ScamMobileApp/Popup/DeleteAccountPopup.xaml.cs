@@ -25,9 +25,13 @@ namespace ScamMobileApp.Popup
             BindingContext = pageViewModel;
         }
 
-        private void Close_Popup(object sender, EventArgs e)
+        private async void Close_Popup(object sender, EventArgs e)
         {
-            PopupNavigation.RemovePageAsync(this);
+            //PopupNavigation.RemovePageAsync(this);
+
+            // Get the IPopupNavigation instance
+            await PopupNavigation.Instance.PopAsync(); // Close the popup first
+
         }
     }
 }

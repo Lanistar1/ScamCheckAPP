@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -12,7 +13,7 @@ namespace ScamMobileApp.ViewModels.More
 
     public class WarningTipsViewModel : BaseViewModel
     {
-        private INavigation Navigation;
+        //private INavigation Navigation;
         public ObservableCollection<Scam> Scams { get; set; }
 
         public WarningTipsViewModel(INavigation navigation)
@@ -32,9 +33,27 @@ namespace ScamMobileApp.ViewModels.More
 
         public ICommand ToggleDescriptionCommand => new Command<Scam>(ToggleDescription);
 
+        //private void ToggleDescription(Scam scam)
+        //{
+        //    scam.IsExpanded = !scam.IsExpanded;
+        //}
+
         private void ToggleDescription(Scam scam)
         {
-            scam.IsExpanded = !scam.IsExpanded;
+            if (scam == null)
+            {
+                Debug.WriteLine("Scam parameter is null in ToggleDescription.");
+                return;
+            }
+
+            try
+            {
+                scam.IsExpanded = !scam.IsExpanded;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Exception in ToggleDescription: {ex.Message}");
+            }
         }
     }
 

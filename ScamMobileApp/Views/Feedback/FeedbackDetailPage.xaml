@@ -7,7 +7,7 @@
              Title="Activity Details">
 
 
-    <ScrollView VerticalScrollBarVisibility="Never">
+    <ScrollView VerticalScrollBarVisibility="Never" VerticalOptions="FillAndExpand">
         <StackLayout Margin="0,20">
             
 
