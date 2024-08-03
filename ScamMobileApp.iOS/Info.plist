@@ -27,7 +27,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>com.Scamalicious.ScamMobileApp</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
@@ -36,10 +36,6 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSAllowsArbitraryLoads</key>
 	<true/>
-	<key>NSCameraUsageDescription</key>
-	<string>We need access to the camera to take pictures</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>We need access to the photo library to pick photos</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 </dict>

@@ -24,7 +24,6 @@ namespace ScamMobileApp.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             Rg.Plugins.Popup.Popup.Init();
-            Plugin.Media.CrossMedia.Current.Initialize();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
