@@ -1,10 +1,14 @@
-﻿using ScamMobileApp.Helpers;
+﻿using Rg.Plugins.Popup.Services;
+using ScamMobileApp.Helpers;
+using ScamMobileApp.Models.Popup;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views.Home;
 using ScamMobileApp.Views.Identity;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -21,11 +25,23 @@ namespace ScamMobileApp.ViewModels.Identity
 
 
             SignupCommand = new Command(async () => await SignupCommandExecute(email, password, username, firstname, lastname));
+            SelectAgeCommand = new Command(async () => await SelectAgeCommandExecute());
 
 
         }
 
         #region Binding Properties
+
+        private string ageBracket;
+        public string AgeBracket
+        {
+            get => ageBracket;
+            set
+            {
+                ageBracket = value;
+                OnPropertyChanged(nameof(AgeBracket));
+            }
+        }
 
         private string password;
         public string Password
@@ -107,6 +123,7 @@ namespace ScamMobileApp.ViewModels.Identity
 
         #region Events, Methods, Functions and Navigations
         public Command SignupCommand { get; }
+        public Command SelectAgeCommand { get; }
         #endregion
 
         #region
@@ -137,6 +154,26 @@ namespace ScamMobileApp.ViewModels.Identity
             {
                 await MessagePopup.Instance.Show("Password field should not be empty");
 
+                return;
+            }
+            // Check for minimum length of 8 characters
+            else if (Password.Length < 8)
+            {
+                await MessagePopup.Instance.Show("Password must be at least 8 characters long.");
+                return;
+            }
+
+            // Check for at least one number
+            else if (!Password.Any(char.IsDigit))
+            {
+                await MessagePopup.Instance.Show("Password must contain at least one number.");
+                return;
+            }
+
+            // Check for at least one symbol
+            else if (!Password.Any(ch => !char.IsLetterOrDigit(ch)))
+            {
+                await MessagePopup.Instance.Show("Password must contain at least one symbol.");
                 return;
             }
 
@@ -187,7 +224,25 @@ namespace ScamMobileApp.ViewModels.Identity
         }
 
 
+        private async Task SelectAgeCommandExecute()
+        {
 
+            List<SelectItemModel> ageTypes = new List<SelectItemModel>()
+            {
+                new SelectItemModel(1,"15-18"),
+                new SelectItemModel(2,"18-24"),
+                new SelectItemModel(3,"25-34"),
+                new SelectItemModel(4,"35-44"),
+                new SelectItemModel(5,"45-54"),
+                new SelectItemModel(6,"55-64"),
+            };
+            var popup = new SelectItemPickerPopup(ageTypes);
+
+            await PopupNavigation.Instance.PushAsync(popup);
+
+            var result = await popup.PopupClosedTask;
+            AgeBracket = result.Item1;
+        }
         #endregion
     }
 

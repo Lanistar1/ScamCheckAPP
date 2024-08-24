@@ -4,6 +4,7 @@ using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views;
 using System;
+using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -203,6 +204,39 @@ namespace ScamMobileApp.ViewModels.Identity
                 return true;
             }
         }
+
+        //private async Task<bool> ValidatePassword()
+        //{
+        //    if (string.IsNullOrWhiteSpace(Password))
+        //    {
+        //        await MessagePopup.Instance.Show("Password field should not be empty.");
+        //        return false;
+        //    }
+
+        //    // Check for minimum length of 8 characters
+        //    if (Password.Length < 8)
+        //    {
+        //        await MessagePopup.Instance.Show("Password must be at least 8 characters long.");
+        //        return false;
+        //    }
+
+        //    // Check for at least one number
+        //    if (!Password.Any(char.IsDigit))
+        //    {
+        //        await MessagePopup.Instance.Show("Password must contain at least one number.");
+        //        return false;
+        //    }
+
+        //    // Check for at least one symbol
+        //    if (!Password.Any(ch => !char.IsLetterOrDigit(ch)))
+        //    {
+        //        await MessagePopup.Instance.Show("Password must contain at least one symbol.");
+        //        return false;
+        //    }
+
+        //    // If all checks pass, return true
+        //    return true;
+        //}
 
         #endregion
     }

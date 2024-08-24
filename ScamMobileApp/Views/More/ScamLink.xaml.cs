@@ -219,6 +219,42 @@ namespace ScamMobileApp.Views.More
         }
         #endregion
 
+        #region China
+        private async void china1(object sender, EventArgs e)
+        {
+
+            string url = "https://www.cbirc.gov.cn/cn/view/pages/ItemList.html?itemPId=960&itemId=4097&itemUrl=ItemListRightMore.html";
+
+            await Launcher.OpenAsync(new Uri(url));
+
+            //await Navigation.PushAsync(new WebviewPage(url));
+
+        }
+
+        private async void china2(object sender, EventArgs e)
+        {
+
+            string url = "https://www.consumersinternational.org/what-we-do/digital-rights/anti-scams/";
+
+            await Launcher.OpenAsync(new Uri(url));
+
+            //await Navigation.PushAsync(new WebviewPage(url));
+
+        }
+
+        private async void china3(object sender, EventArgs e)
+        {
+
+            string url = "http://www.csrc.gov.cn/csrc_en/index.shtml";
+
+            await Launcher.OpenAsync(new Uri(url));
+
+            //await Navigation.PushAsync(new WebviewPage(url));
+
+        }
+        #endregion
+
+
         #region Czech
         private async void Czech1(object sender, EventArgs e)
         {

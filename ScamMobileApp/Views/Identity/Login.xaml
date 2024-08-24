@@ -18,7 +18,7 @@
                 <Label Text="Welcome back" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
 
                 <StackLayout Margin="0,30,0,0">
-                    <Label  Text="User Id"
+                    <Label  Text="Email Id"
                             FontFamily="Inter-Medium"
                             FontSize="14"
                             Margin="0,0"
@@ -29,7 +29,7 @@
                                     VerticalTextAlignment="Center"
                                     FontSize="16"
                                     Text="{Binding Email}"
-                                    Placeholder="User Id"
+                                    Placeholder="Email Id"
                                     PlaceholderColor="#cccccc"
                                     TextColor="{StaticResource SecondaryColor}"/>
                     </Frame>

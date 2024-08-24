@@ -566,6 +566,97 @@
                     </StackLayout>
                 </ScrollView>
 
+                <ScrollView IsVisible="{Binding China}">
+                    <StackLayout >
+                        <Label Text="Organizations for reporting scams in China." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="China Banking and Insurance Regulatory Commission (CBIRC)" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.cbirc.gov.cn/cn/view/pages/ItemList.html" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="china1"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="China Consumers Association (CCA) " TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="https://www.consumersinternational.org" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="china2"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        <Label Text="China Securities Regulatory Commission (CSRC)" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                        <Label Text="http://www.csrc.gov.cn/csrc_en/index.shtml" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="china3"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Website" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+
                 <ScrollView IsVisible="{Binding Croatia}">
                     <StackLayout >
                         <Label Text="Organizations for reporting scams in Croatia." TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,5"/>

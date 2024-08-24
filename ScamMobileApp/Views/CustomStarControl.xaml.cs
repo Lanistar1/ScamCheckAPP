@@ -64,6 +64,8 @@ namespace ScamMobileApp.Views
             Rating = starNumber;
 
             Global.Rating = Rating;
+            MessagingCenter.Send(this, "RatingNumber", Rating);
+
 
         }
     }
