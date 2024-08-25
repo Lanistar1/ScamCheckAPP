@@ -1,4 +1,5 @@
-﻿using ScamMobileApp.Helpers;
+﻿using Rg.Plugins.Popup.Services;
+using ScamMobileApp.Helpers;
 using ScamMobileApp.Models.Experience;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
@@ -24,7 +25,7 @@ namespace ScamMobileApp.ViewModels.Experience
 
             Task _tsk = FetchExperience();
 
-            TappedCommand = new Command<ExperienceData>(async (model) => await GetTappedExecute(model));
+            TappedCommand = new Command<ExperienceData>(async (model) => await GetTappedExecute(model, Navigation));
 
 
         }
@@ -126,18 +127,27 @@ namespace ScamMobileApp.ViewModels.Experience
         public Command SearchCommand { get; }
         public Command TappedCommand { get; }
 
-        public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(ToggleDescription);
+        public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(OpenPopup);
 
-        private void ToggleDescription(ExperienceData scam)
+        private async void OpenPopup(ExperienceData experience)
         {
-            scam.IsExpanded = !scam.IsExpanded;
+
+            await PopupNavigation.Instance.PushAsync(new ExperienceDetailPopup(SelectedItems));
+
         }
+
+        //public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(ToggleDescription);
+
+        //private void ToggleDescription(ExperienceData scam)
+        //{
+        //    scam.IsExpanded = !scam.IsExpanded;
+        //}
         #endregion
 
 
         #region functions, methods, events and Navigations
 
-        private async Task GetTappedExecute(ExperienceData model)
+        private async Task GetTappedExecute(ExperienceData model, INavigation navigation)
         {
             try
             {
@@ -150,7 +160,8 @@ namespace ScamMobileApp.ViewModels.Experience
                 }
                 SelectedItems.Add(model);
 
-                await Navigation.PushAsync(new ExperienceDetailPage(SelectedItems), true);
+                //await Navigation.PushAsync(new ExperienceDetailPage(SelectedItems), true);
+                await PopupNavigation.Instance.PushAsync(new TakeActionPopup(navigation, SelectedItems), true); 
             }
             catch (Exception ex)
             {

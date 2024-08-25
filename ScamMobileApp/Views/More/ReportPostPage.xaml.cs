@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ScamMobileApp.Views.Experience
+namespace ScamMobileApp.Views.More
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ExperienceDetailPage : ContentPage
+    public partial class ReportPostPage : ContentPage
     {
-        public ExperienceDetailPage(ObservableCollection<ExperienceData> selectedItems)
+        public ReportPostPage(ObservableCollection<ExperienceData> selectedItems)
         {
             InitializeComponent();
             BindingContext = new ExperienceDetailViewModel(Navigation, selectedItems);
