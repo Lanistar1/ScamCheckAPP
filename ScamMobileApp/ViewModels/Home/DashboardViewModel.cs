@@ -181,6 +181,9 @@ namespace ScamMobileApp.ViewModels.Home
                             PImage = ProfileData.profileImgeUrl;
                         }
 
+                        await SecureStorage.SetAsync("username", ProfileData.email);
+                        await SecureStorage.SetAsync("CurrentUserFirstName", ProfileData.firstname);
+
                     }
                     else
                     {

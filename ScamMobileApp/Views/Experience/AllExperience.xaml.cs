@@ -1,4 +1,6 @@
-﻿using ScamMobileApp.ViewModels.Experience;
+﻿using Rg.Plugins.Popup.Services;
+using ScamMobileApp.Popup;
+using ScamMobileApp.ViewModels.Experience;
 using ScamMobileApp.ViewModels.ScamType;
 using ScamMobileApp.Views.Home;
 using System;
@@ -26,5 +28,10 @@ namespace ScamMobileApp.Views.Experience
         {
             Navigation.PushAsync(new ShareScamExperience());
         }
+
+        //private void To_TakeActionPopup(object sender, EventArgs e)
+        //{
+        //    PopupNavigation.Instance.PushAsync(new TakeActionPopup(Navigation));
+        //}
     }
 }

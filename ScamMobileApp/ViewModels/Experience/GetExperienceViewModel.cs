@@ -1,4 +1,5 @@
-﻿using ScamMobileApp.Helpers;
+﻿using Rg.Plugins.Popup.Services;
+using ScamMobileApp.Helpers;
 using ScamMobileApp.Models.Experience;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
@@ -24,7 +25,9 @@ namespace ScamMobileApp.ViewModels.Experience
 
             Task _tsk = FetchExperience();
 
-            TappedCommand = new Command<ExperienceData>(async (model) => await GetTappedExecute(model));
+            TappedCommand = new Command<ExperienceData>(async (model) => await GetTappedExecute(model, Navigation));
+
+            ToggleDescriptionCommand = new Command<ExperienceData>(async (model) => await OpenPopup(model));
 
 
         }
@@ -125,19 +128,11 @@ namespace ScamMobileApp.ViewModels.Experience
         public Command SearchEntryTextChangedCommand => new Command<string>((searchEntry) => SearchBar_TextChanged(searchEntry));
         public Command SearchCommand { get; }
         public Command TappedCommand { get; }
+        public Command ToggleDescriptionCommand { get; }
 
-        public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(ToggleDescription);
+        //public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(OpenPopup);
 
-        private void ToggleDescription(ExperienceData scam)
-        {
-            scam.IsExpanded = !scam.IsExpanded;
-        }
-        #endregion
-
-
-        #region functions, methods, events and Navigations
-
-        private async Task GetTappedExecute(ExperienceData model)
+        private async Task OpenPopup(ExperienceData model)
         {
             try
             {
@@ -150,7 +145,43 @@ namespace ScamMobileApp.ViewModels.Experience
                 }
                 SelectedItems.Add(model);
 
-                await Navigation.PushAsync(new ExperienceDetailPage(SelectedItems), true);
+                await PopupNavigation.Instance.PushAsync(new ExperienceDetailPopup(SelectedItems), true);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            //await PopupNavigation.Instance.PushAsync(new ExperienceDetailPopup(SelectedItems));
+
+        }
+
+        //public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(ToggleDescription);
+
+        //private void ToggleDescription(ExperienceData scam)
+        //{
+        //    scam.IsExpanded = !scam.IsExpanded;
+        //}
+        #endregion
+
+
+        #region functions, methods, events and Navigations
+
+        private async Task GetTappedExecute(ExperienceData model, INavigation navigation)
+        {
+            try
+            {
+                var mod = model;
+
+                model.isSelected = model.isSelected ? false : true;
+                if (SelectedItems.Count > 0)
+                {
+                    SelectedItems.Clear();
+                }
+                SelectedItems.Add(model);
+
+                //await Navigation.PushAsync(new ExperienceDetailPage(SelectedItems), true);
+                await PopupNavigation.Instance.PushAsync(new TakeActionPopup(navigation, SelectedItems), true); 
             }
             catch (Exception ex)
             {
