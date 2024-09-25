@@ -5,6 +5,7 @@ using ScamMobileApp.Models.Common;
 using ScamMobileApp.Models.Experience;
 using ScamMobileApp.Models.Feedback;
 using ScamMobileApp.Models.Identity;
+using ScamMobileApp.Models.Others;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -499,6 +500,281 @@ namespace ScamMobileApp.Service
 
         }
 
+        // Contact admin
+        public async Task<(ContactResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> ContactAdminAsync(ContactRequestModel requestPayload)
+        {
+            try
+            {
+                string url = Global.ContactAdminUrl;
+                
+                var json = JsonConvert.SerializeObject(requestPayload);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                ErrorResponseModel errorData;
+
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                var response = await client.PostAsync(url, content);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        ContactResponseModel data = JsonConvert.DeserializeObject<ContactResponseModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, statusCode);
+                    default:
+                        return (null, null, statusCode);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+
+        }
+
+
+        public async Task<(FeedbackCountModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> GetFeedbackCountAsync()
+        {
+            try
+            {
+                string url = Global.FeedbackCountUrl;
+                HttpClient client = new HttpClient();
+
+                //client.DefaultRequestHeaders.Add("Authorization", $"Bearer {Helpers.Global.Token}");
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                HttpResponseMessage response = null;
+                ErrorResponseModel errorData;
+                response = await client.GetAsync(url);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        var data = JsonConvert.DeserializeObject<FeedbackCountModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, 0);
+                    default:
+                        return (null, null, 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+        }
+
+        // Report post
+        public async Task<(ReportScamResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> ReportPostAsync(ReportPostRequestModel requestPayload)
+        {
+            try
+            {
+                string url = Global.ReportPostUrl;
+
+                var json = JsonConvert.SerializeObject(requestPayload);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                ErrorResponseModel errorData;
+
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                var response = await client.PostAsync(url, content);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        ReportScamResponseModel data = JsonConvert.DeserializeObject<ReportScamResponseModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, statusCode);
+                    default:
+                        return (null, null, statusCode);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+
+        }
+
+
+        // Block post
+        public async Task<(BlockPostResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> BlockPostAsync(BlockPostRequestModel requestPayload)
+        {
+            try
+            {
+                string url = Global.BlockUserUrl;
+
+                var json = JsonConvert.SerializeObject(requestPayload);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                ErrorResponseModel errorData;
+
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                var response = await client.PostAsync(url, content);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        BlockPostResponseModel data = JsonConvert.DeserializeObject<BlockPostResponseModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, statusCode);
+                    default:
+                        return (null, null, statusCode);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+
+        }
+
+
+        //Flag post
+        public async Task<(FlagPostResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> FlagPostAsync(FlagPostRequestModel requestPayload)
+        {
+            try
+            {
+                string url = Global.FlagPostUrl;
+
+                var json = JsonConvert.SerializeObject(requestPayload);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                ErrorResponseModel errorData;
+
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                var response = await client.PostAsync(url, content);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        FlagPostResponseModel data = JsonConvert.DeserializeObject<FlagPostResponseModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, statusCode);
+                    default:
+                        return (null, null, statusCode);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+
+        }
+
+
+        // unwanted keyword
+        public async Task<(KeywordResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> AddUnwantedkeywordsAsync(KeywordsRequestModel requestPayload)
+        {
+            try
+            {
+                string url = Global.AddUnwantedKeywordsUrl;
+
+                var json = JsonConvert.SerializeObject(requestPayload);
+                StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                ErrorResponseModel errorData;
+
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                var response = await client.PostAsync(url, content);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        KeywordResponseModel data = JsonConvert.DeserializeObject<KeywordResponseModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, statusCode);
+                    default:
+                        return (null, null, statusCode);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+
+        }
 
     }
 }

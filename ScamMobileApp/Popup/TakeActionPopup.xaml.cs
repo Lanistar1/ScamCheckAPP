@@ -51,7 +51,7 @@ namespace ScamMobileApp.Popup
         {
             await PopupNavigation.Instance.PopAsync(); // Close the popup first
 
-            await PopupNavigation.Instance.PushAsync(new BlockUserPopup(Navigation));
+            await PopupNavigation.Instance.PushAsync(new BlockUserPopup(Navigation, SelectedItems));
 
         }
 
@@ -59,7 +59,7 @@ namespace ScamMobileApp.Popup
         {
             await PopupNavigation.Instance.PopAsync(); // Close the popup first
 
-            await PopupNavigation.Instance.PushAsync(new MuteUserPopup(Navigation));
+            await PopupNavigation.Instance.PushAsync(new MuteUserPopup(Navigation, SelectedItems));
 
         }
 

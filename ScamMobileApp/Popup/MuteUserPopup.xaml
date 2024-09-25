@@ -21,7 +21,7 @@
                 <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,0,0,10">
                     <StackLayout Orientation="Horizontal" Spacing="10">
                         <Image Source="muteuser.png" WidthRequest="30" HeightRequest="30" Margin="0,0" VerticalOptions="Center"/>
-                        <Label Text="Mute Jim Radcliff" FontFamily="Airbnb-Bold" FontSize="16"  Margin="0,5,0,0"
+                        <Label Text="{Binding MuteTitle}" FontFamily="Airbnb-Bold" FontSize="16"  Margin="0,5,0,0"
                                HorizontalTextAlignment="Center"  TextColor="{StaticResource SecondaryColor}"/>
                     </StackLayout>
                     <StackLayout>
@@ -29,7 +29,7 @@
                     </StackLayout>
                 </FlexLayout>
 
-                <Label Text="You won’t see posts fro Jim Radcliff or get notifications about them. They won’t know they’ve been muted." FontFamily="Airbnb-Medium" FontSize="14" 
+                <Label Text="{Binding MutePost}" FontFamily="Airbnb-Medium" FontSize="14" 
                        HorizontalTextAlignment="Start"  TextColor="#3A4756"/>
             </StackLayout>
 

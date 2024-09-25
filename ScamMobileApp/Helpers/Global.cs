@@ -23,6 +23,12 @@ namespace ScamMobileApp.Helpers
         public static string GetFeedbackUrl => $"{BaseUrl}/feedback/user/all";
         public static string DeleteProfileUrl => $"{BaseUrl}/auth/delete-account";
         public static string PickFileUrl => $"{BaseUrl}/auth/upload-image";
+        public static string ContactAdminUrl => $"{BaseUrl}/auth/contact-admin";
+        public static string FeedbackCountUrl => $"{BaseUrl}/feedback/count/all";
+        public static string ReportPostUrl => $"{BaseUrl}/experience/report/new";
+        public static string BlockUserUrl => $"{BaseUrl}/auth/block-user";
+        public static string FlagPostUrl => $"{BaseUrl}/experience/flag/new";
+        public static string AddUnwantedKeywordsUrl => $"{BaseUrl}/feedback/unwanted/keywords";
 
 
 
@@ -43,6 +49,8 @@ namespace ScamMobileApp.Helpers
         public static string likelyOrNot;
         public static int Rating;
         public static string comment;
+        public static string UserName;
+        public static string firstName;
         public static DateTime DateType { get; set; }
 
 

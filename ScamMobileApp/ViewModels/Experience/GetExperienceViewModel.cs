@@ -27,6 +27,8 @@ namespace ScamMobileApp.ViewModels.Experience
 
             TappedCommand = new Command<ExperienceData>(async (model) => await GetTappedExecute(model, Navigation));
 
+            ToggleDescriptionCommand = new Command<ExperienceData>(async (model) => await OpenPopup(model));
+
 
         }
 
@@ -126,13 +128,31 @@ namespace ScamMobileApp.ViewModels.Experience
         public Command SearchEntryTextChangedCommand => new Command<string>((searchEntry) => SearchBar_TextChanged(searchEntry));
         public Command SearchCommand { get; }
         public Command TappedCommand { get; }
+        public Command ToggleDescriptionCommand { get; }
 
-        public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(OpenPopup);
+        //public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(OpenPopup);
 
-        private async void OpenPopup(ExperienceData experience)
+        private async Task OpenPopup(ExperienceData model)
         {
+            try
+            {
+                var mod = model;
 
-            await PopupNavigation.Instance.PushAsync(new ExperienceDetailPopup(SelectedItems));
+                model.isSelected = model.isSelected ? false : true;
+                if (SelectedItems.Count > 0)
+                {
+                    SelectedItems.Clear();
+                }
+                SelectedItems.Add(model);
+
+                await PopupNavigation.Instance.PushAsync(new ExperienceDetailPopup(SelectedItems), true);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+            //await PopupNavigation.Instance.PushAsync(new ExperienceDetailPopup(SelectedItems));
 
         }
 

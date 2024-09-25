@@ -21,7 +21,7 @@
                 <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,0,0,10">
                     <StackLayout Orientation="Horizontal" Spacing="10">
                         <Image Source="blockuser.png" WidthRequest="30" HeightRequest="30" Margin="0,0" VerticalOptions="Center"/>
-                        <Label Text="Block User" FontFamily="Airbnb-Bold" FontSize="16"  Margin="0,5,0,0"
+                        <Label Text="{Binding BlockTitle}" FontFamily="Airbnb-Bold" FontSize="16"  Margin="0,5,0,0"
                                HorizontalTextAlignment="Center"  TextColor="{StaticResource SecondaryColor}"/>
                     </StackLayout>
                     <StackLayout>
@@ -29,7 +29,7 @@
                     </StackLayout>
                 </FlexLayout>
 
-                <Label Text="Jim Radcliff will no longer be able to see your posts, and you will not see any post or notifications from Jim Radcliff." FontFamily="Airbnb-Medium" FontSize="14" 
+                <Label Text="{Binding BlockPost}" FontFamily="Airbnb-Medium" FontSize="14" 
                        HorizontalTextAlignment="Start"  TextColor="#3A4756"/>
             </StackLayout>
 
@@ -47,7 +47,7 @@
                 </Frame>
                 <Frame CornerRadius="5" HasShadow="False" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="1" Padding="0" Margin="5,0" HeightRequest="50">
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer />
+                        <TapGestureRecognizer Command="{Binding BlockPostCommand}"/>
                     </Frame.GestureRecognizers>
                     <Label Text="Proceed" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
                 </Frame>

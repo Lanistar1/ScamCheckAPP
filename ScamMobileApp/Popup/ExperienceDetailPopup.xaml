@@ -6,6 +6,7 @@
                  x:Class="ScamMobileApp.Popup.ExperienceDetailPopup">
 
     <pv:PancakeView Padding="10,15,10,5" 
+                    Margin="0,40,0,0"
                     CornerRadius="25,25,0,0"
                     BackgroundColor="White"
                     HorizontalOptions="Fill"
@@ -28,8 +29,11 @@
                     </StackLayout>
                 </FlexLayout>
 
-                <Label Text="{Binding Message}" FontFamily="Airbnb-Medium" FontSize="14" 
-                       HorizontalTextAlignment="Start" TextColor="#3A4756"/>
+                <ScrollView VerticalScrollBarVisibility="Never">
+                    <Label Text="{Binding Message}" FontFamily="Airbnb-Medium" FontSize="14" 
+       HorizontalTextAlignment="Start" TextColor="#3A4756"/>
+                </ScrollView>
+                
             </StackLayout>
         </Grid>
     </pv:PancakeView>

@@ -50,7 +50,7 @@
         </StackLayout>
 
         <StackLayout Margin="0,0,0,5" Spacing="0">
-            <Label  Text="Select Scam Type"
+            <Label  Text="Select reason for reporting"
                         FontFamily="Inter-Medium"
                         FontSize="16"
                         Margin="0,0,0,5"
@@ -111,6 +111,7 @@
                     AutoSize="TextChanges"
                     FontFamily="Airbnb-Medium"
                     x:Name="comment"
+                    Text="{Binding Reason}"
                     Placeholder="Enter reason for reporting post"
                     PlaceholderColor="#cccccc"
                     TextColor="{StaticResource SecondaryColor}"/>
@@ -119,7 +120,7 @@
 
         <Frame CornerRadius="10" HasShadow="False" BackgroundColor="{StaticResource TertiaryColor}" VerticalOptions="EndAndExpand"  Padding="0" Margin="0,0" HeightRequest="50">
             <Frame.GestureRecognizers>
-                <TapGestureRecognizer />
+                <TapGestureRecognizer Command="{Binding ReportPostCommand}"/>
             </Frame.GestureRecognizers>
             <Label Text="Submit" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
         </Frame>

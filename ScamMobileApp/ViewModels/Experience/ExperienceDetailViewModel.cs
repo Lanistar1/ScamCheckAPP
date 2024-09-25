@@ -2,30 +2,13 @@
 using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Services;
 using ScamMobileApp.Models.Experience;
+using ScamMobileApp.Models.Identity;
+using ScamMobileApp.Models.Others;
 using ScamMobileApp.Models.Popup;
 using ScamMobileApp.Popup;
-using ScamMobileApp.Views.More;
-using ScamMobileApp.Views.Questions.ATM;
-using ScamMobileApp.Views.Questions.Business;
-using ScamMobileApp.Views.Questions.Charity;
-using ScamMobileApp.Views.Questions.Employment;
-using ScamMobileApp.Views.Questions.Fake;
-using ScamMobileApp.Views.Questions.Giftcard;
-using ScamMobileApp.Views.Questions.Grandparent;
-using ScamMobileApp.Views.Questions.Identity;
-using ScamMobileApp.Views.Questions.Impersonation;
-using ScamMobileApp.Views.Questions.Investment;
-using ScamMobileApp.Views.Questions.Lottery;
-using ScamMobileApp.Views.Questions.Online;
-using ScamMobileApp.Views.Questions.Phishing;
-using ScamMobileApp.Views.Questions.QRcode;
-using ScamMobileApp.Views.Questions.Ransomware;
-using ScamMobileApp.Views.Questions.Romance;
-using ScamMobileApp.Views.Questions.Smishing;
-using ScamMobileApp.Views.Questions.SocialMedia;
-using ScamMobileApp.Views.Questions.Tax;
-using ScamMobileApp.Views.Questions.Tech;
-using ScamMobileApp.Views.Questions.Vishing;
+using ScamMobileApp.Utils;
+using ScamMobileApp.Views.Identity;
+using ScamMobileApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -49,17 +32,36 @@ namespace ScamMobileApp.ViewModels.Experience
 
             Message = UserExperienceData.FirstOrDefault().message;
 
+            ExperienceId = UserExperienceData.FirstOrDefault()._id;
+            UserId = UserExperienceData.FirstOrDefault().userDetails._id;
 
-            FirstName = UserExperienceData.FirstOrDefault().userDetails.firstname;
-            LastName = UserExperienceData.FirstOrDefault().userDetails.lastname;
+
+            //FirstName = UserExperienceData.FirstOrDefault().userDetails.firstname;
+            //LastName = UserExperienceData.FirstOrDefault().userDetails.lastname;
+
+            FirstName = UserExperienceData.FirstOrDefault()?.userDetails?.firstname ?? "Default FirstName";
+            LastName = UserExperienceData.FirstOrDefault()?.userDetails?.lastname ?? "Default LastName";
+
 
             BlockUser = $"Block {FirstName + " " + LastName}";
-            MuteUser = $"Mute {FirstName + " " + LastName}";
+            MuteUser = $"Flag {FirstName + " " + LastName}";
 
+            BlockPost = $"{FirstName + " " + LastName} will no longer be able to see your posts, and you will not see any post or notifications from {FirstName + " " + LastName}.";
+
+            MutePost = $"You won’t see posts from {FirstName + " " + LastName}  or get notifications about them. They won’t know they’ve been muted.";
+
+            BlockTitle = $"Block {FirstName + " " + LastName}";
+            MuteTitle = $"Flag {FirstName + " " + LastName}";
 
             TappedCommand = new Command(async () => await GetTappedExecute());
 
             SelectPageCommand = new Command(async () => await SelectPageCommandExecute());
+
+            ReportPostCommand = new Command(async () => await ReportPostCommandExecute());
+
+            BlockPostCommand = new Command(async () => await BlockPostCommandExecute());
+
+            FlagPostCommand = new Command(async () => await FlagPostCommandExecute());
 
 
         }
@@ -164,11 +166,92 @@ namespace ScamMobileApp.ViewModels.Experience
             }
         }
 
+        private string reason;
+        public string Reason
+        {
+            get => reason;
+            set
+            {
+                reason = value;
+                OnPropertyChanged(nameof(Reason));
+            }
+        }
+
+        private string experienceId;
+        public string ExperienceId
+        {
+            get => experienceId;
+            set
+            {
+                experienceId = value;
+                OnPropertyChanged(nameof(ExperienceId));
+            }
+        }
+
+
+        private string blockPost;
+        public string BlockPost
+        {
+            get => blockPost;
+            set
+            {
+                blockPost = value;
+                OnPropertyChanged(nameof(BlockPost));
+            }
+        }
+
+        private string mutePost;
+        public string MutePost
+        {
+            get => mutePost;
+            set
+            {
+                mutePost = value;
+                OnPropertyChanged(nameof(MutePost));
+            }
+        }
+
+
+        private string muteTitle;
+        public string MuteTitle
+        {
+            get => muteTitle;
+            set
+            {
+                muteTitle = value;
+                OnPropertyChanged(nameof(MuteTitle));
+            }
+        }
+
+        private string blockTitle;
+        public string BlockTitle
+        {
+            get => blockTitle;
+            set
+            {
+                blockTitle = value;
+                OnPropertyChanged(nameof(BlockTitle));
+            }
+        }
+
+        private string userId;
+        public string UserId
+        {
+            get => userId;
+            set
+            {
+                userId = value;
+                OnPropertyChanged(nameof(UserId));
+            }
+        }
         #endregion
 
         #region Commands
         public Command TappedCommand { get; }
         public Command SelectPageCommand { get; }
+        public Command ReportPostCommand { get; }
+        public Command BlockPostCommand { get; }
+        public Command FlagPostCommand { get; }
 
         public ICommand ToggleDescriptionCommand => new Command<ExperienceData>(OpenPopup);
 
@@ -237,6 +320,143 @@ namespace ScamMobileApp.ViewModels.Experience
 
         }
 
+
+        private async Task ReportPostCommandExecute()
+        {
+            if (string.IsNullOrWhiteSpace(Reason))
+            {
+                await MessagePopup.Instance.Show("Reason for report field should not be empty");
+
+                return;
+            }
+
+            try
+            {
+
+                await LoadingPopup.Instance.Show("Reporting post...");
+
+                ReportPostRequestModel requestPayload = new ReportPostRequestModel() { experienceId = ExperienceId, reasonReportedBody = Reason, reasonReportedTitle = ReportPost };
+
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.ReportPostAsync(requestPayload);
+
+                if (ResponseData != null)
+                {
+                    await MessagePopup.Instance.Show("Post reported successfully.");
+
+                    await Navigation.PopAsync();
+
+                }
+
+                else if (ErrorData != null && StatusCode == 401)
+                {
+                    await MessagePopup.Instance.Show("Session expire.");
+
+                    Application.Current.MainPage = new NavigationPage(new Login());
+
+                }
+                else
+                {
+                    await MessagePopup.Instance.Show(ErrorData.message);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
+            }
+            finally
+            {
+                await LoadingPopup.Instance.Hide();
+            }
+        }
+
+
+        private async Task BlockPostCommandExecute()
+        {
+         
+            try
+            {
+
+                await PopupNavigation.Instance.PopAsync(); // Close the popup first
+
+                await LoadingPopup.Instance.Show("Blocking User...");
+
+                BlockPostRequestModel requestPayload = new BlockPostRequestModel() { blockUserId = UserId };
+
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.BlockPostAsync(requestPayload);
+
+                if (ResponseData != null)
+                {
+                    await MessagePopup.Instance.Show("User blocked successfully.");
+
+                }
+
+                else if (ErrorData != null && StatusCode == 401)
+                {
+                    await MessagePopup.Instance.Show("Session expire.");
+
+                    Application.Current.MainPage = new NavigationPage(new Login());
+
+                }
+                else
+                {
+                    await MessagePopup.Instance.Show(ErrorData.message);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
+            }
+            finally
+            {
+                await LoadingPopup.Instance.Hide();
+            }
+        }
+
+
+        private async Task FlagPostCommandExecute()
+        {
+
+            try
+            {
+
+                await PopupNavigation.Instance.PopAsync(); // Close the popup first
+
+                await LoadingPopup.Instance.Show("Flagging Post...");
+
+                FlagPostRequestModel requestPayload = new FlagPostRequestModel() { experienceId = ExperienceId };
+
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.FlagPostAsync(requestPayload);
+
+                if (ResponseData != null)
+                {
+                    await MessagePopup.Instance.Show("Post flagged successfully.");
+
+                }
+
+                else if (ErrorData != null && StatusCode == 401)
+                {
+                    await MessagePopup.Instance.Show("Session expire.");
+
+                    Application.Current.MainPage = new NavigationPage(new Login());
+
+                }
+                else
+                {
+                    await MessagePopup.Instance.Show(ErrorData.message);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
+            }
+            finally
+            {
+                await LoadingPopup.Instance.Hide();
+            }
+        }
 
         #endregion
 

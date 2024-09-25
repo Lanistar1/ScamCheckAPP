@@ -1,8 +1,11 @@
 ﻿using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
+using ScamMobileApp.Models.Experience;
+using ScamMobileApp.ViewModels.Experience;
 using ScamMobileApp.Views.Questions;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +20,12 @@ namespace ScamMobileApp.Popup
     {
         private INavigation _navigation;
 
-        public BlockUserPopup(INavigation navigation)
+        public BlockUserPopup(INavigation navigation, ObservableCollection<ExperienceData> selectedItems)
         {
             InitializeComponent();
             _navigation = navigation;
+            BindingContext = new ExperienceDetailViewModel(Navigation, selectedItems);
+
 
         }
 
