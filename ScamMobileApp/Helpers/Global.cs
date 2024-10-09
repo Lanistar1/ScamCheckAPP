@@ -9,7 +9,9 @@ namespace ScamMobileApp.Helpers
     {
         //public static string BaseUrl => "https://scam-detector.onrender.com";
         //public static string BaseUrl => "http://174.138.48.250:3000";
-        public static string BaseUrl => "http://209.97.184.81:5000";
+        //public static string BaseUrl => "http://209.97.184.81:5000";
+        public static string BaseUrl => "https://server.thescamalicious.com";
+
 
         public static string LoginUrl => $"{BaseUrl}/auth/login";
         public static string SignupUrl => $"{BaseUrl}/auth/signup";
@@ -29,6 +31,7 @@ namespace ScamMobileApp.Helpers
         public static string BlockUserUrl => $"{BaseUrl}/auth/block-user";
         public static string FlagPostUrl => $"{BaseUrl}/experience/flag/new";
         public static string AddUnwantedKeywordsUrl => $"{BaseUrl}/feedback/unwanted/keywords";
+        public static string GetUnwantedKeywordsUrl => $"{BaseUrl}/feedback/unwanted/keywords";
 
 
 
