@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using ScamMobileApp.Models.Experience;
+using System.Collections.ObjectModel;
 
 namespace ScamMobileApp.ViewModels.Others
 {
@@ -20,6 +22,9 @@ namespace ScamMobileApp.ViewModels.Others
             Navigation = navigation;
 
             KeywordCommand = new Command(async () => await KeywordCommandExecute());
+
+            AddKeywordCommand = new Command(async () => await ExecuteAddKeywordCommand());
+
 
         }
 
@@ -36,14 +41,66 @@ namespace ScamMobileApp.ViewModels.Others
             }
         }
 
+        List<string> tagList = new List<string>();
+
+        private string _tagInput;
+        public string TagInput
+        {
+            get { return _tagInput; }
+            set
+            {
+                if (_tagInput != value)
+                {
+                    _tagInput = value;
+                    OnPropertyChanged(nameof(TagInput));
+                }
+            }
+        }
+
+        private KeywordData unwantedKeywords;
+        public KeywordData UnwantedKeywords
+        {
+            get => unwantedKeywords;
+            set
+            {
+                unwantedKeywords = value;
+                OnPropertyChanged(nameof(UnwantedKeywords));
+            }
+        }
+
+        private string emptyPlaceholder = "Fetching Unwanted Keywords...";
+        public string EmptyPlaceholder
+        {
+            get => emptyPlaceholder;
+            set
+            {
+                emptyPlaceholder = value;
+                OnPropertyChanged(nameof(EmptyPlaceholder));
+            }
+        }
         #endregion
 
 
         #region Command
         public Command KeywordCommand { get; }
+        public Command AddKeywordCommand { get; }
         #endregion
 
         #region Events, Methods, Functions and Navigations
+
+        private async Task ExecuteAddKeywordCommand()
+        {
+            if (!string.IsNullOrWhiteSpace(TagInput))
+            {
+                tagList.Add(TagInput);
+                //string result = TagInput + " " + "added";
+
+                var message = TagInput + " " + "added to unwanted Keywords";
+                await MessagePopup.Instance.Show(message);
+
+                TagInput = string.Empty; // Clear the input field
+            }
+        }
 
         private async Task KeywordCommandExecute()
         {
@@ -59,7 +116,7 @@ namespace ScamMobileApp.ViewModels.Others
 
                 await LoadingPopup.Instance.Show("Adding unwanted keywords...");
 
-                KeywordsRequestModel requestPayload = new KeywordsRequestModel() {};
+                KeywordsRequestModel requestPayload = new KeywordsRequestModel() { keyword = tagList };
 
                 var (ResponseData, ErrorData, StatusCode) = await _scamAppService.AddUnwantedkeywordsAsync(requestPayload);
 
@@ -93,6 +150,55 @@ namespace ScamMobileApp.ViewModels.Others
             }
         }
 
+        private async Task FetchUnwantedKeywords()
+        {
+            try
+            {
+                await LoadingPopup.Instance.Show("Fetching Keywords...");
+
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.GetUnwantedKeywordsAsync();
+                if (ResponseData != null)
+                {
+                    if (ResponseData.data != null)
+                    {
+                        UnwantedKeywords = ResponseData.data;
+
+                    }
+                    else
+                    {
+                        await MessagePopup.Instance.Show(ErrorData.message);
+                        EmptyPlaceholder = "No Keyword found.";
+
+                    }
+                }
+                else if (ErrorData != null && StatusCode == 401)
+                {
+                    Application.Current.MainPage = new NavigationPage(new Login());
+                }
+                else if (ErrorData != null)
+                {
+                    string message = "Error fetching unwanted keywords. Do you want to RETRY?";
+                    await MessagePopup.Instance.Show(
+                        message: message);
+
+                }
+                else
+                {
+                    await MessagePopup.Instance.Show(ErrorData.message);
+                }
+            }
+            catch (Exception ex)
+            {
+                string message = "Something went wrong. Try again later. ";
+                await MessagePopup.Instance.Show(
+                    message: message);
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                await LoadingPopup.Instance.Hide();
+            }
+        }
 
         #endregion
     }

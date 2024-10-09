@@ -18,7 +18,16 @@
                     Margin="0,0"
                     TextColor="#646C79"/>
 
-            <Frame Padding="10,5" BackgroundColor="#ffffff" Margin="0,0,0,10"  HasShadow="False" CornerRadius="10">
+            
+        </StackLayout>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame Padding="10,5" BackgroundColor="#ffffff" Margin="0,0,0,10"  HasShadow="False" CornerRadius="10" Grid.Column="0">
                 <Controls:XEditor
                         FontSize="13"
                         AutoSize="TextChanges"
@@ -26,13 +35,17 @@
                         x:Name="comment"
                         Placeholder="E.g Orange, Church, Mosque"
                         PlaceholderColor="#cccccc"
+                        Text="{Binding TagInput}"
                         TextColor="#646C79"/>
             </Frame>
-        </StackLayout>
+            <StackLayout Grid.Column="1">
+                <ImageButton Command="{Binding AddKeywordCommand}" BackgroundColor="Transparent" Source="post.png" VerticalOptions="CenterAndExpand" WidthRequest="40" HeightRequest="40"/>
+            </StackLayout>
+        </Grid>
 
         <Frame CornerRadius="10" HasShadow="False" BackgroundColor="{StaticResource TertiaryColor}" VerticalOptions="EndAndExpand"  Padding="0" Margin="0,0" HeightRequest="50">
             <Frame.GestureRecognizers>
-                <TapGestureRecognizer />
+                <TapGestureRecognizer Command="{Binding KeywordCommand}"/>
             </Frame.GestureRecognizers>
             <Label Text="Add Keywords" FontSize="14" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
         </Frame>

@@ -16,16 +16,16 @@
 
 
     <!--Pages can be added as references or inline-->
-    <Pages1:NewDashboard Title="Home" IconImageSource="scamhome.png"></Pages1:NewDashboard>
+    <!--<Pages1:NewDashboard Title="Home" IconImageSource="scamhome.png"></Pages1:NewDashboard>
     <Pages2:QuestionsAndAnswer IconImageSource="qascam.png"></Pages2:QuestionsAndAnswer>
     <Pages4:AllFeedbackPage Title="Activities" IconImageSource="activities.png"></Pages4:AllFeedbackPage>
-    <Pages5:MoreMenu Title="Menu" IconImageSource="moremenu.png"></Pages5:MoreMenu>
+    <Pages5:MoreMenu Title="Menu" IconImageSource="moremenu.png"></Pages5:MoreMenu>-->
 
 
-    <!--<Pages1:NewDashboard Title="Home" IconImageSource="scamhome.png"></Pages1:NewDashboard>
+    <Pages1:NewDashboard Title="Home" IconImageSource="scamhome.png"></Pages1:NewDashboard>
     <Pages2:QuestionsAndAnswer IconImageSource="qascam.png"></Pages2:QuestionsAndAnswer>
     <Pages3:MyStory Title="Your Story" IconImageSource="urstory.png"></Pages3:MyStory>
     <Pages4:AllFeedbackPage Title="Activities" IconImageSource="activities.png"></Pages4:AllFeedbackPage>
-    <Pages5:MoreMenu Title="Menu" IconImageSource="moremenu.png"></Pages5:MoreMenu>-->
+    <Pages5:MoreMenu Title="Menu" IconImageSource="moremenu.png"></Pages5:MoreMenu>
 
 </TabbedPage>

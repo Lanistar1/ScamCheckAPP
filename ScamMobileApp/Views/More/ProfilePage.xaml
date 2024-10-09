@@ -66,7 +66,7 @@
                     </StackLayout>
                 </Frame>
 
-                <Label Text="Total Check: 104 times" TextColor="#110F0F" HorizontalTextAlignment="Center" FontSize="16" FontFamily="Inter-Medium"/>
+                <!--<Label Text="Total Check: 104 times" TextColor="#110F0F" HorizontalTextAlignment="Center" FontSize="16" FontFamily="Inter-Medium"/>-->
 
             </StackLayout>
 

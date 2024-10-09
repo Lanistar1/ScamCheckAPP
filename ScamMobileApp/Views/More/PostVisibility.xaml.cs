@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScamMobileApp.ViewModels.Others;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace ScamMobileApp.Views.More
         public PostVisibility()
         {
             InitializeComponent();
+            BindingContext = new KeywordViewModel(Navigation);
+
         }
     }
 }
