@@ -1,4 +1,5 @@
-﻿using ScamMobileApp.Helpers;
+﻿using Rg.Plugins.Popup.Services;
+using ScamMobileApp.Helpers;
 using ScamMobileApp.Models.Identity;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
@@ -6,6 +7,7 @@ using ScamMobileApp.Views;
 using ScamMobileApp.Views.Identity;
 using System;
 using System.Data;
+using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -20,16 +22,28 @@ namespace ScamMobileApp.ViewModels.Identity
         {
             Navigation = navigation;
 
-            //Task _tsk = FetchUserProfile();
 
             LoginCommand = new Command(async () => await LoginCommandExecute());
 
-            //LoginCommand = new Command(async () => await LoginCommandsExecute());
+            UnlockDeviceCommand = new Command(async () => await UnlockDeviceCommandExecute());
 
+            //LoginCommand = new Command(async () => await LoginCommandsExecute());
 
         }
 
+        
         #region Binding Properties
+
+        private GetProfileData profileData;
+        public GetProfileData ProfileData
+        {
+            get => profileData;
+            set
+            {
+                profileData = value;
+                OnPropertyChanged(nameof(ProfileData));
+            }
+        }
 
         private string password;
         public string Password
@@ -42,13 +56,16 @@ namespace ScamMobileApp.ViewModels.Identity
             }
         }
 
-        private string email;
+        private string email = Preferences.Get(nameof(Email), string.Empty);
         public string Email
         {
             get => email;
             set
             {
-                email = value;
+                //email = value;
+                SetProperty(ref email, value);
+                Global.UserName = email;
+                Preferences.Set(nameof(Email), value);
                 OnPropertyChanged(nameof(Email));
             }
         }
@@ -62,12 +79,72 @@ namespace ScamMobileApp.ViewModels.Identity
             return EmailRegex.IsMatch(Email);
         }
 
+        private string firstName;
+        public string FirstName
+        {
+            get => firstName;
+            set
+            {
+                firstName = value;
+                OnPropertyChanged(nameof(FirstName));
+            }
+        }
+
+        private bool isNoFirstTimeUser;
+        public bool IsNoFirstTimeUser
+        {
+            get => isNoFirstTimeUser;
+            set
+            {
+                isNoFirstTimeUser = value;
+                OnPropertyChanged(nameof(IsNoFirstTimeUser));
+            }
+        }
+
+        private bool isFirstTimeUser;
+        public bool IsFirstTimeUser
+        {
+            get => isFirstTimeUser;
+            set
+            {
+                isFirstTimeUser = value;
+                OnPropertyChanged(nameof(IsFirstTimeUser));
+            }
+        }
+
+        private string greetings;
+        public string Greetings
+        {
+            get
+            {
+                return greetings;
+            }
+            set
+            {
+                greetings = value;
+                OnPropertyChanged(nameof(Greetings));
+            }
+        }
+
+        public string username;
+        public string Username
+        {
+            get => username;
+            set
+            {
+                SetProperty(ref username, value);
+                Global.UserName = username;
+                Preferences.Set(nameof(Username), value);
+                OnPropertyChanged(nameof(Username));
+            }
+        }
 
         #endregion
 
 
         #region Commands
         public Command LoginCommand { get; }
+        public Command UnlockDeviceCommand { get; }
         #endregion
 
         #region Events, Methods, Functions and Navigations
@@ -102,38 +179,46 @@ namespace ScamMobileApp.ViewModels.Identity
         //            await MessagePopup.Instance.Show(
         //                message: message);
 
-        //        }
-        //        //else
-        //        //{
-        //        //    await MessagePopup.Instance.Show(ErrorData.message);
-        //        //}
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        string message = "Error fetching user detail. Do you want to RETRY?";
-        //        await MessagePopup.Instance.Show(
-        //            message: message);
-        //        Console.WriteLine(ex);
-        //    }
-        //    finally
-        //    {
-        //        await LoadingPopup.Instance.Hide();
-        //    }
-        //}
-
-
-
-
         private async Task LoginCommandExecute()
         {
-            bool checker = await VerifyBioDataEntry();
-            if (checker)
+
+            try
             {
                 await LoginCustomerAsync();
             }
         }
         private async Task LoginCustomerAsync()
         {
+            //var newEmail = Email.Trim();
+            //var newPassword = Password.Trim();
+            //if (string.IsNullOrWhiteSpace(newEmail))
+            //{
+            //    await MessagePopup.Instance.Show("Email field should not be empty");
+
+            //}
+            //else
+            //{
+            //    var x = EmailRegex.Match(newEmail);
+            //    if (x.Success)
+            //    {
+            //        // do something
+            //    }
+            //    else
+            //    {
+
+            //        await MessagePopup.Instance.Show("Email field not correct. Field must contain @ and .com ");
+
+            //        return;
+            //    }
+            //}
+
+
+            //if (string.IsNullOrWhiteSpace(Password))
+            //{
+            //    await MessagePopup.Instance.Show("Password field should not be empty");
+
+            //    return;
+            //} email = Email.Trim(),
 
             var current = Connectivity.NetworkAccess;
 
@@ -147,7 +232,7 @@ namespace ScamMobileApp.ViewModels.Identity
             {
                 LoginRequestModel request = new LoginRequestModel()
                 { 
-                    email = Email,
+                    email = Email.Trim(),
                     password = Password
                 };
 
@@ -160,6 +245,8 @@ namespace ScamMobileApp.ViewModels.Identity
                     Global.UserData = ResponseData.data.profile;
                     Global.Token = ResponseData.data.token;
                     //await MessagePopup.Instance.Show("Login successful");
+
+                    //await FetchUserProfile();
 
                     Application.Current.MainPage = new NavigationPage(new Tabbed());
                 }
@@ -195,6 +282,8 @@ namespace ScamMobileApp.ViewModels.Identity
             //    await MessagePopup.Instance.Show("Select title to continue.");
             //    return false;
             //}
+
+
             var emailTrim = Email.Trim();
             if (string.IsNullOrWhiteSpace(emailTrim))
             {
@@ -228,6 +317,158 @@ namespace ScamMobileApp.ViewModels.Identity
                 return true;
             }
         }
+
+        //======== handling page bindings
+        public async void HandlePageBindingAndView()
+        {
+
+            string username = await SecureStorage.GetAsync("username");
+            string firstName = await SecureStorage.GetAsync("CurrentUserFirstName");
+            if (string.IsNullOrEmpty(username) && string.IsNullOrEmpty(firstName))
+            {
+                IsFirstTimeUser = true;
+                IsNoFirstTimeUser = false;
+            }
+            else
+            {
+                IsFirstTimeUser = false;
+                IsNoFirstTimeUser = true;
+                FirstName = firstName;
+            }
+
+
+        }
+
+        //private async Task FetchUserProfile()
+        //{
+        //    try
+        //    {
+        //        await LoadingPopup.Instance.Show("Loading Profile detail...");
+
+        //        var (ResponseData, ErrorData, StatusCode) = await _scamAppService.GetUserProfileAsync();
+        //        if (ResponseData != null)
+        //        {
+        //            if (ResponseData.data != null)
+        //            {
+        //                ProfileData = ResponseData.data;
+
+        //                await SecureStorage.SetAsync("username", ProfileData.email);
+        //                await SecureStorage.SetAsync("CurrentUserFirstName", ProfileData.firstname);
+
+        //                FirstName = ProfileData.firstname;
+        //                Global.firstName = FirstName;
+
+        //            }
+        //            else
+        //            {
+        //                await MessagePopup.Instance.Show(ErrorData.message);
+        //            }
+        //        }
+        //        else if (ErrorData != null && StatusCode == 401)
+        //        {
+        //            Application.Current.MainPage = new NavigationPage(new Login());
+        //        }
+        //        else if (ErrorData != null)
+        //        {
+        //            string message = "Error fetching user detail. Do you want to RETRY?";
+        //            await MessagePopup.Instance.Show(
+        //                message: message);
+
+        //        }
+        //        else
+        //        {
+        //            await MessagePopup.Instance.Show(ErrorData.message);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        string message = "Error fetching user detail. Do you want to RETRY?";
+        //        await MessagePopup.Instance.Show(
+        //            message: message);
+        //        Console.WriteLine(ex);
+        //    }
+        //    finally
+        //    {
+        //        await LoadingPopup.Instance.Hide();
+        //    }
+        //}
+
+
+        private async Task UnlockDeviceCommandExecute()
+        {
+
+            try
+            {
+                if (Device.RuntimePlatform == Device.Android)
+                {
+                    await UnlockDeviceRequest();
+                }
+                else
+                {
+                    await UnlockDeviceForiOsUser();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
+
+        private async Task UnlockDeviceRequest()
+        {
+            try
+            {
+                await LoadingPopup.Instance.Show("Unlocking device. Please wait...");
+                var _userId = await SecureStorage.GetAsync("CurrentUserId");
+                string _appId = "Customer_app";
+                //remove later when unlockdevice is implemented on v2
+                IsFirstTimeUser = true;
+                IsNoFirstTimeUser = false;
+                SecureStorage.Remove("username");
+                SecureStorage.Remove("CurrentUserFirstName");
+                Username = string.Empty;
+                Email = string.Empty;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                await LoadingPopup.Instance.Hide();
+            }
+        }
+
+        private async Task UnlockDeviceForiOsUser()
+        {
+            try
+            {
+                await LoadingPopup.Instance.Show("Unlocking device. Please wait...");
+                await Task.Delay(1000);
+                IsFirstTimeUser = true;
+                IsNoFirstTimeUser = false;
+                SecureStorage.Remove("username");
+                SecureStorage.Remove("CurrentUserProfileId");
+                SecureStorage.Remove("CurrentUserFirstName");
+                SecureStorage.Remove("CurrentUserPassword");
+
+                Username = string.Empty;
+                Email = string.Empty;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                await LoadingPopup.Instance.Hide();
+            }
+        }
+
 
         #endregion
     }

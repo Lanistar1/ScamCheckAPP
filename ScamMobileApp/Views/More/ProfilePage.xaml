@@ -44,7 +44,10 @@
                         </Frame>
                         <StackLayout Spacing="10">
                             <Label Text="Likely A Scam" TextColor="#000000" HorizontalTextAlignment="Start" FontSize="14" FontFamily="Inter-Medium"/>
-                            <Label Text="48 Times" TextColor="#000000" HorizontalTextAlignment="Start" FontSize="16" FontFamily="Inter-Medium"/>
+                            <StackLayout Orientation="Horizontal" Spacing="3">
+                                <Label Text="{Binding LikelyScamCount}" TextColor="#000000" HorizontalTextAlignment="Start" FontSize="16" FontFamily="Inter-Medium"/>
+                                <Label Text="Times" TextColor="#000000" HorizontalTextAlignment="Start" FontSize="16" FontFamily="Inter-Medium"/>
+                            </StackLayout>
                         </StackLayout>
                     </StackLayout>
                 </Frame>
@@ -55,12 +58,15 @@
                         </Frame>
                         <StackLayout Spacing="10">
                             <Label Text="Unlikely A Scam" TextColor="#000000" HorizontalTextAlignment="Start" FontSize="14" FontFamily="Inter-Medium"/>
-                            <Label Text="56 Times" TextColor="#000000" HorizontalTextAlignment="Start" FontSize="16" FontFamily="Inter-Medium"/>
+                            <StackLayout Orientation="Horizontal" Spacing="3">
+                                <Label Text="{Binding UnlikelyScamCount}" TextColor="#000000" HorizontalTextAlignment="Start" FontSize="16" FontFamily="Inter-Medium"/>
+                                <Label Text="Times" TextColor="#000000" HorizontalTextAlignment="Start" FontSize="16" FontFamily="Inter-Medium"/>
+                            </StackLayout>
                         </StackLayout>
                     </StackLayout>
                 </Frame>
 
-                <Label Text="Total Check: 104 times" TextColor="#110F0F" HorizontalTextAlignment="Center" FontSize="16" FontFamily="Inter-Medium"/>
+                <!--<Label Text="Total Check: 104 times" TextColor="#110F0F" HorizontalTextAlignment="Center" FontSize="16" FontFamily="Inter-Medium"/>-->
 
             </StackLayout>
 
@@ -72,133 +78,6 @@
                 <Label Text="Delete Account" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#ffffff" FontSize="16" FontFamily="Inter-Medium"/>
             </Frame>
         </StackLayout>
-
-        <!--<ScrollView  Grid.Row="1" Margin="0,10,0,20">
-            <StackLayout>
-                
-                <StackLayout Margin="20,0">
-                    <Label Text="Name" TextColor="{StaticResource SecondaryColor}" FontSize="13" FontFamily="Inter-Medium"/>
-                    <Label Text="{Binding Name} " TextColor="{StaticResource SecondaryColor}" FontSize="18" FontFamily="Inter-Medium"/>
-                </StackLayout>
-                
-                
-                <Line X1="0"
-                      Y1="0"
-                      X2="400"
-                      Y2="0"
-                      Margin="0,0"
-                      Grid.Row="6"
-                      Stroke="#101137"
-                      StrokeDashArray="0,0"
-                      StrokeDashOffset="2"/>
-
-                --><!--<StackLayout Margin="20,10,0,0">
-                    <Label Text="Last Name" TextColor="{StaticResource SecondaryColor}" FontSize="13" FontFamily="Inter-Medium"/>
-                    <Label Text="{Binding LastName}" TextColor="{StaticResource SecondaryColor}" FontSize="18" FontFamily="Inter-Medium"/>
-                </StackLayout>
-                <Line X1="0"
-                      Y1="0"
-                      X2="400"
-                      Y2="0"
-                      Margin="0,0"
-                      Grid.Row="6"
-                      Stroke="#101137"
-                      StrokeDashArray="0,0"
-                      StrokeDashOffset="2"/>--><!--
-
-                <StackLayout Margin="20,10,0,0">
-                    <Label Text="Email" TextColor="{StaticResource SecondaryColor}" FontSize="13" FontFamily="Inter-Medium"/>
-                    <Label Text="{Binding Email}" TextColor="{StaticResource SecondaryColor}" FontSize="18" FontFamily="Inter-Medium"/>
-                </StackLayout>
-                <Line X1="0"
-                      Y1="0"
-                      X2="400"
-                      Y2="0"
-                      Margin="0,0"
-                      Grid.Row="6"
-                      Stroke="#101137"
-                      StrokeDashArray="0,0"
-                      StrokeDashOffset="2"/>
-
-                --><!--<StackLayout Margin="20,10,0,0">
-                    <Label Text="Phone Number" TextColor="#ffffff" FontSize="13"/>
-                    <Label Text="+1-432516265336" TextColor="#ffffff" FontSize="18"/>
-                </StackLayout>
-                <Line X1="0"
-                      Y1="0"
-                      X2="400"
-                      Y2="0"
-                      Margin="0,0"
-                      Grid.Row="6"
-                      Stroke="#ffffff"
-                      StrokeDashArray="0,0"
-                      StrokeDashOffset="2"/>--><!--
-
-                <StackLayout Margin="20,10,0,0">
-                    <Label Text="User Name" TextColor="{StaticResource SecondaryColor}" FontSize="13" FontFamily="Inter-Medium"/>
-                    <Label Text="{Binding UserName}" TextColor="{StaticResource SecondaryColor}" FontSize="18" FontFamily="Inter-Medium"/>
-                </StackLayout>
-                <Line X1="0"
-                      Y1="0"
-                      X2="400"
-                      Y2="0"
-                      Margin="0,0"
-                      Grid.Row="6"
-                      Stroke="#101137"
-                      StrokeDashArray="0,0"
-                      StrokeDashOffset="2"/>
-
-                <StackLayout Margin="20,10,0,0">
-                    <Label Text="Role" TextColor="{StaticResource SecondaryColor}" FontSize="13" FontFamily="Inter-Medium"/>
-                    <Label Text="{Binding Role}" TextColor="{StaticResource SecondaryColor}" FontSize="18" FontFamily="Inter-Bold"/>
-                </StackLayout>
-                <Line X1="0"
-                      Y1="0"
-                      X2="400"
-                      Y2="0"
-                      Margin="0,0"
-                      Grid.Row="6"
-                      Stroke="#101137"
-                      StrokeDashArray="0,0"
-                      StrokeDashOffset="2"/>
-
-                <Frame Padding="20" CornerRadius="15" BackgroundColor="#DEDEE7" Margin="20" HasShadow="False">
-                    <StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
-                            <Image Source="scamscale.png" WidthRequest="30" HeightRequest="30"/>
-                            <Label Text="Scam Check Scale" TextColor="#110F0F" VerticalTextAlignment="Center" FontSize="16" FontFamily="Inter-Medium"/>
-                        </StackLayout>
-                        <Grid Margin="10,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Frame Padding="10" CornerRadius="10" BackgroundColor="{StaticResource SecondaryColor}" Grid.Column="0">
-                                <StackLayout>
-                                    <Label Text="Likely A Scam" TextColor="#ffffff" HorizontalTextAlignment="Center" FontSize="14" FontFamily="Inter-Medium"/>
-                                    <Label Text="48 times" TextColor="#ffffff" HorizontalTextAlignment="Center" FontSize="16" FontFamily="Inter-Medium"/>
-                                </StackLayout>
-                            </Frame>
-                            <Frame Padding="10" CornerRadius="10" BackgroundColor="{StaticResource SecondaryColor}" Grid.Column="1">
-                                <StackLayout>
-                                    <Label Text="Unlikely A Scam" TextColor="#ffffff" HorizontalTextAlignment="Center" FontSize="14" FontFamily="Inter-Medium"/>
-                                    <Label Text="56 times" TextColor="#ffffff" HorizontalTextAlignment="Center" FontSize="16" FontFamily="Inter-Medium"/>
-                                </StackLayout>
-                            </Frame>
-                        </Grid>
-                        <Label Text="Total Check: 104 times" TextColor="#110F0F" HorizontalTextAlignment="Center" FontSize="16" FontFamily="Inter-Medium"/>
-
-                    </StackLayout>
-                </Frame>
-
-                --><!--<Frame CornerRadius="10" BackgroundColor="{StaticResource TertiaryColor}" Padding="10,12" Margin="20,20,20,20">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer/>
-                    </Frame.GestureRecognizers>
-                    <Label Text="Save Changes" TextColor="White" FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                </Frame>--><!--
-            </StackLayout>
-        </ScrollView>-->
 
     </ScrollView>
 </ContentPage>

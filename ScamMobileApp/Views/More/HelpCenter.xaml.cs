@@ -30,5 +30,10 @@ namespace ScamMobileApp.Views.More
             Navigation.PushAsync(new ScamQA());
 
         }
+
+        private void To_ContactUs(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ContactUsPage());
+        }
     }
 }

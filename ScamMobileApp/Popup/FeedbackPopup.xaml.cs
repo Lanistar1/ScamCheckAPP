@@ -2,8 +2,10 @@
 using Rg.Plugins.Popup.Services;
 using ScamMobileApp.Helpers;
 using ScamMobileApp.ViewModels.ScamCalculator;
+using ScamMobileApp.Views;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +17,41 @@ namespace ScamMobileApp.Popup
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 
-    public partial class FeedbackPopup : PopupPage
+    public partial class FeedbackPopup : PopupPage, INotifyPropertyChanged
     {
         private string newComment;
+
+        private int ratingNumber;
+
+
+
+        private bool hideButton;
+        public bool HideButton
+        {
+            get => hideButton;
+            set
+            {
+                if (hideButton != value)
+                {
+                    hideButton = value;
+                    OnPropertyChanged(nameof(HideButton));
+                }
+            }
+        }
+
+        private bool showButton;
+        public bool ShowButton
+        {
+            get => showButton;
+            set
+            {
+                if (showButton != value)
+                {
+                    showButton = value;
+                    OnPropertyChanged(nameof(ShowButton));
+                }
+            }
+        }
 
         public int StarRating { get; set; }
 
@@ -28,8 +62,96 @@ namespace ScamMobileApp.Popup
             // Initialize the star rating (e.g., 0 means no star)
             StarRating = 0;
 
+            //ratingNumber = 0;
+
+            //if (ratingNumber == 0)
+            //{
+            //    Device.BeginInvokeOnMainThread(() =>
+            //    {
+            //        // Force a layout update if necessary
+            //        hideButton = true; // Show Button 1
+            //        showButton = false; // Hide Button 2
+            //    });
+
+            //}
+            //else
+            //{
+            //    Device.BeginInvokeOnMainThread(() =>
+            //    {
+            //        // Force a layout update if necessary
+            //        hideButton = false; // Hide Button 1
+            //        showButton = true; // Show Button 2
+            //    });
+
+            //}
+
+            HideButton = true;
+            ShowButton = false;
+
+            UpdateButtonVisibility();
+
             BindingContext = this;
         }
+
+        
+
+        private void UpdateButtonVisibility()
+        {
+            MessagingCenter.Subscribe<CustomStarControl, int>(this, "RatingNumber", (sender, RatingNumber) =>
+            {
+                ratingNumber = RatingNumber;
+
+                if (ratingNumber == 0)
+                {
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        // Force a layout update if necessary
+                        HideButton = true; // Show Button 1
+                        ShowButton = false; // Hide Button 2
+                    });
+                    
+                }
+                else
+                {
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        // Force a layout update if necessary
+                        HideButton = false; // Hide Button 1
+                        ShowButton = true; // Show Button 2
+                    });
+                    
+                }
+            });
+
+
+            //var test = Global.Rating;
+
+            //string newTest = test.ToString();
+
+            //if (ratingNumber == 0)
+            //{
+            //    hideButton = true; // Show Button 1
+            //    showButton = false; // Hide Button 2
+            //}
+            //else
+            //{
+            //    hideButton = false; // Hide Button 1
+            //    showButton = true; // Show Button 2
+            //}
+
+            // Notify the UI that the properties have changed
+            OnPropertyChanged(nameof(hideButton));
+            OnPropertyChanged(nameof(showButton));
+        }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
 
         private void cancel(object sender, EventArgs e)
         {

@@ -14,6 +14,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Plugin.Media.Abstractions;
+using Plugin.Media;
+using ScamMobileApp.Models.Feedback;
 
 
 
@@ -28,13 +31,25 @@ namespace ScamMobileApp.ViewModels.Identity
             //PImage = "myprofile.png";
 
             Task _tsk = FetchUserProfile();
+            Task _tsks = FetchFeedbackCount();
 
-            //UpdateProfileCommand = new Command(async () => await GetUpdateProfileExecute());
+            UpdateProfileCommand = new Command(async () => await GetUpdateProfileExecute());
 
         }
 
 
         #region Bindings
+
+        private CountData feedbackCountData;
+        public CountData FeedbackCountData
+        {
+            get => feedbackCountData;
+            set
+            {
+                feedbackCountData = value;
+                OnPropertyChanged(nameof(FeedbackCountData));
+            }
+        }
 
         private GetProfileData profileData;
         public GetProfileData ProfileData
@@ -44,6 +59,28 @@ namespace ScamMobileApp.ViewModels.Identity
             {
                 profileData = value;
                 OnPropertyChanged(nameof(ProfileData));
+            }
+        }
+
+        private int likelyScamCount;
+        public int LikelyScamCount
+        {
+            get => likelyScamCount;
+            set
+            {
+                likelyScamCount = value;
+                OnPropertyChanged(nameof(LikelyScamCount));
+            }
+        }
+
+        private int unlikelyScamCount;
+        public int UnlikelyScamCount
+        {
+            get => unlikelyScamCount;
+            set
+            {
+                unlikelyScamCount = value;
+                OnPropertyChanged(nameof(UnlikelyScamCount));
             }
         }
 
@@ -393,6 +430,56 @@ namespace ScamMobileApp.ViewModels.Identity
         //    }
         //    return status;
         //}
+
+
+        private async Task FetchFeedbackCount()
+        {
+            try
+            {
+                await LoadingPopup.Instance.Show("Loading Feddback Count...");
+
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.GetFeedbackCountAsync();
+                if (ResponseData != null)
+                {
+                    if (ResponseData.data != null)
+                    {
+                        FeedbackCountData = ResponseData.data;
+                        UnlikelyScamCount = FeedbackCountData.unlikelyScamCount;
+                        LikelyScamCount = FeedbackCountData.likelyScamCount;
+                    }
+                    else
+                    {
+                        await MessagePopup.Instance.Show(ErrorData.message);
+                    }
+                }
+                else if (ErrorData != null && StatusCode == 401)
+                {
+                    Application.Current.MainPage = new NavigationPage(new Login());
+                }
+                else if (ErrorData != null)
+                {
+                    string message = "Error fetching user detail. Do you want to RETRY?";
+                    await MessagePopup.Instance.Show(
+                        message: message);
+
+                }
+                else
+                {
+                    await MessagePopup.Instance.Show(ErrorData.message);
+                }
+            }
+            catch (Exception ex)
+            {
+                string message = "Error fetching user detail. Do you want to RETRY?";
+                await MessagePopup.Instance.Show(
+                    message: message);
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                await LoadingPopup.Instance.Hide();
+            }
+        }
 
         #endregion
 

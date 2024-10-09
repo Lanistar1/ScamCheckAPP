@@ -1,4 +1,5 @@
-﻿using ScamMobileApp.Views.Identity;
+﻿using ScamMobileApp.ViewModels.Others;
+using ScamMobileApp.Views.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,9 @@ namespace ScamMobileApp.Views
 		public WelcomePage ()
 		{
 			InitializeComponent ();
-		}
+            BindingContext = new HomePageViewModel();
+
+        }
 
         private void To_Login(object sender, EventArgs e)
         {

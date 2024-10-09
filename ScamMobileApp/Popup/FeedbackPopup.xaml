@@ -42,7 +42,7 @@
                         Margin="0,0"
                         TextColor="#374352"/>
 
-                <Frame Padding="10,0,10,0" BorderColor="#E6EDFF" Margin="0,0,0,10" HeightRequest="130" HasShadow="False" CornerRadius="10">
+                <Frame Padding="10,0,10,0" BorderColor="#E6EDFF" Margin="0,0,0,10" HasShadow="False" CornerRadius="10">
                     <Controls:XEditor
                             FontSize="15"
                             AutoSize="TextChanges"
@@ -66,12 +66,21 @@
                     </Frame.GestureRecognizers>
                     <Label Text="Later" FontSize="16" FontAttributes="Bold"  TextColor="{StaticResource SecondaryColor}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
                 </Frame>
-                <Frame CornerRadius="5" HasShadow="False" BackgroundColor="{StaticResource TertiaryColor}" Grid.Column="1" Padding="0" Margin="5,0" HeightRequest="50">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Close_Popup"/>
-                    </Frame.GestureRecognizers>
-                    <Label Text="Submit" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
-                </Frame>
+                <Grid Grid.Column="1">
+                    <Frame CornerRadius="5" HasShadow="False" IsVisible="{Binding HideButton}" BackgroundColor="#cccccc"  Padding="0" Margin="5,0" HeightRequest="50">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer/>
+                        </Frame.GestureRecognizers>
+                        <Label Text="Submit" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame CornerRadius="5" HasShadow="False" IsVisible="{Binding ShowButton}"  BackgroundColor="{StaticResource TertiaryColor}" Padding="0" Margin="5,0" HeightRequest="50">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Close_Popup"/>
+                        </Frame.GestureRecognizers>
+                        <Label Text="Submit" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    </Frame>
+                </Grid>
+                
             </Grid>
 
         </StackLayout>

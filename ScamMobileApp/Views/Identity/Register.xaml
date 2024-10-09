@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:Controls="clr-namespace:ScamMobileApp.Controls" 
-             xmlns:local="clr-namespace:ScamMobileApp.Utils"
+             xmlns:local="clr-namespace:ScamMobileApp.Utils" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="ScamMobileApp.Views.Identity.Register"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource PrimaryColor}">
@@ -94,7 +94,63 @@
                         </Frame>
                     </StackLayout>
 
-                    <StackLayout Margin="0,5,0,0">
+                    <StackLayout Spacing="1" Margin="0,0">
+                        <Label Text="Select Age Bracket" TextColor="Black" FontFamily="Rubik-Regular" FontSize="16" Margin="0,3"
+              />
+                        <Frame Padding="10,0,10,0"  CornerRadius="10" BackgroundColor="#ffffff" HeightRequest="50" Margin="0,0,0,10" HasShadow="False">
+
+                            <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+                                <Grid HorizontalOptions="StartAndExpand"
+                              VerticalOptions="CenterAndExpand">
+                                    <Label 
+                                HorizontalOptions="StartAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                TextColor="Black"
+                                IsVisible="{Binding AgeBracket}"
+                                FontSize="16"/>
+
+                                    <StackLayout Orientation="Vertical"
+                                     VerticalOptions="CenterAndExpand">
+                                        <Label Text="{Binding AgeBracket}"
+                                           HorizontalOptions="StartAndExpand"
+                                           TextColor="Black"
+                                           FontSize="16"
+                                           VerticalOptions="CenterAndExpand"
+                                           IsVisible="{Binding AgeBracket}"
+                                           />
+
+                                    </StackLayout>
+                                </Grid>
+
+                                <ImageButton
+                                    HorizontalOptions="End"
+                                    Source="arrowdown1.png"
+                                    VerticalOptions="Center"
+                                    Aspect="AspectFit"
+                                    WidthRequest="15"
+                                    HeightRequest="15"
+                                    BackgroundColor="Transparent"
+                                    Command="{Binding SelectAgeCommand}"
+                                    CommandParameter="age">
+
+                                </ImageButton>
+                            </Grid>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SelectAgeCommand}"
+                                CommandParameter="user"
+                                NumberOfTapsRequired="1"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SelectAgeCommand}"
+                            CommandParameter="user"
+                            NumberOfTapsRequired="1"/>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+
+                    <!--<StackLayout Margin="0,5,0,0">
                         <Label  Text="Select DOB"
                                 FontFamily="Inter-Medium"
                                 FontSize="14"
@@ -116,7 +172,7 @@
                             </Grid>
                         </Frame>
 
-                    </StackLayout>
+                    </StackLayout>-->
 
                     <StackLayout>
                         <StackLayout>

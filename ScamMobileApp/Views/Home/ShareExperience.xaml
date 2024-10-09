@@ -98,7 +98,7 @@
 
                 <StackLayout Margin="0,0,0,0">
                     <Label Text="Your Experience" TextColor="{StaticResource SecondaryColor}" FontSize="16" FontFamily="Inter-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <Frame Padding="5" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource SecondaryColor}" Margin="0,0,0,0" CornerRadius="5" HeightRequest="170">
+                    <Frame Padding="5" BackgroundColor="{StaticResource PrimaryColor}" BorderColor="{StaticResource SecondaryColor}" Margin="0,0,0,0" CornerRadius="5" >
                         <controls:XEditor
                                 FontSize="16"
                                 AutoSize="TextChanges"
@@ -108,7 +108,7 @@
                                 PlaceholderColor="#645F5F"
                                 TextColor="{StaticResource SecondaryColor}"/>
                     </Frame>
-                    <Label Text="Max: 200 words" TextColor="{StaticResource SecondaryColor}" FontSize="12" FontFamily="Inter-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                    <Label Text="Max: 500 words" TextColor="{StaticResource SecondaryColor}" FontSize="12" FontFamily="Inter-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" Spacing="3" VerticalOptions="Center" >
                     <CheckBox Color="{StaticResource TertiaryColor}" VerticalOptions="CenterAndExpand"  Margin="0,0,0,10" IsChecked="{Binding ScamCheck}"/>

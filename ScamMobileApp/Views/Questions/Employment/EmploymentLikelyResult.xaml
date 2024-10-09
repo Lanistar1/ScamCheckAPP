@@ -4,7 +4,7 @@
              x:Class="ScamMobileApp.Views.Questions.Employment.EmploymentLikelyResult"
              Title="Is This A Scam?"
              NavigationPage.HasNavigationBar="False"
-             BackgroundImageSource="scambackground.png">
+             BackgroundColor="{StaticResource PrimaryColor}">
 
     <ScrollView>
         <StackLayout>

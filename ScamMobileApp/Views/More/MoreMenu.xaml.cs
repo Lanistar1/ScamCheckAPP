@@ -148,5 +148,10 @@ namespace ScamMobileApp.Views.More
         {
             Navigation.PushAsync(new PrivacyPolicy());
         }
+
+        private void To_PostVisibility(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PostVisibility());
+        }
     }
 }

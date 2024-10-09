@@ -675,6 +675,17 @@ namespace ScamMobileApp.ViewModels.Report
                 OnPropertyChanged(nameof(Croatia));
             }
         }
+
+        private bool china = false;
+        public bool China
+        {
+            get => china;
+            set
+            {
+                china = value;
+                OnPropertyChanged(nameof(China));
+            }
+        }
         #endregion
 
 
@@ -698,52 +709,53 @@ namespace ScamMobileApp.ViewModels.Report
                 new SelectItemModel(5,"Brazil"),
                 new SelectItemModel(6,"Bulgaria"),
                 new SelectItemModel(7,"Canada"),
-                new SelectItemModel(8,"Croatia"),
-                new SelectItemModel(9,"Czech Republic"),
-                new SelectItemModel(10,"Denmark"),
-                new SelectItemModel(11,"Egypt"),
-                new SelectItemModel(12,"Estonia"),
-                new SelectItemModel(13,"Finland"),
-                new SelectItemModel(14,"France"),
-                new SelectItemModel(15,"Germany"),
-                new SelectItemModel(16,"Greece"),
-                new SelectItemModel(17,"Hungary"),
-                new SelectItemModel(18,"India"),
-                new SelectItemModel(19,"Indonesia"),
-                new SelectItemModel(20,"Ireland"),
-                new SelectItemModel(21,"Israel"),
-                new SelectItemModel(22,"Italy"),
-                new SelectItemModel(23,"Japan"),
-                new SelectItemModel(24,"Latvia"),
-                new SelectItemModel(25,"Lithuania"),
-                new SelectItemModel(26,"Malaysia"),
-                new SelectItemModel(27,"Mauritius"),
-                new SelectItemModel(28,"Mexico"),
-                new SelectItemModel(29,"Netherland"),
-                new SelectItemModel(30,"New Zealand"),
-                new SelectItemModel(31,"Norway"),
-                new SelectItemModel(32,"Pakistan"),
-                new SelectItemModel(33,"Philippines"),
-                new SelectItemModel(34,"Poland"),
-                new SelectItemModel(35,"Portugal"),
-                new SelectItemModel(36,"Romania"),
-                new SelectItemModel(37,"Saudi Arabia"),
-                new SelectItemModel(38,"Serbia"),
-                new SelectItemModel(39,"Singapore"),
-                new SelectItemModel(40,"Slovakia"),
-                new SelectItemModel(41,"Slovenia"),
-                new SelectItemModel(42,"South Africa"),
-                new SelectItemModel(43,"South Korea"),
-                new SelectItemModel(44,"Spain"),
-                new SelectItemModel(45,"Sri Lanka"),
-                new SelectItemModel(46,"Sweden"),
-                new SelectItemModel(47,"Switzerland"),
-                new SelectItemModel(48,"Thailand"),
-                new SelectItemModel(49,"Turkey"),
-                new SelectItemModel(50,"Ukraine"),
-                new SelectItemModel(51,"United Arab Emirate"),
-                new SelectItemModel(52,"United Kingdom"),
-                new SelectItemModel(53,"United State of America"),
+                new SelectItemModel(8,"China"),
+                new SelectItemModel(9,"Croatia"),
+                new SelectItemModel(10,"Czech Republic"),
+                new SelectItemModel(11,"Denmark"),
+                new SelectItemModel(12,"Egypt"),
+                new SelectItemModel(13,"Estonia"),
+                new SelectItemModel(14,"Finland"),
+                new SelectItemModel(15,"France"),
+                new SelectItemModel(16,"Germany"),
+                new SelectItemModel(17,"Greece"),
+                new SelectItemModel(18,"Hungary"),
+                new SelectItemModel(19,"India"),
+                new SelectItemModel(20,"Indonesia"),
+                new SelectItemModel(21,"Ireland"),
+                new SelectItemModel(22,"Israel"),
+                new SelectItemModel(23,"Italy"),
+                new SelectItemModel(24,"Japan"),
+                new SelectItemModel(25,"Latvia"),
+                new SelectItemModel(26,"Lithuania"),
+                new SelectItemModel(27,"Malaysia"),
+                new SelectItemModel(28,"Mauritius"),
+                new SelectItemModel(29,"Mexico"),
+                new SelectItemModel(30,"Netherland"),
+                new SelectItemModel(31,"New Zealand"),
+                new SelectItemModel(32,"Norway"),
+                new SelectItemModel(33,"Pakistan"),
+                new SelectItemModel(34,"Philippines"),
+                new SelectItemModel(35,"Poland"),
+                new SelectItemModel(36,"Portugal"),
+                new SelectItemModel(37,"Romania"),
+                new SelectItemModel(38,"Saudi Arabia"),
+                new SelectItemModel(39,"Serbia"),
+                new SelectItemModel(40,"Singapore"),
+                new SelectItemModel(41,"Slovakia"),
+                new SelectItemModel(42,"Slovenia"),
+                new SelectItemModel(43,"South Africa"),
+                new SelectItemModel(44,"South Korea"),
+                new SelectItemModel(45,"Spain"),
+                new SelectItemModel(46,"Sri Lanka"),
+                new SelectItemModel(47,"Sweden"),
+                new SelectItemModel(48,"Switzerland"),
+                new SelectItemModel(49,"Thailand"),
+                new SelectItemModel(50,"Turkey"),
+                new SelectItemModel(51,"Ukraine"),
+                new SelectItemModel(52,"United Arab Emirate"),
+                new SelectItemModel(53,"United Kingdom"),
+                new SelectItemModel(54,"United State of America"),
 
             };
             var popup = new SelectItemPickerPopup(responseToLightTypes);
@@ -764,6 +776,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -820,6 +833,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = true;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -876,6 +890,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -931,6 +946,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -988,6 +1004,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1044,6 +1061,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1099,6 +1117,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -1156,6 +1175,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1212,6 +1232,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1268,6 +1289,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1324,6 +1346,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1380,6 +1403,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1435,6 +1459,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -1492,6 +1517,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1548,6 +1574,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1604,6 +1631,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1660,6 +1688,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1716,6 +1745,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1772,6 +1802,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1828,6 +1859,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1884,6 +1916,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1940,6 +1973,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -1996,6 +2030,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -2052,6 +2087,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -2107,6 +2143,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = true;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -2164,6 +2201,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = true;
                 Denmark = false;
                 Egypt = false;
@@ -2219,6 +2257,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = true;
@@ -2276,6 +2315,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = true;
@@ -2331,6 +2371,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -2388,6 +2429,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -2443,6 +2485,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -2500,6 +2543,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -2555,6 +2599,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -2611,6 +2656,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -2668,6 +2714,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -2724,6 +2771,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -2780,6 +2828,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -2835,6 +2884,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -2892,6 +2942,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -2947,6 +2998,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -3003,6 +3055,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -3059,6 +3112,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -3116,6 +3170,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -3171,6 +3226,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -3227,6 +3283,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -3283,6 +3340,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -3340,6 +3398,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
+                China = false;
                 Czech = false;
                 Denmark = false;
                 Egypt = false;
@@ -3395,6 +3454,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -3451,6 +3511,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
+                China = false;
                 Croatia = false;
                 Czech = false;
                 Denmark = false;
@@ -3504,6 +3565,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Argentina = false;
                 Austria = false;
                 Belgium = false;
+                China = false;
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
@@ -3561,6 +3623,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Austria = false;
                 Belgium = false;
                 Brazil = false;
+                China = false;
                 Bulgaria = false;
                 Canada = false;
                 Croatia = false;
@@ -3616,6 +3679,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Argentina = false;
                 Austria = false;
                 Belgium = false;
+                China = false;
                 Brazil = false;
                 Bulgaria = false;
                 Canada = false;
@@ -3671,6 +3735,7 @@ namespace ScamMobileApp.ViewModels.Report
                 Australia = false;
                 Argentina = false;
                 Austria = false;
+                China = false;
                 Belgium = false;
                 Brazil = false;
                 Bulgaria = false;
@@ -3722,6 +3787,64 @@ namespace ScamMobileApp.ViewModels.Report
                 UnitedK = false;
                 USA = false;
             }
+            else if (Title == "China")
+            {
+                Australia = false;
+                Argentina = false;
+                Austria = false;
+                Belgium = false;
+                Brazil = false;
+                Bulgaria = false;
+                Canada = false;
+                Croatia = false;
+                China = true;
+                Czech = false;
+                Denmark = false;
+                Egypt = false;
+                Estonia = false;
+                Finland = false;
+                France = false;
+                Germany = false;
+                Greece = false;
+                Hungary = false;
+                India = false;
+                Indonesia = false;
+                Ireland = false;
+                Israel = false;
+                Italy = false;
+                Japan = false;
+                Latvia = false;
+                Lithuania = false;
+                Malaysia = false;
+                Mauritius = false;
+                Mexico = false;
+                Netherland = false;
+                Zealand = false;
+                Norway = false;
+                Pakistan = false;
+                Philippines = false;
+                Poland = false;
+                Portugal = false;
+                Romania = false;
+                Saudi = false;
+                Serbia = false;
+                Singapore = false;
+                Slovakia = false;
+                Slovenia = false;
+                SAfrica = false;
+                SKorea = false;
+                Spain = false;
+                Sri = false;
+                Sweden = false;
+                Switzerland = false;
+                Thailand = false;
+                Turkey = false;
+                Ukraine = false;
+                UAE = false;
+                UnitedK = false;
+                USA = false;
+            }
+
 
         }
 

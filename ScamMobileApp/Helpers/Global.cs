@@ -12,6 +12,7 @@ namespace ScamMobileApp.Helpers
         //public static string BaseUrl => "http://209.97.184.81:5000";
         public static string BaseUrl => "https://server.thescamalicious.com";
 
+
         public static string LoginUrl => $"{BaseUrl}/auth/login";
         public static string SignupUrl => $"{BaseUrl}/auth/signup";
         public static string ChangePasswordUrl => $"{BaseUrl}/auth/change-password";
@@ -24,6 +25,13 @@ namespace ScamMobileApp.Helpers
         public static string GetFeedbackUrl => $"{BaseUrl}/feedback/user/all";
         public static string DeleteProfileUrl => $"{BaseUrl}/auth/delete-account";
         public static string PickFileUrl => $"{BaseUrl}/auth/upload-image";
+        public static string ContactAdminUrl => $"{BaseUrl}/auth/contact-admin";
+        public static string FeedbackCountUrl => $"{BaseUrl}/feedback/count/all";
+        public static string ReportPostUrl => $"{BaseUrl}/experience/report/new";
+        public static string BlockUserUrl => $"{BaseUrl}/auth/block-user";
+        public static string FlagPostUrl => $"{BaseUrl}/experience/flag/new";
+        public static string AddUnwantedKeywordsUrl => $"{BaseUrl}/feedback/unwanted/keywords";
+        public static string GetUnwantedKeywordsUrl => $"{BaseUrl}/feedback/unwanted/keywords";
 
 
 
@@ -44,6 +52,8 @@ namespace ScamMobileApp.Helpers
         public static string likelyOrNot;
         public static int Rating;
         public static string comment;
+        public static string UserName;
+        public static string firstName;
         public static DateTime DateType { get; set; }
 
 
