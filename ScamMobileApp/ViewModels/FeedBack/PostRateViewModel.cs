@@ -1,32 +1,24 @@
-﻿using ScamMobileApp.Models.Identity;
+﻿using ScamMobileApp.Helpers;
+using ScamMobileApp.Models.Feedback;
 using ScamMobileApp.Models.Others;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views.Identity;
-using ScamMobileApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using ScamMobileApp.Models.Experience;
-using System.Collections.ObjectModel;
 
-namespace ScamMobileApp.ViewModels.Others
+namespace ScamMobileApp.ViewModels.FeedBack
 {
-
-    public class KeywordViewModel : BaseViewModel
+    public class PostRateViewModel : BaseViewModel
     {
-        public KeywordViewModel(INavigation navigation)
+        public PostRateViewModel(INavigation navigation)
         {
             Navigation = navigation;
 
-            Task _tsk = FetchUnwantedKeywords();
-
-            KeywordCommand = new Command(async () => await KeywordCommandExecute());
-
-            AddKeywordCommand = new Command(async () => await ExecuteAddKeywordCommand());
-
+            AppRatingCommand = new Command(async () => await AppRatingCommandExecute());
 
         }
 
@@ -43,34 +35,7 @@ namespace ScamMobileApp.ViewModels.Others
             }
         }
 
-        List<string> tagList = new List<string>();
-
-        private string _tagInput;
-        public string TagInput
-        {
-            get { return _tagInput; }
-            set
-            {
-                if (_tagInput != value)
-                {
-                    _tagInput = value;
-                    OnPropertyChanged(nameof(TagInput));
-                }
-            }
-        }
-
-        private List<string> unwantedKeywords;
-        public List<string> UnwantedKeywords
-        {
-            get => unwantedKeywords;
-            set
-            {
-                unwantedKeywords = value;
-                OnPropertyChanged(nameof(UnwantedKeywords));
-            }
-        }
-
-        private string emptyPlaceholder = "Fetching Unwanted Keywords...";
+        private string emptyPlaceholder;
         public string EmptyPlaceholder
         {
             get => emptyPlaceholder;
@@ -80,51 +45,43 @@ namespace ScamMobileApp.ViewModels.Others
                 OnPropertyChanged(nameof(EmptyPlaceholder));
             }
         }
+
+        private KeywordData unwantedKeywords;
+        public KeywordData UnwantedKeywords
+        {
+            get => unwantedKeywords;
+            set
+            {
+                unwantedKeywords = value;
+                OnPropertyChanged(nameof(UnwantedKeywords));
+            }
+        }
         #endregion
 
 
         #region Command
-        public Command KeywordCommand { get; }
-        public Command AddKeywordCommand { get; }
+        public Command AppRatingCommand { get; }
         #endregion
 
         #region Events, Methods, Functions and Navigations
 
-        private async Task ExecuteAddKeywordCommand()
+        private async Task AppRatingCommandExecute()
         {
-            if (!string.IsNullOrWhiteSpace(TagInput))
-            {
-                tagList.Add(TagInput);
-                //string result = TagInput + " " + "added";
-
-                var message = TagInput + " " + "added to unwanted Keywords";
-                await MessagePopup.Instance.Show(message);
-
-                TagInput = string.Empty; // Clear the input field
-            }
-        }
-
-        private async Task KeywordCommandExecute()
-        {
-            //if (string.IsNullOrWhiteSpace(Message))
-            //{
-            //    await MessagePopup.Instance.Show("Message field should not be empty");
-
-            //    return;
-            //}
 
             try
             {
 
-                await LoadingPopup.Instance.Show("Adding unwanted keywords...");
+                await LoadingPopup.Instance.Show("Posting app rating...");
 
-                KeywordsRequestModel requestPayload = new KeywordsRequestModel() { keyword = tagList };
+                var ratingNumber = Global.newRatingNumber;
 
-                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.AddUnwantedkeywordsAsync(requestPayload);
+                PostRateRequestModel requestPayload = new PostRateRequestModel() { rating = ratingNumber };
+
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.AddRatingAsync(requestPayload);
 
                 if (ResponseData != null)
                 {
-                    await MessagePopup.Instance.Show("Unwanted keywords added successfully.");
+                    await MessagePopup.Instance.Show("Rating Created successfully.");
 
                     //Application.Current.MainPage = new NavigationPage(new Tabbed());
                 }
@@ -163,7 +120,7 @@ namespace ScamMobileApp.ViewModels.Others
                 {
                     if (ResponseData.data != null)
                     {
-                        UnwantedKeywords = ResponseData.data.keyword;
+                        UnwantedKeywords = ResponseData.data;
 
                     }
                     else

@@ -9,8 +9,8 @@
     <StackLayout Margin="20">
         <Frame CornerRadius="10" Padding="10,20" BackgroundColor="#EEE9ED" HasShadow="False">
             <StackLayout>
-                <Label Text="Got a Question?" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                <Label Text="Get in Touch - Scammers Hate it" TextColor="#646C79" FontSize="13" FontFamily="Airbnb-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                <Label Text="Got a Question? Get in Touch—Scammers Hate It When We Team Up!" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                <Label Text="Whether you've got a query or just want to say hello, we’re all ears. We’re here to help and answer any questions you might have. If you don't get a reply immediately, we might be busy combating scammers, but we promise we'll get back to you as soon as possible." TextColor="#646C79" FontSize="13" FontFamily="Airbnb-Regular" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
             </StackLayout>
         </Frame>
 

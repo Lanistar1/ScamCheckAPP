@@ -1,6 +1,8 @@
 ﻿using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using ScamMobileApp.Helpers;
+using ScamMobileApp.ViewModels.FeedBack;
+using ScamMobileApp.ViewModels.Others;
 using ScamMobileApp.ViewModels.ScamCalculator;
 using ScamMobileApp.Views;
 using System;
@@ -55,6 +57,9 @@ namespace ScamMobileApp.Popup
 
         public int StarRating { get; set; }
 
+        PostRateViewModel pageViewModel = null;
+
+
         public FeedbackPopup()
         {
             InitializeComponent();
@@ -62,28 +67,6 @@ namespace ScamMobileApp.Popup
             // Initialize the star rating (e.g., 0 means no star)
             StarRating = 0;
 
-            //ratingNumber = 0;
-
-            //if (ratingNumber == 0)
-            //{
-            //    Device.BeginInvokeOnMainThread(() =>
-            //    {
-            //        // Force a layout update if necessary
-            //        hideButton = true; // Show Button 1
-            //        showButton = false; // Hide Button 2
-            //    });
-
-            //}
-            //else
-            //{
-            //    Device.BeginInvokeOnMainThread(() =>
-            //    {
-            //        // Force a layout update if necessary
-            //        hideButton = false; // Hide Button 1
-            //        showButton = true; // Show Button 2
-            //    });
-
-            //}
 
             HideButton = true;
             ShowButton = false;
@@ -91,6 +74,10 @@ namespace ScamMobileApp.Popup
             UpdateButtonVisibility();
 
             BindingContext = this;
+
+            pageViewModel = new PostRateViewModel(Navigation);
+            InitializeComponent();
+            BindingContext = pageViewModel;
         }
 
         
@@ -100,6 +87,7 @@ namespace ScamMobileApp.Popup
             MessagingCenter.Subscribe<CustomStarControl, int>(this, "RatingNumber", (sender, RatingNumber) =>
             {
                 ratingNumber = RatingNumber;
+                Global.newRatingNumber = ratingNumber;
 
                 if (ratingNumber == 0)
                 {

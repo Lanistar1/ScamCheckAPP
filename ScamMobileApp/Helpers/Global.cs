@@ -32,6 +32,7 @@ namespace ScamMobileApp.Helpers
         public static string FlagPostUrl => $"{BaseUrl}/experience/flag/new";
         public static string AddUnwantedKeywordsUrl => $"{BaseUrl}/feedback/unwanted/keywords";
         public static string GetUnwantedKeywordsUrl => $"{BaseUrl}/feedback/unwanted/keywords";
+        public static string PostAppRatingUrl => $"{BaseUrl}/feedback/rate/new";
 
 
 
@@ -54,6 +55,7 @@ namespace ScamMobileApp.Helpers
         public static string comment;
         public static string UserName;
         public static string firstName;
+        public static int newRatingNumber;
         public static DateTime DateType { get; set; }
 
 

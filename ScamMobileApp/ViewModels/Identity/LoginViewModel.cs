@@ -322,6 +322,11 @@ namespace ScamMobileApp.ViewModels.Identity
                 await MessagePopup.Instance.Show("Password field should not be empty.");
                 return false;
             }
+            else if (Password.Length < 8 || !Password.Any(char.IsDigit) || !Password.Any(ch => !char.IsLetterOrDigit(ch)))
+            {
+                await MessagePopup.Instance.Show("Password field must contain atleast a number, a special character and must be atleast 8 characters long.");
+                return false;
+            }
             else
             {
                 return true;

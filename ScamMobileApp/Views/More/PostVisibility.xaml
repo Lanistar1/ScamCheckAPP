@@ -7,6 +7,21 @@
              Title="Manage posts visibility">
 
     <StackLayout Margin="20">
+        <!--<StackLayout x:Name="cvBanner" BindableLayout.ItemsSource="{Binding UnwantedKeywords}" Spacing="2" Margin="0,0,0,10">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="5" BorderColor="#aaaaaa" HasShadow="False" CornerRadius="5" >
+                        <StackLayout Spacing="0">
+                            <Label Text="{Binding }"  FontSize="14" TextColor="#191919"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                        </StackLayout>
+                    </Frame>
+                    
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>-->
+
+
+
         <Frame CornerRadius="20" Padding="20,10" BackgroundColor="#EEE9ED" HasShadow="False">
             <Label Text="Add the keywords you want excluded  from your timeline, to manage what is visible to you." TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
         </Frame>
@@ -47,7 +62,7 @@
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding KeywordCommand}"/>
             </Frame.GestureRecognizers>
-            <Label Text="Add Keywords" FontSize="14" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Label Text="Submit" FontSize="14" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
         </Frame>
     </StackLayout>
 </ContentPage>

@@ -121,12 +121,12 @@ namespace ScamMobileApp.ViewModels.Identity
         #endregion
 
 
-        #region Events, Methods, Functions and Navigations
+        #region Commands
         public Command SignupCommand { get; }
         public Command SelectAgeCommand { get; }
         #endregion
 
-        #region
+        #region Events, Methods, Functions and Navigations
         private async Task SignupCommandExecute(string email, string password, string username, string firstname, string lastname)
         {
             if (string.IsNullOrWhiteSpace(Email))
@@ -194,11 +194,11 @@ namespace ScamMobileApp.ViewModels.Identity
 
                 await LoadingPopup.Instance.Show("Registering...");
 
-                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.SignupUserAsync(email, password, username, firstname, lastname);
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.SignupUserAsync(email, password, username, firstname, lastname, AgeBracket);
 
                 if (ResponseData != null)
                 {
-                    await MessagePopup.Instance.Show("Sign up successful");
+                    await MessagePopup.Instance.Show("Sign up successful. Check your mail to verify your account.");
 
                     await Navigation.PushAsync(new Login());
                 }
@@ -235,6 +235,7 @@ namespace ScamMobileApp.ViewModels.Identity
                 new SelectItemModel(4,"35-44"),
                 new SelectItemModel(5,"45-54"),
                 new SelectItemModel(6,"55-64"),
+                new SelectItemModel(6,"65 & above"),
             };
             var popup = new SelectItemPickerPopup(ageTypes);
 

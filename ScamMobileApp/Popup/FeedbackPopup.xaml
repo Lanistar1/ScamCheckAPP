@@ -69,13 +69,13 @@
                 <Grid Grid.Column="1">
                     <Frame CornerRadius="5" HasShadow="False" IsVisible="{Binding HideButton}" BackgroundColor="#cccccc"  Padding="0" Margin="5,0" HeightRequest="50">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer/>
+                            <TapGestureRecognizer />
                         </Frame.GestureRecognizers>
                         <Label Text="Submit" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
                     </Frame>
                     <Frame CornerRadius="5" HasShadow="False" IsVisible="{Binding ShowButton}"  BackgroundColor="{StaticResource TertiaryColor}" Padding="0" Margin="5,0" HeightRequest="50">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Close_Popup"/>
+                            <TapGestureRecognizer Tapped="Close_Popup" Command="{Binding AppRatingCommand}"/>
                         </Frame.GestureRecognizers>
                         <Label Text="Submit" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
                     </Frame>
