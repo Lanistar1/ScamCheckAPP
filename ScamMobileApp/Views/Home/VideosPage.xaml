@@ -3,9 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScamMobileApp.Views.Home.VideosPage"
              BackgroundColor="{StaticResource PrimaryColor}"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Title="Videos">
 
-    <ScrollView Margin="20">
+    <StackLayout Padding="10">
+            <!-- Video Player -->
+            <xct:MediaElement Source="{Binding SelectedVideoUrl}" 
+                          AutoPlay="True"
+                          Aspect="AspectFit"
+                          HeightRequest="200"
+                          x:Name="VideoPlayer"
+                          IsVisible="{Binding SelectedVideoUrl, Converter={StaticResource NullToVisibilityConverter}}" />
+
+            <!-- Video List -->
+        <CollectionView ItemsSource="{Binding Videos}"
+                        SelectionMode="Single">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical" Span="2" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="5" Margin="5" HasShadow="True" BorderColor="Gray" CornerRadius="10">
+                        <StackLayout>
+                            <Label Text="{Binding Title}" HorizontalOptions="Center" TextColor="#000000"/>
+                            <Button Text="Play" CornerRadius="5" BackgroundColor="{StaticResource SecondaryColor}"
+                                    Command="{Binding BindingContext.PlayVideoCommand, Source={x:Reference Name=VideoPlayer}}"
+                                    CommandParameter="{Binding}" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+    <!--<ScrollView Margin="20">
         <StackLayout>
             <StackLayout>
                 <Image Source="videobox.png" />
@@ -25,5 +57,5 @@
             </StackLayout>
         </StackLayout>
 
-    </ScrollView>
+    </ScrollView>-->
 </ContentPage>

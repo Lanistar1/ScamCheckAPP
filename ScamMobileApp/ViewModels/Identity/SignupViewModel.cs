@@ -235,7 +235,7 @@ namespace ScamMobileApp.ViewModels.Identity
                 new SelectItemModel(4,"35-44"),
                 new SelectItemModel(5,"45-54"),
                 new SelectItemModel(6,"55-64"),
-                new SelectItemModel(6,"65 & above"),
+                new SelectItemModel(7,"65 & above"),
             };
             var popup = new SelectItemPickerPopup(ageTypes);
 

@@ -7,18 +7,29 @@
              Title="Manage posts visibility">
 
     <StackLayout Margin="20">
-        <!--<StackLayout x:Name="cvBanner" BindableLayout.ItemsSource="{Binding UnwantedKeywords}" Spacing="2" Margin="0,0,0,10">
-            <BindableLayout.ItemTemplate>
-                <DataTemplate>
-                    <Frame Padding="5" BorderColor="#aaaaaa" HasShadow="False" CornerRadius="5" >
-                        <StackLayout Spacing="0">
-                            <Label Text="{Binding }"  FontSize="14" TextColor="#191919"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
-                        </StackLayout>
-                    </Frame>
-                    
-                </DataTemplate>
-            </BindableLayout.ItemTemplate>
-        </StackLayout>-->
+        <StackLayout Margin="0,0,0,20">
+            <Label Text="Previously added keywords" TextColor="#191919" FontSize="14" FontAttributes="Bold"/>
+            <FlexLayout x:Name="cvBanner"
+                        BindableLayout.ItemsSource="{Binding UnwantedKeywords}"
+                        Direction="Row"
+                        Wrap="Wrap"
+                        JustifyContent="Start"
+                        AlignItems="Center"
+                        Margin="0,0,0,10">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="5" Margin="5" BorderColor="#d3d3d3" CornerRadius="5" HasShadow="False" WidthRequest="80">
+                            <Label Text="{Binding}" 
+                                   FontSize="14" 
+                                   TextColor="#191919"  
+                                   VerticalTextAlignment="Center" 
+                                   HorizontalTextAlignment="Center"/>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </StackLayout>
+        
 
 
 

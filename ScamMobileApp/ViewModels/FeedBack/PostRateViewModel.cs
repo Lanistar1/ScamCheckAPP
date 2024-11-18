@@ -35,6 +35,17 @@ namespace ScamMobileApp.ViewModels.FeedBack
             }
         }
 
+        private string myComment;
+        public string MyComment
+        {
+            get => myComment;
+            set
+            {
+                myComment = value;
+                OnPropertyChanged(nameof(MyComment));
+            }
+        }
+
         private string emptyPlaceholder;
         public string EmptyPlaceholder
         {
@@ -74,6 +85,8 @@ namespace ScamMobileApp.ViewModels.FeedBack
                 await LoadingPopup.Instance.Show("Posting app rating...");
 
                 var ratingNumber = Global.newRatingNumber;
+                Global.comment = MyComment;
+
 
                 PostRateRequestModel requestPayload = new PostRateRequestModel() { rating = ratingNumber };
 

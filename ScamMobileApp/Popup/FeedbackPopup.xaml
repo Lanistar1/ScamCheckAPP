@@ -33,7 +33,7 @@
             
             <Label Text="Rate below" TextColor="#646C79" FontSize="15" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
 
-            <local:CustomStarControl x:Name="starRating" Rating="{Binding StarRating}" />
+            <local:CustomStarControl  Rating="{Binding StarRating}" />
 
             <StackLayout Margin="0,10,0,0">
                 <Label  Text="Tell us more"
@@ -47,9 +47,9 @@
                             FontSize="15"
                             AutoSize="TextChanges"
                             FontFamily="Airbnb-Medium"
-                            x:Name="comment"
                             Placeholder="Share your experience using the app"
                             PlaceholderColor="#cccccc"
+                            Text="{Binding MyComment}"
                             TextColor="{StaticResource SecondaryColor}"/>
                 </Frame>
             </StackLayout>
@@ -60,7 +60,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Frame CornerRadius="5" HasShadow="False" IsVisible="True" x:Name="Atmunlikely" BackgroundColor="#E6E8EA" Grid.Column="0" Padding="0" Margin="5,0" HeightRequest="50">
+                <Frame CornerRadius="5" HasShadow="False" IsVisible="True"  BackgroundColor="#E6E8EA" Grid.Column="0" Padding="0" Margin="5,0" HeightRequest="50">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="cancel"/>
                     </Frame.GestureRecognizers>
