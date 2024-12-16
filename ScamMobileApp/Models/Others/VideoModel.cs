@@ -8,6 +8,8 @@ namespace ScamMobileApp.Models.Others
     {
         public string Title { get; set; } // Optional, for display
         public string VideoUrl { get; set; }
+        public string ThumbnailUrl { get; set; }
+        public bool isSelected { get; set; }
     }
 
 }

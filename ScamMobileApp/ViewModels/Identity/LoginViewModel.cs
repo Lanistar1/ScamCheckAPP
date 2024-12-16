@@ -4,6 +4,7 @@ using ScamMobileApp.Models.Identity;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views;
+using ScamMobileApp.Views.Home;
 using ScamMobileApp.Views.Identity;
 using System;
 using System.Data;
@@ -258,7 +259,14 @@ namespace ScamMobileApp.ViewModels.Identity
 
                     //await FetchUserProfile();
 
-                    Application.Current.MainPage = new NavigationPage(new Tabbed());
+                    //Application.Current.MainPage = new NavigationPage(new Tabbed());
+
+                    //await Navigation.PushAsync(new Tabbed());
+
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        Application.Current.MainPage = new NavigationPage(new NewDashboard());
+                    });
                 }
 
                 else if (ErrorData != null && StatusCode == 401)

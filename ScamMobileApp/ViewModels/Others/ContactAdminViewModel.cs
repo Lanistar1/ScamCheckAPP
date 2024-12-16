@@ -6,6 +6,7 @@ using ScamMobileApp.Models.Popup;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views;
+using ScamMobileApp.Views.Home;
 using ScamMobileApp.Views.Identity;
 using System;
 using System.Collections.Generic;
@@ -168,7 +169,10 @@ namespace ScamMobileApp.ViewModels.Others
                 {
                     await MessagePopup.Instance.Show("Message sent to admin.");
 
-                    Application.Current.MainPage = new NavigationPage(new Tabbed());
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        Application.Current.MainPage = new NavigationPage(new NewDashboard());
+                    });
                 }
 
                 else if (ErrorData != null && StatusCode == 401)

@@ -27,6 +27,7 @@ namespace ScamMobileApp.ViewModels.Others
 
             AddKeywordCommand = new Command(async () => await ExecuteAddKeywordCommand());
 
+            CancelCommand = new Command<string>(async (keyword) => await ExecuteCancelCommand(keyword));
 
         }
 
@@ -86,6 +87,8 @@ namespace ScamMobileApp.ViewModels.Others
         #region Command
         public Command KeywordCommand { get; }
         public Command AddKeywordCommand { get; }
+        public Command<string> CancelCommand { get; }
+
         #endregion
 
         #region Events, Methods, Functions and Navigations
@@ -104,21 +107,30 @@ namespace ScamMobileApp.ViewModels.Others
             }
         }
 
+
+        //=======add unwanted keyword ==========
         private async Task KeywordCommandExecute()
         {
-            //if (string.IsNullOrWhiteSpace(Message))
-            //{
-            //    await MessagePopup.Instance.Show("Message field should not be empty");
-
-            //    return;
-            //}
-
             try
             {
+                // Merge the existing unwanted keywords with the new keywords
+                var allKeywords = new List<string>();
+
+                // Add previously fetched unwanted keywords
+                if (UnwantedKeywords != null && UnwantedKeywords.Count > 0)
+                {
+                    allKeywords.AddRange(UnwantedKeywords);
+                }
+
+                // Add new keywords added by the user
+                if (tagList != null && tagList.Count > 0)
+                {
+                    allKeywords.AddRange(tagList);
+                }
 
                 await LoadingPopup.Instance.Show("Adding unwanted keywords...");
 
-                KeywordsRequestModel requestPayload = new KeywordsRequestModel() { keyword = tagList };
+                KeywordsRequestModel requestPayload = new KeywordsRequestModel() { keyword = allKeywords };
 
                 var (ResponseData, ErrorData, StatusCode) = await _scamAppService.AddUnwantedkeywordsAsync(requestPayload);
 
@@ -126,15 +138,13 @@ namespace ScamMobileApp.ViewModels.Others
                 {
                     await MessagePopup.Instance.Show("Unwanted keywords added successfully.");
 
-                    //Application.Current.MainPage = new NavigationPage(new Tabbed());
+                    // Fetch the updated list of unwanted keywords to display
+                    await FetchUnwantedKeywords();
                 }
-
                 else if (ErrorData != null && StatusCode == 401)
                 {
-                    await MessagePopup.Instance.Show("Session expire.");
-
+                    await MessagePopup.Instance.Show("Session expired.");
                     Application.Current.MainPage = new NavigationPage(new Login());
-
                 }
                 else
                 {
@@ -152,6 +162,96 @@ namespace ScamMobileApp.ViewModels.Others
             }
         }
 
+
+        // =============remove keyword ==============
+        private async Task ExecuteCancelCommand(string keywordToRemove)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(keywordToRemove))
+                    return;
+
+                // Filter out the keyword to remove
+                var remainingKeywords = new List<string>(UnwantedKeywords);
+                remainingKeywords.Remove(keywordToRemove);
+
+                await LoadingPopup.Instance.Show("Updating unwanted keywords...");
+
+                KeywordsRequestModel requestPayload = new KeywordsRequestModel() { keyword = remainingKeywords };
+
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.AddUnwantedkeywordsAsync(requestPayload);
+
+                if (ResponseData != null)
+                {
+                    await MessagePopup.Instance.Show($"Keyword '{keywordToRemove}' removed successfully.");
+
+                    // Fetch the updated keywords
+                    await FetchUnwantedKeywords();
+                }
+                else if (ErrorData != null && StatusCode == 401)
+                {
+                    await MessagePopup.Instance.Show("Session expired.");
+                    Application.Current.MainPage = new NavigationPage(new Login());
+                }
+                else
+                {
+                    await MessagePopup.Instance.Show(ErrorData.message);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
+            }
+            finally
+            {
+                await LoadingPopup.Instance.Hide();
+            }
+        }
+
+
+        //private async Task KeywordCommandExecute()
+        //{
+
+        //    try
+        //    {
+
+        //        await LoadingPopup.Instance.Show("Adding unwanted keywords...");
+
+        //        KeywordsRequestModel requestPayload = new KeywordsRequestModel() { keyword = tagList };
+
+        //        var (ResponseData, ErrorData, StatusCode) = await _scamAppService.AddUnwantedkeywordsAsync(requestPayload);
+
+        //        if (ResponseData != null)
+        //        {
+        //            await MessagePopup.Instance.Show("Unwanted keywords added successfully.");
+
+        //            //Application.Current.MainPage = new NavigationPage(new Tabbed());
+        //        }
+
+        //        else if (ErrorData != null && StatusCode == 401)
+        //        {
+        //            await MessagePopup.Instance.Show("Session expire.");
+
+        //            Application.Current.MainPage = new NavigationPage(new Login());
+
+        //        }
+        //        else
+        //        {
+        //            await MessagePopup.Instance.Show(ErrorData.message);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine(ex);
+        //        await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
+        //    }
+        //    finally
+        //    {
+        //        await LoadingPopup.Instance.Hide();
+        //    }
+        //}
+
         private async Task FetchUnwantedKeywords()
         {
             try
@@ -163,7 +263,22 @@ namespace ScamMobileApp.ViewModels.Others
                 {
                     if (ResponseData.data != null)
                     {
-                        UnwantedKeywords = ResponseData.data.keyword;
+                        //UnwantedKeywords = ResponseData.data.keyword;
+
+                        if (ResponseData.data.keyword.Count >= 0)
+                        {
+                            //await MessagePopup.Instance.Show(ErrorData.message);
+                            //EmptyPlaceholder = "No Keyword found.";
+                            UnwantedKeywords = ResponseData.data.keyword;
+
+                            EmptyPlaceholder = "";
+
+
+                        }
+                        if (ResponseData.data.keyword.Count == 0)
+                        {
+                            EmptyPlaceholder = "No Keyword found.";
+                        }
 
                     }
                     else

@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using ScamMobileApp.Views.Home;
 
 namespace ScamMobileApp.ViewModels.ScamCalculator
 {
@@ -508,7 +509,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 {
                     await MessagePopup.Instance.Show("Feedback saved Successfully");
 
-                    Application.Current.MainPage = new NavigationPage(new Tabbed());
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        Application.Current.MainPage = new NavigationPage(new NewDashboard());
+                    });
                 }
                 else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                 {

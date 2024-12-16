@@ -1,306 +1,182 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:utils="clr-namespace:ScamMobileApp.Utils"
              x:Class="ScamMobileApp.Views.More.MoreMenu"
-             BackgroundColor="{StaticResource PrimaryColor}">
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="Menu">
 
-    <StackLayout Margin="20,10">
-        <Label Text="More" TextColor="{StaticResource SecondaryColor}" FontSize="15" FontFamily="Airbnb-Bold"
-               HorizontalTextAlignment="Center" Margin="0,0,0,0" Padding="20,10"/>
-        <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
-            <FlexLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="To_Profile"/>
-            </FlexLayout.GestureRecognizers>
-            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
-                <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
-                    <Image  Source="profileRed.png" HeightRequest="30" WidthRequest="30" />
+    <Grid HorizontalOptions="FillAndExpand"
+VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Margin="20,10">
+            <!--<Label Text="More" TextColor="{StaticResource SecondaryColor}" FontSize="15" FontFamily="Airbnb-Bold"
+               HorizontalTextAlignment="Center" Margin="0,0,0,0" Padding="20,10"/>-->
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_Profile"/>
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
+                        <Image  Source="profileRed.png" HeightRequest="30" WidthRequest="30" />
+                    </StackLayout>
+                    <Label Text="My Profile" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
-                <Label Text="My Profile" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
-            </StackLayout>
-            <StackLayout>
-                <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
-            </StackLayout>
-        </FlexLayout>
-        <Line X1="0"
+                <StackLayout>
+                    <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+            <Line X1="0"
               Y1="0"
               X2="400"
               Y2="0"
               Stroke="#E6E8ED" />
 
-        <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
-            <FlexLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="To_ChangePassword"/>
-            </FlexLayout.GestureRecognizers>
-            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
-                <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
-                    <Image  Source="passwordRed.png" HeightRequest="30" WidthRequest="30" />
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_ChangePassword"/>
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
+                        <Image  Source="passwordRed.png" HeightRequest="30" WidthRequest="30" />
+                    </StackLayout>
+                    <Label Text="Change Password" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
-                <Label Text="Change Password" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
-            </StackLayout>
-            <StackLayout>
-                <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
-            </StackLayout>
-        </FlexLayout>
-        <Line X1="0"
+                <StackLayout>
+                    <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+            <Line X1="0"
               Y1="0"
               X2="400"
               Y2="0"
               Stroke="#E6E8ED" />
 
-        <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
-            <FlexLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="To_PostVisibility"/>
-            </FlexLayout.GestureRecognizers>
-            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
-                <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
-                    <Image  Source="termsRed.png" HeightRequest="30" WidthRequest="30" />
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_PostVisibility"/>
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
+                        <Image  Source="termsRed.png" HeightRequest="30" WidthRequest="30" />
+                    </StackLayout>
+                    <Label Text="Manage Posts Visibility" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
-                <Label Text="Manage Posts Visibility" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
-            </StackLayout>
-            <StackLayout>
-                <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
-            </StackLayout>
-        </FlexLayout>
-        <Line X1="0"
+                <StackLayout>
+                    <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+            <Line X1="0"
               Y1="0"
               X2="400"
               Y2="0"
               Stroke="#E6E8ED" />
 
-        <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
-            <FlexLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="To_Terms"/>
-            </FlexLayout.GestureRecognizers>
-            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
-                <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
-                    <Image  Source="termsRed.png" HeightRequest="30" WidthRequest="30" />
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_Terms"/>
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
+                        <Image  Source="termsRed.png" HeightRequest="30" WidthRequest="30" />
+                    </StackLayout>
+                    <Label Text="Terms and Conditions" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
-                <Label Text="Terms and Conditions" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
-            </StackLayout>
-            <StackLayout>
-                <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
-            </StackLayout>
-        </FlexLayout>
-        <Line X1="0"
+                <StackLayout>
+                    <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+            <Line X1="0"
               Y1="0"
               X2="400"
               Y2="0"
               Stroke="#E6E8ED" />
 
-        <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
-            <FlexLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="To_Privacy"/>
-            </FlexLayout.GestureRecognizers>
-            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
-                <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
-                    <Image  Source="privacy2.png" HeightRequest="30" WidthRequest="30" />
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_Privacy"/>
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
+                        <Image  Source="privacy2.png" HeightRequest="30" WidthRequest="30" />
+                    </StackLayout>
+                    <Label Text="Privacy Policy" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
-                <Label Text="Privacy Policy" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
-            </StackLayout>
-            <StackLayout>
-                <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
-            </StackLayout>
-        </FlexLayout>
-        <Line X1="0"
+                <StackLayout>
+                    <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+            <Line X1="0"
               Y1="0"
               X2="400"
               Y2="0"
               Stroke="#E6E8ED" />
 
-        <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
-            <FlexLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="To_HelpCenter"/>
-            </FlexLayout.GestureRecognizers>
-            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
-                <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
-                    <Image  Source="helpRed.png" HeightRequest="30" WidthRequest="30" />
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_HelpCenter"/>
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
+                        <Image  Source="helpRed.png" HeightRequest="30" WidthRequest="30" />
+                    </StackLayout>
+                    <Label Text="Help Centre" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
-                <Label Text="Help Centre" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
-            </StackLayout>
-            <StackLayout>
-                <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
-            </StackLayout>
-        </FlexLayout>
-        <Line X1="0"
+                <StackLayout>
+                    <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+            <Line X1="0"
               Y1="0"
               X2="400"
               Y2="0"
               Stroke="#E6E8ED" />
 
-        <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
-            <FlexLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="Logout"/>
-            </FlexLayout.GestureRecognizers>
-            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
-                <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
-                    <Image  Source="logouts.png" HeightRequest="30" WidthRequest="30" />
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Logout"/>
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
+                        <Image  Source="logouts.png" HeightRequest="30" WidthRequest="30" />
+                    </StackLayout>
+                    <Label Text="Log Out" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
                 </StackLayout>
-                <Label Text="Log Out" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
-            </StackLayout>
-            <StackLayout>
-                <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
-            </StackLayout>
-        </FlexLayout>
-        <Line X1="0"
+                <StackLayout>
+                    <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+            <Line X1="0"
               Y1="0"
               X2="400"
               Y2="0"
               Stroke="#E6E8ED" />
-    </StackLayout>
-    
-
-    <!--<ScrollView VerticalScrollBarVisibility="Never" >
-        <StackLayout Margin="20,20,20,20">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <StackLayout Grid.Column="0" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_typeOFScam" Source="typescam.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Types of Scam" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-
-                <StackLayout Grid.Column="1" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_ScamQA" Source="scamqa.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="{Binding ScamQA}" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-            </Grid>
-
-            <Grid Margin="0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <StackLayout Grid.Column="0" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_ShareExperience" Source="antiscam.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Anti-Scam Movement" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-
-                </StackLayout>
-
-                <StackLayout Grid.Column="1" Margin="0,0,0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_PreventiveTips" Source="preventivetip.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Preventive Tips" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-            </Grid>
-
-            <Grid Margin="0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <StackLayout Grid.Column="0" Margin="0,0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="TowarningSign" Source="warningsign.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Warning Signs" TextColor="{StaticResource SecondaryColor}"  FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,-5,0,0"/>
-                </StackLayout>
-
-                <StackLayout Grid.Column="1" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_Scamlink" Source="reportscam.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Report Scam" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-            </Grid>
-
-            <Grid Margin="0,10,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <StackLayout Grid.Column="0" Margin="0,0,2,5">
-                    <Frame Padding="10" CornerRadius="10" Background="#233651" HeightRequest="70" WidthRequest="40">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="To_LikelyScam"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout>
-                            <Image Source="infolikely.png" WidthRequest="80" HeightRequest="80" Margin="0,0,0,0" VerticalOptions="Center"/>
-                        </StackLayout>
-                    </Frame>
-                    <Label Text="Likely a scam" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-
-                <StackLayout Grid.Column="1" Margin="2,0,0,5">
-                    <Frame Padding="10" CornerRadius="10" Background="#DEE8EB" HeightRequest="70" WidthRequest="40">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="To_UnlikelyScam"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout>
-                            <Image Source="infoUnlikely.png" WidthRequest="60" HeightRequest="60" VerticalOptions="Center"/>
-                        </StackLayout>
-                    </Frame>
-                    <Label Text="Unlikely a scam" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-            </Grid>
-
-
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <StackLayout Grid.Column="0" Margin="0,0,2,5">
-                    <Frame Padding="10" CornerRadius="10" Background="#ACA564" HeightRequest="70" WidthRequest="40">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="To_Scammed"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout>
-                            <Image Source="infoscam.png" WidthRequest="60" HeightRequest="60" VerticalOptions="CenterAndExpand"/>
-                        </StackLayout>
-                    </Frame>
-                    <Label Text="Scammed" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-
-                <StackLayout Grid.Column="1" Margin="2,0,0,5">
-                    <Frame Padding="10" CornerRadius="10" Background="#A8B9D2" HeightRequest="70" WidthRequest="40">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="To_HelpCenter"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout>
-                            <Image Source="helpicon.png" WidthRequest="60" HeightRequest="60" VerticalOptions="CenterAndExpand"/>
-                        </StackLayout>
-                    </Frame>
-                    <Label Text="Help Center" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-            </Grid>
-
-            <Grid Margin="0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <StackLayout Grid.Column="0" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_Terms" Source="terms.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Terms" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-
-                <StackLayout Grid.Column="1" Margin="0,0" Spacing="0">
-                    <ImageButton BackgroundColor="Transparent" Clicked="To_ChangePassword" Source="passwordchange.png" VerticalOptions="CenterAndExpand"/>
-                    <Label Text="Change Password" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-
-                </StackLayout>
-            </Grid>
-
-
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <StackLayout Grid.Column="0" Margin="0,5,0,10">
-                    <Frame Padding="10" CornerRadius="10" Background="#DF0A17" HeightRequest="70" WidthRequest="40">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Logout"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout>
-                            <Image Source="newscamlogout.png" WidthRequest="40" HeightRequest="40" VerticalOptions="CenterAndExpand"/>
-                        </StackLayout>
-                    </Frame>
-                    <Label Text="Logout" TextColor="{StaticResource SecondaryColor}" FontSize="14" FontFamily="Inter-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                </StackLayout>
-            </Grid>
         </StackLayout>
-    </ScrollView>-->
 
+
+        <!--#region custom bottom tab view-->
+        <Grid HorizontalOptions="FillAndExpand"
+        VerticalOptions="End"
+        HeightRequest="60"
+        Grid.Row="1">
+            <utils:BottomTab hmImgSource="scamhome.png" 
+       hmLabelColor="#ffffff"
+       CurrentPage="MoreMenu"
+       cusImgSource="qascam.png"
+       cusLabelColor="#ffffff"
+       colImgSource="urstory.png"
+       colLabelColor="#ffffff"
+       profileImgSource="activities.png"
+       profileLabelColor="#ffffff"
+       moreImgSource="moremenu.png"
+       moreLabelColor="{StaticResource TertiaryColor}"/>
+        </Grid>
+        <!--#endregion-->
+    </Grid>
+
+
+   
 </ContentPage>

@@ -7,55 +7,29 @@
              Title="Videos">
 
     <StackLayout Padding="10">
-            <!-- Video Player -->
-            <xct:MediaElement Source="{Binding SelectedVideoUrl}" 
-                          AutoPlay="True"
-                          Aspect="AspectFit"
-                          HeightRequest="200"
-                          x:Name="VideoPlayer"
-                          IsVisible="{Binding SelectedVideoUrl, Converter={StaticResource NullToVisibilityConverter}}" />
 
-            <!-- Video List -->
-        <CollectionView ItemsSource="{Binding Videos}"
-                        SelectionMode="Single">
+        <CollectionView x:Name="videoplayer" ItemsSource="{Binding Videos}"
+                SelectionMode="Single">
             <CollectionView.ItemsLayout>
-                <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical" Span="2" />
+                <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
             </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="5" Margin="5" HasShadow="True" BorderColor="Gray" CornerRadius="10">
+                    <Frame Padding="0" Margin="5" HasShadow="False" CornerRadius="10">
                         <StackLayout>
-                            <Label Text="{Binding Title}" HorizontalOptions="Center" TextColor="#000000"/>
-                            <Button Text="Play" CornerRadius="5" BackgroundColor="{StaticResource SecondaryColor}"
-                                    Command="{Binding BindingContext.PlayVideoCommand, Source={x:Reference Name=VideoPlayer}}"
-                                    CommandParameter="{Binding}" />
+                            <ImageButton Source="{Binding ThumbnailUrl}" 
+                                 CornerRadius="0" BackgroundColor="Transparent"
+                                 Command="{Binding Path=BindingContext.TappedCommand, Source={x:Reference videoplayer}}"
+                                 CommandParameter="{Binding}" />
+                            <Frame BackgroundColor="{StaticResource SecondaryColor}" Margin="0,-10,0,0">
+                                <Label Text="{Binding Title}" FontSize="14" HorizontalOptions="Center" 
+                               TextColor="#ffffff" HorizontalTextAlignment="Start"/>
+                            </Frame>
                         </StackLayout>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
     </StackLayout>
-
-    <!--<ScrollView Margin="20">
-        <StackLayout>
-            <StackLayout>
-                <Image Source="videobox.png" />
-                <Label Text="How to spot a scam" TextColor="#110F0F" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start"/>
-            </StackLayout>
-            <StackLayout>
-                <Image Source="videobox.png" />
-                <Label Text="How to download our app" TextColor="#110F0F" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start"/>
-            </StackLayout>
-            <StackLayout>
-                <Image Source="videobox.png" />
-                <Label Text="How to spot a scam" TextColor="#110F0F" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start"/>
-            </StackLayout>
-            <StackLayout>
-                <Image Source="videobox.png" />
-                <Label Text="How to download our app" TextColor="#110F0F" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start"/>
-            </StackLayout>
-        </StackLayout>
-
-    </ScrollView>-->
 </ContentPage>

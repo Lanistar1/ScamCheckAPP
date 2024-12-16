@@ -3,6 +3,7 @@ using ScamMobileApp.Models.Popup;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views;
+using ScamMobileApp.Views.Home;
 using ScamMobileApp.Views.Identity;
 using System;
 using System.Collections.Generic;
@@ -227,8 +228,10 @@ namespace ScamMobileApp.ViewModels.Experience
                 {
                     await MessagePopup.Instance.Show("Experience posted successfully");
 
-                    Application.Current.MainPage = new NavigationPage(new Tabbed());
-
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        Application.Current.MainPage = new NavigationPage(new NewDashboard());
+                    });
                 }
 
                 else if (ErrorData != null && StatusCode == 401)
