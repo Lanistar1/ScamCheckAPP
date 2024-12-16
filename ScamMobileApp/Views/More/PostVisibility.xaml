@@ -43,11 +43,50 @@
             </StackLayout>
         </Grid>
 
+        <StackLayout Margin="0,20,0,20">
+            <Label Text="Previously added keywords" TextColor="#191919" FontSize="14" FontAttributes="Bold"/>
+            <FlexLayout x:Name="cvBannerzy"
+                        BindableLayout.ItemsSource="{Binding UnwantedKeywords}"
+                        Direction="Row"
+                        Wrap="Wrap"
+                        JustifyContent="Start"
+                        AlignItems="Center"
+                        Margin="0,0,0,10">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="5" Margin="5" BorderColor="#d3d3d3" CornerRadius="5" HasShadow="False" WidthRequest="80">
+                            <StackLayout Orientation="Horizontal" Spacing="5">
+                                <Label Text="{Binding}" 
+                                       FontSize="14" 
+                                       TextColor="#191919"  
+                                       VerticalTextAlignment="Center" 
+                                       HorizontalTextAlignment="Center"/>
+
+                                <ImageButton  HorizontalOptions="EndAndExpand" Command="{Binding Path=BindingContext.CancelCommand, Source={x:Reference cvBannerzy}}" CommandParameter="{Binding}"  Source="cancelButton.png" BackgroundColor="Transparent" WidthRequest="15" HeightRequest="15"/>
+                            </StackLayout>
+
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+
+            <Label  Text="{Binding EmptyPlaceholder}" 
+                    FontFamily="Inter-Mediun"
+                    LineBreakMode="CharacterWrap"
+                    Margin="0,50,0,0"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Center"
+                    TextColor="{StaticResource SecondaryColor}" 
+                    FontSize="16"/>
+        </StackLayout>
+
+
         <Frame CornerRadius="10" HasShadow="False" BackgroundColor="{StaticResource TertiaryColor}" VerticalOptions="EndAndExpand"  Padding="0" Margin="0,0" HeightRequest="50">
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding KeywordCommand}"/>
             </Frame.GestureRecognizers>
-            <Label Text="Add Keywords" FontSize="14" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+            <Label Text="Submit" FontSize="14" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
         </Frame>
     </StackLayout>
 </ContentPage>

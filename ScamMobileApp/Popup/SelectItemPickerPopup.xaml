@@ -55,7 +55,7 @@
                         <pv:Border Color="Blue" Thickness="2"/>
                     </pv:PancakeView.Border>
                     <Controls:CustomEntry PlaceholderColor="#cccccc" 
-                                          Placeholder="Search Scam" 
+                                          Placeholder="Search..." 
                                           ReturnType="Done"
                                           Keyboard="Default"
                                           FontSize="16"

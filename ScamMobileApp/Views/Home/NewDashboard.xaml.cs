@@ -109,5 +109,10 @@ namespace ScamMobileApp.Views.Home
         {
             Navigation.PushAsync(new VideosPage());
         }
+
+        private void To_ProfilePage(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ProfilePage());
+        }
     }
 }

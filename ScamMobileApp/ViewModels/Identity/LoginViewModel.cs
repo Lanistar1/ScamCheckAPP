@@ -4,6 +4,7 @@ using ScamMobileApp.Models.Identity;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views;
+using ScamMobileApp.Views.Home;
 using ScamMobileApp.Views.Identity;
 using System;
 using System.Data;
@@ -258,7 +259,14 @@ namespace ScamMobileApp.ViewModels.Identity
 
                     //await FetchUserProfile();
 
-                    Application.Current.MainPage = new NavigationPage(new Tabbed());
+                    //Application.Current.MainPage = new NavigationPage(new Tabbed());
+
+                    //await Navigation.PushAsync(new Tabbed());
+
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        Application.Current.MainPage = new NavigationPage(new NewDashboard());
+                    });
                 }
 
                 else if (ErrorData != null && StatusCode == 401)
@@ -320,6 +328,11 @@ namespace ScamMobileApp.ViewModels.Identity
             if (string.IsNullOrWhiteSpace(Password))
             {
                 await MessagePopup.Instance.Show("Password field should not be empty.");
+                return false;
+            }
+            else if (Password.Length < 8 || !Password.Any(char.IsDigit) || !Password.Any(ch => !char.IsLetterOrDigit(ch)))
+            {
+                await MessagePopup.Instance.Show("Password field must contain atleast a number, a special character and must be atleast 8 characters long.");
                 return false;
             }
             else

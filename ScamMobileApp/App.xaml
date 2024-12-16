@@ -6,6 +6,7 @@
              x:Class="ScamMobileApp.App">
     <Application.Resources>
         <ResourceDictionary>
+            <local:NullToVisibilityConverter x:Key="NullToVisibilityConverter" />
             <local:BoolToIntConverter x:Key="BoolToIntConverter" />
             <local:BoolToReadMoreTextConverter x:Key="BoolToReadMoreTextConverter" />
             <ResourceDictionary.MergedDictionaries>

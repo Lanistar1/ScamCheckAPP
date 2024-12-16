@@ -95,14 +95,14 @@ namespace ScamMobileApp.ViewModels.Identity
         #endregion
 
 
-        #region Events, Methods, Functions and Navigations
+        #region Command
         public Command ForgotPasswordCommand { get; }
         public Command ChangePasswordCommand { get; }
         public Command ResetPasswordCommand { get; }
 
         #endregion
 
-        #region
+        #region Events, Methods, Functions and Navigations
         private async Task ForgotPasswordCommandExecute(string email)
         {
             if (string.IsNullOrWhiteSpace(Email))
@@ -136,14 +136,15 @@ namespace ScamMobileApp.ViewModels.Identity
 
                 if (ResponseData != null)
                 {
-                    await MessagePopup.Instance.Show("Password reset code has been sent to your mail");
+                    await MessagePopup.Instance.Show("Password reset link has been sent to your mail. Reset your password and login with your new password here.");
 
-                    await Navigation.PushAsync(new EnterOtp());
+                    await Navigation.PopAsync();
+                    //await Navigation.PushAsync(new EnterOtp());
                 }
 
                 else if (ErrorData != null && StatusCode == 401)
                 {
-                    await MessagePopup.Instance.Show("Invalid credentials. Please check and try again");
+                    await MessagePopup.Instance.Show("Token Expire.");
                 }
                 else
                 {

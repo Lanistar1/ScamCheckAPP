@@ -43,8 +43,8 @@
                     </StackLayout>
 
                     <StackLayout Margin="0,30,0,0" IsVisible="{Binding IsFirstTimeUser}">
-                        <Label  Text="Email Id"
-                                FontFamily="Inter-Medium"
+                        <Label  Text="Email ID"
+                                FontFamily="Airbnb-Medium"
                                 FontSize="14"
                                 Margin="0,0"
                                 TextColor="{StaticResource SecondaryColor}"/>
@@ -88,8 +88,8 @@
 
                         <StackLayout >
                             <Label Text="Password"
-                                    FontFamily="Inter-Medium"
-                                    FontSize="15"
+                                    FontFamily="Airbnb-Medium"
+                                    FontSize="14"
                                     Margin="0,5,10,0"
                                     TextColor="{StaticResource SecondaryColor}"/>
 

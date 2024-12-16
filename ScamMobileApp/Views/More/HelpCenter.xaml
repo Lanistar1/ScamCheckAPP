@@ -26,7 +26,7 @@
                     <TapGestureRecognizer Command="{Binding ShowNoDetailCommand}"/>
                 </Frame.GestureRecognizers>
                 <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center">
-                    <Label Text="What is scam?" TextColor="#000000" FontSize="14" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    <Label Text="What is Scam / Fraud?" TextColor="#000000" FontSize="14" FontFamily="Airbnb-Mediun" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
                     <StackLayout>
                         <ImageButton WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Source="scamdownwardarrow.png" Command="{Binding ShowNoDetailCommand}" CommandParameter="{Binding .}"/>
                     </StackLayout>

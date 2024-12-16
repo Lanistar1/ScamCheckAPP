@@ -4,6 +4,7 @@ using ScamMobileApp.Models.Feedback;
 using ScamMobileApp.Popup;
 using ScamMobileApp.Utils;
 using ScamMobileApp.Views;
+using ScamMobileApp.Views.Home;
 using ScamMobileApp.Views.Identity;
 using ScamMobileApp.Views.Questions;
 using ScamMobileApp.Views.Questions.ATM;
@@ -513,7 +514,10 @@ namespace ScamMobileApp.ViewModels.ScamCalculator
                 {
                     await MessagePopup.Instance.Show("Feedback saved Successfully");
 
-                    Application.Current.MainPage = new NavigationPage(new Tabbed());
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        Application.Current.MainPage = new NavigationPage(new NewDashboard());
+                    });
                 }
                 else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                 {

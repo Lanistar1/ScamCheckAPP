@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ScamMobileApp.ViewModels.Home;
+using ScamMobileApp.ViewModels.Others;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,8 @@ namespace ScamMobileApp.Views.Home
         public VideosPage()
         {
             InitializeComponent();
+            BindingContext = new VideoListViewModel(Navigation);
+
         }
     }
 }

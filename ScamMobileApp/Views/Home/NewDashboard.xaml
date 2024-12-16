@@ -1,188 +1,180 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:utils="clr-namespace:ScamMobileApp.Utils"
              x:Class="ScamMobileApp.Views.Home.NewDashboard"
              BackgroundColor="{StaticResource PrimaryColor}"
              NavigationPage.HasNavigationBar="False">
 
-    <Grid>
+    <Grid HorizontalOptions="FillAndExpand"
+          VerticalOptions="FillAndExpand">
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackLayout Grid.Row="0"  Padding="20">
-            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" >
-                <StackLayout Orientation="Horizontal">
-                    <Image Source="{Binding PImage}" HeightRequest="40" WidthRequest="40" Aspect="AspectFill">
-                        <Image.Clip>
-                            <EllipseGeometry Center="20,20" RadiusX="20" RadiusY="20" />
-                        </Image.Clip>
-                    </Image>
-                    <Label Text="Welcome," TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                    <Label Text="{Binding Username}" TextColor="#110F0F" VerticalTextAlignment="Center" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                </StackLayout>
-                <!--<StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0"  Padding="20">
+                <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" >
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_ProfilePage"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="{Binding PImage}" HeightRequest="40" WidthRequest="40" Aspect="AspectFill">
+                            <Image.Clip>
+                                <EllipseGeometry Center="20,20" RadiusX="20" RadiusY="20" />
+                            </Image.Clip>
+                        </Image>
+                        <Label Text="Welcome," TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                        <Label Text="{Binding Username}" TextColor="#110F0F" VerticalTextAlignment="Center" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                    </StackLayout>
+                    <!--<StackLayout>
                     <Image  Source="dashMenu.png" HeightRequest="30" WidthRequest="30"/>
                 </StackLayout>-->
-            </FlexLayout>
+                </FlexLayout>
 
-            <Grid Margin="0,10,0,0" ColumnSpacing="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                <Grid Margin="0,10,0,0" ColumnSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
 
-                <StackLayout Grid.Row="0" Grid.Column="0" Spacing="10">
-                    <Frame Grid.Row="0" Grid.Column="0" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#BCBDF7" VerticalOptions="Start" HeightRequest="140">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="To_ScamQAPopup"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout VerticalOptions="CenterAndExpand">
-                            <Image  Source="scamQAs.png" HeightRequest="60" WidthRequest="60"/>
-                            <Label Text="{Binding Title}" TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                    <StackLayout Grid.Row="0" Grid.Column="0" Spacing="10">
+                        <Frame Grid.Row="0" Grid.Column="0" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#BCBDF7" VerticalOptions="Start" HeightRequest="140">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="To_ScamQAPopup"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Image  Source="scamQAs.png" HeightRequest="60" WidthRequest="60"/>
+                                <Label Text="{Binding Title}" TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
-                        </StackLayout>
-                    </Frame>
-                    <Frame Grid.Row="0" Grid.Column="0" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#F07BB8" VerticalOptions="End" HeightRequest="100">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="To_WarningSign"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout VerticalOptions="CenterAndExpand">
-                            <Image  Source="warningSigns.png" HeightRequest="40" WidthRequest="40"/>
-                            <Label Text="Warning Signs" TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-                <StackLayout Grid.Row="0" Grid.Column="1" Spacing="10">
-                    <Frame Grid.Row="0" Grid.Column="1" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#B0E6E6" VerticalOptions="Start" HeightRequest="100">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="To_ReportScam"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout VerticalOptions="CenterAndExpand">
-                            <Image  Source="reportScams.png" HeightRequest="40" WidthRequest="40"/>
-                            <Label Text="Report a Scam" TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
-
-                        </StackLayout>
-                    </Frame>
-                    <Frame Grid.Row="0" Grid.Column="1" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#CCF2B6" VerticalOptions="End" HeightRequest="140" Margin="0,0,0,0">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="To_AntiScam"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout VerticalOptions="CenterAndExpand">
-                            <Image  Source="antiScams.png" HeightRequest="40" WidthRequest="40"/>
-                            <Label Text="Anti scam" TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
-                            <Label Text="Movement" TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,-5,0,0"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </Grid>
-        </StackLayout>
-
-        <ScrollView Grid.Row="1" Margin="20,0" VerticalScrollBarVisibility="Never">
-            <StackLayout>
-
-                <Frame BackgroundColor="#EEE9ED" CornerRadius="20" Padding="20,0,20,20" HasShadow="False">
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="To_LearnCentre"/>
-                    </Frame.GestureRecognizers>
-                    <FlexLayout AlignContent="Center" AlignItems="Center">
-                        <StackLayout>
-                            <Label Text="Protect Yourself" TextColor="{StaticResource TertiaryColor}" FontSize="18" VerticalTextAlignment="Center" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                            <Label Text="Learn more about different types of scams and how to protect yourself." TextColor="#9B9EA7" FontSize="14" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,10,0"/>
-                            <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="0,10,0,0">
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="To_LearnCentre"/>
-                                </StackLayout.GestureRecognizers>
-                                <Label Text="Visit Learning Centre" TextColor="{StaticResource SecondaryColor}" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                                <Image  Source="arrowright1.png" HeightRequest="15" WidthRequest="20" Margin="0,3,0,0"/>
                             </StackLayout>
-                        </StackLayout>
-                        <StackLayout VerticalOptions="CenterAndExpand">
-                            <Image  Source="infoUnlikely.png" HeightRequest="150" WidthRequest="150"/>
-                        </StackLayout>
-                    </FlexLayout>
-                </Frame>
+                        </Frame>
+                        <Frame Grid.Row="0" Grid.Column="0" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#F07BB8" VerticalOptions="End" HeightRequest="100">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="To_WarningSign"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Image  Source="warningSigns.png" HeightRequest="40" WidthRequest="40"/>
+                                <Label Text="Warning Signs" TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1" Spacing="10">
+                        <Frame Grid.Row="0" Grid.Column="1" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#B0E6E6" VerticalOptions="Start" HeightRequest="100">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="To_ReportScam"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Image  Source="reportScams.png" HeightRequest="40" WidthRequest="40"/>
+                                <Label Text="Report a Scam" TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,0,0,0"/>
 
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Row="0" Grid.Column="1" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#CCF2B6" VerticalOptions="End" HeightRequest="140" Margin="0,0,0,0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="To_AntiScam"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Image  Source="antiScams.png" HeightRequest="40" WidthRequest="40"/>
+                                <Label Text="Anti scam" TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,5,0,0"/>
+                                <Label Text="Movement" TextColor="#110F0F" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,-5,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+
+            <ScrollView Grid.Row="1" Margin="20,0" VerticalScrollBarVisibility="Never">
                 <StackLayout>
-                    <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" Margin="0,8,0,0">
-                        <Label Text="Featured Videos" TextColor="#110F0F" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start"/>
 
-                        <Label Text="View More" TextColor="{StaticResource TertiaryColor}" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="End">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="To_Videos"/>
-                            </Label.GestureRecognizers>
-                        </Label>
-                    </FlexLayout>
+                    <Frame BackgroundColor="#EEE9ED" CornerRadius="20" Padding="20,0,20,20" HasShadow="False">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="To_LearnCentre"/>
+                        </Frame.GestureRecognizers>
+                        <FlexLayout AlignContent="Center" AlignItems="Center">
+                            <StackLayout>
+                                <Label Text="Protect Yourself" TextColor="{StaticResource TertiaryColor}" FontSize="18" VerticalTextAlignment="Center" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                <Label Text="Learn more about different types of scams and how to protect yourself." TextColor="#9B9EA7" FontSize="14" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,10,0"/>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="To_LearnCentre"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Visit Learning Centre" TextColor="{StaticResource SecondaryColor}" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <Image  Source="arrowright1.png" HeightRequest="15" WidthRequest="20" Margin="0,3,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Image  Source="infoUnlikely.png" HeightRequest="150" WidthRequest="150"/>
+                            </StackLayout>
+                        </FlexLayout>
+                    </Frame>
 
                     <StackLayout>
-                        <Image Source="videobox.png" />
-                    </StackLayout>
-                </StackLayout>
-                
-                
-                <!--<StackLayout Margin="0,5,0,0">
-                    <Label Text="Popular scams in your Location." TextColor="#110F0F" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,10"/>
-                    <Grid ColumnSpacing="10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Frame BackgroundColor="#ffffff" Padding="10,10,10,10" CornerRadius="15" HasShadow="False" Grid.Column="0">
-                            <StackLayout Orientation="Horizontal">
-                                <Image Source="popularscam.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"/>
-                                <Label Text="Phishing" TextColor="#110F0F" FontSize="14" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                            </StackLayout>
-                        </Frame>
-                        <Frame BackgroundColor="#ffffff" Padding="10,10,10,10" CornerRadius="15" HasShadow="False" Grid.Column="1">
-                            <StackLayout Orientation="Horizontal">
-                                <Image Source="popularscam.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"/>
-                                <Label Text="Investment" TextColor="#110F0F" FontSize="14" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                            </StackLayout>
-                        </Frame>
-                    </Grid>
-                    <Grid ColumnSpacing="10" Margin="0,5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Frame BackgroundColor="#ffffff" Padding="10,10,10,10" CornerRadius="15" HasShadow="False" Grid.Column="0">
-                            <StackLayout Orientation="Horizontal">
-                                <Image Source="popularscam.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"/>
-                                <Label Text="Travel" TextColor="#110F0F" FontSize="14" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                            </StackLayout>
-                        </Frame>
-                        <Frame BackgroundColor="#ffffff" Padding="10,10,10,10" CornerRadius="15" HasShadow="False" Grid.Column="1">
-                            <StackLayout Orientation="Horizontal">
-                                <Image Source="popularscam.png" WidthRequest="30" HeightRequest="30" Margin="0,0,0,0"/>
-                                <Label Text="Smishing" TextColor="#110F0F" FontSize="14" FontFamily="Inter-Medium" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                            </StackLayout>
-                        </Frame>
-                    </Grid>
-                </StackLayout>-->
+                        <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" Margin="0,8,0,0">
+                            <Label Text="Featured Videos" TextColor="#110F0F" FontSize="16" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start"/>
 
-                <Frame BackgroundColor="#E6E8ED" CornerRadius="20" Padding="20,20,0,0" Margin="0,10,0,20" HasShadow="False">
-                    <StackLayout Orientation="Horizontal" >
-                        <StackLayout >
-                            <Label Text="Action Points" TextColor="{StaticResource TertiaryColor}" FontSize="18" VerticalTextAlignment="Center" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                            <Label Text="What to do when you suspect a scam has happened or is about too." TextColor="#9B9EA7" FontSize="14" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" />
-                            <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="0,10,0,0">
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="To_ActionPoint"/>
-                                </StackLayout.GestureRecognizers>
-                                <Label Text="Learn More" TextColor="{StaticResource SecondaryColor}" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
-                                <Image  Source="arrowright1.png" HeightRequest="15" WidthRequest="20" Margin="0,3,0,0"/>
-                            </StackLayout>
-                        </StackLayout>
-                        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand">
-                            <Image  Source="scamLikelys.png" HeightRequest="150" WidthRequest="150"/>
+                            <Label Text="View More" TextColor="{StaticResource TertiaryColor}" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="End">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="To_Videos"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </FlexLayout>
+
+                        <StackLayout>
+                            <ImageButton BackgroundColor="transparent" Source="videobox.png" Clicked="To_Videos"/>
                         </StackLayout>
                     </StackLayout>
-                </Frame>
-            </StackLayout>
-        </ScrollView>
+
+                    <Frame BackgroundColor="#E6E8ED" CornerRadius="20" Padding="20,20,0,0" Margin="0,10,0,20" HasShadow="False">
+                        <StackLayout Orientation="Horizontal" >
+                            <StackLayout >
+                                <Label Text="Action Points" TextColor="{StaticResource TertiaryColor}" FontSize="18" VerticalTextAlignment="Center" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                <Label Text="What to do when you suspect a scam has happened or is about too." TextColor="#9B9EA7" FontSize="14" VerticalTextAlignment="Center" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" />
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="To_ActionPoint"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="Learn More" TextColor="{StaticResource SecondaryColor}" FontSize="16" VerticalTextAlignment="Center" FontFamily="Airbnb-Bold" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    <Image  Source="arrowright1.png" HeightRequest="15" WidthRequest="20" Margin="0,3,0,0"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand">
+                                <Image  Source="scamLikelys.png" HeightRequest="150" WidthRequest="150"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+
+        <!--#region custom bottom tab view-->
+        <Grid HorizontalOptions="FillAndExpand"
+                  VerticalOptions="End"
+                  HeightRequest="60"
+                  Grid.Row="1">
+            <utils:BottomTab hmImgSource="scamhome.png" 
+                     hmLabelColor="{StaticResource TertiaryColor}"
+                             hmButtonColor="{StaticResource TertiaryColor}"
+                     CurrentPage="NewDashboard"
+                     cusImgSource="qascam.png"
+                     cusLabelColor="#ffffff"
+                     colImgSource="urstory.png"
+                     colLabelColor="#ffffff"
+                     profileImgSource="activities.png"
+                     profileLabelColor="#ffffff"
+                     moreImgSource="moremenu.png"
+                     moreLabelColor="#ffffff"/>
+        </Grid>
+        <!--#endregion-->
+
     </Grid>
+
 </ContentPage>
