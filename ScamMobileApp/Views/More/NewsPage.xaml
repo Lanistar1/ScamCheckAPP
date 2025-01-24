@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.More.NewsPage"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="News">
+
+
+    <StackLayout Padding="10">
+
+        <CollectionView x:Name="videoplayer" ItemsSource="{Binding News}"
+                SelectionMode="Single">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="0" Margin="5" HasShadow="False" CornerRadius="10">
+                        <StackLayout>
+                            <ImageButton Source="{Binding urlToImage}" 
+                                 CornerRadius="0" BackgroundColor="Transparent"
+                                 Command="{Binding Path=BindingContext.TappedCommand, Source={x:Reference videoplayer}}"
+                                 CommandParameter="{Binding}" />
+                            <Frame BackgroundColor="{StaticResource SecondaryColor}" Margin="0,-10,0,0">
+                                <Label Text="{Binding title}" FontSize="14" HorizontalOptions="Center" 
+                               TextColor="#ffffff" HorizontalTextAlignment="Start"/>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+</ContentPage>

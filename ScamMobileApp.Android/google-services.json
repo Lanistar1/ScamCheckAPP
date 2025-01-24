@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "688089433849",
+    "project_id": "scamalicious-app",
+    "storage_bucket": "scamalicious-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688089433849:android:33f4248ce74eefcbfb0428",
+        "android_client_info": {
+          "package_name": "com.TitanZenLimited.scammobileapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfTlFVo5duvsVoGThHsJfiKAfVT8e6I24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

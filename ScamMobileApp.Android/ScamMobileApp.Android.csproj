@@ -86,11 +86,20 @@
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.7.3</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Facebook.Android">
+      <Version>11.2.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Analytics">
+      <Version>71.1630.4</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms">
       <Version>5.0.0.2578</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.PancakeView">
       <Version>2.3.0.763-beta</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Measurement.Base">
+      <Version>71.1630.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -408,6 +417,7 @@
     <AndroidAsset Include="Assets\pdfjs\web\standard_fonts\LICENSE_LIBERATION" />
     <AndroidAsset Include="Assets\Content\Scammed.pdf" />
     <AndroidAsset Include="Assets\Content\Unlikelyscammed.pdf" />
+    <GoogleServicesJson Include="google-services.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -1174,6 +1184,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResourceAnalysisConfig Include="Resources\values\strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResourceAnalysisConfig>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
