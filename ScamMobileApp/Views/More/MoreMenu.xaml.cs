@@ -153,5 +153,11 @@ namespace ScamMobileApp.Views.More
         {
             Navigation.PushAsync(new PostVisibility());
         }
+
+        private void To_NewsPage(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NewsPage());
+
+        }
     }
 }

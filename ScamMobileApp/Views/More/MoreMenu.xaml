@@ -137,6 +137,26 @@ VerticalOptions="FillAndExpand">
 
             <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
                 <FlexLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="To_NewsPage"/>
+                </FlexLayout.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                    <StackLayout BackgroundColor="#EEE9ED" Padding="5" >
+                        <Image  Source="helpRed.png" HeightRequest="30" WidthRequest="30" />
+                    </StackLayout>
+                    <Label Text="World News" TextColor="#646C79" FontSize="16" FontFamily="Airbnb-Mediun" VerticalTextAlignment="Center" Margin="0,0,0,0"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image  Source="arrowright2.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </FlexLayout>
+            <Line X1="0"
+                  Y1="0"
+                  X2="400"
+                  Y2="0"
+                  Stroke="#E6E8ED" />
+
+            <FlexLayout JustifyContent="SpaceBetween" AlignContent="Center" AlignItems="Center" Margin="0,10">
+                <FlexLayout.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Logout"/>
                 </FlexLayout.GestureRecognizers>
                 <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
