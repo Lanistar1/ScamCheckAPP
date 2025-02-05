@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScamMobileApp.Models.Identity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -17,13 +18,21 @@ namespace ScamMobileApp.Models.Others
         public string urlToImage { get; set; }
         public DateTime publishedAt { get; set; }
         public string content { get; set; }
+        public bool isSelected { get; set; }
     }
 
-    public class NewsModel
+    public class NewsData
     {
         public string status { get; set; }
         public int totalResults { get; set; }
         public List<Article> articles { get; set; }
+    }
+
+    public class NewsModel
+    {
+        public int status { get; set; }
+        public string message { get; set; }
+        public NewsData data { get; set; }
     }
 
     public class Source

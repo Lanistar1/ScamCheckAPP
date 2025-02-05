@@ -159,5 +159,16 @@ namespace ScamMobileApp.Views.More
             Navigation.PushAsync(new NewsPage());
 
         }
+
+        private void To_AIImageCheck(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AIImageCheckPage());
+        }
+
+        private void To_TriviaQuestions(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new TriviaQuestionPage());
+
+        }
     }
 }

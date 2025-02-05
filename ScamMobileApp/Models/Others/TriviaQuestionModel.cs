@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace ScamMobileApp.Models.Others
@@ -12,6 +13,9 @@ namespace ScamMobileApp.Models.Others
         public string Question { get; set; }
         public string Answer { get; set; }
         public string Metadata { get; set; }
+        public ObservableCollection<string> options { get; set; }
+        public bool isSelected { get; set; }
+
     }
 
 }

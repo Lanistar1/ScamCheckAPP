@@ -25,9 +25,12 @@ namespace ScamMobileApp.Droid
             Plugin.Media.CrossMedia.Current.Initialize(); // Initialize the media plugin
 
             // Initialize Facebook SDK
-            FacebookSdk.SdkInitialize(ApplicationContext);
-            // Track App Launch Event
-            AppEventsLogger.ActivateApp(this.Application);
+            //FacebookSdk.SdkInitialize(ApplicationContext);
+            //// Track App Launch Event
+            //AppEventsLogger.ActivateApp(this.Application);
+
+            FacebookSdk.SdkInitialize(this);
+            AppEventsLogger.ActivateApp(this);
 
             // Firebase integration
             //FirebaseApp.InitializeApp(this);

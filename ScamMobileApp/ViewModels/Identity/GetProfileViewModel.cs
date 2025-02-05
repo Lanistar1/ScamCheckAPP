@@ -578,6 +578,8 @@ namespace ScamMobileApp.ViewModels.Identity
         }
 
 
+
+        //========= Feedback count ================
         private async Task FetchFeedbackCount()
         {
             try

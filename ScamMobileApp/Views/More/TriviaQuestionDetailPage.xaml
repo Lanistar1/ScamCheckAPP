@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Controls="clr-namespace:ScamMobileApp.Controls"
+             x:Class="ScamMobileApp.Views.More.TriviaQuestionDetailPage"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="Question">
+
+    <StackLayout Margin="20">
+        <!--<Label Text="{Binding Question}" TextColor="{StaticResource SecondaryColor}" Margin="0,0,0,10"/>-->
+
+        <!--<Frame Padding="10,15" BackgroundColor="#EEE9ED" CornerRadius="10" Margin="0,0,0,10" HasShadow="False">
+            <Label Text="{Binding QuestionSubject}" TextColor="{StaticResource SecondaryColor}"/>
+        </Frame>-->
+
+        <Frame Padding="10,15" BackgroundColor="#EEE9ED" CornerRadius="10" Margin="0,10,0,10" HasShadow="False">
+            <Label Text="{Binding Question}" TextColor="{StaticResource SecondaryColor}"/>
+        </Frame>
+
+        <StackLayout>
+            <Label Text="Your answer" TextColor="{StaticResource SecondaryColor}" FontSize="13"/>
+
+            <Frame Padding="10,0,10,0" BorderColor="#E6EDFF" Margin="0,0,0,10" HasShadow="False" CornerRadius="10">
+                <Controls:XEditor
+                    FontSize="15"
+                    AutoSize="TextChanges"
+                    FontFamily="Airbnb-Medium"
+                    Placeholder="Enter your answer here."
+                    PlaceholderColor="#cccccc"
+                    Text="{Binding MyComment}"
+                    TextColor="{StaticResource SecondaryColor}"/>
+            </Frame>
+        </StackLayout>
+
+        
+
+        <Frame CornerRadius="5" HasShadow="False" IsVisible="{Binding ShowButton}"  BackgroundColor="{StaticResource TertiaryColor}" Padding="0" Margin="5,0" HeightRequest="50">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer />
+            </Frame.GestureRecognizers>
+            <Label Text="Submit" FontSize="16" FontAttributes="Bold"  TextColor="White" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        </Frame>
+    </StackLayout>
+</ContentPage>

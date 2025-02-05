@@ -876,7 +876,7 @@ namespace ScamMobileApp.Service
                 string url = Global.NewsUrl;
                 HttpClient client = new HttpClient();
 
-                //client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
                 HttpResponseMessage response = null;
                 ErrorResponseModel errorData;
                 response = await client.GetAsync(url);
@@ -887,6 +887,49 @@ namespace ScamMobileApp.Service
                 {
                     case 200:
                         var data = JsonConvert.DeserializeObject<NewsModel>(result);
+                        return (data, null, statusCode);
+                    case 300:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 400:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 500:
+                        errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
+                        return (null, errorData, statusCode);
+                    case 0:
+                        return (null, null, 0);
+                    default:
+                        return (null, null, 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return (null, null, 0);
+            }
+        }
+
+
+        // Get Videos
+        public async Task<(VideoModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> GetVideosAsync()
+        {
+            try
+            {
+                string url = Global.VideoUrl;
+                HttpClient client = new HttpClient();
+
+                client.DefaultRequestHeaders.Add("Authorization", $"{token}");
+                HttpResponseMessage response = null;
+                ErrorResponseModel errorData;
+                response = await client.GetAsync(url);
+                int statusCode = (int)response.StatusCode;
+                int _status = StringHelper.ConvertStatusCode((int)response.StatusCode);
+                string result = await response.Content.ReadAsStringAsync();
+                switch (_status)
+                {
+                    case 200:
+                        var data = JsonConvert.DeserializeObject<VideoModel>(result);
                         return (data, null, statusCode);
                     case 300:
                         errorData = JsonConvert.DeserializeObject<ErrorResponseModel>(result);
