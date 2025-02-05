@@ -1,15 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="ScamMobileApp.Views.More.NewsPage"
              BackgroundColor="{StaticResource PrimaryColor}"
-             Title="News">
+             Title="News Page">
 
 
     <StackLayout Padding="10">
 
-        <CollectionView x:Name="videoplayer" ItemsSource="{Binding News}"
-                SelectionMode="Single">
+        <StackLayout Margin="0,0,0,5" Spacing="0">
+
+            <Label  Text="Filter by Country"
+                    FontFamily="Inter-Medium"
+                    FontSize="16"
+                    Margin="0,0,0,5"
+                    TextColor="{StaticResource SecondaryColor}"/>
+
+            <pv:PancakeView BackgroundColor="#ffffff"
+                            CornerRadius="5"
+                            HorizontalOptions="Fill" 
+                            HeightRequest="40"
+                            Padding="10,5">
+                <Grid HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid HorizontalOptions="StartAndExpand"
+                          VerticalOptions="CenterAndExpand">
+
+                        <StackLayout Orientation="Vertical"
+                                     VerticalOptions="CenterAndExpand">
+                            <Label Text="{Binding Title}"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    FontFamily="Roboto-Medium"
+                                    TextColor="{StaticResource SecondaryColor}"
+                                    FontSize="16"/>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                    <StackLayout Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,10,0">
+                        <ImageButton BackgroundColor="Transparent" Command="{Binding SelectPageCommand}" CommandParameter="{Binding .}" Source="arrowdown1.png" WidthRequest="15" 
+                                     HeightRequest="15"/>
+                    </StackLayout>
+
+                </Grid>
+                <pv:PancakeView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SelectPageCommand}"
+                                          CommandParameter="{Binding .}"
+                                          NumberOfTapsRequired="1"/>
+                </pv:PancakeView.GestureRecognizers>
+            </pv:PancakeView>
+        </StackLayout>
+
+
+        <CollectionView x:Name="news" ItemsSource="{Binding News}"
+                        SelectionMode="Single">
             <CollectionView.ItemsLayout>
                 <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
             </CollectionView.ItemsLayout>
@@ -17,14 +67,17 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame Padding="0" Margin="5" HasShadow="False" CornerRadius="10">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.TappedCommand, Source={x:Reference news}}" CommandParameter="{Binding}"/>
+                        </Frame.GestureRecognizers>
                         <StackLayout>
                             <ImageButton Source="{Binding urlToImage}" 
-                                 CornerRadius="0" BackgroundColor="Transparent"
-                                 Command="{Binding Path=BindingContext.TappedCommand, Source={x:Reference videoplayer}}"
-                                 CommandParameter="{Binding}" />
-                            <Frame BackgroundColor="{StaticResource SecondaryColor}" Margin="0,-10,0,0">
-                                <Label Text="{Binding title}" FontSize="14" HorizontalOptions="Center" 
-                               TextColor="#ffffff" HorizontalTextAlignment="Start"/>
+                                         CornerRadius="0" BackgroundColor="Transparent"
+                                         Command="{Binding Path=BindingContext.TappedCommand, Source={x:Reference news}}"
+                                         CommandParameter="{Binding}" />
+                            <Frame BackgroundColor="{StaticResource SecondaryColor}" Margin="0,-8,0,0">
+                                <Label Text="{Binding title}" FontSize="15" HorizontalOptions="Center" 
+                                       TextColor="#ffffff" HorizontalTextAlignment="Start"/>
                             </Frame>
                         </StackLayout>
                     </Frame>

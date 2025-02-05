@@ -12,26 +12,26 @@ namespace ScamMobileApp.ViewModels.Others
 
     public class VideoListDetailViewModel : BaseViewModel
     {
-        public VideoListDetailViewModel(INavigation navigation, ObservableCollection<VideoModel> selectedItems)
+        public VideoListDetailViewModel(INavigation navigation, ObservableCollection<VideoData> selectedItems)
         {
             Navigation = navigation;
 
             SelectedItems = selectedItems;
 
 
-            VideoData = new ObservableCollection<VideoModel>(SelectedItems);
+            VideoData = new ObservableCollection<VideoData>(SelectedItems);
 
-            VideoTitle = VideoData.FirstOrDefault().Title;
+            VideoTitle = VideoData.FirstOrDefault().title;
 
-            SelectedVideoUrl = VideoData.FirstOrDefault().VideoUrl;
+            SelectedVideoUrl = VideoData.FirstOrDefault().url;
 
         }
 
 
         #region Bindings
 
-        public ObservableCollection<VideoModel> selectedItems;
-        public ObservableCollection<VideoModel> SelectedItems
+        public ObservableCollection<VideoData> selectedItems;
+        public ObservableCollection<VideoData> SelectedItems
         {
             get => selectedItems;
             set
@@ -40,8 +40,8 @@ namespace ScamMobileApp.ViewModels.Others
             }
         }
 
-        private ObservableCollection<VideoModel> videoData;
-        public ObservableCollection<VideoModel> VideoData
+        private ObservableCollection<VideoData> videoData;
+        public ObservableCollection<VideoData> VideoData
         {
             get => videoData;
             set

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScamMobileApp.Views.More.TriviaQuestionPage"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="Questions Page">
+
+    <!--<ScrollView Margin="20" VerticalScrollBarVisibility="Never">
+        <StackLayout>
+            <CollectionView x:Name="triviaQuestion" ItemsSource="{Binding QuestionAndAnswer}"
+                            SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout VerticalItemSpacing="10" HorizontalItemSpacing="10" Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="20" Padding="20,20" BackgroundColor="#ffffff" HasShadow="False" Margin="0,0">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Frame Padding="10,5" CornerRadius="5" BackgroundColor="#EEE9ED" HasShadow="False">
+                                        <Image Source="global.png" WidthRequest="30" HeightRequest="40"/>
+                                    </Frame>
+                                    <StackLayout Spacing="0">
+                                        --><!--<Label Text="{Binding Subject}" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Black" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>--><!--
+                                        <Label Text="{Binding Question}" TextColor="#646C79" FontSize="14" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Start" Margin="0,0,0,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <Line   X1="0"
+                                        Y1="0"
+                                        X2="400"
+                                        Y2="0"
+                                        Stroke="gray"
+                                        StrokeDashArray="1,1"
+                                        StrokeDashOffset="2"/>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,10,0,0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.TappedCommand, Source={x:Reference triviaQuestion}}" CommandParameter="{Binding}" />
+                                    </StackLayout.GestureRecognizers>
+                                    <Label Text="View More" TextColor="{StaticResource TertiaryColor}" FontSize="17" FontFamily="Airbnb-Regular" HorizontalTextAlignment="End" Margin="0,0,0,0"/>
+                                    <Image  Source="readMore.png" HeightRequest="20" WidthRequest="20"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>-->
+
+
+    <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+
+        <!-- Display Subject -->
+        <Label Text="{Binding CurrentQuestion.Subject}" 
+               FontSize="Large" 
+               FontAttributes="Bold" 
+               HorizontalOptions="Center" TextColor="Black"
+               Margin="0,10"/>
+
+        <!-- Display Question -->
+        <Label Text="{Binding CurrentQuestion.Question}" 
+               FontSize="Medium" 
+               Margin="0,20" TextColor="Black"
+               HorizontalOptions="CenterAndExpand"/>
+
+        <!-- Display Options -->
+        <ListView ItemsSource="{Binding CurrentQuestion.options}" 
+                  SelectionMode="Single" 
+                  ItemSelected="OnOptionSelected"
+                  HasUnevenRows="True"
+                  SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame BorderColor="Gray" Padding="10" Margin="5" CornerRadius="10">
+                            <Label Text="{Binding .}" FontSize="Medium" TextColor="Black"/>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Next Button -->
+        <Button Text="Next" 
+                Command="{Binding NextQuestionCommand}" 
+                IsEnabled="{Binding IsAnswerSelected}" 
+                Margin="0,20" 
+                BackgroundColor="#4CAF50" 
+                TextColor="White"/>
+    </StackLayout>
+</ContentPage>

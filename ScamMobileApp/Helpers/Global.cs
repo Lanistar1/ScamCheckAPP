@@ -33,7 +33,10 @@ namespace ScamMobileApp.Helpers
         public static string AddUnwantedKeywordsUrl => $"{BaseUrl}/feedback/unwanted/keywords";
         public static string GetUnwantedKeywordsUrl => $"{BaseUrl}/feedback/unwanted/keywords";
         public static string PostAppRatingUrl => $"{BaseUrl}/feedback/rate/new";
-        public static string NewsUrl => "https://newsapi.org/v2/top-headlines?country=us&apiKey=aae4b3c2c26042a9b4d5ad99afafe4c5";
+        public static string NewsUrl => $"{BaseUrl}/feedback/fetch/news";
+
+        public static string VideoUrl => $"{BaseUrl}/video/admin/all";
+        public static string AIImageCheckUrl => $"{BaseUrl}/video/detect/ai";
 
 
 

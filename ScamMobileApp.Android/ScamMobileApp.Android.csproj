@@ -1190,5 +1190,8 @@
       <SubType>Designer</SubType>
     </AndroidResourceAnalysisConfig>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\uploadImage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

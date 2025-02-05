@@ -17,7 +17,7 @@ namespace ScamMobileApp.Views.Home
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class VideoDetailPage : ContentPage
 	{
-		public VideoDetailPage (ObservableCollection<VideoModel> selectedItems)
+		public VideoDetailPage (ObservableCollection<VideoData> selectedItems)
 		{
 			InitializeComponent ();
             BindingContext = new VideoListDetailViewModel(Navigation, selectedItems);
