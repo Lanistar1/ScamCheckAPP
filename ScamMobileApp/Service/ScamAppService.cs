@@ -69,7 +69,7 @@ namespace ScamMobileApp.Service
 
         }
 
-        public async Task<(SignupResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> SignupUserAsync(string email, string password, string username, string firstname, string lastname, string AgeBracket)
+        public async Task<(SignupResponseModel ResponseData, ErrorResponseModel ErrorData, int StatusCode)> SignupUserAsync(string email, string password, string username, string firstname, string lastname, string AgeBracket, string Gender, string Country)
         {
             try
             {
@@ -82,7 +82,9 @@ namespace ScamMobileApp.Service
                     username = username,
                     firstname = firstname,
                     lastname = lastname,
-                    ageBracket = AgeBracket
+                    ageBracket = AgeBracket, 
+                    gender = Gender, 
+                    country = Country
                 };
                 var json = JsonConvert.SerializeObject(RegisterData);
                 StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -874,6 +876,7 @@ namespace ScamMobileApp.Service
             try
             {
                 string url = Global.NewsUrl;
+                
                 HttpClient client = new HttpClient();
 
                 client.DefaultRequestHeaders.Add("Authorization", $"{token}");
@@ -916,7 +919,8 @@ namespace ScamMobileApp.Service
         {
             try
             {
-                string url = Global.VideoUrl;
+                //string url = Global.VideoUrl;
+                string url = "https://server.thescamalicious.com/video/user/all";
                 HttpClient client = new HttpClient();
 
                 client.DefaultRequestHeaders.Add("Authorization", $"{token}");

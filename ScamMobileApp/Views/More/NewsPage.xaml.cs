@@ -43,10 +43,6 @@ namespace ScamMobileApp.Views.More
 
             await Launcher.OpenAsync(new Uri(url));
 
-
-            //await Navigation.PushAsync(new WebviewPage(url));
-
-            //await Launcher.OpenAsync(url);
         }
 
         private async void ACMA(object sender, EventArgs e)
@@ -56,8 +52,6 @@ namespace ScamMobileApp.Views.More
 
             await Launcher.OpenAsync(new Uri(url));
 
-
-            //await Navigation.PushAsync(new WebviewPage(url));
 
         }
         #endregion

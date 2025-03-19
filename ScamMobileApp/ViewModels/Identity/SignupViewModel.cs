@@ -26,6 +26,9 @@ namespace ScamMobileApp.ViewModels.Identity
 
             SignupCommand = new Command(async () => await SignupCommandExecute(email, password, username, firstname, lastname));
             SelectAgeCommand = new Command(async () => await SelectAgeCommandExecute());
+            SelectGenderCommand = new Command(async () => await SelectGenderCommandExecute());
+            SelectCountryCommand = new Command(async () => await SelectCountryCommandExecute());
+
 
 
         }
@@ -40,6 +43,28 @@ namespace ScamMobileApp.ViewModels.Identity
             {
                 ageBracket = value;
                 OnPropertyChanged(nameof(AgeBracket));
+            }
+        }
+
+        private string gender;
+        public string Gender
+        {
+            get => gender;
+            set
+            {
+                gender = value;
+                OnPropertyChanged(nameof(Gender));
+            }
+        }
+
+        private string country;
+        public string Country
+        {
+            get => country;
+            set
+            {
+                country = value;
+                OnPropertyChanged(nameof(Country));
             }
         }
 
@@ -124,6 +149,8 @@ namespace ScamMobileApp.ViewModels.Identity
         #region Commands
         public Command SignupCommand { get; }
         public Command SelectAgeCommand { get; }
+        public Command SelectGenderCommand { get; }
+        public Command SelectCountryCommand { get; }
         #endregion
 
         #region Events, Methods, Functions and Navigations
@@ -194,7 +221,7 @@ namespace ScamMobileApp.ViewModels.Identity
 
                 await LoadingPopup.Instance.Show("Registering...");
 
-                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.SignupUserAsync(email, password, username, firstname, lastname, AgeBracket);
+                var (ResponseData, ErrorData, StatusCode) = await _scamAppService.SignupUserAsync(email, password, username, firstname, lastname, AgeBracket, Gender, Country);
 
                 if (ResponseData != null)
                 {
@@ -244,6 +271,94 @@ namespace ScamMobileApp.ViewModels.Identity
             var result = await popup.PopupClosedTask;
             AgeBracket = result.Item1;
         }
+
+
+        private async Task SelectGenderCommandExecute()
+        {
+            List<SelectItemModel> genderOptions = new List<SelectItemModel>()
+            {
+                new SelectItemModel(1, "Male"),
+                new SelectItemModel(2, "Female"),
+                new SelectItemModel(3, "Others"),
+            };
+
+            var popup = new SelectItemPickerPopup(genderOptions);
+
+            await PopupNavigation.Instance.PushAsync(popup);
+
+            var result = await popup.PopupClosedTask;
+            Gender = result.Item1;
+        }
+
+
+        private async Task SelectCountryCommandExecute()
+        {
+            List<SelectItemModel> countryOptions = new List<SelectItemModel>()
+            {
+                 new SelectItemModel(1,"Australia"),
+                new SelectItemModel(2,"Argentina"),
+                new SelectItemModel(3,"Austria"),
+                new SelectItemModel(4,"Belgium"),
+                new SelectItemModel(5,"Brazil"),
+                new SelectItemModel(6,"Bulgaria"),
+                new SelectItemModel(7,"Canada"),
+                new SelectItemModel(8,"China"),
+                new SelectItemModel(9,"Croatia"),
+                new SelectItemModel(10,"Czech Republic"),
+                new SelectItemModel(11,"Denmark"),
+                new SelectItemModel(12,"Egypt"),
+                new SelectItemModel(13,"Estonia"),
+                new SelectItemModel(14,"Finland"),
+                new SelectItemModel(15,"France"),
+                new SelectItemModel(16,"Germany"),
+                new SelectItemModel(17,"Greece"),
+                new SelectItemModel(18,"Hungary"),
+                new SelectItemModel(19,"India"),
+                new SelectItemModel(20,"Indonesia"),
+                new SelectItemModel(21,"Ireland"),
+                new SelectItemModel(22,"Israel"),
+                new SelectItemModel(23,"Italy"),
+                new SelectItemModel(24,"Japan"),
+                new SelectItemModel(25,"Latvia"),
+                new SelectItemModel(26,"Lithuania"),
+                new SelectItemModel(27,"Malaysia"),
+                new SelectItemModel(28,"Mauritius"),
+                new SelectItemModel(29,"Mexico"),
+                new SelectItemModel(30,"Netherland"),
+                new SelectItemModel(31,"New Zealand"),
+                new SelectItemModel(32,"Norway"),
+                new SelectItemModel(33,"Pakistan"),
+                new SelectItemModel(34,"Philippines"),
+                new SelectItemModel(35,"Poland"),
+                new SelectItemModel(36,"Portugal"),
+                new SelectItemModel(37,"Romania"),
+                new SelectItemModel(38,"Saudi Arabia"),
+                new SelectItemModel(39,"Serbia"),
+                new SelectItemModel(40,"Singapore"),
+                new SelectItemModel(41,"Slovakia"),
+                new SelectItemModel(42,"Slovenia"),
+                new SelectItemModel(43,"South Africa"),
+                new SelectItemModel(44,"South Korea"),
+                new SelectItemModel(45,"Spain"),
+                new SelectItemModel(46,"Sri Lanka"),
+                new SelectItemModel(47,"Sweden"),
+                new SelectItemModel(48,"Switzerland"),
+                new SelectItemModel(49,"Thailand"),
+                new SelectItemModel(50,"Turkey"),
+                new SelectItemModel(51,"Ukraine"),
+                new SelectItemModel(52,"United Arab Emirate"),
+                new SelectItemModel(53,"United Kingdom"),
+                new SelectItemModel(54,"United State of America"),
+            };
+
+            var popup = new SelectItemPickerPopup(countryOptions);
+
+            await PopupNavigation.Instance.PushAsync(popup);
+
+            var result = await popup.PopupClosedTask;
+            Country = result.Item1;
+        }
+
         #endregion
     }
 

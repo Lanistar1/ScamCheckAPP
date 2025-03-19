@@ -95,6 +95,51 @@
             <ScrollView Grid.Row="1" Margin="20,0" VerticalScrollBarVisibility="Never">
                 <StackLayout>
 
+                    <Grid Margin="10,0,10,0" ColumnSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Scam News (Higher Position) -->
+                        <Frame Grid.Column="0" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#FFD700" HeightRequest="100" VerticalOptions="Start">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="To_NewsPage"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Image Source="news.png" HeightRequest="35" WidthRequest="35"/>
+                                <Label Text="Scam News" TextColor="#110F0F" FontSize="12" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <!-- Scam Question (Middle Position) -->
+                        <Frame Grid.Column="1" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#BCBDF7" HeightRequest="100" VerticalOptions="Center">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="To_TriviaQuestion" />
+                            </Frame.GestureRecognizers>
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Image Source="scamQAs.png" HeightRequest="50" WidthRequest="50"/>
+                                <Label Text="Trivia Questions" TextColor="#110F0F" FontSize="12" Margin="0,5,0,0" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <!-- Scam Image (Lower Position) -->
+                        <Frame Grid.Column="2" CornerRadius="10" HasShadow="False" Padding="20" BackgroundColor="#FFB6C1" HeightRequest="100" VerticalOptions="End">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="To_AIImageCheck"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Image Source="AI.png" HeightRequest="35" WidthRequest="35"/>
+                                <Label Text="AI" TextColor="#110F0F" FontSize="12" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center"/>
+                                <Label Text=" image" TextColor="#110F0F" FontSize="12" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center" Margin="0,-5"/>
+                                <Label Text="detection" TextColor="#110F0F" FontSize="12" FontFamily="Airbnb-Medium" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Frame>
+
+                    </Grid>
+
+
                     <Frame BackgroundColor="#EEE9ED" CornerRadius="20" Padding="20,0,20,20" HasShadow="False">
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="To_LearnCentre"/>
@@ -132,7 +177,7 @@
                             <ImageButton BackgroundColor="transparent" Source="videobox.png" Clicked="To_Videos"/>
                         </StackLayout>
                     </StackLayout>
-
+                    
                     <Frame BackgroundColor="#E6E8ED" CornerRadius="20" Padding="20,20,0,0" Margin="0,10,0,20" HasShadow="False">
                         <StackLayout Orientation="Horizontal" >
                             <StackLayout >

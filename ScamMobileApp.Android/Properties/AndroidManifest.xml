@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.TitanZenLimited.scammobileapp" android:installLocation="preferExternal" android:versionCode="12" android:versionName="2.1">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.TitanZenLimited.scammobileapp" android:installLocation="preferExternal" android:versionCode="13" android:versionName="2.2">
 	<!-- Specify the minimum and target SDK versions -->
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34" />
 	<!-- Required permissions -->
@@ -15,11 +15,6 @@
 		<!-- Facebook Activity -->
 		<!-- Facebook Content Provider -->
 		<provider android:name="com.facebook.FacebookContentProvider" android:authorities="${applicationId}.facebook.provider" android:exported="true" />
-
-		<meta-data
-                  android:name="com.google.firebase.analytics.enabled"
-                  android:value="true" />
-
-
+		<meta-data android:name="com.google.firebase.analytics.enabled" android:value="true" />
 	</application>
 </manifest>

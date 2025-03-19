@@ -12,6 +12,8 @@ namespace ScamMobileApp.Models.Identity
         public string firstname { get; set; }
         public string lastname { get; set; }
         public string ageBracket { get; set; }
+        public string gender { get; set; }
+        public string country { get; set; }
     }
 
 }

@@ -102,6 +102,17 @@ namespace ScamMobileApp.Models.Others
             }
         }
 
+        private bool showText= true;
+        public bool ShowText
+        {
+            get => showText;
+            set
+            {
+                showText = value;
+                OnPropertyChanged(nameof(ShowText));
+            }
+        }
+
         private string lastName;
         public string LastName
         {
@@ -206,12 +217,19 @@ namespace ScamMobileApp.Models.Others
             {
                 await LoadingPopup.Instance.Show("Uploading Image...");
 
-                var content = new MultipartFormDataContent();
-                content.Add(new StreamContent(file.GetStream()), "file", file.Path);
+                var token = Global.Token; // Retrieve token
 
                 using (var client = new HttpClient())
                 {
-                    var response = await client.PostAsync("http://209.97.184.81:5000/auth/upload-image", content);
+                    // Add Authorization token to headers
+                    client.DefaultRequestHeaders.Add("Authorization", token);
+
+                    // Create MultipartFormDataContent
+                    var content = new MultipartFormDataContent();
+                    content.Add(new StreamContent(file.GetStream()), "file", file.Path);
+
+                    // Send the POST request
+                    var response = await client.PostAsync("https://server.thescamalicious.com/auth/upload-image", content);
                     var responseString = await response.Content.ReadAsStringAsync();
 
                     if (response.IsSuccessStatusCode)
@@ -219,9 +237,10 @@ namespace ScamMobileApp.Models.Others
                         var jsonResponse = JsonConvert.DeserializeObject<pickImageResponseModel>(responseString);
                         var imageUrl = jsonResponse.data.url;
 
-                        //await MessagePopup.Instance.Show("Image uploaded successfully.");
+                        // Show success message
+                        await MessagePopup.Instance.Show("Image uploaded successfully.");
 
-                        // Update the user profile
+                        // Update the user profile with the image URL
                         await UpdateUserProfile(imageUrl);
                     }
                     else if ((int)response.StatusCode == 401)
@@ -233,6 +252,7 @@ namespace ScamMobileApp.Models.Others
                         await MessagePopup.Instance.Show("File upload failed.");
                     }
                 }
+
             }
             catch (Exception ex)
             {
@@ -282,6 +302,7 @@ namespace ScamMobileApp.Models.Others
                     Console.WriteLine("passedjiojiojiojio");
 
                     ShowResult = true;
+                    ShowText = false;
 
                     var testAI = data.data.type.ai_generated * 100; // Convert decimal to percentage
                     AiGenerated = $"{Math.Round(testAI)}%";

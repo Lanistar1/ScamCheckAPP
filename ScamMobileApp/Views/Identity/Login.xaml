@@ -86,7 +86,7 @@
                 <ScrollView>
                     <StackLayout>
 
-                        <StackLayout >
+                        <StackLayout IsVisible="{Binding IsFirstTimeUser}">
                             <Label Text="Password"
                                     FontFamily="Airbnb-Medium"
                                     FontSize="14"

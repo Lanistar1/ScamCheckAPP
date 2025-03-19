@@ -6,26 +6,24 @@ using System.Text;
 namespace ScamMobileApp.Models.Others
 {
     
-
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-    public class Article
-    {
-        public Source source { get; set; }
-        public string author { get; set; }
-        public string title { get; set; }
-        public string description { get; set; }
-        public string url { get; set; }
-        public string urlToImage { get; set; }
-        public DateTime publishedAt { get; set; }
-        public string content { get; set; }
-        public bool isSelected { get; set; }
-    }
-
     public class NewsData
     {
-        public string status { get; set; }
-        public int totalResults { get; set; }
-        public List<Article> articles { get; set; }
+        public SearchParameters searchParameters { get; set; }
+        public List<News> news { get; set; }
+        public int credits { get; set; }
+    }
+
+    public class News
+    {
+        public string title { get; set; }
+        public string link { get; set; }
+        public string snippet { get; set; }
+        public string date { get; set; }
+        public string source { get; set; }
+        public string imageUrl { get; set; }
+        public int position { get; set; }
+        public bool isSelected { get; set; }
     }
 
     public class NewsModel
@@ -35,11 +33,14 @@ namespace ScamMobileApp.Models.Others
         public NewsData data { get; set; }
     }
 
-    public class Source
+    public class SearchParameters
     {
-        public string id { get; set; }
-        public string name { get; set; }
+        public string q { get; set; }
+        public string gl { get; set; }
+        public string type { get; set; }
+        public string API { get; set; }
     }
+
 
 
 }

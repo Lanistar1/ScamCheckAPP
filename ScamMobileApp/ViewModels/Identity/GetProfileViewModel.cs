@@ -375,12 +375,19 @@ namespace ScamMobileApp.ViewModels.Identity
             {
                 await LoadingPopup.Instance.Show("Uploading Image...");
 
-                var content = new MultipartFormDataContent();
-                content.Add(new StreamContent(file.GetStream()), "file", file.Path);
+                var token = Global.Token; // Retrieve token
 
                 using (var client = new HttpClient())
                 {
-                    var response = await client.PostAsync("http://209.97.184.81:5000/auth/upload-image", content);
+                    // Add Authorization token to headers
+                    client.DefaultRequestHeaders.Add("Authorization", token);
+
+                    // Create MultipartFormDataContent
+                    var content = new MultipartFormDataContent();
+                    content.Add(new StreamContent(file.GetStream()), "file", file.Path);
+
+                    // Send the POST request
+                    var response = await client.PostAsync("https://server.thescamalicious.com/auth/upload-image", content);
                     var responseString = await response.Content.ReadAsStringAsync();
 
                     if (response.IsSuccessStatusCode)
@@ -388,9 +395,10 @@ namespace ScamMobileApp.ViewModels.Identity
                         var jsonResponse = JsonConvert.DeserializeObject<pickImageResponseModel>(responseString);
                         var imageUrl = jsonResponse.data.url;
 
+                        // Show success message
                         await MessagePopup.Instance.Show("Image uploaded successfully.");
 
-                        // Update the user profile
+                        // Update the user profile with the image URL
                         await UpdateUserProfile(imageUrl);
                     }
                     else if ((int)response.StatusCode == 401)
@@ -402,6 +410,7 @@ namespace ScamMobileApp.ViewModels.Identity
                         await MessagePopup.Instance.Show("File upload failed.");
                     }
                 }
+
             }
             catch (Exception ex)
             {
@@ -491,67 +500,67 @@ namespace ScamMobileApp.ViewModels.Identity
 
 
             private async Task UpdateUserProfile(string imageUrl)
-        {
-            try
             {
-                HttpClient client = new HttpClient();
-
-                await LoadingPopup.Instance.Show("Updating user profile...");
-
-                var profileData = Global.UserProfileData;
-
-                UserProfileRequestModel requestPayload = new UserProfileRequestModel()
-                { firstname = profileData.firstname, lastname = profileData.lastname, profileImgeUrl = imageUrl };
-
-
-                string payloadJson = JsonConvert.SerializeObject(requestPayload);
-
-                Console.WriteLine(payloadJson);
-
-                string url = "http://209.97.184.81:5000/auth/update-user";
-                Console.WriteLine(url);
-                StringContent content = new StringContent(payloadJson, Encoding.UTF8, "application/json");
-                client.DefaultRequestHeaders.Add("Authorization", $"{Global.Token}");
-
-
-                HttpResponseMessage response;
-                response = await client.PutAsync(url, content);
-
-                string result = await response.Content.ReadAsStringAsync();
-                Console.WriteLine(result);
-
-                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                try
                 {
-                    await MessagePopup.Instance.Show("User Profile updated successfully.");
+                    HttpClient client = new HttpClient();
 
-                    if (string.IsNullOrEmpty(imageUrl))
+                    await LoadingPopup.Instance.Show("Updating user profile...");
+
+                    var profileData = Global.UserProfileData;
+
+                    UserProfileRequestModel requestPayload = new UserProfileRequestModel()
+                    { firstname = profileData.firstname, lastname = profileData.lastname, profileImgeUrl = imageUrl };
+
+
+                    string payloadJson = JsonConvert.SerializeObject(requestPayload);
+
+                    Console.WriteLine(payloadJson);
+
+                    string url = "http://209.97.184.81:5000/auth/update-user";
+                    Console.WriteLine(url);
+                    StringContent content = new StringContent(payloadJson, Encoding.UTF8, "application/json");
+                    client.DefaultRequestHeaders.Add("Authorization", $"{Global.Token}");
+
+
+                    HttpResponseMessage response;
+                    response = await client.PutAsync(url, content);
+
+                    string result = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(result);
+
+                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
-                        PImage = "myprofile.png";
-                    }
-                    else
-                    {
-                        PImage = imageUrl;
-                    }
-                }
-                else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
-                {
-                    await MessagePopup.Instance.Show("User profile not updated.");
+                        await MessagePopup.Instance.Show("User Profile updated successfully.");
 
+                        if (string.IsNullOrEmpty(imageUrl))
+                        {
+                            PImage = "myprofile.png";
+                        }
+                        else
+                        {
+                            PImage = imageUrl;
+                        }
+                    }
+                    else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+                    {
+                        await MessagePopup.Instance.Show("User profile not updated.");
+
+                    }
+                    else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                    {
+                        await MessagePopup.Instance.Show("You are not authorized to perform this action.");
+                    }
                 }
-                else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                catch (Exception ex)
                 {
-                    await MessagePopup.Instance.Show("You are not authorized to perform this action.");
+                    await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
+                }
+                finally
+                {
+                    await LoadingPopup.Instance.Hide();
                 }
             }
-            catch (Exception ex)
-            {
-                await MessagePopup.Instance.Show("Something went wrong. Please try again later.");
-            }
-            finally
-            {
-                await LoadingPopup.Instance.Hide();
-            }
-        }
 
 
         //========= check and request permission to use storage ================

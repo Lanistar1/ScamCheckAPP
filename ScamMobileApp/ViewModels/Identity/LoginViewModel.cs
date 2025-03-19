@@ -47,16 +47,32 @@ namespace ScamMobileApp.ViewModels.Identity
             }
         }
 
-        private string password;
+        //private string password;
+        //public string Password
+        //{
+        //    get => password;
+        //    set
+        //    {
+        //        password = value;
+        //        OnPropertyChanged(nameof(Password));
+        //    }
+        //}
+
+
+        private string password = Preferences.Get(nameof(Password), string.Empty);
         public string Password
         {
             get => password;
             set
             {
-                password = value;
+                SetProperty(ref password, value);
+                Global.UserPassword = password;
+                Preferences.Set(nameof(Password), value);
                 OnPropertyChanged(nameof(Password));
             }
         }
+
+
 
         private string email = Preferences.Get(nameof(Email), string.Empty);
         public string Email
@@ -159,9 +175,12 @@ namespace ScamMobileApp.ViewModels.Identity
                 if (IsFirstTimeUser == true)
                 {
                     var _userId = Email.Trim();
-
+                    var password = Password.Trim();
                     Username = _userId;
+                    Password = password;
                     Global.UserName = username;
+                    Global.UserPassword = password;
+
                     await LoginCommandsExecute(Username, Password);
                 }
                 else
@@ -170,6 +189,7 @@ namespace ScamMobileApp.ViewModels.Identity
                     Global.UserName = Username;
 
                     Password = Password;
+                    Global.UserPassword = Password;
                     await LoginCommandsExecute(Username, Password);
                 }
 
@@ -346,6 +366,7 @@ namespace ScamMobileApp.ViewModels.Identity
         {
 
             string username = await SecureStorage.GetAsync("username");
+            string password = await SecureStorage.GetAsync("password");
             string firstName = await SecureStorage.GetAsync("CurrentUserFirstName");
             if (string.IsNullOrEmpty(username) && string.IsNullOrEmpty(firstName))
             {
@@ -450,6 +471,7 @@ namespace ScamMobileApp.ViewModels.Identity
                 IsFirstTimeUser = true;
                 IsNoFirstTimeUser = false;
                 SecureStorage.Remove("username");
+                SecureStorage.Remove("password");
                 SecureStorage.Remove("CurrentUserFirstName");
                 Username = string.Empty;
                 Email = string.Empty;
@@ -474,6 +496,7 @@ namespace ScamMobileApp.ViewModels.Identity
                 IsFirstTimeUser = true;
                 IsNoFirstTimeUser = false;
                 SecureStorage.Remove("username");
+                SecureStorage.Remove("password");
                 SecureStorage.Remove("CurrentUserProfileId");
                 SecureStorage.Remove("CurrentUserFirstName");
                 SecureStorage.Remove("CurrentUserPassword");

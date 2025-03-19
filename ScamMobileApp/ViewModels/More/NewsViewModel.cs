@@ -15,6 +15,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ScamMobileApp.ViewModels.More
@@ -30,7 +31,9 @@ namespace ScamMobileApp.ViewModels.More
 
             SelectPageCommand = new Command(async () => await SelectPageCommandExecute());
 
-            TappedCommand = new Command<Article>(async (model) => await GetTappedExecute(model));
+            TappedCommand = new Command<News>(async (model) => await GetTappedExecute(model));
+
+            ShareCommand = new Command<News>(async (model) => await ShareNews(model));
 
 
         }
@@ -47,8 +50,8 @@ namespace ScamMobileApp.ViewModels.More
             }
         }
 
-        private List<Article> news;
-        public List<Article> News
+        private List<News> news;
+        public List<News> News
         {
             get => news;
             set
@@ -70,7 +73,7 @@ namespace ScamMobileApp.ViewModels.More
             }
         }
 
-        private ObservableCollection<Article> SelectedItems = new ObservableCollection<Article>();
+        private ObservableCollection<News> SelectedItems = new ObservableCollection<News>();
 
         #endregion
 
@@ -79,8 +82,26 @@ namespace ScamMobileApp.ViewModels.More
         public Command SelectPageCommand { get; }
         public Command TappedCommand { get; }
 
+        public Command ShareCommand { get; }
 
         #endregion
+
+
+        private async Task ShareNews(News article)
+        {
+            if (article == null || string.IsNullOrEmpty(article.link))
+            {
+                await MessagePopup.Instance.Show("No valid link to share.");
+
+                return;
+            }
+
+            await Share.RequestAsync(new ShareTextRequest
+            {
+                Uri = article.link,
+                Title = "Share News"
+            });
+        }
 
         private async Task SelectPageCommandExecute()
         {
@@ -150,7 +171,7 @@ namespace ScamMobileApp.ViewModels.More
             Title = result.Item1;
         }
 
-        private async Task GetTappedExecute(Article model)
+        private async Task GetTappedExecute(News model)
         {
             try
             {
@@ -163,7 +184,7 @@ namespace ScamMobileApp.ViewModels.More
                 }
                 SelectedItems.Add(model);
 
-                var testUrl = SelectedItems.FirstOrDefault().url;
+                var testUrl = SelectedItems.FirstOrDefault().link;
 
                 await Navigation.PushAsync(new NewsWebview(testUrl), true);
             }
@@ -187,7 +208,7 @@ namespace ScamMobileApp.ViewModels.More
                     if (ResponseData.data != null)
                     {
 
-                        News = ResponseData.data.articles;
+                        News = ResponseData.data.news;
 
                     }
                     else

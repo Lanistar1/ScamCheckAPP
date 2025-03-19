@@ -26,11 +26,14 @@ namespace ScamMobileApp.Views.Identity
         private void To_ForgotPassword(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ForgetPassword());
+            //Application.Current.MainPage = new NavigationPage(new ForgetPassword());
         }
 
         private void To_Register(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Register());
+            //Application.Current.MainPage = new NavigationPage(new Register());
+
         }
 
         private void To_Tabbed(object sender, EventArgs e)
